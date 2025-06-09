@@ -1,108 +1,218 @@
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import foundersImage from "@assets/WhatsApp Image 2025-06-02 at 18.04.55_ae1d9bc2_1749473393971.jpg";
 
 export default function Story() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white">
       <Header />
-      <div className="pt-20 min-h-screen">
-        <div className="container mx-auto px-4 py-16">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-16">
-              <h1 className="text-5xl font-playfair font-bold text-deep-black mb-6">Our Story</h1>
-              <p className="text-xl text-gray-600">The journey of craftsmanship, passion, and excellence</p>
-            </div>
-
-            <div className="space-y-12">
-              <Card className="overflow-hidden">
-                <CardContent className="p-8">
-                  <div className="grid lg:grid-cols-2 gap-8 items-center">
-                    <div>
-                      <h2 className="text-3xl font-playfair font-bold text-deep-black mb-4">Founded on Excellence</h2>
-                      <p className="text-gray-600 mb-4">
-                        Blackhorse Furnitures was born from a vision to blend traditional Indian craftsmanship with contemporary design. 
-                        Our journey began with a simple belief: every piece of furniture should tell a story of quality, 
-                        durability, and artistic excellence.
-                      </p>
-                      <p className="text-gray-600">
-                        With over 25 years of experience in the furniture industry, we have established ourselves as 
-                        trusted creators of luxury furniture that transforms spaces into havens of comfort and style.
-                      </p>
-                    </div>
-                    <div>
-                      <img 
-                        src="https://images.unsplash.com/photo-1604709177225-055f99402ea3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400" 
-                        alt="Traditional craftsmanship" 
-                        className="w-full h-80 object-cover rounded-lg shadow-lg"
-                      />
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-
-              <Card className="overflow-hidden">
-                <CardContent className="p-8">
-                  <div className="grid lg:grid-cols-2 gap-8 items-center">
-                    <div className="lg:order-2">
-                      <h2 className="text-3xl font-playfair font-bold text-deep-black mb-4">Our Mission</h2>
-                      <p className="text-gray-600 mb-4">
-                        Led by design consultant <strong>Diksha Shringi</strong>, our team is dedicated to creating 
-                        furniture that not only serves functional purposes but also enhances the aesthetic appeal 
-                        of your living and working spaces.
-                      </p>
-                      <p className="text-gray-600">
-                        We believe in sustainable practices, quality materials, and time-honored techniques that 
-                        ensure each piece we create becomes a cherished part of your home for generations to come.
-                      </p>
-                    </div>
-                    <div className="lg:order-1">
-                      <img 
-                        src="https://images.unsplash.com/photo-1560472355-536de3962603?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400" 
-                        alt="Design consultation" 
-                        className="w-full h-80 object-cover rounded-lg shadow-lg"
-                      />
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-
-              <Card className="bg-luxury-gold text-white overflow-hidden">
-                <CardContent className="p-8 text-center">
-                  <h2 className="text-3xl font-playfair font-bold mb-4">Our Promise</h2>
-                  <p className="text-lg mb-6 max-w-3xl mx-auto">
-                    Every piece we create carries our commitment to excellence. From the initial design consultation 
-                    to the final delivery, we ensure that your furniture exceeds expectations in quality, 
-                    craftsmanship, and beauty.
-                  </p>
-                  <div className="grid md:grid-cols-3 gap-8 mt-8">
-                    <div>
-                      <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i className="fas fa-award text-luxury-gold text-2xl"></i>
-                      </div>
-                      <h3 className="text-xl font-semibold mb-2">Quality Assured</h3>
-                      <p>Premium materials and meticulous craftsmanship</p>
-                    </div>
-                    <div>
-                      <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i className="fas fa-users text-luxury-gold text-2xl"></i>
-                      </div>
-                      <h3 className="text-xl font-semibold mb-2">Customer First</h3>
-                      <p>Personalized service and attention to detail</p>
-                    </div>
-                    <div>
-                      <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i className="fas fa-leaf text-luxury-gold text-2xl"></i>
-                      </div>
-                      <h3 className="text-xl font-semibold mb-2">Sustainable</h3>
-                      <p>Eco-friendly practices and responsible sourcing</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+      <div className="pt-20">
+        {/* Hero Section */}
+        <section className="py-20 bg-gradient-to-r from-luxury-gold/20 to-transparent">
+          <div className="container mx-auto px-4">
+            <div className="text-center max-w-4xl mx-auto">
+              <h1 className="text-6xl font-playfair font-bold mb-6 bg-gradient-to-r from-luxury-gold to-yellow-300 bg-clip-text text-transparent">
+                Our Extraordinary Journey
+              </h1>
+              <p className="text-2xl text-gray-300 leading-relaxed">
+                Discover the passionate story behind Blackhorse Furnitures - where traditional Indian craftsmanship 
+                meets contemporary design excellence, creating timeless pieces that transform living spaces into works of art.
+              </p>
             </div>
           </div>
-        </div>
+        </section>
+
+        {/* Founders Section */}
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <Card className="bg-gray-800/30 border-gray-700 overflow-hidden">
+              <CardContent className="p-0">
+                <div className="grid lg:grid-cols-2 gap-0 items-center">
+                  <div className="p-12">
+                    <h2 className="text-4xl font-playfair font-bold text-luxury-gold mb-8">Meet Our Visionary Founders</h2>
+                    
+                    <div className="space-y-8">
+                      <div>
+                        <h3 className="text-2xl font-playfair font-bold text-luxury-gold mb-3">Amar Chauhan - Founder & Creative Director</h3>
+                        <p className="text-gray-300 leading-relaxed mb-4">
+                          With an unwavering passion for excellence and an innate understanding of luxury furniture design, 
+                          Amar Chauhan established Blackhorse Furnitures with a revolutionary vision to redefine the Indian 
+                          furniture landscape. His entrepreneurial journey spans over two decades, during which he has 
+                          consistently pushed the boundaries of traditional craftsmanship while embracing contemporary aesthetics.
+                        </p>
+                        <p className="text-gray-300 leading-relaxed">
+                          Amar's expertise lies in identifying premium materials, understanding client aspirations, and 
+                          translating abstract concepts into tangible masterpieces that stand the test of time.
+                        </p>
+                      </div>
+                      
+                      <div>
+                        <h3 className="text-2xl font-playfair font-bold text-luxury-gold mb-3">Diksha Shringi - Co-Founder & Design Consultant</h3>
+                        <p className="text-gray-300 leading-relaxed mb-4">
+                          Bringing over 5 years of specialized experience in Indian furniture design and interior consultation, 
+                          Diksha Shringi serves as the creative backbone of our organization. Her profound understanding of 
+                          spatial dynamics, color theory, and ergonomic principles enables her to create furniture solutions 
+                          that are both aesthetically magnificent and functionally superior.
+                        </p>
+                        <p className="text-gray-300 leading-relaxed">
+                          Diksha's meticulous attention to detail and innovative approach to problem-solving has resulted in 
+                          countless successful projects that seamlessly blend traditional Indian craftsmanship with modern lifestyle requirements.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="relative">
+                    <img 
+                      src={foundersImage} 
+                      alt="Amar Chauhan and Diksha Shringi - Founders of Blackhorse Furnitures" 
+                      className="w-full h-full object-cover min-h-[600px]"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </section>
+
+        {/* Company Journey */}
+        <section className="py-20 bg-gradient-to-r from-luxury-gold/10 to-transparent">
+          <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto">
+              <div className="text-center mb-16">
+                <h2 className="text-4xl font-playfair font-bold mb-6 text-luxury-gold">Our Evolution of Excellence</h2>
+                <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                  From humble beginnings to becoming a distinguished name in luxury furniture, our journey reflects 
+                  unwavering commitment to quality, innovation, and customer satisfaction.
+                </p>
+              </div>
+
+              <div className="grid md:grid-cols-2 gap-12">
+                <Card className="bg-gray-800/50 border-gray-700 hover-lift transition-all">
+                  <CardContent className="p-8">
+                    <div className="w-16 h-16 bg-luxury-gold rounded-full flex items-center justify-center mb-6">
+                      <i className="fas fa-lightbulb text-black text-2xl"></i>
+                    </div>
+                    <h3 className="text-2xl font-playfair font-bold text-luxury-gold mb-4">Founded on Innovation</h3>
+                    <p className="text-gray-300 leading-relaxed">
+                      Blackhorse Furnitures emerged from a revolutionary vision to bridge the gap between traditional 
+                      Indian woodworking heritage and contemporary design sensibilities. Our founders recognized the 
+                      immense potential in combining time-honored craftsmanship techniques with modern aesthetic preferences, 
+                      creating furniture pieces that resonate with discerning customers worldwide.
+                    </p>
+                  </CardContent>
+                </Card>
+
+                <Card className="bg-gray-800/50 border-gray-700 hover-lift transition-all">
+                  <CardContent className="p-8">
+                    <div className="w-16 h-16 bg-luxury-gold rounded-full flex items-center justify-center mb-6">
+                      <i className="fas fa-tools text-black text-2xl"></i>
+                    </div>
+                    <h3 className="text-2xl font-playfair font-bold text-luxury-gold mb-4">Mastering the Craft</h3>
+                    <p className="text-gray-300 leading-relaxed">
+                      Through years of dedicated research, experimentation, and collaboration with master craftsmen, 
+                      we have developed proprietary techniques that ensure exceptional quality in every piece. Our 
+                      commitment to excellence extends from material selection and design conceptualization to 
+                      precision manufacturing and meticulous finishing processes.
+                    </p>
+                  </CardContent>
+                </Card>
+
+                <Card className="bg-gray-800/50 border-gray-700 hover-lift transition-all">
+                  <CardContent className="p-8">
+                    <div className="w-16 h-16 bg-luxury-gold rounded-full flex items-center justify-center mb-6">
+                      <i className="fas fa-globe text-black text-2xl"></i>
+                    </div>
+                    <h3 className="text-2xl font-playfair font-bold text-luxury-gold mb-4">Expanding Horizons</h3>
+                    <p className="text-gray-300 leading-relaxed">
+                      Our success in the Indian market has opened doors to international opportunities, including our 
+                      partnership with Frezza Arredementi in Italy. This collaboration has enriched our design 
+                      perspective, incorporating European elegance with Indian craftsmanship to create truly unique 
+                      furniture collections that appeal to global aesthetics.
+                    </p>
+                  </CardContent>
+                </Card>
+
+                <Card className="bg-gray-800/50 border-gray-700 hover-lift transition-all">
+                  <CardContent className="p-8">
+                    <div className="w-16 h-16 bg-luxury-gold rounded-full flex items-center justify-center mb-6">
+                      <i className="fas fa-heart text-black text-2xl"></i>
+                    </div>
+                    <h3 className="text-2xl font-playfair font-bold text-luxury-gold mb-4">Customer-Centric Philosophy</h3>
+                    <p className="text-gray-300 leading-relaxed">
+                      Every project we undertake is approached with genuine passion and commitment to exceeding client 
+                      expectations. Our personalized consultation process ensures that each piece we create reflects 
+                      the client's unique vision while maintaining our signature standards of quality, durability, 
+                      and aesthetic excellence.
+                    </p>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Values & Mission */}
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <Card className="bg-gradient-to-r from-luxury-gold to-yellow-400 text-black overflow-hidden">
+              <CardContent className="p-12 text-center">
+                <h2 className="text-4xl font-playfair font-bold mb-8">Our Unwavering Commitment</h2>
+                <p className="text-xl mb-12 max-w-4xl mx-auto leading-relaxed">
+                  At Blackhorse Furnitures, every piece we create embodies our foundational values of excellence, 
+                  integrity, and innovation. From the initial design consultation to the final installation, 
+                  we ensure that your investment in our furniture represents not just a purchase, but a legacy 
+                  of quality that will be cherished for generations.
+                </p>
+                
+                <div className="grid md:grid-cols-3 gap-12">
+                  <div>
+                    <div className="w-20 h-20 bg-black rounded-full flex items-center justify-center mx-auto mb-6">
+                      <i className="fas fa-award text-luxury-gold text-3xl"></i>
+                    </div>
+                    <h3 className="text-2xl font-playfair font-bold mb-4">Uncompromising Quality</h3>
+                    <p className="text-lg">Premium materials, precision craftsmanship, and rigorous quality control ensure exceptional durability and timeless beauty.</p>
+                  </div>
+                  <div>
+                    <div className="w-20 h-20 bg-black rounded-full flex items-center justify-center mx-auto mb-6">
+                      <i className="fas fa-users text-luxury-gold text-3xl"></i>
+                    </div>
+                    <h3 className="text-2xl font-playfair font-bold mb-4">Client-First Approach</h3>
+                    <p className="text-lg">Personalized service, transparent communication, and unwavering dedication to bringing your vision to life.</p>
+                  </div>
+                  <div>
+                    <div className="w-20 h-20 bg-black rounded-full flex items-center justify-center mx-auto mb-6">
+                      <i className="fas fa-leaf text-luxury-gold text-3xl"></i>
+                    </div>
+                    <h3 className="text-2xl font-playfair font-bold mb-4">Sustainable Practices</h3>
+                    <p className="text-lg">Environmentally responsible sourcing, eco-friendly processes, and commitment to preserving our planet's resources.</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </section>
+
+        {/* Call to Action */}
+        <section className="py-20 bg-gradient-to-r from-luxury-gold/20 to-transparent">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="text-4xl font-playfair font-bold mb-6 text-luxury-gold">Begin Your Journey With Us</h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+              Ready to experience the Blackhorse Furnitures difference? Let us transform your space with our exceptional craftsmanship and personalized service.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button className="bg-luxury-gold text-black px-12 py-4 text-lg font-bold hover:bg-yellow-400 transition-colors">
+                Schedule Consultation
+              </Button>
+              <Button variant="outline" className="border-2 border-luxury-gold text-luxury-gold px-12 py-4 text-lg font-bold hover:bg-luxury-gold hover:text-black transition-colors">
+                View Portfolio
+              </Button>
+            </div>
+          </div>
+        </section>
       </div>
       <Footer />
     </div>
