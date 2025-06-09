@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useMutation } from "@tanstack/react-query";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import { Card, CardContent } from "@/components/ui/card";
@@ -7,6 +8,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
+import { apiRequest } from "@/lib/queryClient";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -14,9 +16,45 @@ export default function Contact() {
     lastName: "",
     email: "",
     phone: "",
-    message: ""
+    projectDetails: ""
   });
   const { toast } = useToast();
+
+  const consultationMutation = useMutation({
+    mutationFn: async (data: typeof formData) => {
+      const response = await fetch("/api/consultation-requests", {
+        method: "POST",
+        body: JSON.stringify(data),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      } as RequestInit);
+      if (!response.ok) {
+        throw new Error("Failed to submit consultation request");
+      }
+      return await response.json();
+    },
+    onSuccess: () => {
+      toast({
+        title: "Consultation Request Submitted Successfully!",
+        description: "Thank you for your inquiry. Our design experts will contact you within 24 hours to discuss your project requirements.",
+      });
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        phone: "",
+        projectDetails: ""
+      });
+    },
+    onError: () => {
+      toast({
+        title: "Submission Failed",
+        description: "There was an error submitting your request. Please try again or contact us directly.",
+        variant: "destructive",
+      });
+    }
+  });
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -28,17 +66,7 @@ export default function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    toast({
-      title: "Message Sent Successfully!",
-      description: "Thank you for your inquiry. Our team will contact you within 24 hours.",
-    });
-    setFormData({
-      firstName: "",
-      lastName: "",
-      email: "",
-      phone: "",
-      message: ""
-    });
+    consultationMutation.mutate(formData);
   };
 
   const contactInfo = [
@@ -236,20 +264,24 @@ export default function Contact() {
                       />
                     </div>
                     <div>
-                      <Label htmlFor="message" className="text-sm font-medium text-gray-300 mb-2 block">Project Details *</Label>
+                      <Label htmlFor="projectDetails" className="text-sm font-medium text-gray-300 mb-2 block">Project Details *</Label>
                       <Textarea
-                        id="message"
-                        name="message"
+                        id="projectDetails"
+                        name="projectDetails"
                         rows={5}
-                        value={formData.message}
+                        value={formData.projectDetails}
                         onChange={handleInputChange}
                         placeholder="Describe your furniture requirements, space dimensions, style preferences, and any specific needs..."
                         className="bg-gray-700 border-gray-600 text-white placeholder-gray-400"
                         required
                       />
                     </div>
-                    <Button type="submit" className="w-full bg-luxury-gold text-black py-4 text-lg font-bold hover:bg-yellow-400 transition-colors">
-                      Send Consultation Request
+                    <Button 
+                      type="submit" 
+                      disabled={consultationMutation.isPending}
+                      className="w-full bg-luxury-gold text-black py-4 text-lg font-bold hover:bg-yellow-400 transition-colors disabled:opacity-50"
+                    >
+                      {consultationMutation.isPending ? "Submitting..." : "Send Consultation Request"}
                     </Button>
                   </form>
                 </CardContent>
