@@ -159,7 +159,7 @@ export default function Projects() {
                           </div>
                         ))}
                       </div>
-                      <Button className="w-full bg-luxury-terracotta text-white hover:bg-warm-terracotta transition-colors">
+                      <Button className="w-full bg-glow-gold text-white hover:bg-elegant-brown transition-colors shadow-lg">
                         View Details
                       </Button>
                     </div>
@@ -171,20 +171,20 @@ export default function Projects() {
         </section>
 
         {/* Call to Action */}
-        <section className="py-20 bg-gradient-to-r from-olive-green/20 to-transparent">
+        <section className="py-20 bg-section">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="text-4xl font-playfair font-bold mb-6 text-luxury-terracotta">Ready to Create Your Dream Space?</h2>
-            <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+            <h2 className="text-4xl font-playfair font-bold mb-6 text-elegant-brown">Ready to Create Your Dream Space?</h2>
+            <p className="text-xl text-soft-brown mb-8 max-w-2xl mx-auto">
               Let us bring your vision to life with our bespoke furniture solutions and exceptional craftsmanship.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Link href="/contact">
-                <Button className="bg-luxury-terracotta text-white px-12 py-4 text-lg font-bold hover:bg-warm-terracotta transition-colors">
+                <Button className="bg-glow-gold text-white px-12 py-4 text-lg font-bold hover:bg-elegant-brown transition-colors shadow-lg">
                   Schedule Consultation
                 </Button>
               </Link>
               <Link href="/collections">
-                <Button variant="outline" className="border-2 border-luxury-terracotta text-luxury-terracotta px-12 py-4 text-lg font-bold hover:bg-luxury-terracotta hover:text-white transition-colors">
+                <Button variant="outline" className="border-2 border-elegant-brown text-elegant-brown px-12 py-4 text-lg font-bold hover:bg-elegant-brown hover:text-white transition-colors">
                   Browse Collections
                 </Button>
               </Link>
