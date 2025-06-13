@@ -38,8 +38,8 @@ ${formData.message}
 *Requested via Blackhorse Furnitures Website*
     `.trim();
 
-    // Amar Chauhan's WhatsApp number (replace with actual number)
-    const whatsappNumber = "919876543210"; // Replace with actual WhatsApp number
+    // Amar Chauhan's WhatsApp number
+    const whatsappNumber = "919718978337";
     const encodedMessage = encodeURIComponent(whatsappMessage);
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
     

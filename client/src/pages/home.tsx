@@ -58,20 +58,6 @@ export default function Home() {
         </div>
         
         <div className="relative z-10 container mx-auto px-4 text-center">
-          {/* Special Home Page Logo */}
-          <div className="mb-8 flex justify-center">
-            <div className="bg-white/95 backdrop-blur-md rounded-3xl p-6 shadow-2xl border border-glow-gold/40 hover:scale-105 transition-all duration-500 luxury-glow group">
-              <div className="flex items-center gap-4">
-                <div className="w-16 h-16 bg-gradient-to-br from-glow-gold to-elegant-brown rounded-2xl flex items-center justify-center shadow-xl group-hover:rotate-12 transition-transform duration-500">
-                  <i className="fas fa-chess-knight text-white text-2xl"></i>
-                </div>
-                <div>
-                  <h2 className="text-3xl font-playfair font-bold text-elegant-brown">Blackhorse</h2>
-                  <p className="text-glow-gold font-medium">Premium Furnitures</p>
-                </div>
-              </div>
-            </div>
-          </div>
           <h1 className="text-6xl md:text-7xl font-playfair font-bold mb-6 bg-gradient-to-r from-elegant-brown via-glow-gold to-elegant-brown bg-clip-text text-transparent animate-fade-in-up drop-shadow-lg">
             Blackhorse Furnitures
           </h1>
