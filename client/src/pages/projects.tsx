@@ -6,16 +6,16 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 
-// Import unique luxury furniture images
-import bedroomLuxury from "@assets/img5_1749793548297.png";
-import livingRoomSet from "@assets/img13_1749793557706.png";
-import diningTable from "@assets/img20_1749793571212.png";
-import wardrobeDesign from "@assets/IMG-20250604-WA0023_1749793593319.jpg";
-import kitchenStorage from "@assets/IMG-20250604-WA0038_1749793606717.jpg";
-import bathroomDesign from "@assets/image_1749795624306.png";
-import officeSpace from "@assets/image_1749796619978.png";
-import modernFurniture from "@assets/image_1749797315618.png";
-import customShelving from "@assets/image_1749797480863.png";
+// Import luxury hospitality furniture images
+import luxuryLobbyProject from "@assets/IMG-20250613-WA0024_1749812797538.jpg";
+import premiumBarProject from "@assets/IMG-20250613-WA0025_1749812815133.jpg";
+import elegantDiningProject from "@assets/IMG-20250613-WA0026_1749812830979.jpg";
+import hospitalityLoungeProject from "@assets/WhatsApp Image 2025-06-13 at 16.31.07_8b6b59a2_1749812856777.jpg";
+import luxuryDecorProject from "@assets/WhatsApp Image 2025-06-13 at 16.31.07_8b6b59a2_1749812856777.jpg";
+import customBarProject from "@assets/IMG-20250613-WA0023_1749812884813.jpg";
+import restaurantProject from "@assets/IMG-20250613-WA0028_1749812922793.jpg";
+import modernDiningProject from "@assets/WhatsApp Image 2025-06-13 at 16.29.47_a47fa735_1749813023915.jpg";
+import luxuryInteriorProject from "@assets/IMG-20250613-WA0024_1749812797538.jpg";
 
 export default function Projects() {
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -23,79 +23,79 @@ export default function Projects() {
   const projects = [
     {
       id: 1,
-      title: "Luxury Master Bedroom Suite",
-      description: "A complete bedroom transformation featuring custom-designed furniture with crystal chandeliers, premium upholstery, and sophisticated lighting creating an opulent sleeping sanctuary.",
-      image: bedroomLuxury,
-      category: "Bedroom",
-      features: ["Custom Chandelier", "Premium Fabrics", "Integrated Lighting"]
+      title: "Grand Hotel Lobby Design",
+      description: "Sophisticated entrance featuring crystal chandeliers, premium marble flooring, elegant console tables, and contemporary seating arrangements creating memorable first impressions for luxury hotels.",
+      image: luxuryLobbyProject,
+      category: "Hospitality",
+      features: ["Crystal Chandelier", "Marble Flooring", "Custom Console Tables"]
     },
     {
       id: 2,
-      title: "Modern Living Room Collection",
-      description: "Elegant living room setup with tufted sofas, marble coffee tables, and coordinated color palettes creating a sophisticated atmosphere for entertainment and relaxation.",
-      image: livingRoomSet,
-      category: "Living Room",
-      features: ["Tufted Upholstery", "Marble Surfaces", "Color Coordination"]
+      title: "Premium Bar & Entertainment Space",
+      description: "Upscale bar featuring rich wooden cabinetry, marble surfaces, comfortable high-back stools, and integrated lighting systems for sophisticated entertainment venues.",
+      image: premiumBarProject,
+      category: "Bar & Lounge",
+      features: ["Wooden Cabinetry", "Marble Countertops", "Integrated Lighting"]
     },
     {
       id: 3,
-      title: "Executive Dining Experience",
-      description: "Professional dining space featuring premium dining table with executive chairs and coordinated lighting for corporate environments and formal dining occasions.",
-      image: diningTable,
-      category: "Dining",
-      features: ["Executive Seating", "Premium Materials", "Corporate Design"]
+      title: "Contemporary Dining Experience",
+      description: "Modern dining space with premium upholstered chairs, elegant table settings, and sophisticated ambient lighting creating exceptional dining experiences for restaurants.",
+      image: elegantDiningProject,
+      category: "Restaurant",
+      features: ["Premium Upholstery", "Ambient Lighting", "Contemporary Design"]
     },
     {
       id: 4,
-      title: "Custom Wardrobe Solutions",
-      description: "Bespoke wardrobe design with integrated lighting, premium finishes, and smart storage solutions maximizing space efficiency while maintaining aesthetic elegance.",
-      image: wardrobeDesign,
-      category: "Wardrobe",
-      features: ["Integrated LED", "Smart Storage", "Premium Finish"]
+      title: "Hospitality Lounge Collection",
+      description: "Elegant lounge furniture featuring high-back cane chairs, round dining tables, premium upholstery, and carefully curated decor for comfortable hospitality environments.",
+      image: hospitalityLoungeProject,
+      category: "Lounge",
+      features: ["Cane Furniture", "Premium Upholstery", "Round Tables"]
     },
     {
       id: 5,
-      title: "Contemporary Kitchen Design",
-      description: "Modern kitchen cabinet system with glass panels, internal lighting, and sleek hardware creating a culinary workspace that blends functionality with luxury aesthetics.",
-      image: kitchenStorage,
-      category: "Kitchen",
-      features: ["Glass Panels", "Internal Lighting", "Modern Hardware"]
+      title: "Luxury Bar Environment",
+      description: "Sophisticated bar design with premium leather seating, marble-topped tables, elegant lighting fixtures, and custom cabinetry for exclusive hospitality venues.",
+      image: customBarProject,
+      category: "Bar & Lounge",
+      features: ["Leather Seating", "Marble Tables", "Custom Cabinetry"]
     },
     {
       id: 6,
-      title: "Luxury Bathroom Retreat",
-      description: "Sophisticated bathroom design featuring premium materials, elegant fixtures, and spa-like ambiance creating a personal sanctuary for relaxation and rejuvenation.",
-      image: bathroomDesign,
-      category: "Bathroom",
-      features: ["Premium Materials", "Spa Design", "Luxury Fixtures"]
+      title: "Fine Dining Restaurant",
+      description: "Comprehensive restaurant design featuring curved ceiling elements, premium wooden fixtures, elegant table arrangements, and sophisticated lighting for upscale dining.",
+      image: restaurantProject,
+      category: "Restaurant",
+      features: ["Curved Ceilings", "Wooden Elements", "Premium Lighting"]
     },
     {
       id: 7,
-      title: "Professional Office Space",
-      description: "Complete office furniture solution featuring executive desks, ergonomic seating, and storage units designed for productivity and professional excellence.",
-      image: officeSpace,
-      category: "Office",
-      features: ["Executive Design", "Ergonomic Solutions", "Professional Finish"]
+      title: "Modern Dining Experience",
+      description: "Contemporary dining space with elegant chairs, premium table settings, natural lighting, and sophisticated decor creating exceptional guest experiences.",
+      image: modernDiningProject,
+      category: "Restaurant",
+      features: ["Contemporary Chairs", "Natural Lighting", "Premium Settings"]
     },
     {
       id: 8,
-      title: "Modern Furniture Collection",
-      description: "Contemporary furniture pieces featuring clean lines, premium materials, and sophisticated design elements that embody modern luxury living.",
-      image: modernFurniture,
-      category: "Modern",
-      features: ["Clean Lines", "Premium Materials", "Contemporary Style"]
+      title: "Luxury Interior Design",
+      description: "Complete interior transformation featuring marble accents, elegant lighting solutions, premium furniture arrangements, and sophisticated color coordination.",
+      image: luxuryInteriorProject,
+      category: "Hospitality",
+      features: ["Marble Accents", "Elegant Lighting", "Premium Arrangements"]
     },
     {
       id: 9,
-      title: "Designer Shelving System",
-      description: "Elegant shelving solution with premium wood finish and strategic lighting to showcase decorative items while maximizing storage functionality.",
-      image: customShelving,
-      category: "Storage",
-      features: ["Premium Wood", "Display Lighting", "Custom Design"]
+      title: "Executive Hospitality Suite",
+      description: "High-end hospitality furniture with luxury finishes, contemporary design elements, and premium materials creating memorable experiences for distinguished guests.",
+      image: luxuryDecorProject,
+      category: "Hospitality",
+      features: ["Luxury Finishes", "Contemporary Design", "Premium Materials"]
     }
   ];
 
-  const categories = ["All", "Bedroom", "Living Room", "Dining", "Wardrobe", "Kitchen", "Bathroom", "Office", "Modern", "Storage"];
+  const categories = ["All", "Hospitality", "Bar & Lounge", "Restaurant", "Lounge"];
   
   const filteredProjects = selectedCategory === "All" 
     ? projects 

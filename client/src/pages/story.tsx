@@ -3,7 +3,7 @@ import Footer from "@/components/footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
-import foundersImage from "@assets/WhatsApp Image 2025-06-02 at 18.04.55_ae1d9bc2_1749473393971.jpg";
+import foundersImage from "@assets/IMG-20250613-WA0025_1749812815133.jpg";
 
 export default function Story() {
   return (
@@ -19,7 +19,7 @@ export default function Story() {
               </h1>
               <p className="text-2xl text-soft-brown leading-relaxed">
                 Discover the passionate story behind Blackhorse Furnitures - where traditional Indian craftsmanship 
-                meets contemporary design excellence, creating timeless pieces that transform living spaces into works of art.
+                meets contemporary design excellence, creating extraordinary hospitality and luxury commercial furniture that transforms spaces into memorable experiences.
               </p>
             </div>
           </div>
@@ -38,28 +38,28 @@ export default function Story() {
                       <div>
                         <h3 className="text-2xl font-playfair font-bold text-glow-gold mb-3">Amar Chauhan - Founder & Creative Director</h3>
                         <p className="text-soft-brown leading-relaxed mb-4">
-                          With an unwavering passion for excellence and an innate understanding of luxury furniture design, 
-                          Amar Chauhan established Blackhorse Furnitures with a revolutionary vision to redefine the Indian 
-                          furniture landscape. His entrepreneurial journey spans over two decades, during which he has 
-                          consistently pushed the boundaries of traditional craftsmanship while embracing contemporary aesthetics.
+                          With an unwavering passion for excellence and specialized expertise in luxury hospitality furniture, 
+                          Amar Chauhan established Blackhorse Furnitures with a revolutionary vision to create exceptional 
+                          commercial spaces. His entrepreneurial journey spans over two decades in the hospitality industry, 
+                          designing premium hotels, restaurants, bars, and luxury commercial environments.
                         </p>
                         <p className="text-soft-brown leading-relaxed">
-                          Amar's expertise lies in identifying premium materials, understanding client aspirations, and 
-                          translating abstract concepts into tangible masterpieces that stand the test of time.
+                          Amar's expertise lies in understanding hospitality requirements, creating memorable guest experiences, 
+                          and designing furniture that combines functionality with luxury aesthetics for commercial success.
                         </p>
                       </div>
                       
                       <div>
                         <h3 className="text-2xl font-playfair font-bold text-glow-gold mb-3">Diksha Shringi - Co-Founder & Design Consultant</h3>
                         <p className="text-soft-brown leading-relaxed mb-4">
-                          Bringing over 15 years of specialized experience in Indian furniture design and interior consultation, 
+                          Bringing over 15 years of specialized experience in hospitality interior design and commercial furniture consultation, 
                           Diksha Shringi serves as the creative backbone of our organization. Her profound understanding of 
-                          spatial dynamics, color theory, and ergonomic principles enables her to create furniture solutions 
-                          that are both aesthetically magnificent and functionally superior.
+                          guest psychology, spatial dynamics, and commercial functionality enables her to create hospitality solutions 
+                          that enhance guest experiences and operational efficiency.
                         </p>
                         <p className="text-soft-brown leading-relaxed">
-                          Diksha's meticulous attention to detail and innovative approach to problem-solving has resulted in 
-                          countless successful projects that seamlessly blend traditional Indian craftsmanship with modern lifestyle requirements.
+                          Diksha's meticulous attention to detail and innovative approach to hospitality design has resulted in 
+                          countless successful hotel, restaurant, and commercial projects that create memorable guest experiences while maintaining operational excellence.
                         </p>
                       </div>
                     </div>
