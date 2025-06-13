@@ -152,13 +152,13 @@ export default function Projects() {
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {filteredProjects.map((project) => (
-                <Card key={project.id} className="bg-card border-champagne/40 overflow-hidden hover:shadow-2xl transition-all duration-500 group shadow-xl">
+                <Card key={project.id} className="premium-card hover-3d overflow-hidden transition-all duration-500 group shadow-xl luxury-shine">
                   <CardContent className="p-0">
                     <div className="relative overflow-hidden">
                       <img 
                         src={project.image} 
                         alt={project.title} 
-                        className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
+                        className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110 image-3d image-glossy"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-glow-gold/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                       <div className="absolute top-4 right-4 bg-glow-gold text-white px-3 py-1 rounded-full text-sm font-bold shadow-lg">
@@ -177,7 +177,7 @@ export default function Projects() {
                           </div>
                         ))}
                       </div>
-                      <Button className="w-full bg-glow-gold text-white hover:bg-elegant-brown transition-colors shadow-lg">
+                      <Button className="w-full glossy-btn text-white shadow-lg">
                         View Details
                       </Button>
                     </div>

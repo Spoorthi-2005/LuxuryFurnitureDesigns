@@ -129,6 +129,21 @@ export default function Contact() {
           </div>
         </section>
 
+        {/* WhatsApp Contact Section */}
+        <section className="py-20 bg-section">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl font-playfair font-bold text-elegant-brown mb-6 animated-gradient">
+                Instant WhatsApp Consultation
+              </h2>
+              <p className="text-xl text-soft-brown max-w-3xl mx-auto floating">
+                Get immediate responses and personalized assistance through WhatsApp - the fastest way to start your furniture journey.
+              </p>
+            </div>
+            <WhatsAppContact />
+          </div>
+        </section>
+
         <div className="py-20">
           <div className="container mx-auto px-4">
             <div className="grid lg:grid-cols-2 gap-16">
@@ -336,6 +351,8 @@ export default function Contact() {
           </div>
         </div>
       </div>
+      
+      <FloatingContact />
       <Footer />
     </div>
   );
