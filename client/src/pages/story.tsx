@@ -2,6 +2,7 @@ import Header from "@/components/header";
 import Footer from "@/components/footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Link } from "wouter";
 import foundersImage from "@assets/WhatsApp Image 2025-06-02 at 18.04.55_ae1d9bc2_1749473393971.jpg";
 
 export default function Story() {
@@ -204,12 +205,16 @@ export default function Story() {
               Ready to experience the Blackhorse Furnitures difference? Let us transform your space with our exceptional craftsmanship and personalized service.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button className="bg-luxury-gold text-black px-12 py-4 text-lg font-bold hover:bg-yellow-400 transition-colors">
-                Schedule Consultation
-              </Button>
-              <Button variant="outline" className="border-2 border-luxury-gold text-luxury-gold px-12 py-4 text-lg font-bold hover:bg-luxury-gold hover:text-black transition-colors">
-                View Portfolio
-              </Button>
+              <Link href="/contact">
+                <Button className="bg-luxury-gold text-black px-12 py-4 text-lg font-bold hover:bg-yellow-400 transition-colors">
+                  Schedule Consultation
+                </Button>
+              </Link>
+              <Link href="/projects">
+                <Button variant="outline" className="border-2 border-luxury-gold text-luxury-gold px-12 py-4 text-lg font-bold hover:bg-luxury-gold hover:text-black transition-colors">
+                  View Portfolio
+                </Button>
+              </Link>
             </div>
           </div>
         </section>

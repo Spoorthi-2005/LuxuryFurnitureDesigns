@@ -2,6 +2,7 @@ import Header from "@/components/header";
 import Footer from "@/components/footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Link } from "wouter";
 import kitchenImage from "@assets/IMG-20250604-WA0017_1749474302053.jpg";
 import bathroomImage from "@assets/IMG-20250604-WA0021_1749474302056.jpg";
 import wardrobeImage from "@assets/IMG-20250604-WA0029_1749474302058.jpg";
@@ -92,12 +93,14 @@ export default function Collections() {
                   <CardContent className="p-8">
                     <h3 className="text-2xl font-playfair font-bold text-elegant-brown mb-4">{collection.title}</h3>
                     <p className="text-soft-brown mb-6 leading-relaxed">{collection.description}</p>
-                    <Button 
-                      variant="ghost" 
-                      className="text-elegant-brown border border-elegant-brown hover:bg-elegant-brown hover:text-white transition-all duration-300 font-semibold p-6"
-                    >
-                      Explore Collection <i className="fas fa-arrow-right ml-2"></i>
-                    </Button>
+                    <Link href="/contact">
+                      <Button 
+                        variant="ghost" 
+                        className="text-elegant-brown border border-elegant-brown hover:bg-elegant-brown hover:text-white transition-all duration-300 font-semibold p-6"
+                      >
+                        Explore Collection <i className="fas fa-arrow-right ml-2"></i>
+                      </Button>
+                    </Link>
                   </CardContent>
                 </Card>
               ))}
@@ -112,9 +115,11 @@ export default function Collections() {
             <p className="text-xl text-soft-brown mb-8 max-w-2xl mx-auto">
               Let our expert designers create bespoke solutions that perfectly complement your lifestyle and aesthetic preferences.
             </p>
-            <Button className="bg-elegant-brown text-white px-12 py-4 text-lg font-bold hover:bg-soft-brown transition-colors">
-              Schedule Consultation
-            </Button>
+            <Link href="/contact">
+              <Button className="bg-elegant-brown text-white px-12 py-4 text-lg font-bold hover:bg-soft-brown transition-colors">
+                Schedule Consultation
+              </Button>
+            </Link>
           </div>
         </section>
       </div>

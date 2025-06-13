@@ -177,9 +177,11 @@ export default function Projects() {
                           </div>
                         ))}
                       </div>
-                      <Button className="w-full glossy-btn text-white shadow-lg">
-                        View Details
-                      </Button>
+                      <Link href="/contact">
+                        <Button className="w-full glossy-btn text-white shadow-lg">
+                          View Details
+                        </Button>
+                      </Link>
                     </div>
                   </CardContent>
                 </Card>
