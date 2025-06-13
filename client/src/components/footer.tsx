@@ -23,10 +23,10 @@ export default function Footer() {
   ];
 
   const socialLinks = [
-    { icon: "fab fa-facebook", href: "#" },
-    { icon: "fab fa-instagram", href: "#" },
-    { icon: "fab fa-twitter", href: "#" },
-    { icon: "fab fa-linkedin", href: "#" }
+    { icon: "fab fa-instagram", href: "https://www.instagram.com/blackhorsefurnitures/" },
+    { icon: "fab fa-linkedin", href: "https://www.linkedin.com/in/amar-chauhan-29187228?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
+    { icon: "fab fa-youtube", href: "https://youtu.be/3ewXDG1TG8c?si=WxaqlgpeIJKprN8t" },
+    { icon: "fab fa-whatsapp", href: "https://wa.me/919718978337" }
   ];
 
   return (
@@ -49,7 +49,9 @@ export default function Footer() {
                 <a 
                   key={index}
                   href={link.href} 
-                  className="text-soft-brown hover:text-elegant-brown transition-colors"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-soft-brown hover:text-elegant-brown transition-all duration-300 hover:scale-110 luxury-glow"
                 >
                   <i className={`${link.icon} text-xl`}></i>
                 </a>
@@ -107,7 +109,7 @@ export default function Footer() {
 
         <div className="border-t border-champagne/30 mt-8 pt-8 text-center">
           <p className="text-soft-brown">
-            &copy; 2024 Blackhorse Furnitures. All rights reserved. | Crafted with passion in India
+            &copy; 2020 Blackhorse Furnitures. All rights reserved. | Crafted with passion in India
           </p>
         </div>
       </div>

@@ -293,62 +293,32 @@ export default function Home() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <Card className="premium-card hover-3d transition-all shadow-xl group luxury-shine">
-              <CardContent className="p-0">
-                <div className="relative h-64 overflow-hidden">
-                  <img 
-                    src={heroImage} 
-                    alt="Premium quality materials showcase" 
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 image-luxury"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <CardContent className="p-8 text-center">
+                <div className="w-20 h-20 bg-glow-gold rounded-full flex items-center justify-center mx-auto mb-6 shadow-xl luxury-glow">
+                  <i className="fas fa-gem text-white text-2xl"></i>
                 </div>
-                <div className="p-6 text-center">
-                  <div className="w-16 h-16 bg-glow-gold rounded-full flex items-center justify-center mx-auto mb-4 shadow-xl luxury-glow">
-                    <i className="fas fa-gem text-white text-xl"></i>
-                  </div>
-                  <h3 className="text-xl font-playfair font-bold text-elegant-brown mb-3">Premium Materials</h3>
-                  <p className="text-soft-brown leading-relaxed">Only the finest woods, metals, and fabrics sourced from trusted suppliers worldwide for exceptional quality and durability.</p>
-                </div>
+                <h3 className="text-xl font-playfair font-bold text-elegant-brown mb-4">Premium Materials</h3>
+                <p className="text-soft-brown leading-relaxed">Only the finest woods, metals, and fabrics sourced from trusted suppliers worldwide for exceptional quality and durability.</p>
               </CardContent>
             </Card>
 
             <Card className="premium-card hover-3d transition-all shadow-xl group luxury-shine">
-              <CardContent className="p-0">
-                <div className="relative h-64 overflow-hidden">
-                  <img 
-                    src={founderImage} 
-                    alt="Master craftsmen and founders" 
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 image-luxury"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <CardContent className="p-8 text-center">
+                <div className="w-20 h-20 bg-glow-gold rounded-full flex items-center justify-center mx-auto mb-6 shadow-xl luxury-glow">
+                  <i className="fas fa-tools text-white text-2xl"></i>
                 </div>
-                <div className="p-6 text-center">
-                  <div className="w-16 h-16 bg-glow-gold rounded-full flex items-center justify-center mx-auto mb-4 shadow-xl luxury-glow">
-                    <i className="fas fa-tools text-white text-xl"></i>
-                  </div>
-                  <h3 className="text-xl font-playfair font-bold text-elegant-brown mb-3">Master Craftsmen</h3>
-                  <p className="text-soft-brown leading-relaxed">Skilled artisans with decades of experience creating furniture masterpieces that combine traditional techniques with modern innovation.</p>
-                </div>
+                <h3 className="text-xl font-playfair font-bold text-elegant-brown mb-4">Master Craftsmen</h3>
+                <p className="text-soft-brown leading-relaxed">Skilled artisans with decades of experience creating furniture masterpieces that combine traditional techniques with modern innovation.</p>
               </CardContent>
             </Card>
 
             <Card className="premium-card hover-3d transition-all shadow-xl group luxury-shine">
-              <CardContent className="p-0">
-                <div className="relative h-64 overflow-hidden">
-                  <img 
-                    src={workshopImage} 
-                    alt="Custom design consultation process" 
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 image-luxury"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <CardContent className="p-8 text-center">
+                <div className="w-20 h-20 bg-glow-gold rounded-full flex items-center justify-center mx-auto mb-6 shadow-xl luxury-glow">
+                  <i className="fas fa-palette text-white text-2xl"></i>
                 </div>
-                <div className="p-6 text-center">
-                  <div className="w-16 h-16 bg-glow-gold rounded-full flex items-center justify-center mx-auto mb-4 shadow-xl luxury-glow">
-                    <i className="fas fa-palette text-white text-xl"></i>
-                  </div>
-                  <h3 className="text-xl font-playfair font-bold text-elegant-brown mb-3">Custom Design</h3>
-                  <p className="text-soft-brown leading-relaxed">Bespoke solutions tailored to your unique vision and space requirements with personalized design consultations.</p>
-                </div>
+                <h3 className="text-xl font-playfair font-bold text-elegant-brown mb-4">Custom Design</h3>
+                <p className="text-soft-brown leading-relaxed">Bespoke solutions tailored to your unique vision and space requirements with personalized design consultations.</p>
               </CardContent>
             </Card>
 
