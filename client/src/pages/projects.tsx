@@ -14,8 +14,8 @@ import project4Image from "@assets/WhatsApp Image 2025-06-13 at 16.31.07_8b6b59a
 import project5Image from "@assets/IMG-20250613-WA0023_1749812884813.jpg";
 import project6Image from "@assets/IMG-20250613-WA0028_1749812922793.jpg";
 import project7Image from "@assets/WhatsApp Image 2025-06-13 at 16.29.47_a47fa735_1749813023915.jpg";
-import project8Image from "@assets/IMG-20250613-WA0025_1749812815133.jpg";
-import project9Image from "@assets/IMG-20250613-WA0024_1749812797538.jpg";
+import project8Image from "@assets/IMG-20250604-WA0023_1749793593319.jpg";
+import project9Image from "@assets/IMG-20250604-WA0038_1749793606717.jpg";
 
 export default function Projects() {
   const [selectedCategory, setSelectedCategory] = useState("All");

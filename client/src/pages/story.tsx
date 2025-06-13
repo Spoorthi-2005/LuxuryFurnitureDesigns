@@ -52,9 +52,8 @@ export default function Story() {
                       <div>
                         <h3 className="text-2xl font-playfair font-bold text-glow-gold mb-3">Diksha Shringi - Co-Founder & Design Consultant</h3>
                         <p className="text-soft-brown leading-relaxed mb-4">
-                          Bringing over 15 years of specialized experience in hospitality interior design and commercial furniture consultation, 
-                          Diksha Shringi serves as the creative backbone of our organization. Her profound understanding of 
-                          guest psychology, spatial dynamics, and commercial functionality enables her to create hospitality solutions 
+                          A distinguished graduate from the American University of Interior Design in Dubai, Diksha Shringi brings over 15 years of specialized experience in hospitality interior design and commercial furniture consultation. 
+                          Her international education combined with profound understanding of guest psychology, spatial dynamics, and commercial functionality enables her to create hospitality solutions 
                           that enhance guest experiences and operational efficiency.
                         </p>
                         <p className="text-soft-brown leading-relaxed">
