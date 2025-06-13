@@ -6,6 +6,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import AnimatedCounter from "@/components/animated-counter";
 import TestimonialsCarousel from "@/components/testimonials-carousel";
+import LuxuryFeatures from "@/components/luxury-features";
 import heroImage from "@assets/img35_1749474302052.png";
 import founderImage from "@assets/WhatsApp Image 2025-06-02 at 18.04.55_ae1d9bc2_1749473393971.jpg";
 import workshopImage from "@assets/IMG-20250606-WA0034_1749474302060.jpg";
@@ -212,48 +213,48 @@ export default function Home() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <Card className="bg-card border-champagne/40 hover-lift transition-all shadow-xl">
+            <Card className="premium-card hover-3d transition-all shadow-xl luxury-shine">
               <CardContent className="p-8 text-center">
-                <div className="w-20 h-20 bg-glow-gold rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                <div className="w-20 h-20 bg-glow-gold rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg luxury-glow">
                   <i className="fas fa-users text-white text-2xl"></i>
                 </div>
-                <div className="text-4xl font-playfair font-bold text-elegant-brown mb-2">
+                <div className="text-4xl font-playfair font-bold text-elegant-brown mb-2 text-shimmer">
                   <AnimatedCounter end={200} suffix="+" />
                 </div>
                 <p className="text-soft-brown font-medium">Happy Customers</p>
               </CardContent>
             </Card>
 
-            <Card className="bg-card border-champagne/40 hover-lift transition-all shadow-xl">
+            <Card className="premium-card hover-3d transition-all shadow-xl luxury-shine">
               <CardContent className="p-8 text-center">
-                <div className="w-20 h-20 bg-glow-gold rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                <div className="w-20 h-20 bg-glow-gold rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg luxury-glow">
                   <i className="fas fa-project-diagram text-white text-2xl"></i>
                 </div>
-                <div className="text-4xl font-playfair font-bold text-elegant-brown mb-2">
+                <div className="text-4xl font-playfair font-bold text-elegant-brown mb-2 text-shimmer">
                   <AnimatedCounter end={700} suffix="+" />
                 </div>
                 <p className="text-soft-brown font-medium">Projects Completed</p>
               </CardContent>
             </Card>
 
-            <Card className="bg-card border-champagne/40 hover-lift transition-all shadow-xl">
+            <Card className="premium-card hover-3d transition-all shadow-xl luxury-shine">
               <CardContent className="p-8 text-center">
-                <div className="w-20 h-20 bg-glow-gold rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                <div className="w-20 h-20 bg-glow-gold rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg luxury-glow">
                   <i className="fas fa-calendar text-white text-2xl"></i>
                 </div>
-                <div className="text-4xl font-playfair font-bold text-elegant-brown mb-2">
+                <div className="text-4xl font-playfair font-bold text-elegant-brown mb-2 text-shimmer">
                   <AnimatedCounter end={15} suffix="+" />
                 </div>
                 <p className="text-soft-brown font-medium">Years of Excellence</p>
               </CardContent>
             </Card>
 
-            <Card className="bg-card border-champagne/40 hover-lift transition-all shadow-xl">
+            <Card className="premium-card hover-3d transition-all shadow-xl luxury-shine">
               <CardContent className="p-8 text-center">
-                <div className="w-20 h-20 bg-glow-gold rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                <div className="w-20 h-20 bg-glow-gold rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg luxury-glow">
                   <i className="fas fa-award text-white text-2xl"></i>
                 </div>
-                <div className="text-4xl font-playfair font-bold text-elegant-brown mb-2">
+                <div className="text-4xl font-playfair font-bold text-elegant-brown mb-2 text-shimmer">
                   <AnimatedCounter end={98} suffix="%" />
                 </div>
                 <p className="text-soft-brown font-medium">Client Satisfaction</p>
@@ -290,7 +291,7 @@ export default function Home() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card className="bg-card border-champagne/40 hover-lift transition-all shadow-xl group overflow-hidden">
+            <Card className="premium-card hover-3d transition-all shadow-xl group overflow-hidden luxury-shine">
               <CardContent className="p-0">
                 <div className="relative h-48 overflow-hidden">
                   <img 
@@ -300,7 +301,7 @@ export default function Home() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-elegant-brown/80 to-transparent"></div>
                   <div className="absolute bottom-4 left-4 right-4">
-                    <div className="w-16 h-16 bg-glow-gold rounded-full flex items-center justify-center mb-3 shadow-xl">
+                    <div className="w-16 h-16 bg-glow-gold rounded-full flex items-center justify-center mb-3 shadow-xl luxury-glow">
                       <i className="fas fa-gem text-white text-xl"></i>
                     </div>
                     <h3 className="text-xl font-playfair font-bold text-white mb-2">Premium Materials</h3>
@@ -310,7 +311,7 @@ export default function Home() {
               </CardContent>
             </Card>
 
-            <Card className="bg-card border-champagne/40 hover-lift transition-all shadow-xl group overflow-hidden">
+            <Card className="premium-card hover-3d transition-all shadow-xl group overflow-hidden luxury-shine">
               <CardContent className="p-0">
                 <div className="relative h-48 overflow-hidden">
                   <img 
@@ -320,7 +321,7 @@ export default function Home() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-elegant-brown/80 to-transparent"></div>
                   <div className="absolute bottom-4 left-4 right-4">
-                    <div className="w-16 h-16 bg-glow-gold rounded-full flex items-center justify-center mb-3 shadow-xl">
+                    <div className="w-16 h-16 bg-glow-gold rounded-full flex items-center justify-center mb-3 shadow-xl luxury-glow">
                       <i className="fas fa-tools text-white text-xl"></i>
                     </div>
                     <h3 className="text-xl font-playfair font-bold text-white mb-2">Master Craftsmen</h3>
@@ -330,7 +331,7 @@ export default function Home() {
               </CardContent>
             </Card>
 
-            <Card className="bg-card border-champagne/40 hover-lift transition-all shadow-xl group overflow-hidden">
+            <Card className="premium-card hover-3d transition-all shadow-xl group overflow-hidden luxury-shine">
               <CardContent className="p-0">
                 <div className="relative h-48 overflow-hidden">
                   <img 
@@ -340,7 +341,7 @@ export default function Home() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-elegant-brown/80 to-transparent"></div>
                   <div className="absolute bottom-4 left-4 right-4">
-                    <div className="w-16 h-16 bg-glow-gold rounded-full flex items-center justify-center mb-3 shadow-xl">
+                    <div className="w-16 h-16 bg-glow-gold rounded-full flex items-center justify-center mb-3 shadow-xl luxury-glow">
                       <i className="fas fa-palette text-white text-xl"></i>
                     </div>
                     <h3 className="text-xl font-playfair font-bold text-white mb-2">Custom Design</h3>
@@ -423,7 +424,7 @@ export default function Home() {
       {/* Luxury Bedroom Showcase */}
       <section className="py-20 bg-section">
         <div className="container mx-auto px-4">
-          <Card className="bg-card border-champagne/40 overflow-hidden shadow-2xl">
+          <Card className="premium-card hover-3d overflow-hidden shadow-2xl">
             <CardContent className="p-0">
               <div className="grid lg:grid-cols-2 gap-0 items-center">
                 <div className="relative">
@@ -435,31 +436,31 @@ export default function Home() {
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent to-elegant-brown/20"></div>
                 </div>
                 <div className="p-12">
-                  <h2 className="text-4xl font-playfair font-bold text-elegant-brown mb-6">Curated Piece Delivery & Installation</h2>
-                  <p className="text-lg text-soft-brown mb-6 leading-relaxed">
+                  <h2 className="text-4xl font-playfair font-bold text-elegant-brown mb-6 animated-gradient">Curated Piece Delivery & Installation</h2>
+                  <p className="text-lg text-soft-brown mb-6 leading-relaxed floating">
                     Experience seamless delivery and professional installation of your custom furniture pieces. 
                     Our specialized team ensures every detail is perfect, from placement to final adjustments, 
                     creating the luxurious ambiance you've envisioned.
                   </p>
                   <div className="space-y-4 mb-8">
                     <div className="flex items-center space-x-3">
-                      <div className="w-3 h-3 bg-glow-gold rounded-full"></div>
+                      <div className="w-3 h-3 bg-glow-gold rounded-full luxury-glow"></div>
                       <span className="text-soft-brown">White-glove delivery service</span>
                     </div>
                     <div className="flex items-center space-x-3">
-                      <div className="w-3 h-3 bg-glow-gold rounded-full"></div>
+                      <div className="w-3 h-3 bg-glow-gold rounded-full luxury-glow"></div>
                       <span className="text-soft-brown">Professional assembly and installation</span>
                     </div>
                     <div className="flex items-center space-x-3">
-                      <div className="w-3 h-3 bg-glow-gold rounded-full"></div>
+                      <div className="w-3 h-3 bg-glow-gold rounded-full luxury-glow"></div>
                       <span className="text-soft-brown">Room styling and arrangement</span>
                     </div>
                     <div className="flex items-center space-x-3">
-                      <div className="w-3 h-3 bg-glow-gold rounded-full"></div>
+                      <div className="w-3 h-3 bg-glow-gold rounded-full luxury-glow"></div>
                       <span className="text-soft-brown">Final quality inspection</span>
                     </div>
                   </div>
-                  <Button className="bg-elegant-brown text-white px-8 py-4 text-lg font-bold hover:bg-soft-brown transition-all duration-300 shadow-lg">
+                  <Button className="glossy-btn px-8 py-4 text-lg font-bold text-white">
                     Schedule Delivery
                   </Button>
                 </div>
@@ -468,6 +469,9 @@ export default function Home() {
           </Card>
         </div>
       </section>
+
+      {/* Luxury Features Component */}
+      <LuxuryFeatures />
 
       {/* Call to Action */}
       <section className="py-20 bg-champagne/30">
@@ -479,12 +483,12 @@ export default function Home() {
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Link href="/contact">
-              <Button className="bg-glow-gold text-white px-12 py-4 text-lg font-bold hover:bg-elegant-brown transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 transform">
+              <Button className="glossy-btn px-12 py-4 text-lg font-bold text-white shadow-xl">
                 Schedule Consultation
               </Button>
             </Link>
             <Link href="/collections">
-              <Button variant="outline" className="border-2 border-elegant-brown text-elegant-brown px-12 py-4 text-lg font-bold hover:bg-elegant-brown hover:text-white transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 transform">
+              <Button variant="outline" className="glass-morphism border-2 border-elegant-brown text-elegant-brown px-12 py-4 text-lg font-bold hover:bg-elegant-brown hover:text-white transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 transform">
                 Browse Collections
               </Button>
             </Link>
