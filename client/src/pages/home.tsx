@@ -172,13 +172,13 @@ export default function Home() {
               { step: 5, title: "Lustrous Polishing", icon: "fas fa-gem" },
               { step: 6, title: "Curated Piece", icon: "fas fa-truck" }
             ].map((process) => (
-              <Card key={process.step} className="bg-white border-silver/30 hover-lift transition-all text-center shadow-xl">
+              <Card key={process.step} className="backdrop-blur-lg bg-glass-white border-glow-gold/30 hover-lift transition-all text-center shadow-2xl transform hover:-translate-y-1">
                 <CardContent className="p-8">
-                  <div className="w-16 h-16 bg-elegant-brown rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                  <div className="w-16 h-16 bg-gradient-to-br from-elegant-brown to-glow-gold rounded-full flex items-center justify-center mx-auto mb-4 shadow-xl">
                     <span className="text-white font-bold text-xl">{process.step}</span>
                   </div>
-                  <div className="w-12 h-12 bg-gradient-to-r from-platinum to-silver rounded-full flex items-center justify-center mx-auto mb-4 shadow-md">
-                    <i className={`${process.icon} text-foreground text-lg`}></i>
+                  <div className="w-12 h-12 bg-gradient-to-r from-champagne to-glow-gold rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                    <i className={`${process.icon} text-elegant-brown text-lg`}></i>
                   </div>
                   <h3 className="text-lg font-playfair font-bold text-elegant-brown">{process.title}</h3>
                 </CardContent>
@@ -188,7 +188,7 @@ export default function Home() {
 
           <div className="text-center mt-12">
             <Link href="/process">
-              <Button className="bg-elegant-brown text-white px-12 py-4 text-lg font-bold hover:bg-primary transition-colors shadow-lg">
+              <Button className="bg-gradient-to-r from-elegant-brown to-glow-gold text-white px-12 py-4 text-lg font-bold hover:scale-105 transition-all duration-300 shadow-xl">
                 View Complete Process
               </Button>
             </Link>
