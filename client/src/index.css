@@ -6,29 +6,30 @@
 @tailwind utilities;
 
 :root {
-  --background: hsl(240, 10%, 3.9%);
-  --foreground: hsl(0, 0%, 98%);
-  --muted: hsl(240, 3.7%, 15.9%);
-  --muted-foreground: hsl(240, 5%, 64.9%);
-  --popover: hsl(240, 10%, 3.9%);
-  --popover-foreground: hsl(0, 0%, 98%);
-  --card: hsl(240, 10%, 3.9%);
-  --card-foreground: hsl(0, 0%, 98%);
-  --border: hsl(240, 3.7%, 15.9%);
-  --input: hsl(240, 3.7%, 15.9%);
-  --primary: hsl(47, 90%, 65%);
+  --background: hsl(0, 0%, 18%); /* Charcoal Gray #2E2E2E */
+  --foreground: hsl(0, 0%, 100%); /* White #FFFFFF */
+  --muted: hsl(0, 0%, 25%);
+  --muted-foreground: hsl(0, 0%, 70%);
+  --popover: hsl(0, 0%, 18%);
+  --popover-foreground: hsl(0, 0%, 100%);
+  --card: hsl(0, 0%, 18%);
+  --card-foreground: hsl(0, 0%, 100%);
+  --border: hsl(0, 0%, 35%);
+  --input: hsl(0, 0%, 25%);
+  --primary: hsl(45, 100%, 51%); /* Gold #C9B037 */
   --primary-foreground: hsl(0, 0%, 0%);
-  --secondary: hsl(240, 3.7%, 15.9%);
-  --secondary-foreground: hsl(0, 0%, 98%);
-  --accent: hsl(240, 3.7%, 15.9%);
-  --accent-foreground: hsl(0, 0%, 98%);
-  --destructive: hsl(0, 62.8%, 30.6%);
-  --destructive-foreground: hsl(0, 0%, 98%);
-  --ring: hsl(240, 4.9%, 83.9%);
+  --secondary: hsl(0, 0%, 96%); /* Light Gray #F5F5F5 */
+  --secondary-foreground: hsl(0, 0%, 18%);
+  --accent: hsl(45, 80%, 55%); /* Gold Accent #D4AF37 */
+  --accent-foreground: hsl(0, 0%, 0%);
+  --destructive: hsl(0, 84.2%, 60.2%);
+  --destructive-foreground: hsl(0, 0%, 100%);
+  --ring: hsl(45, 100%, 51%);
   --radius: 0.5rem;
-  --luxury-gold: hsl(47, 90%, 65%);
-  --warm-brown: hsl(25, 40%, 20%);
-  --deep-black: hsl(0, 0%, 5%);
+  --luxury-gold: hsl(45, 100%, 51%); /* #C9B037 */
+  --luxury-gold-accent: hsl(45, 80%, 55%); /* #D4AF37 */
+  --charcoal-gray: hsl(0, 0%, 18%); /* #2E2E2E */
+  --ivory-white: hsl(0, 0%, 96%); /* #F5F5F5 */
 }
 
 .dark {
@@ -61,8 +62,8 @@
 
   body {
     @apply font-inter antialiased;
-    background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 50%, #000000 100%);
-    color: hsl(0, 0%, 98%);
+    background: #2E2E2E; /* Charcoal Gray */
+    color: #FFFFFF; /* White */
     min-height: 100vh;
   }
   

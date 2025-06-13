@@ -5,7 +5,7 @@ import designingImage from "@assets/image_1749473635504.png";
 import carpentryImage from "@assets/WhatsApp Image 2025-06-09 at 13.13.31_21d3a583_1749473653273.jpg";
 import foamingImage from "@assets/WhatsApp Image 2025-06-09 at 13.07.01_2a278a20_1749473665532.jpg";
 import upholsteryImage from "@assets/WhatsApp Image 2025-06-09 at 12.00.39_8ba48a52_1749473681038.jpg";
-import polishingImage from "@assets/WhatsApp Image 2025-06-09 at 11.14.28_73c55b0f_1749473700903.jpg";
+import polishingImage from "@assets/WhatsApp Image 2025-06-09 at 11.55.15_1041ad24_1749793175676.jpg";
 import deliveryImage from "@assets/IMG-20250606-WA0034_1749474302060.jpg";
 
 export default function Process() {
@@ -52,7 +52,7 @@ export default function Process() {
     },
     {
       id: 6,
-      title: "White-Glove Delivery & Installation",
+      title: "Curated Piece Delivery & Installation",
       description: "Our professionally trained delivery specialists ensure your furniture arrives in pristine condition through careful handling and transportation. We provide comprehensive installation services, positioning each piece perfectly within your space while conducting thorough quality inspections.",
       image: deliveryImage,
       alt: "Professional furniture delivery and installation service",

@@ -116,7 +116,7 @@ export default function Home() {
                   <p className="text-lg text-gray-300 mb-6 leading-relaxed">
                     Founded by visionary entrepreneurs Amar Chauhan and Diksha Shringi, Blackhorse Furnitures represents 
                     the perfect synthesis of traditional Indian woodworking heritage and contemporary design innovation. 
-                    With over 5 years of specialized experience in the Indian furniture industry, our founders have 
+                    With over 15 years of specialized experience in the Indian furniture industry, our founders have 
                     established a reputation for creating exceptional pieces that transcend ordinary expectations.
                   </p>
                   <p className="text-lg text-gray-300 mb-8 leading-relaxed">
@@ -161,7 +161,7 @@ export default function Home() {
               { step: 3, title: "Premium Foaming", icon: "fas fa-cube" },
               { step: 4, title: "Expert Upholstery", icon: "fas fa-cut" },
               { step: 5, title: "Lustrous Polishing", icon: "fas fa-gem" },
-              { step: 6, title: "White-Glove Delivery", icon: "fas fa-truck" }
+              { step: 6, title: "Curated Piece", icon: "fas fa-truck" }
             ].map((process) => (
               <Card key={process.step} className="bg-gray-800/50 border-gray-700 hover-lift transition-all text-center">
                 <CardContent className="p-8">
