@@ -51,7 +51,7 @@ export default function Story() {
                       <div>
                         <h3 className="text-2xl font-playfair font-bold text-glow-gold mb-3">Diksha Shringi - Co-Founder & Design Consultant</h3>
                         <p className="text-soft-brown leading-relaxed mb-4">
-                          Bringing over 5 years of specialized experience in Indian furniture design and interior consultation, 
+                          Bringing over 15 years of specialized experience in Indian furniture design and interior consultation, 
                           Diksha Shringi serves as the creative backbone of our organization. Her profound understanding of 
                           spatial dynamics, color theory, and ergonomic principles enables her to create furniture solutions 
                           that are both aesthetically magnificent and functionally superior.

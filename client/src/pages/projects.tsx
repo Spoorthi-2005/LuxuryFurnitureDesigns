@@ -158,13 +158,13 @@ export default function Projects() {
                       <img 
                         src={project.image} 
                         alt={project.title} 
-                        className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110 image-3d image-glossy"
+                        className="w-full h-64 object-cover transition-all duration-700 group-hover:scale-110 group-hover:rotate-2 image-luxury image-glossy-enhanced"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-glow-gold/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                      <div className="absolute top-4 right-4 bg-glow-gold text-white px-3 py-1 rounded-full text-sm font-bold shadow-lg">
+                      <div className="absolute inset-0 bg-gradient-to-t from-glow-gold/30 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+                      <div className="absolute top-4 right-4 bg-gradient-to-r from-glow-gold to-elegant-brown text-white px-4 py-2 rounded-full text-sm font-bold shadow-xl transform group-hover:scale-110 transition-transform duration-300">
                         {project.category}
                       </div>
-                      <div className="absolute inset-0 bg-gradient-to-br from-champagne/10 to-transparent"></div>
+                      <div className="absolute inset-0 bg-gradient-to-br from-champagne/20 to-transparent group-hover:rotate-1 transition-transform duration-700"></div>
                     </div>
                     <div className="p-6">
                       <h3 className="text-xl font-playfair font-bold text-elegant-brown mb-3">{project.title}</h3>

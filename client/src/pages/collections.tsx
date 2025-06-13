@@ -79,14 +79,15 @@ export default function Collections() {
           <div className="container mx-auto px-4">
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {collections.map((collection) => (
-                <Card key={collection.id} className="bg-card border-champagne/40 overflow-hidden hover:shadow-2xl transition-all duration-500 hover-lift group">
+                <Card key={collection.id} className="premium-card hover-3d overflow-hidden transition-all duration-500 group shadow-xl luxury-shine">
                   <div className="relative overflow-hidden">
                     <img 
                       src={collection.image} 
                       alt={collection.alt} 
-                      className="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110"
+                      className="w-full h-80 object-cover transition-all duration-700 group-hover:scale-110 group-hover:rotate-1 image-luxury image-glossy-enhanced"
                     />
-                    <div className="absolute inset-0 bg-transparent-brown opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-glow-gold/30 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+                    <div className="absolute inset-0 bg-gradient-to-br from-champagne/20 to-transparent group-hover:rotate-2 transition-transform duration-700"></div>
                   </div>
                   <CardContent className="p-8">
                     <h3 className="text-2xl font-playfair font-bold text-elegant-brown mb-4">{collection.title}</h3>
