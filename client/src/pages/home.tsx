@@ -36,7 +36,7 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen bg-pure-white text-foreground">
+    <div className="min-h-screen bg-warm-beige text-foreground">
       <Header />
       
       {/* Hero Section */}
@@ -51,7 +51,7 @@ export default function Home() {
         </div>
         
         <div className="relative z-10 container mx-auto px-4 text-center">
-          <h1 className="text-6xl md:text-7xl font-playfair font-bold mb-6 text-gradient-gold animate-fade-in-up">
+          <h1 className="text-6xl md:text-7xl font-playfair font-bold mb-6 text-gradient-brown animate-fade-in-up">
             Blackhorse Furnitures
           </h1>
           <p className="text-2xl md:text-3xl text-muted-foreground mb-8 max-w-4xl mx-auto leading-relaxed">
@@ -60,12 +60,12 @@ export default function Home() {
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Link href="/collections">
-              <Button className="bg-luxury-gold text-foreground px-12 py-6 text-lg font-bold hover:bg-warm-gold transition-all duration-300 hover:scale-105 shadow-lg">
+              <Button className="bg-elegant-brown text-white px-12 py-6 text-lg font-bold hover:bg-primary transition-all duration-300 hover:scale-105 shadow-lg">
                 Explore Collections <i className="fas fa-arrow-right ml-2"></i>
               </Button>
             </Link>
-            <Link href="/our-story">
-              <Button variant="outline" className="border-2 border-luxury-gold text-luxury-gold px-12 py-6 text-lg font-bold hover:bg-luxury-gold hover:text-foreground transition-all duration-300 shadow-lg">
+            <Link href="/story">
+              <Button variant="outline" className="border-2 border-elegant-brown text-elegant-brown px-12 py-6 text-lg font-bold hover:bg-elegant-brown hover:text-white transition-all duration-300 shadow-lg">
                 Our Story <i className="fas fa-book-open ml-2"></i>
               </Button>
             </Link>
@@ -77,7 +77,7 @@ export default function Home() {
       <section className="py-20 bg-light-gray/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-5xl font-playfair font-bold mb-6 text-luxury-gold">Excellence in Every Detail</h2>
+            <h2 className="text-5xl font-playfair font-bold mb-6 text-elegant-brown">Excellence in Every Detail</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Discover our comprehensive range of premium furniture solutions, each crafted with meticulous attention 
               to detail and an unwavering commitment to quality that defines luxury living.
@@ -88,13 +88,13 @@ export default function Home() {
             {featuredServices.map((service, index) => (
               <Card key={index} className="bg-white border-silver/30 hover-lift transition-all duration-500 group shadow-xl">
                 <CardContent className="p-8 text-center">
-                  <div className="w-20 h-20 bg-gradient-to-r from-luxury-gold to-warm-gold rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                    <i className={`${service.icon} text-foreground text-2xl`}></i>
+                  <div className="w-20 h-20 bg-gradient-to-r from-elegant-brown to-primary rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                    <i className={`${service.icon} text-white text-2xl`}></i>
                   </div>
-                  <h3 className="text-xl font-playfair font-bold text-luxury-gold mb-4">{service.title}</h3>
+                  <h3 className="text-xl font-playfair font-bold text-elegant-brown mb-4">{service.title}</h3>
                   <p className="text-muted-foreground mb-6 leading-relaxed">{service.description}</p>
                   <Link href={service.link}>
-                    <Button variant="ghost" className="text-luxury-gold border border-luxury-gold hover:bg-luxury-gold hover:text-foreground transition-all duration-300 shadow-md">
+                    <Button variant="ghost" className="text-elegant-brown border border-elegant-brown hover:bg-elegant-brown hover:text-white transition-all duration-300 shadow-md">
                       Learn More
                     </Button>
                   </Link>
@@ -112,7 +112,7 @@ export default function Home() {
             <CardContent className="p-0">
               <div className="grid lg:grid-cols-2 gap-0 items-center">
                 <div className="p-12">
-                  <h2 className="text-4xl font-playfair font-bold text-luxury-gold mb-6">Crafting Legacy Since Inception</h2>
+                  <h2 className="text-4xl font-playfair font-bold text-elegant-brown mb-6">Crafting Legacy Since Inception</h2>
                   <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
                     Founded by visionary entrepreneurs Amar Chauhan and Diksha Shringi, Blackhorse Furnitures represents 
                     the perfect synthesis of traditional Indian woodworking heritage and contemporary design innovation. 
