@@ -103,7 +103,7 @@ export default function Craftsmanship() {
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto">
-              <div className="relative bg-black rounded-2xl overflow-hidden shadow-2xl">
+              <div className="relative bg-luxury-pearl rounded-2xl overflow-hidden shadow-2xl">
                 <video 
                   ref={videoRef}
                   className="w-full h-auto" 
@@ -119,24 +119,24 @@ export default function Craftsmanship() {
                 
                 {!isPlaying && (
                   <div 
-                    className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 cursor-pointer video-overlay"
+                    className="absolute inset-0 flex items-center justify-center bg-elegant-brown/70 cursor-pointer video-overlay"
                     onClick={handlePlayVideo}
                   >
                     <Button
                       size="lg"
-                      className="w-24 h-24 bg-luxury-gold rounded-full hover:scale-110 transition-transform p-0 shadow-2xl"
+                      className="w-24 h-24 bg-elegant-brown rounded-full hover:scale-110 transition-transform p-0 shadow-2xl"
                     >
-                      <i className="fas fa-play text-black text-3xl ml-1"></i>
+                      <i className="fas fa-play text-white text-3xl ml-1"></i>
                     </Button>
                   </div>
                 )}
               </div>
 
               <div className="text-center mt-8">
-                <h3 className="text-2xl font-playfair font-bold text-luxury-gold mb-4">
+                <h3 className="text-2xl font-playfair font-bold text-elegant-brown mb-4">
                   Experience Our Artisanal Excellence
                 </h3>
-                <p className="text-lg text-gray-300 max-w-3xl mx-auto">
+                <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
                   This exclusive behind-the-scenes footage showcases our master craftsmen at work, 
                   demonstrating the precision, skill, and passion that goes into every piece we create.
                 </p>
@@ -146,24 +146,24 @@ export default function Craftsmanship() {
         </section>
 
         {/* Craftsmanship Features */}
-        <section className="py-20 bg-gradient-to-r from-luxury-gold/10 to-transparent">
+        <section className="py-20 bg-light-cream/50">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-playfair font-bold mb-6 text-luxury-gold">Excellence in Every Detail</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <h2 className="text-4xl font-playfair font-bold mb-6 text-elegant-brown">Excellence in Every Detail</h2>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
                 Our commitment to craftsmanship excellence is reflected in every aspect of our furniture creation process.
               </p>
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {craftmanshipFeatures.map((feature, index) => (
-                <Card key={index} className="bg-gray-800/30 border-gray-700 hover:shadow-xl transition-all duration-300 hover-lift">
+                <Card key={index} className="bg-white border-silver/30 hover:shadow-xl transition-all duration-300 hover-lift">
                   <CardContent className="p-8 text-center">
-                    <div className="w-20 h-20 bg-gradient-to-r from-luxury-gold to-yellow-400 rounded-full flex items-center justify-center mx-auto mb-6">
-                      <i className={`${feature.icon} text-black text-2xl`}></i>
+                    <div className="w-20 h-20 bg-gradient-to-r from-elegant-brown to-soft-brown rounded-full flex items-center justify-center mx-auto mb-6">
+                      <i className={`${feature.icon} text-white text-2xl`}></i>
                     </div>
-                    <h3 className="text-xl font-playfair font-bold text-luxury-gold mb-4">{feature.title}</h3>
-                    <p className="text-gray-300 leading-relaxed">{feature.description}</p>
+                    <h3 className="text-xl font-playfair font-bold text-elegant-brown mb-4">{feature.title}</h3>
+                    <p className="text-muted-foreground leading-relaxed">{feature.description}</p>
                   </CardContent>
                 </Card>
               ))}
@@ -172,11 +172,11 @@ export default function Craftsmanship() {
         </section>
 
         {/* Crafting Process */}
-        <section className="py-20">
+        <section className="py-20 bg-luxury-pearl/30">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-playfair font-bold mb-6 text-luxury-gold">The Art of Creation</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <h2 className="text-4xl font-playfair font-bold mb-6 text-elegant-brown">The Art of Creation</h2>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
                 Every piece undergoes a meticulous transformation process that ensures exceptional quality and enduring beauty.
               </p>
             </div>
@@ -185,12 +185,12 @@ export default function Craftsmanship() {
               <div className="space-y-8">
                 {craftingStages.map((stage, index) => (
                   <div key={index} className="flex items-center space-x-6 group">
-                    <div className="w-16 h-16 bg-luxury-gold rounded-full flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
-                      <span className="text-black font-bold text-xl">{index + 1}</span>
+                    <div className="w-16 h-16 bg-elegant-brown rounded-full flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                      <span className="text-white font-bold text-xl">{index + 1}</span>
                     </div>
                     <div className="flex-1">
-                      <h3 className="text-2xl font-playfair font-bold text-luxury-gold mb-2">{stage.title}</h3>
-                      <p className="text-gray-300 text-lg">{stage.description}</p>
+                      <h3 className="text-2xl font-playfair font-bold text-elegant-brown mb-2">{stage.title}</h3>
+                      <p className="text-muted-foreground text-lg">{stage.description}</p>
                     </div>
                   </div>
                 ))}
