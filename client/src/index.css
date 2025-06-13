@@ -6,30 +6,32 @@
 @tailwind utilities;
 
 :root {
-  --background: hsl(0, 0%, 18%); /* Charcoal Gray #2E2E2E */
-  --foreground: hsl(0, 0%, 100%); /* White #FFFFFF */
-  --muted: hsl(0, 0%, 25%);
-  --muted-foreground: hsl(0, 0%, 70%);
-  --popover: hsl(0, 0%, 18%);
-  --popover-foreground: hsl(0, 0%, 100%);
-  --card: hsl(0, 0%, 18%);
-  --card-foreground: hsl(0, 0%, 100%);
-  --border: hsl(0, 0%, 35%);
-  --input: hsl(0, 0%, 25%);
-  --primary: hsl(45, 100%, 51%); /* Gold #C9B037 */
-  --primary-foreground: hsl(0, 0%, 0%);
-  --secondary: hsl(0, 0%, 96%); /* Light Gray #F5F5F5 */
-  --secondary-foreground: hsl(0, 0%, 18%);
-  --accent: hsl(45, 80%, 55%); /* Gold Accent #D4AF37 */
-  --accent-foreground: hsl(0, 0%, 0%);
+  --background: hsl(54, 30%, 95%); /* Beige/Sand #F5F5DC */
+  --foreground: hsl(25, 25%, 20%); /* Dark Brown for text */
+  --muted: hsl(30, 20%, 85%); /* Light beige for muted elements */
+  --muted-foreground: hsl(25, 15%, 40%); /* Medium brown for muted text */
+  --popover: hsl(54, 30%, 95%);
+  --popover-foreground: hsl(25, 25%, 20%);
+  --card: hsl(54, 30%, 97%); /* Slightly lighter beige for cards */
+  --card-foreground: hsl(25, 25%, 20%);
+  --border: hsl(30, 20%, 80%); /* Soft beige border */
+  --input: hsl(54, 25%, 92%); /* Input background */
+  --primary: hsl(15, 50%, 55%); /* Terracotta #D2996B */
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(80, 25%, 70%); /* Sage Green #9CAF88 */
+  --secondary-foreground: hsl(25, 25%, 20%);
+  --accent: hsl(15, 60%, 65%); /* Warm Terracotta #E2725B */
+  --accent-foreground: hsl(0, 0%, 100%);
   --destructive: hsl(0, 84.2%, 60.2%);
   --destructive-foreground: hsl(0, 0%, 100%);
-  --ring: hsl(45, 100%, 51%);
+  --ring: hsl(15, 50%, 55%);
   --radius: 0.5rem;
-  --luxury-gold: hsl(45, 100%, 51%); /* #C9B037 */
-  --luxury-gold-accent: hsl(45, 80%, 55%); /* #D4AF37 */
-  --charcoal-gray: hsl(0, 0%, 18%); /* #2E2E2E */
-  --ivory-white: hsl(0, 0%, 96%); /* #F5F5F5 */
+  --luxury-terracotta: hsl(15, 50%, 55%); /* #D2996B */
+  --warm-terracotta: hsl(15, 60%, 65%); /* #E2725B */
+  --sage-green: hsl(80, 25%, 70%); /* #9CAF88 */
+  --olive-green: hsl(75, 20%, 65%); /* #B6C4A2 */
+  --sand-beige: hsl(54, 30%, 95%); /* #F5F5DC */
+  --warm-beige: hsl(30, 25%, 88%); /* #E3D5C0 */
 }
 
 .dark {
@@ -62,8 +64,8 @@
 
   body {
     @apply font-inter antialiased;
-    background: #2E2E2E; /* Charcoal Gray */
-    color: #FFFFFF; /* White */
+    background: #F5F5DC; /* Sand/Beige */
+    color: #4A3728; /* Dark Brown */
     min-height: 100vh;
   }
   
@@ -81,32 +83,56 @@
   font-family: 'Inter', sans-serif;
 }
 
-.luxury-gold {
-  color: hsl(47, 100%, 59%);
+.luxury-terracotta {
+  color: hsl(15, 50%, 55%);
 }
 
-.bg-luxury-gold {
-  background-color: hsl(47, 100%, 59%);
+.bg-luxury-terracotta {
+  background-color: hsl(15, 50%, 55%);
 }
 
-.text-luxury-gold {
-  color: hsl(47, 100%, 59%);
+.text-luxury-terracotta {
+  color: hsl(15, 50%, 55%);
 }
 
-.bg-warm-brown {
-  background-color: hsl(20, 50%, 30%);
+.bg-warm-terracotta {
+  background-color: hsl(15, 60%, 65%);
 }
 
-.text-warm-brown {
-  color: hsl(20, 50%, 30%);
+.text-warm-terracotta {
+  color: hsl(15, 60%, 65%);
 }
 
-.bg-deep-black {
-  background-color: hsl(0, 0%, 10%);
+.bg-sage-green {
+  background-color: hsl(80, 25%, 70%);
 }
 
-.text-deep-black {
-  color: hsl(0, 0%, 10%);
+.text-sage-green {
+  color: hsl(80, 25%, 70%);
+}
+
+.bg-olive-green {
+  background-color: hsl(75, 20%, 65%);
+}
+
+.text-olive-green {
+  color: hsl(75, 20%, 65%);
+}
+
+.bg-sand-beige {
+  background-color: hsl(54, 30%, 95%);
+}
+
+.text-sand-beige {
+  color: hsl(54, 30%, 95%);
+}
+
+.bg-warm-beige {
+  background-color: hsl(30, 25%, 88%);
+}
+
+.text-warm-beige {
+  color: hsl(30, 25%, 88%);
 }
 
 /* Smooth transitions */
@@ -180,22 +206,22 @@ video {
 
 /* Button enhancements */
 .btn-luxury {
-  background: linear-gradient(135deg, var(--luxury-gold) 0%, #ffd700 100%);
-  color: black;
+  background: linear-gradient(135deg, var(--luxury-terracotta) 0%, var(--warm-terracotta) 100%);
+  color: white;
   font-weight: 600;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+  box-shadow: 0 4px 15px rgba(210, 153, 107, 0.3);
 }
 
 .btn-luxury:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.5);
-  background: linear-gradient(135deg, #ffd700 0%, var(--luxury-gold) 100%);
+  box-shadow: 0 8px 25px rgba(210, 153, 107, 0.5);
+  background: linear-gradient(135deg, var(--warm-terracotta) 0%, var(--luxury-terracotta) 100%);
 }
 
 /* Text effects */
-.text-gradient-gold {
-  background: linear-gradient(135deg, var(--luxury-gold) 0%, #ffd700 50%, #ffed4e 100%);
+.text-gradient-terracotta {
+  background: linear-gradient(135deg, var(--luxury-terracotta) 0%, var(--warm-terracotta) 50%, #E2725B 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -207,16 +233,16 @@ video {
 }
 
 ::-webkit-scrollbar-track {
-  background: #1a1a1a;
+  background: var(--warm-beige);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--luxury-gold);
+  background: var(--luxury-terracotta);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #ffd700;
+  background: var(--warm-terracotta);
 }
 
 /* Form styling */

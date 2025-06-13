@@ -23,6 +23,7 @@ export default function Header() {
     { label: "Collections", path: "/collections" },
     { label: "Process", path: "/process" },
     { label: "Craftsmanship", path: "/craftsmanship" },
+    { label: "Projects", path: "/projects" },
     { label: "Contact", path: "/contact" },
   ];
 

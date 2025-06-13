@@ -10,6 +10,7 @@ import Collections from "@/pages/collections";
 import Process from "@/pages/process";
 import Craftsmanship from "@/pages/craftsmanship";
 import Contact from "@/pages/contact";
+import Projects from "@/pages/projects";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -26,6 +27,7 @@ function Router() {
       <Route path="/collections" component={Collections} />
       <Route path="/process" component={Process} />
       <Route path="/craftsmanship" component={Craftsmanship} />
+      <Route path="/projects" component={Projects} />
       <Route path="/contact" component={Contact} />
       <Route component={NotFound} />
     </Switch>
