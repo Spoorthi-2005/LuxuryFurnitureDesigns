@@ -6,17 +6,17 @@ import foundersImage from "@assets/WhatsApp Image 2025-06-02 at 18.04.55_ae1d9bc
 
 export default function Story() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white">
+    <div className="min-h-screen text-foreground">
       <Header />
       <div className="pt-20">
         {/* Hero Section */}
-        <section className="py-20 bg-gradient-to-r from-luxury-gold/20 to-transparent">
+        <section className="py-20 bg-section">
           <div className="container mx-auto px-4">
             <div className="text-center max-w-4xl mx-auto">
-              <h1 className="text-6xl font-playfair font-bold mb-6 bg-gradient-to-r from-luxury-gold to-yellow-300 bg-clip-text text-transparent">
+              <h1 className="text-6xl font-playfair font-bold mb-6 text-gradient-brown">
                 Our Extraordinary Journey
               </h1>
-              <p className="text-2xl text-gray-300 leading-relaxed">
+              <p className="text-2xl text-soft-brown leading-relaxed">
                 Discover the passionate story behind Blackhorse Furnitures - where traditional Indian craftsmanship 
                 meets contemporary design excellence, creating timeless pieces that transform living spaces into works of art.
               </p>
@@ -27,36 +27,36 @@ export default function Story() {
         {/* Founders Section */}
         <section className="py-20">
           <div className="container mx-auto px-4">
-            <Card className="bg-gray-800/30 border-gray-700 overflow-hidden">
+            <Card className="bg-card border-champagne/40 overflow-hidden shadow-xl">
               <CardContent className="p-0">
                 <div className="grid lg:grid-cols-2 gap-0 items-center">
                   <div className="p-12">
-                    <h2 className="text-4xl font-playfair font-bold text-luxury-gold mb-8">Meet Our Visionary Founders</h2>
+                    <h2 className="text-4xl font-playfair font-bold text-elegant-brown mb-8">Meet Our Visionary Founders</h2>
                     
                     <div className="space-y-8">
                       <div>
-                        <h3 className="text-2xl font-playfair font-bold text-luxury-gold mb-3">Amar Chauhan - Founder & Creative Director</h3>
-                        <p className="text-gray-300 leading-relaxed mb-4">
+                        <h3 className="text-2xl font-playfair font-bold text-glow-gold mb-3">Amar Chauhan - Founder & Creative Director</h3>
+                        <p className="text-soft-brown leading-relaxed mb-4">
                           With an unwavering passion for excellence and an innate understanding of luxury furniture design, 
                           Amar Chauhan established Blackhorse Furnitures with a revolutionary vision to redefine the Indian 
                           furniture landscape. His entrepreneurial journey spans over two decades, during which he has 
                           consistently pushed the boundaries of traditional craftsmanship while embracing contemporary aesthetics.
                         </p>
-                        <p className="text-gray-300 leading-relaxed">
+                        <p className="text-soft-brown leading-relaxed">
                           Amar's expertise lies in identifying premium materials, understanding client aspirations, and 
                           translating abstract concepts into tangible masterpieces that stand the test of time.
                         </p>
                       </div>
                       
                       <div>
-                        <h3 className="text-2xl font-playfair font-bold text-luxury-gold mb-3">Diksha Shringi - Co-Founder & Design Consultant</h3>
-                        <p className="text-gray-300 leading-relaxed mb-4">
+                        <h3 className="text-2xl font-playfair font-bold text-glow-gold mb-3">Diksha Shringi - Co-Founder & Design Consultant</h3>
+                        <p className="text-soft-brown leading-relaxed mb-4">
                           Bringing over 5 years of specialized experience in Indian furniture design and interior consultation, 
                           Diksha Shringi serves as the creative backbone of our organization. Her profound understanding of 
                           spatial dynamics, color theory, and ergonomic principles enables her to create furniture solutions 
                           that are both aesthetically magnificent and functionally superior.
                         </p>
-                        <p className="text-gray-300 leading-relaxed">
+                        <p className="text-soft-brown leading-relaxed">
                           Diksha's meticulous attention to detail and innovative approach to problem-solving has resulted in 
                           countless successful projects that seamlessly blend traditional Indian craftsmanship with modern lifestyle requirements.
                         </p>
@@ -70,7 +70,7 @@ export default function Story() {
                       alt="Amar Chauhan and Diksha Shringi - Founders of Blackhorse Furnitures" 
                       className="w-full h-full object-cover min-h-[600px]"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+                    <div className="absolute inset-0 bg-transparent-brown"></div>
                   </div>
                 </div>
               </CardContent>

@@ -26,18 +26,18 @@
   --destructive-foreground: hsl(0, 0%, 100%);
   --ring: hsl(25, 30%, 40%);
   --radius: 0.75rem;
-  --warm-cream: #F8F6F3; /* Soft beige */
-  --light-cream: #F5F1EA; /* Light beige */
-  --luxury-pearl: #F2EDE4; /* Pearl beige */
-  --champagne: #F0EBE2; /* Champagne beige */
+  --warm-cream: #FFF9F1; /* Warm ivory */
+  --light-cream: #FFF5E6; /* Light ivory */
+  --luxury-pearl: #FFEFD6; /* Pearl gold */
+  --champagne: #FFE8C5; /* Rich champagne */
   --pure-white: #FFFFFF; /* Pure white */
-  --elegant-brown: #8B7355; /* Elegant brown */
-  --soft-brown: #A68B73; /* Soft brown */
-  --glass-white: rgba(248, 246, 243, 0.90); /* Glass effect */
-  --glow-gold: #D4B896; /* Muted gold */
-  --transparent-brown: rgba(139, 115, 85, 0.10); /* Transparent overlay */
-  --section-bg: rgba(245, 241, 234, 0.60); /* Section background */
-  --card-bg: rgba(255, 255, 255, 0.85); /* Card background */
+  --elegant-brown: #B8860B; /* Elegant gold-brown */
+  --soft-brown: #CD853F; /* Soft gold-brown */
+  --glass-white: rgba(255, 249, 241, 0.90); /* Glass effect */
+  --glow-gold: #DAA520; /* Rich gold */
+  --transparent-brown: rgba(184, 134, 11, 0.15); /* Transparent overlay */
+  --section-bg: rgba(255, 245, 230, 0.70); /* Section background */
+  --card-bg: rgba(255, 255, 255, 0.90); /* Card background */
 }
 
 .dark {
@@ -70,9 +70,9 @@
 
   body {
     @apply font-inter antialiased;
-    background: linear-gradient(135deg, #F8F6F3 0%, #F5F1EA 25%, #F2EDE4 50%, #F0EBE2 75%, #EDE8DF 100%);
+    background: linear-gradient(135deg, #FFF9F1 0%, #FFF5E6 25%, #FFEFD6 50%, #FFE8C5 75%, #FFE1B3 100%);
     background-attachment: fixed;
-    color: #6B5B47;
+    color: #8B6914;
     min-height: 100vh;
   }
   
@@ -172,7 +172,7 @@
 
 /* Custom utility classes */
 .text-gradient-brown {
-  background: linear-gradient(135deg, hsl(25, 45%, 45%), hsl(45, 60%, 80%));
+  background: linear-gradient(135deg, #B8860B, #DAA520, #FFD700);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
