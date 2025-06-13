@@ -6,37 +6,35 @@
 @tailwind utilities;
 
 :root {
-  --background: linear-gradient(135deg, #C5A880 0%, #7A6240 100%); /* Matte Gold Gradient */
-  --foreground: hsl(30, 15%, 25%); /* Deep Brown Text */
-  --muted: rgba(197, 168, 128, 0.15); /* Light Matte Gold */
-  --muted-foreground: hsl(30, 20%, 40%); /* Medium Brown */
-  --popover: rgba(197, 168, 128, 0.95);
-  --popover-foreground: hsl(30, 15%, 25%);
-  --card: rgba(197, 168, 128, 0.20); /* Subtle Gold Card */
-  --card-foreground: hsl(30, 15%, 25%);
-  --border: rgba(122, 98, 64, 0.30); /* Matte Gold Border */
-  --input: rgba(197, 168, 128, 0.25); /* Gold Input Background */
-  --primary: #7A6240; /* Dark Matte Gold Primary */
-  --primary-foreground: #FFFFFF;
-  --secondary: rgba(197, 168, 128, 0.20); /* Light Matte Gold */
-  --secondary-foreground: hsl(30, 15%, 25%);
-  --accent: #C5A880; /* Light Matte Gold Accent */
-  --accent-foreground: hsl(30, 15%, 25%);
+  --background: hsl(0, 0%, 98%); /* Clean White */
+  --foreground: hsl(0, 0%, 13%); /* Deep Black Text */
+  --muted: hsl(0, 0%, 92%); /* Light Grey */
+  --muted-foreground: hsl(0, 0%, 42%); /* Medium Grey */
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(0, 0%, 13%);
+  --card: hsl(0, 0%, 100%); /* Pure White Card */
+  --card-foreground: hsl(0, 0%, 13%);
+  --border: hsl(0, 0%, 88%); /* Light Grey Border */
+  --input: hsl(0, 0%, 96%); /* Very Light Grey Input */
+  --primary: hsl(0, 0%, 13%); /* Black Primary */
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(0, 0%, 96%); /* Light Grey */
+  --secondary-foreground: hsl(0, 0%, 13%);
+  --accent: hsl(0, 0%, 20%); /* Dark Grey Accent */
+  --accent-foreground: hsl(0, 0%, 100%);
   --destructive: hsl(0, 84.2%, 60.2%);
   --destructive-foreground: hsl(0, 0%, 100%);
-  --ring: #7A6240;
+  --ring: hsl(0, 0%, 13%);
   --radius: 0.75rem;
-  --matte-gold-light: #C5A880; /* Light Matte Gold */
-  --matte-gold-dark: #7A6240; /* Dark Matte Gold */
-  --luxury-gold: #B8A075; /* Medium Gold */
-  --champagne: rgba(197, 168, 128, 0.30); /* Champagne overlay */
-  --elegant-brown: #7A6240; /* Primary brand color */
-  --soft-brown: #A08660; /* Softer brown variant */
-  --glass-gold: rgba(197, 168, 128, 0.15); /* Glass effect */
-  --glow-gold: #C5A880; /* Glowing gold */
-  --transparent-brown: rgba(122, 98, 64, 0.20); /* Transparent overlay */
-  --section-bg: rgba(197, 168, 128, 0.08); /* Subtle section background */
-  --card-bg: rgba(255, 255, 255, 0.10); /* Card background with gold tint */
+  --elegant-brown: hsl(0, 0%, 13%); /* Black for luxury */
+  --soft-brown: hsl(0, 0%, 42%); /* Medium grey */
+  --glass-white: rgba(255, 255, 255, 0.85); /* Glass effect */
+  --glow-gold: hsl(0, 0%, 20%); /* Dark grey */
+  --transparent-brown: rgba(0, 0, 0, 0.05); /* Subtle black overlay */
+  --section-bg: hsl(0, 0%, 97%); /* Very light grey section */
+  --card-bg: hsl(0, 0%, 100%); /* Pure white card */
+  --champagne: hsl(0, 0%, 95%); /* Light grey overlay */
+  --luxury-gold: hsl(0, 0%, 25%); /* Charcoal */
 }
 
 .dark {
@@ -171,42 +169,42 @@
 
 /* Custom utility classes */
 .text-gradient-brown {
-  background: linear-gradient(135deg, #495057, #212529, #343a40);
+  background: linear-gradient(135deg, hsl(0, 0%, 13%), hsl(0, 0%, 25%), hsl(0, 0%, 42%));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-/* Grey/Black/White Gradient Backgrounds */
+/* Elegant Monochrome Gradient Backgrounds */
 .bg-elegant-gradient {
   background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 25%, #e9ecef 50%, #dee2e6 75%, #ced4da 100%);
 }
 
 .bg-dark-elegant {
-  background-color: #212529;
+  background-color: hsl(0, 0%, 13%);
 }
 
 .bg-medium-grey {
-  background-color: #6c757d;
+  background-color: hsl(0, 0%, 42%);
 }
 
 .bg-light-grey {
-  background-color: #f8f9fa;
+  background-color: hsl(0, 0%, 97%);
 }
 
 .text-dark-elegant {
-  color: #212529;
+  color: hsl(0, 0%, 13%);
 }
 
 .text-medium-grey {
-  color: #6c757d;
+  color: hsl(0, 0%, 42%);
 }
 
 /* Luxury Glass Effect */
 .glass-elegant {
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .hover-lift {
