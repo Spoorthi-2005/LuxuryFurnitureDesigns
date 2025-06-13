@@ -96,6 +96,10 @@ export default function Projects() {
   ];
 
   const categories = ["All", "Bedroom", "Living Room", "Dining", "Wardrobe", "Kitchen", "Bathroom", "Office", "Modern", "Storage"];
+  
+  const filteredProjects = selectedCategory === "All" 
+    ? projects 
+    : projects.filter(project => project.category === selectedCategory);
 
   return (
     <div className="min-h-screen text-foreground">
@@ -105,10 +109,10 @@ export default function Projects() {
         <section className="py-20 bg-section">
           <div className="container mx-auto px-4">
             <div className="text-center max-w-4xl mx-auto">
-              <h1 className="text-6xl font-playfair font-bold mb-6 text-gradient-brown">
+              <h1 className="text-6xl font-playfair font-bold mb-6 animated-gradient">
                 Our Luxury Projects
               </h1>
-              <p className="text-2xl text-soft-brown leading-relaxed">
+              <p className="text-2xl text-soft-brown leading-relaxed floating">
                 Discover our portfolio of exceptional furniture creations that showcase the pinnacle of 
                 craftsmanship, design excellence, and luxury living.
               </p>
@@ -123,8 +127,13 @@ export default function Projects() {
               {categories.map((category) => (
                 <Button
                   key={category}
-                  variant="outline"
-                  className="border-elegant-brown text-elegant-brown hover:bg-elegant-brown hover:text-white transition-all duration-300"
+                  onClick={() => setSelectedCategory(category)}
+                  variant={selectedCategory === category ? "default" : "outline"}
+                  className={`transition-all duration-300 ${
+                    selectedCategory === category
+                      ? 'bg-glow-gold text-white shadow-lg'
+                      : 'border-elegant-brown text-elegant-brown hover:bg-elegant-brown hover:text-white'
+                  }`}
                 >
                   {category}
                 </Button>
@@ -136,8 +145,13 @@ export default function Projects() {
         {/* Projects Grid */}
         <section className="py-20">
           <div className="container mx-auto px-4">
+            <div className="text-center mb-8">
+              <p className="text-lg text-soft-brown">
+                Showing {filteredProjects.length} {selectedCategory === "All" ? "projects" : selectedCategory.toLowerCase() + " projects"}
+              </p>
+            </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {projects.map((project) => (
+              {filteredProjects.map((project) => (
                 <Card key={project.id} className="bg-card border-champagne/40 overflow-hidden hover:shadow-2xl transition-all duration-500 group shadow-xl">
                   <CardContent className="p-0">
                     <div className="relative overflow-hidden">
@@ -196,6 +210,8 @@ export default function Projects() {
           </div>
         </section>
       </div>
+      
+      <FloatingContact />
       <Footer />
     </div>
   );
