@@ -3,6 +3,8 @@ import Header from "@/components/header";
 import Footer from "@/components/footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import AnimatedCounter from "@/components/animated-counter";
+import TestimonialsCarousel from "@/components/testimonials-carousel";
 import heroImage from "@assets/img35_1749474302052.png";
 import founderImage from "@assets/WhatsApp Image 2025-06-02 at 18.04.55_ae1d9bc2_1749473393971.jpg";
 import workshopImage from "@assets/IMG-20250606-WA0034_1749474302060.jpg";
@@ -192,6 +194,158 @@ export default function Home() {
                 View Complete Process
               </Button>
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Animated Statistics */}
+      <section className="py-20 bg-gradient-to-r from-glow-gold/10 to-transparent">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-playfair font-bold mb-6 text-elegant-brown">Our Legacy in Numbers</h2>
+            <p className="text-xl text-soft-brown max-w-3xl mx-auto">
+              Decades of excellence reflected in satisfied customers, completed projects, and recognition in the luxury furniture industry.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <Card className="bg-card border-champagne/40 hover-lift transition-all shadow-xl">
+              <CardContent className="p-8 text-center">
+                <div className="w-20 h-20 bg-glow-gold rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                  <i className="fas fa-users text-white text-2xl"></i>
+                </div>
+                <div className="text-4xl font-playfair font-bold text-elegant-brown mb-2">
+                  <AnimatedCounter end={2500} suffix="+" />
+                </div>
+                <p className="text-soft-brown font-medium">Happy Customers</p>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-card border-champagne/40 hover-lift transition-all shadow-xl">
+              <CardContent className="p-8 text-center">
+                <div className="w-20 h-20 bg-glow-gold rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                  <i className="fas fa-project-diagram text-white text-2xl"></i>
+                </div>
+                <div className="text-4xl font-playfair font-bold text-elegant-brown mb-2">
+                  <AnimatedCounter end={3200} suffix="+" />
+                </div>
+                <p className="text-soft-brown font-medium">Projects Completed</p>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-card border-champagne/40 hover-lift transition-all shadow-xl">
+              <CardContent className="p-8 text-center">
+                <div className="w-20 h-20 bg-glow-gold rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                  <i className="fas fa-calendar text-white text-2xl"></i>
+                </div>
+                <div className="text-4xl font-playfair font-bold text-elegant-brown mb-2">
+                  <AnimatedCounter end={15} suffix="+" />
+                </div>
+                <p className="text-soft-brown font-medium">Years of Excellence</p>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-card border-champagne/40 hover-lift transition-all shadow-xl">
+              <CardContent className="p-8 text-center">
+                <div className="w-20 h-20 bg-glow-gold rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                  <i className="fas fa-award text-white text-2xl"></i>
+                </div>
+                <div className="text-4xl font-playfair font-bold text-elegant-brown mb-2">
+                  <AnimatedCounter end={98} suffix="%" />
+                </div>
+                <p className="text-soft-brown font-medium">Client Satisfaction</p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="py-20 bg-section">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-playfair font-bold mb-6 text-elegant-brown">What Our Clients Say</h2>
+            <p className="text-xl text-soft-brown max-w-3xl mx-auto">
+              Discover why discerning customers choose Blackhorse Furnitures for their most important spaces.
+            </p>
+          </div>
+
+          <div className="max-w-4xl mx-auto">
+            <TestimonialsCarousel />
+          </div>
+        </div>
+      </section>
+
+      {/* Luxury Features Showcase */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-playfair font-bold mb-6 text-elegant-brown">Why Choose Blackhorse</h2>
+            <p className="text-xl text-soft-brown max-w-3xl mx-auto">
+              Experience the difference that sets us apart in the luxury furniture industry.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <Card className="bg-card border-champagne/40 hover-lift transition-all shadow-xl group">
+              <CardContent className="p-8 text-center">
+                <div className="w-24 h-24 bg-gradient-to-br from-glow-gold to-elegant-brown rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-all duration-300 shadow-xl">
+                  <i className="fas fa-gem text-white text-3xl"></i>
+                </div>
+                <h3 className="text-xl font-playfair font-bold text-elegant-brown mb-4">Premium Materials</h3>
+                <p className="text-soft-brown leading-relaxed">Only the finest woods, metals, and fabrics sourced from trusted suppliers worldwide.</p>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-card border-champagne/40 hover-lift transition-all shadow-xl group">
+              <CardContent className="p-8 text-center">
+                <div className="w-24 h-24 bg-gradient-to-br from-glow-gold to-elegant-brown rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-all duration-300 shadow-xl">
+                  <i className="fas fa-tools text-white text-3xl"></i>
+                </div>
+                <h3 className="text-xl font-playfair font-bold text-elegant-brown mb-4">Master Craftsmen</h3>
+                <p className="text-soft-brown leading-relaxed">Skilled artisans with decades of experience creating furniture masterpieces.</p>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-card border-champagne/40 hover-lift transition-all shadow-xl group">
+              <CardContent className="p-8 text-center">
+                <div className="w-24 h-24 bg-gradient-to-br from-glow-gold to-elegant-brown rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-all duration-300 shadow-xl">
+                  <i className="fas fa-palette text-white text-3xl"></i>
+                </div>
+                <h3 className="text-xl font-playfair font-bold text-elegant-brown mb-4">Custom Design</h3>
+                <p className="text-soft-brown leading-relaxed">Bespoke solutions tailored to your unique vision and space requirements.</p>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-card border-champagne/40 hover-lift transition-all shadow-xl group">
+              <CardContent className="p-8 text-center">
+                <div className="w-24 h-24 bg-gradient-to-br from-glow-gold to-elegant-brown rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-all duration-300 shadow-xl">
+                  <i className="fas fa-shield-alt text-white text-3xl"></i>
+                </div>
+                <h3 className="text-xl font-playfair font-bold text-elegant-brown mb-4">Lifetime Warranty</h3>
+                <p className="text-soft-brown leading-relaxed">Comprehensive warranty coverage ensuring your investment is protected.</p>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-card border-champagne/40 hover-lift transition-all shadow-xl group">
+              <CardContent className="p-8 text-center">
+                <div className="w-24 h-24 bg-gradient-to-br from-glow-gold to-elegant-brown rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-all duration-300 shadow-xl">
+                  <i className="fas fa-shipping-fast text-white text-3xl"></i>
+                </div>
+                <h3 className="text-xl font-playfair font-bold text-elegant-brown mb-4">White Glove Delivery</h3>
+                <p className="text-soft-brown leading-relaxed">Professional installation and setup service with care and precision.</p>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-card border-champagne/40 hover-lift transition-all shadow-xl group">
+              <CardContent className="p-8 text-center">
+                <div className="w-24 h-24 bg-gradient-to-br from-glow-gold to-elegant-brown rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-all duration-300 shadow-xl">
+                  <i className="fas fa-headset text-white text-3xl"></i>
+                </div>
+                <h3 className="text-xl font-playfair font-bold text-elegant-brown mb-4">24/7 Support</h3>
+                <p className="text-soft-brown leading-relaxed">Dedicated customer service team available round the clock for assistance.</p>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
