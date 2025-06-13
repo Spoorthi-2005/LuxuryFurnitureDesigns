@@ -138,18 +138,18 @@ export default function Contact() {
               {/* Contact Information */}
               <div className="space-y-8">
                 <div>
-                  <h2 className="text-4xl font-playfair font-bold text-luxury-gold mb-8">Get In Touch</h2>
+                  <h2 className="text-4xl font-playfair font-bold text-elegant-brown mb-8">Get In Touch</h2>
                   
                   {contactInfo.map((info, index) => (
-                    <Card key={index} className={`mb-6 bg-gray-800/30 border-gray-700 hover-lift transition-all ${info.highlight ? 'border-luxury-gold' : ''}`}>
+                    <Card key={index} className={`mb-6 bg-white border-silver/30 hover-lift transition-all ${info.highlight ? 'border-elegant-brown' : ''}`}>
                       <CardContent className="p-8">
                         <div className="flex items-start space-x-6">
-                          <div className="w-16 h-16 bg-luxury-gold rounded-full flex items-center justify-center flex-shrink-0">
-                            <i className={`${info.icon} text-black text-xl`}></i>
+                          <div className="w-16 h-16 bg-elegant-brown rounded-full flex items-center justify-center flex-shrink-0">
+                            <i className={`${info.icon} text-white text-xl`}></i>
                           </div>
                           <div>
-                            <h3 className="text-2xl font-playfair font-bold text-luxury-gold mb-3">{info.title}</h3>
-                            <p className="text-gray-300 whitespace-pre-line leading-relaxed">{info.content}</p>
+                            <h3 className="text-2xl font-playfair font-bold text-elegant-brown mb-3">{info.title}</h3>
+                            <p className="text-muted-foreground whitespace-pre-line leading-relaxed">{info.content}</p>
                           </div>
                         </div>
                       </CardContent>
@@ -158,16 +158,16 @@ export default function Contact() {
 
                   <div className="grid md:grid-cols-2 gap-6">
                     {contactDetails.map((detail, index) => (
-                      <Card key={index} className="bg-gray-800/30 border-gray-700 hover-lift transition-all">
+                      <Card key={index} className="bg-white border-silver/30 hover-lift transition-all">
                         <CardContent className="p-6">
                           <div className="flex items-center space-x-4 mb-4">
-                            <i className={`${detail.icon} text-luxury-gold text-xl`}></i>
-                            <span className="font-playfair font-bold text-luxury-gold text-lg">{detail.title}</span>
+                            <i className={`${detail.icon} text-elegant-brown text-xl`}></i>
+                            <span className="font-playfair font-bold text-elegant-brown text-lg">{detail.title}</span>
                           </div>
                           {detail.items.map((item, itemIndex) => (
                             <div key={itemIndex} className="mb-2">
-                              <p className="text-sm text-gray-400">{item.label}</p>
-                              <p className="text-gray-300 font-medium">{item.value}</p>
+                              <p className="text-sm text-muted-foreground">{item.label}</p>
+                              <p className="text-foreground font-medium">{item.value}</p>
                             </div>
                           ))}
                         </CardContent>
@@ -176,11 +176,11 @@ export default function Contact() {
                   </div>
 
                   {/* Business Hours */}
-                  <Card className="bg-luxury-gold text-black">
+                  <Card className="bg-elegant-brown text-white">
                     <CardContent className="p-8">
                       <h3 className="text-2xl font-playfair font-bold mb-6">Consultation Hours</h3>
                       {businessHours.map((schedule, index) => (
-                        <div key={index} className="flex justify-between items-center py-2 border-b border-black/20 last:border-b-0">
+                        <div key={index} className="flex justify-between items-center py-2 border-b border-white/20 last:border-b-0">
                           <span className="font-semibold">{schedule.day}</span>
                           <span>{schedule.hours}</span>
                         </div>
@@ -188,13 +188,13 @@ export default function Contact() {
                     </CardContent>
                   </Card>
 
-                  <Card className="bg-gray-800/50 border-luxury-gold">
+                  <Card className="bg-white border-elegant-brown">
                     <CardContent className="p-6">
-                      <h4 className="text-xl font-playfair font-bold text-luxury-gold mb-4">Visit Our Online Gallery</h4>
-                      <p className="text-gray-300 mb-4">Explore our exclusive collection of printed canvas wall art</p>
+                      <h4 className="text-xl font-playfair font-bold text-elegant-brown mb-4">Visit Our Online Gallery</h4>
+                      <p className="text-muted-foreground mb-4">Explore our exclusive collection of printed canvas wall art</p>
                       <a 
                         href="http://www.opulencelivingwalls.com" 
-                        className="text-luxury-gold hover:text-yellow-300 transition-colors font-semibold" 
+                        className="text-elegant-brown hover:text-primary transition-colors font-semibold" 
                         target="_blank" 
                         rel="noopener noreferrer"
                       >
@@ -206,13 +206,13 @@ export default function Contact() {
               </div>
 
               {/* Contact Form */}
-              <Card className="bg-gray-800/30 border-gray-700 hover-lift transition-all">
+              <Card className="bg-white border-silver/30 hover-lift transition-all shadow-xl">
                 <CardContent className="p-10">
-                  <h3 className="text-3xl font-playfair font-bold text-luxury-gold mb-8">Schedule Your Consultation</h3>
+                  <h3 className="text-3xl font-playfair font-bold text-elegant-brown mb-8">Schedule Your Consultation</h3>
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="grid md:grid-cols-2 gap-6">
                       <div>
-                        <Label htmlFor="firstName" className="text-sm font-medium text-gray-300 mb-2 block">First Name *</Label>
+                        <Label htmlFor="firstName" className="text-sm font-medium text-foreground mb-2 block">First Name *</Label>
                         <Input
                           id="firstName"
                           name="firstName"
@@ -220,12 +220,12 @@ export default function Contact() {
                           value={formData.firstName}
                           onChange={handleInputChange}
                           placeholder="Your first name"
-                          className="bg-gray-700 border-gray-600 text-white placeholder-gray-400"
+                          className="bg-warm-beige border-elegant-brown/30 text-foreground placeholder-muted-foreground"
                           required
                         />
                       </div>
                       <div>
-                        <Label htmlFor="lastName" className="text-sm font-medium text-gray-300 mb-2 block">Last Name *</Label>
+                        <Label htmlFor="lastName" className="text-sm font-medium text-foreground mb-2 block">Last Name *</Label>
                         <Input
                           id="lastName"
                           name="lastName"
@@ -233,13 +233,13 @@ export default function Contact() {
                           value={formData.lastName}
                           onChange={handleInputChange}
                           placeholder="Your last name"
-                          className="bg-gray-700 border-gray-600 text-white placeholder-gray-400"
+                          className="bg-warm-beige border-elegant-brown/30 text-foreground placeholder-muted-foreground"
                           required
                         />
                       </div>
                     </div>
                     <div>
-                      <Label htmlFor="email" className="text-sm font-medium text-gray-300 mb-2 block">Email Address *</Label>
+                      <Label htmlFor="email" className="text-sm font-medium text-foreground mb-2 block">Email Address *</Label>
                       <Input
                         id="email"
                         name="email"
@@ -247,12 +247,12 @@ export default function Contact() {
                         value={formData.email}
                         onChange={handleInputChange}
                         placeholder="your.email@example.com"
-                        className="bg-gray-700 border-gray-600 text-white placeholder-gray-400"
+                        className="bg-warm-beige border-elegant-brown/30 text-foreground placeholder-muted-foreground"
                         required
                       />
                     </div>
                     <div>
-                      <Label htmlFor="phone" className="text-sm font-medium text-gray-300 mb-2 block">Phone Number</Label>
+                      <Label htmlFor="phone" className="text-sm font-medium text-foreground mb-2 block">Phone Number</Label>
                       <Input
                         id="phone"
                         name="phone"
@@ -260,11 +260,11 @@ export default function Contact() {
                         value={formData.phone}
                         onChange={handleInputChange}
                         placeholder="+91 98765 43210"
-                        className="bg-gray-700 border-gray-600 text-white placeholder-gray-400"
+                        className="bg-warm-beige border-elegant-brown/30 text-foreground placeholder-muted-foreground"
                       />
                     </div>
                     <div>
-                      <Label htmlFor="projectDetails" className="text-sm font-medium text-gray-300 mb-2 block">Project Details *</Label>
+                      <Label htmlFor="projectDetails" className="text-sm font-medium text-foreground mb-2 block">Project Details *</Label>
                       <Textarea
                         id="projectDetails"
                         name="projectDetails"
@@ -272,14 +272,14 @@ export default function Contact() {
                         value={formData.projectDetails}
                         onChange={handleInputChange}
                         placeholder="Describe your furniture requirements, space dimensions, style preferences, and any specific needs..."
-                        className="bg-gray-700 border-gray-600 text-white placeholder-gray-400"
+                        className="bg-warm-beige border-elegant-brown/30 text-foreground placeholder-muted-foreground"
                         required
                       />
                     </div>
                     <Button 
                       type="submit" 
                       disabled={consultationMutation.isPending}
-                      className="w-full bg-luxury-gold text-black py-4 text-lg font-bold hover:bg-yellow-400 transition-colors disabled:opacity-50"
+                      className="w-full bg-elegant-brown text-white py-4 text-lg font-bold hover:bg-primary transition-colors disabled:opacity-50"
                     >
                       {consultationMutation.isPending ? "Submitting..." : "Send Consultation Request"}
                     </Button>
@@ -290,16 +290,16 @@ export default function Contact() {
 
             {/* Map Section */}
             <div className="mt-20">
-              <h3 className="text-4xl font-playfair font-bold text-luxury-gold mb-8 text-center">Visit Our Showroom</h3>
-              <Card className="bg-gray-800/30 border-gray-700 hover-lift transition-all">
+              <h3 className="text-4xl font-playfair font-bold text-elegant-brown mb-8 text-center">Visit Our Showroom</h3>
+              <Card className="bg-white border-silver/30 hover-lift transition-all shadow-xl">
                 <CardContent className="p-6">
-                  <div className="w-full h-96 bg-gradient-to-br from-gray-700 to-gray-800 rounded-lg flex items-center justify-center">
+                  <div className="w-full h-96 bg-gradient-to-br from-warm-beige to-light-beige rounded-lg flex items-center justify-center">
                     <div className="text-center">
-                      <i className="fas fa-map-marked-alt text-6xl text-luxury-gold mb-6"></i>
-                      <h4 className="text-2xl font-playfair font-bold text-luxury-gold mb-4">Interactive Showroom Location</h4>
-                      <p className="text-gray-300 mb-2">Plot No.B, Ground Floor, Kh No.236, Road No.3</p>
-                      <p className="text-gray-300">Village Ghitorni, New Delhi-110030</p>
-                      <Button className="mt-6 bg-luxury-gold text-black px-8 py-3 font-semibold hover:bg-yellow-400 transition-colors">
+                      <i className="fas fa-map-marked-alt text-6xl text-elegant-brown mb-6"></i>
+                      <h4 className="text-2xl font-playfair font-bold text-elegant-brown mb-4">Interactive Showroom Location</h4>
+                      <p className="text-muted-foreground mb-2">Plot No.B, Ground Floor, Kh No.236, Road No.3</p>
+                      <p className="text-muted-foreground">Village Ghitorni, New Delhi-110030</p>
+                      <Button className="mt-6 bg-elegant-brown text-white px-8 py-3 font-semibold hover:bg-primary transition-colors">
                         Get Directions <i className="fas fa-directions ml-2"></i>
                       </Button>
                     </div>
