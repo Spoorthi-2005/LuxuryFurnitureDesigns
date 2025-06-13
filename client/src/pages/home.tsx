@@ -1,6 +1,7 @@
 import { Link } from "wouter";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
+import FloatingContact from "@/components/floating-contact";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import AnimatedCounter from "@/components/animated-counter";
@@ -410,6 +411,7 @@ export default function Home() {
         </div>
       </section>
 
+      <FloatingContact />
       <Footer />
     </div>
   );

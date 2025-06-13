@@ -1,5 +1,7 @@
+import { useState } from "react";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
+import FloatingContact from "@/components/floating-contact";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
@@ -16,6 +18,8 @@ import modernFurniture from "@assets/image_1749797315618.png";
 import customShelving from "@assets/image_1749797480863.png";
 
 export default function Projects() {
+  const [selectedCategory, setSelectedCategory] = useState("All");
+
   const projects = [
     {
       id: 1,
