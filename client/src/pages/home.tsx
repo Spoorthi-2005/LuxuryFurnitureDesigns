@@ -292,93 +292,93 @@ export default function Home() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card className="premium-card hover-3d transition-all shadow-xl group overflow-hidden luxury-shine">
+            <Card className="premium-card hover-3d transition-all shadow-xl group luxury-shine">
               <CardContent className="p-0">
-                <div className="relative h-48 overflow-hidden">
+                <div className="relative h-64 overflow-hidden">
                   <img 
                     src={heroImage} 
-                    alt="Premium quality materials" 
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 image-3d image-glossy"
+                    alt="Premium quality materials showcase" 
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 image-luxury"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-elegant-brown/80 to-transparent"></div>
-                  <div className="absolute bottom-4 left-4 right-4">
-                    <div className="w-16 h-16 bg-glow-gold rounded-full flex items-center justify-center mb-3 shadow-xl luxury-glow">
-                      <i className="fas fa-gem text-white text-xl"></i>
-                    </div>
-                    <h3 className="text-xl font-playfair font-bold text-white mb-2">Premium Materials</h3>
-                    <p className="text-champagne/90 text-sm">Only the finest woods, metals, and fabrics sourced from trusted suppliers worldwide.</p>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
+                <div className="p-6 text-center">
+                  <div className="w-16 h-16 bg-glow-gold rounded-full flex items-center justify-center mx-auto mb-4 shadow-xl luxury-glow">
+                    <i className="fas fa-gem text-white text-xl"></i>
                   </div>
+                  <h3 className="text-xl font-playfair font-bold text-elegant-brown mb-3">Premium Materials</h3>
+                  <p className="text-soft-brown leading-relaxed">Only the finest woods, metals, and fabrics sourced from trusted suppliers worldwide for exceptional quality and durability.</p>
                 </div>
               </CardContent>
             </Card>
 
-            <Card className="premium-card hover-3d transition-all shadow-xl group overflow-hidden luxury-shine">
+            <Card className="premium-card hover-3d transition-all shadow-xl group luxury-shine">
               <CardContent className="p-0">
-                <div className="relative h-48 overflow-hidden">
+                <div className="relative h-64 overflow-hidden">
                   <img 
                     src={founderImage} 
-                    alt="Master craftsmen at work" 
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 image-3d image-glossy"
+                    alt="Master craftsmen and founders" 
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 image-luxury"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-elegant-brown/80 to-transparent"></div>
-                  <div className="absolute bottom-4 left-4 right-4">
-                    <div className="w-16 h-16 bg-glow-gold rounded-full flex items-center justify-center mb-3 shadow-xl luxury-glow">
-                      <i className="fas fa-tools text-white text-xl"></i>
-                    </div>
-                    <h3 className="text-xl font-playfair font-bold text-white mb-2">Master Craftsmen</h3>
-                    <p className="text-champagne/90 text-sm">Skilled artisans with decades of experience creating furniture masterpieces.</p>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
+                <div className="p-6 text-center">
+                  <div className="w-16 h-16 bg-glow-gold rounded-full flex items-center justify-center mx-auto mb-4 shadow-xl luxury-glow">
+                    <i className="fas fa-tools text-white text-xl"></i>
                   </div>
+                  <h3 className="text-xl font-playfair font-bold text-elegant-brown mb-3">Master Craftsmen</h3>
+                  <p className="text-soft-brown leading-relaxed">Skilled artisans with decades of experience creating furniture masterpieces that combine traditional techniques with modern innovation.</p>
                 </div>
               </CardContent>
             </Card>
 
-            <Card className="premium-card hover-3d transition-all shadow-xl group overflow-hidden luxury-shine">
+            <Card className="premium-card hover-3d transition-all shadow-xl group luxury-shine">
               <CardContent className="p-0">
-                <div className="relative h-48 overflow-hidden">
+                <div className="relative h-64 overflow-hidden">
                   <img 
                     src={workshopImage} 
-                    alt="Custom design consultation" 
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 image-3d image-glossy"
+                    alt="Custom design consultation process" 
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 image-luxury"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-elegant-brown/80 to-transparent"></div>
-                  <div className="absolute bottom-4 left-4 right-4">
-                    <div className="w-16 h-16 bg-glow-gold rounded-full flex items-center justify-center mb-3 shadow-xl luxury-glow">
-                      <i className="fas fa-palette text-white text-xl"></i>
-                    </div>
-                    <h3 className="text-xl font-playfair font-bold text-white mb-2">Custom Design</h3>
-                    <p className="text-champagne/90 text-sm">Bespoke solutions tailored to your unique vision and space requirements.</p>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
+                <div className="p-6 text-center">
+                  <div className="w-16 h-16 bg-glow-gold rounded-full flex items-center justify-center mx-auto mb-4 shadow-xl luxury-glow">
+                    <i className="fas fa-palette text-white text-xl"></i>
                   </div>
+                  <h3 className="text-xl font-playfair font-bold text-elegant-brown mb-3">Custom Design</h3>
+                  <p className="text-soft-brown leading-relaxed">Bespoke solutions tailored to your unique vision and space requirements with personalized design consultations.</p>
                 </div>
               </CardContent>
             </Card>
 
-            <Card className="bg-card border-champagne/40 hover-lift transition-all shadow-xl group">
+            <Card className="premium-card hover-3d transition-all shadow-xl group luxury-shine">
               <CardContent className="p-8 text-center">
-                <div className="w-24 h-24 bg-gradient-to-br from-glow-gold to-elegant-brown rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-all duration-300 shadow-xl">
-                  <i className="fas fa-shield-alt text-white text-3xl"></i>
+                <div className="w-20 h-20 bg-glow-gold rounded-full flex items-center justify-center mx-auto mb-6 shadow-xl luxury-glow">
+                  <i className="fas fa-shield-alt text-white text-2xl"></i>
                 </div>
                 <h3 className="text-xl font-playfair font-bold text-elegant-brown mb-4">Lifetime Warranty</h3>
-                <p className="text-soft-brown leading-relaxed">Comprehensive warranty coverage ensuring your investment is protected.</p>
+                <p className="text-soft-brown leading-relaxed">Comprehensive warranty coverage ensuring your furniture investment is protected for generations with quality guarantees.</p>
               </CardContent>
             </Card>
 
-            <Card className="bg-card border-champagne/40 hover-lift transition-all shadow-xl group">
+            <Card className="premium-card hover-3d transition-all shadow-xl group luxury-shine">
               <CardContent className="p-8 text-center">
-                <div className="w-24 h-24 bg-gradient-to-br from-glow-gold to-elegant-brown rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-all duration-300 shadow-xl">
-                  <i className="fas fa-shipping-fast text-white text-3xl"></i>
+                <div className="w-20 h-20 bg-glow-gold rounded-full flex items-center justify-center mx-auto mb-6 shadow-xl luxury-glow">
+                  <i className="fas fa-shipping-fast text-white text-2xl"></i>
                 </div>
                 <h3 className="text-xl font-playfair font-bold text-elegant-brown mb-4">White Glove Delivery</h3>
-                <p className="text-soft-brown leading-relaxed">Professional installation and setup service with care and precision.</p>
+                <p className="text-soft-brown leading-relaxed">Professional installation and setup service with care, precision, and complete room styling for perfect presentation.</p>
               </CardContent>
             </Card>
 
-            <Card className="bg-card border-champagne/40 hover-lift transition-all shadow-xl group">
+            <Card className="premium-card hover-3d transition-all shadow-xl group luxury-shine">
               <CardContent className="p-8 text-center">
-                <div className="w-24 h-24 bg-gradient-to-br from-glow-gold to-elegant-brown rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-all duration-300 shadow-xl">
-                  <i className="fas fa-headset text-white text-3xl"></i>
+                <div className="w-20 h-20 bg-glow-gold rounded-full flex items-center justify-center mx-auto mb-6 shadow-xl luxury-glow">
+                  <i className="fas fa-headset text-white text-2xl"></i>
                 </div>
                 <h3 className="text-xl font-playfair font-bold text-elegant-brown mb-4">24/7 Support</h3>
-                <p className="text-soft-brown leading-relaxed">Dedicated customer service team available round the clock for assistance.</p>
+                <p className="text-soft-brown leading-relaxed">Dedicated customer service team available round the clock for assistance with all your furniture needs and queries.</p>
               </CardContent>
             </Card>
           </div>
