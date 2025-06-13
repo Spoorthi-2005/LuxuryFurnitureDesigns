@@ -114,17 +114,17 @@ export default function Contact() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white">
+    <div className="min-h-screen bg-warm-beige text-foreground">
       <Header />
       <div className="pt-20">
         {/* Hero Section */}
-        <section className="py-20 bg-gradient-to-r from-luxury-gold/20 to-transparent">
+        <section className="py-20 bg-gradient-to-r from-elegant-brown/10 to-transparent">
           <div className="container mx-auto px-4">
             <div className="text-center max-w-4xl mx-auto">
-              <h1 className="text-6xl font-playfair font-bold mb-6 bg-gradient-to-r from-luxury-gold to-yellow-300 bg-clip-text text-transparent">
+              <h1 className="text-6xl font-playfair font-bold mb-6 text-gradient-brown">
                 Connect With Excellence
               </h1>
-              <p className="text-2xl text-gray-300 leading-relaxed">
+              <p className="text-2xl text-muted-foreground leading-relaxed">
                 Transform your living spaces with our exceptional furniture solutions. Our expert consultants are ready to 
                 discuss your vision and create bespoke pieces that reflect your unique style and sophistication.
               </p>

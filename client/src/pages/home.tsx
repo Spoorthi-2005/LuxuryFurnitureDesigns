@@ -123,8 +123,8 @@ export default function Home() {
                     Every piece we create tells a story of passion, precision, and unwavering commitment to excellence, 
                     ensuring that our furniture becomes a cherished part of your home for generations to come.
                   </p>
-                  <Link href="/our-story">
-                    <Button className="bg-luxury-gold text-foreground px-8 py-4 text-lg font-bold hover:bg-warm-gold transition-colors shadow-lg">
+                  <Link href="/story">
+                    <Button className="bg-elegant-brown text-white px-8 py-4 text-lg font-bold hover:bg-primary transition-colors shadow-lg">
                       Discover Our Journey
                     </Button>
                   </Link>
@@ -147,7 +147,7 @@ export default function Home() {
       <section className="py-20 bg-light-gray/20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-playfair font-bold mb-6 text-luxury-gold">Our Meticulous 6-Step Process</h2>
+            <h2 className="text-4xl font-playfair font-bold mb-6 text-elegant-brown">Our Meticulous 6-Step Process</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               From conceptual design to final delivery, every piece undergoes our time-honored process that ensures 
               exceptional quality and customer satisfaction at every stage.
@@ -165,13 +165,13 @@ export default function Home() {
             ].map((process) => (
               <Card key={process.step} className="bg-white border-silver/30 hover-lift transition-all text-center shadow-xl">
                 <CardContent className="p-8">
-                  <div className="w-16 h-16 bg-luxury-gold rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
-                    <span className="text-foreground font-bold text-xl">{process.step}</span>
+                  <div className="w-16 h-16 bg-elegant-brown rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                    <span className="text-white font-bold text-xl">{process.step}</span>
                   </div>
                   <div className="w-12 h-12 bg-gradient-to-r from-platinum to-silver rounded-full flex items-center justify-center mx-auto mb-4 shadow-md">
                     <i className={`${process.icon} text-foreground text-lg`}></i>
                   </div>
-                  <h3 className="text-lg font-playfair font-bold text-luxury-gold">{process.title}</h3>
+                  <h3 className="text-lg font-playfair font-bold text-elegant-brown">{process.title}</h3>
                 </CardContent>
               </Card>
             ))}
@@ -179,7 +179,7 @@ export default function Home() {
 
           <div className="text-center mt-12">
             <Link href="/process">
-              <Button className="bg-luxury-gold text-foreground px-12 py-4 text-lg font-bold hover:bg-warm-gold transition-colors shadow-lg">
+              <Button className="bg-elegant-brown text-white px-12 py-4 text-lg font-bold hover:bg-primary transition-colors shadow-lg">
                 View Complete Process
               </Button>
             </Link>
@@ -199,10 +199,10 @@ export default function Home() {
                     alt="Blackhorse Furnitures workshop with skilled craftsmen" 
                     className="w-full h-full object-cover min-h-[500px]"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-luxury-gold/10 to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-elegant-brown/10 to-transparent"></div>
                 </div>
                 <div className="p-12 lg:order-1">
-                  <h2 className="text-4xl font-playfair font-bold text-luxury-gold mb-6">Craftsmanship in Action</h2>
+                  <h2 className="text-4xl font-playfair font-bold text-elegant-brown mb-6">Craftsmanship in Action</h2>
                   <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
                     Step into our workshop where master craftsmen bring designs to life through skilled hands and 
                     time-honored techniques. Our state-of-the-art facility combines traditional woodworking methods 
@@ -213,7 +213,7 @@ export default function Home() {
                     video documentation that showcases the artistry and dedication behind every piece.
                   </p>
                   <Link href="/craftsmanship">
-                    <Button className="bg-luxury-gold text-foreground px-8 py-4 text-lg font-bold hover:bg-warm-gold transition-colors shadow-lg">
+                    <Button className="bg-elegant-brown text-white px-8 py-4 text-lg font-bold hover:bg-primary transition-colors shadow-lg">
                       Watch Craftsmanship Video
                     </Button>
                   </Link>
@@ -227,19 +227,19 @@ export default function Home() {
       {/* Call to Action */}
       <section className="py-20 bg-light-gray/30">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-5xl font-playfair font-bold mb-6 text-luxury-gold">Ready to Transform Your Space?</h2>
+          <h2 className="text-5xl font-playfair font-bold mb-6 text-elegant-brown">Ready to Transform Your Space?</h2>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
             Let our expert designers create bespoke furniture solutions that perfectly complement your lifestyle 
             and aesthetic vision. Experience the Blackhorse difference today.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Link href="/contact">
-              <Button className="bg-luxury-gold text-foreground px-12 py-4 text-lg font-bold hover:bg-warm-gold transition-colors shadow-lg">
+              <Button className="bg-elegant-brown text-white px-12 py-4 text-lg font-bold hover:bg-primary transition-colors shadow-lg">
                 Schedule Consultation
               </Button>
             </Link>
             <Link href="/collections">
-              <Button variant="outline" className="border-2 border-luxury-gold text-luxury-gold px-12 py-4 text-lg font-bold hover:bg-luxury-gold hover:text-foreground transition-colors shadow-lg">
+              <Button variant="outline" className="border-2 border-elegant-brown text-elegant-brown px-12 py-4 text-lg font-bold hover:bg-elegant-brown hover:text-white transition-colors shadow-lg">
                 Browse Collections
               </Button>
             </Link>
