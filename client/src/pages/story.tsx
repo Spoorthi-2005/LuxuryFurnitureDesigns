@@ -79,25 +79,25 @@ export default function Story() {
         </section>
 
         {/* Company Journey */}
-        <section className="py-20 bg-gradient-to-r from-luxury-gold/10 to-transparent">
+        <section className="py-20 bg-section">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-16">
-                <h2 className="text-4xl font-playfair font-bold mb-6 text-luxury-gold">Our Evolution of Excellence</h2>
-                <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                <h2 className="text-4xl font-playfair font-bold mb-6 text-elegant-brown">Our Evolution of Excellence</h2>
+                <p className="text-xl text-soft-brown max-w-3xl mx-auto">
                   From humble beginnings to becoming a distinguished name in luxury furniture, our journey reflects 
                   unwavering commitment to quality, innovation, and customer satisfaction.
                 </p>
               </div>
 
               <div className="grid md:grid-cols-2 gap-12">
-                <Card className="bg-gray-800/50 border-gray-700 hover-lift transition-all">
+                <Card className="bg-card border-champagne/40 hover-lift transition-all shadow-xl">
                   <CardContent className="p-8">
-                    <div className="w-16 h-16 bg-luxury-gold rounded-full flex items-center justify-center mb-6">
-                      <i className="fas fa-lightbulb text-black text-2xl"></i>
+                    <div className="w-16 h-16 bg-glow-gold rounded-full flex items-center justify-center mb-6">
+                      <i className="fas fa-lightbulb text-white text-2xl"></i>
                     </div>
-                    <h3 className="text-2xl font-playfair font-bold text-luxury-gold mb-4">Founded on Innovation</h3>
-                    <p className="text-gray-300 leading-relaxed">
+                    <h3 className="text-2xl font-playfair font-bold text-elegant-brown mb-4">Founded on Innovation</h3>
+                    <p className="text-soft-brown leading-relaxed">
                       Blackhorse Furnitures emerged from a revolutionary vision to bridge the gap between traditional 
                       Indian woodworking heritage and contemporary design sensibilities. Our founders recognized the 
                       immense potential in combining time-honored craftsmanship techniques with modern aesthetic preferences, 
@@ -106,13 +106,13 @@ export default function Story() {
                   </CardContent>
                 </Card>
 
-                <Card className="bg-gray-800/50 border-gray-700 hover-lift transition-all">
+                <Card className="bg-card border-champagne/40 hover-lift transition-all shadow-xl">
                   <CardContent className="p-8">
-                    <div className="w-16 h-16 bg-luxury-gold rounded-full flex items-center justify-center mb-6">
-                      <i className="fas fa-tools text-black text-2xl"></i>
+                    <div className="w-16 h-16 bg-glow-gold rounded-full flex items-center justify-center mb-6">
+                      <i className="fas fa-tools text-white text-2xl"></i>
                     </div>
-                    <h3 className="text-2xl font-playfair font-bold text-luxury-gold mb-4">Mastering the Craft</h3>
-                    <p className="text-gray-300 leading-relaxed">
+                    <h3 className="text-2xl font-playfair font-bold text-elegant-brown mb-4">Mastering the Craft</h3>
+                    <p className="text-soft-brown leading-relaxed">
                       Through years of dedicated research, experimentation, and collaboration with master craftsmen, 
                       we have developed proprietary techniques that ensure exceptional quality in every piece. Our 
                       commitment to excellence extends from material selection and design conceptualization to 
@@ -121,13 +121,13 @@ export default function Story() {
                   </CardContent>
                 </Card>
 
-                <Card className="bg-gray-800/50 border-gray-700 hover-lift transition-all">
+                <Card className="bg-card border-champagne/40 hover-lift transition-all shadow-xl">
                   <CardContent className="p-8">
-                    <div className="w-16 h-16 bg-luxury-gold rounded-full flex items-center justify-center mb-6">
-                      <i className="fas fa-globe text-black text-2xl"></i>
+                    <div className="w-16 h-16 bg-glow-gold rounded-full flex items-center justify-center mb-6">
+                      <i className="fas fa-globe text-white text-2xl"></i>
                     </div>
-                    <h3 className="text-2xl font-playfair font-bold text-luxury-gold mb-4">Expanding Horizons</h3>
-                    <p className="text-gray-300 leading-relaxed">
+                    <h3 className="text-2xl font-playfair font-bold text-elegant-brown mb-4">Expanding Horizons</h3>
+                    <p className="text-soft-brown leading-relaxed">
                       Our success in the Indian market has opened doors to international opportunities, including our 
                       partnership with Frezza Arredementi in Italy. This collaboration has enriched our design 
                       perspective, incorporating European elegance with Indian craftsmanship to create truly unique 
@@ -136,13 +136,13 @@ export default function Story() {
                   </CardContent>
                 </Card>
 
-                <Card className="bg-gray-800/50 border-gray-700 hover-lift transition-all">
+                <Card className="bg-card border-champagne/40 hover-lift transition-all shadow-xl">
                   <CardContent className="p-8">
-                    <div className="w-16 h-16 bg-luxury-gold rounded-full flex items-center justify-center mb-6">
-                      <i className="fas fa-heart text-black text-2xl"></i>
+                    <div className="w-16 h-16 bg-glow-gold rounded-full flex items-center justify-center mb-6">
+                      <i className="fas fa-heart text-white text-2xl"></i>
                     </div>
-                    <h3 className="text-2xl font-playfair font-bold text-luxury-gold mb-4">Customer-Centric Philosophy</h3>
-                    <p className="text-gray-300 leading-relaxed">
+                    <h3 className="text-2xl font-playfair font-bold text-elegant-brown mb-4">Customer-Centric Philosophy</h3>
+                    <p className="text-soft-brown leading-relaxed">
                       Every project we undertake is approached with genuine passion and commitment to exceeding client 
                       expectations. Our personalized consultation process ensures that each piece we create reflects 
                       the client's unique vision while maintaining our signature standards of quality, durability, 
