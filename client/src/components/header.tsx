@@ -29,7 +29,7 @@ export default function Header() {
 
   return (
     <header className={`fixed w-full top-0 z-50 transition-all duration-300 ${
-      isScrolled ? "bg-warm-beige shadow-md" : "bg-warm-beige/95 backdrop-blur-sm"
+      isScrolled ? "bg-warm-cream shadow-lg" : "bg-warm-cream/95 backdrop-blur-sm"
     }`}>
       <nav className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
@@ -66,7 +66,7 @@ export default function Header() {
                 <i className="fas fa-bars text-2xl text-elegant-brown"></i>
               </Button>
             </SheetTrigger>
-            <SheetContent className="bg-warm-beige border-elegant-brown/30">
+            <SheetContent className="bg-warm-cream border-elegant-brown/30">
               <div className="flex flex-col space-y-4 mt-8">
                 {navItems.map((item) => (
                   <Link

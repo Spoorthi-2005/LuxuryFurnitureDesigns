@@ -3,7 +3,7 @@ import Header from "@/components/header";
 import Footer from "@/components/footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import beautyVideo from "@assets/beauty_1749471775976.mp4";
+import craftVideo from "@assets/VID-20250604-WA0001_1749474302061.mp4";
 
 export default function Craftsmanship() {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -81,17 +81,17 @@ export default function Craftsmanship() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white">
+    <div className="min-h-screen bg-warm-cream text-foreground">
       <Header />
       <div className="pt-20">
         {/* Hero Section */}
-        <section className="py-20 bg-gradient-to-r from-luxury-gold/20 to-transparent">
+        <section className="py-20 bg-gradient-to-r from-elegant-brown/10 to-transparent">
           <div className="container mx-auto px-4">
             <div className="text-center max-w-4xl mx-auto">
-              <h1 className="text-6xl font-playfair font-bold mb-6 bg-gradient-to-r from-luxury-gold to-yellow-300 bg-clip-text text-transparent">
+              <h1 className="text-6xl font-playfair font-bold mb-6 text-gradient-brown">
                 Craftsmanship in Action
               </h1>
-              <p className="text-2xl text-gray-300 leading-relaxed">
+              <p className="text-2xl text-muted-foreground leading-relaxed">
                 Witness the extraordinary artistry and meticulous precision of our master craftsmen as they transform 
                 premium materials into exquisite furniture pieces that embody the perfect fusion of traditional techniques and contemporary innovation.
               </p>
@@ -113,7 +113,7 @@ export default function Craftsmanship() {
                   onPause={handleVideoPause}
                   onPlay={() => setIsPlaying(true)}
                 >
-                  <source src={beautyVideo} type="video/mp4" />
+                  <source src={craftVideo} type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
                 
