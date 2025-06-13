@@ -9,6 +9,8 @@ import TestimonialsCarousel from "@/components/testimonials-carousel";
 import heroImage from "@assets/img35_1749474302052.png";
 import founderImage from "@assets/WhatsApp Image 2025-06-02 at 18.04.55_ae1d9bc2_1749473393971.jpg";
 import workshopImage from "@assets/IMG-20250606-WA0034_1749474302060.jpg";
+import luxuryBedroom from "@assets/WhatsApp Image 2025-06-09 at 11.14.28_edf5b472_1749800699879.jpg";
+import craftsmanshipImage from "@assets/IMG-20250604-WA0023_1749793593319.jpg";
 
 export default function Home() {
   const featuredServices = [
@@ -216,7 +218,7 @@ export default function Home() {
                   <i className="fas fa-users text-white text-2xl"></i>
                 </div>
                 <div className="text-4xl font-playfair font-bold text-elegant-brown mb-2">
-                  <AnimatedCounter end={2500} suffix="+" />
+                  <AnimatedCounter end={200} suffix="+" />
                 </div>
                 <p className="text-soft-brown font-medium">Happy Customers</p>
               </CardContent>
@@ -228,7 +230,7 @@ export default function Home() {
                   <i className="fas fa-project-diagram text-white text-2xl"></i>
                 </div>
                 <div className="text-4xl font-playfair font-bold text-elegant-brown mb-2">
-                  <AnimatedCounter end={3200} suffix="+" />
+                  <AnimatedCounter end={700} suffix="+" />
                 </div>
                 <p className="text-soft-brown font-medium">Projects Completed</p>
               </CardContent>
@@ -288,33 +290,63 @@ export default function Home() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card className="bg-card border-champagne/40 hover-lift transition-all shadow-xl group">
-              <CardContent className="p-8 text-center">
-                <div className="w-24 h-24 bg-gradient-to-br from-glow-gold to-elegant-brown rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-all duration-300 shadow-xl">
-                  <i className="fas fa-gem text-white text-3xl"></i>
+            <Card className="bg-card border-champagne/40 hover-lift transition-all shadow-xl group overflow-hidden">
+              <CardContent className="p-0">
+                <div className="relative h-48 overflow-hidden">
+                  <img 
+                    src={heroImage} 
+                    alt="Premium quality materials" 
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-elegant-brown/80 to-transparent"></div>
+                  <div className="absolute bottom-4 left-4 right-4">
+                    <div className="w-16 h-16 bg-glow-gold rounded-full flex items-center justify-center mb-3 shadow-xl">
+                      <i className="fas fa-gem text-white text-xl"></i>
+                    </div>
+                    <h3 className="text-xl font-playfair font-bold text-white mb-2">Premium Materials</h3>
+                    <p className="text-champagne/90 text-sm">Only the finest woods, metals, and fabrics sourced from trusted suppliers worldwide.</p>
+                  </div>
                 </div>
-                <h3 className="text-xl font-playfair font-bold text-elegant-brown mb-4">Premium Materials</h3>
-                <p className="text-soft-brown leading-relaxed">Only the finest woods, metals, and fabrics sourced from trusted suppliers worldwide.</p>
               </CardContent>
             </Card>
 
-            <Card className="bg-card border-champagne/40 hover-lift transition-all shadow-xl group">
-              <CardContent className="p-8 text-center">
-                <div className="w-24 h-24 bg-gradient-to-br from-glow-gold to-elegant-brown rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-all duration-300 shadow-xl">
-                  <i className="fas fa-tools text-white text-3xl"></i>
+            <Card className="bg-card border-champagne/40 hover-lift transition-all shadow-xl group overflow-hidden">
+              <CardContent className="p-0">
+                <div className="relative h-48 overflow-hidden">
+                  <img 
+                    src={founderImage} 
+                    alt="Master craftsmen at work" 
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-elegant-brown/80 to-transparent"></div>
+                  <div className="absolute bottom-4 left-4 right-4">
+                    <div className="w-16 h-16 bg-glow-gold rounded-full flex items-center justify-center mb-3 shadow-xl">
+                      <i className="fas fa-tools text-white text-xl"></i>
+                    </div>
+                    <h3 className="text-xl font-playfair font-bold text-white mb-2">Master Craftsmen</h3>
+                    <p className="text-champagne/90 text-sm">Skilled artisans with decades of experience creating furniture masterpieces.</p>
+                  </div>
                 </div>
-                <h3 className="text-xl font-playfair font-bold text-elegant-brown mb-4">Master Craftsmen</h3>
-                <p className="text-soft-brown leading-relaxed">Skilled artisans with decades of experience creating furniture masterpieces.</p>
               </CardContent>
             </Card>
 
-            <Card className="bg-card border-champagne/40 hover-lift transition-all shadow-xl group">
-              <CardContent className="p-8 text-center">
-                <div className="w-24 h-24 bg-gradient-to-br from-glow-gold to-elegant-brown rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-all duration-300 shadow-xl">
-                  <i className="fas fa-palette text-white text-3xl"></i>
+            <Card className="bg-card border-champagne/40 hover-lift transition-all shadow-xl group overflow-hidden">
+              <CardContent className="p-0">
+                <div className="relative h-48 overflow-hidden">
+                  <img 
+                    src={workshopImage} 
+                    alt="Custom design consultation" 
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-elegant-brown/80 to-transparent"></div>
+                  <div className="absolute bottom-4 left-4 right-4">
+                    <div className="w-16 h-16 bg-glow-gold rounded-full flex items-center justify-center mb-3 shadow-xl">
+                      <i className="fas fa-palette text-white text-xl"></i>
+                    </div>
+                    <h3 className="text-xl font-playfair font-bold text-white mb-2">Custom Design</h3>
+                    <p className="text-champagne/90 text-sm">Bespoke solutions tailored to your unique vision and space requirements.</p>
+                  </div>
                 </div>
-                <h3 className="text-xl font-playfair font-bold text-elegant-brown mb-4">Custom Design</h3>
-                <p className="text-soft-brown leading-relaxed">Bespoke solutions tailored to your unique vision and space requirements.</p>
               </CardContent>
             </Card>
 
@@ -359,7 +391,7 @@ export default function Home() {
               <div className="grid lg:grid-cols-2 gap-0 items-center">
                 <div className="relative lg:order-2">
                   <img 
-                    src={workshopImage} 
+                    src={craftsmanshipImage} 
                     alt="Blackhorse Furnitures workshop with skilled craftsmen" 
                     className="w-full h-full object-cover min-h-[500px]"
                   />
@@ -388,22 +420,71 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Luxury Bedroom Showcase */}
+      <section className="py-20 bg-section">
+        <div className="container mx-auto px-4">
+          <Card className="bg-card border-champagne/40 overflow-hidden shadow-2xl">
+            <CardContent className="p-0">
+              <div className="grid lg:grid-cols-2 gap-0 items-center">
+                <div className="relative">
+                  <img 
+                    src={luxuryBedroom} 
+                    alt="Luxury bedroom furniture delivery and installation" 
+                    className="w-full h-full object-cover min-h-[500px]"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent to-elegant-brown/20"></div>
+                </div>
+                <div className="p-12">
+                  <h2 className="text-4xl font-playfair font-bold text-elegant-brown mb-6">Curated Piece Delivery & Installation</h2>
+                  <p className="text-lg text-soft-brown mb-6 leading-relaxed">
+                    Experience seamless delivery and professional installation of your custom furniture pieces. 
+                    Our specialized team ensures every detail is perfect, from placement to final adjustments, 
+                    creating the luxurious ambiance you've envisioned.
+                  </p>
+                  <div className="space-y-4 mb-8">
+                    <div className="flex items-center space-x-3">
+                      <div className="w-3 h-3 bg-glow-gold rounded-full"></div>
+                      <span className="text-soft-brown">White-glove delivery service</span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <div className="w-3 h-3 bg-glow-gold rounded-full"></div>
+                      <span className="text-soft-brown">Professional assembly and installation</span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <div className="w-3 h-3 bg-glow-gold rounded-full"></div>
+                      <span className="text-soft-brown">Room styling and arrangement</span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <div className="w-3 h-3 bg-glow-gold rounded-full"></div>
+                      <span className="text-soft-brown">Final quality inspection</span>
+                    </div>
+                  </div>
+                  <Button className="bg-elegant-brown text-white px-8 py-4 text-lg font-bold hover:bg-soft-brown transition-all duration-300 shadow-lg">
+                    Schedule Delivery
+                  </Button>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
       {/* Call to Action */}
       <section className="py-20 bg-champagne/30">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-5xl font-playfair font-bold mb-6 text-elegant-brown">Ready to Transform Your Space?</h2>
-          <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+          <h2 className="text-5xl font-playfair font-bold mb-6 text-elegant-brown animated-gradient">Ready to Transform Your Space?</h2>
+          <p className="text-xl text-soft-brown mb-8 max-w-2xl mx-auto floating">
             Let our expert designers create bespoke furniture solutions that perfectly complement your lifestyle 
             and aesthetic vision. Experience the Blackhorse difference today.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Link href="/contact">
-              <Button className="bg-elegant-brown text-white px-12 py-4 text-lg font-bold hover:bg-primary transition-colors shadow-lg">
+              <Button className="bg-glow-gold text-white px-12 py-4 text-lg font-bold hover:bg-elegant-brown transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 transform">
                 Schedule Consultation
               </Button>
             </Link>
             <Link href="/collections">
-              <Button variant="outline" className="border-2 border-elegant-brown text-elegant-brown px-12 py-4 text-lg font-bold hover:bg-elegant-brown hover:text-white transition-colors shadow-lg">
+              <Button variant="outline" className="border-2 border-elegant-brown text-elegant-brown px-12 py-4 text-lg font-bold hover:bg-elegant-brown hover:text-white transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 transform">
                 Browse Collections
               </Button>
             </Link>
