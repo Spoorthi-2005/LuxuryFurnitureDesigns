@@ -46,36 +46,81 @@ export default function Home() {
     <div className="min-h-screen text-foreground">
       <Header />
       
-      {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center">
+      {/* Enhanced Hero Section */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        {/* Animated Background Elements */}
         <div className="absolute inset-0">
+          {/* Primary Background */}
+          <div className="absolute inset-0 bg-gradient-to-br from-luxury-pearl via-warm-cream to-champagne"></div>
+          
+          {/* Decorative Geometric Shapes */}
+          <div className="absolute top-10 left-10 w-32 h-32 bg-glow-gold/20 rounded-full blur-xl animate-pulse"></div>
+          <div className="absolute top-1/3 right-20 w-24 h-24 bg-elegant-brown/20 rounded-full blur-lg floating"></div>
+          <div className="absolute bottom-1/4 left-1/4 w-40 h-40 bg-champagne/30 rounded-full blur-2xl animate-pulse"></div>
+          <div className="absolute bottom-10 right-10 w-28 h-28 bg-glow-gold/15 rounded-full blur-xl floating"></div>
+          
+          {/* Luxury Pattern Overlay */}
+          <div className="absolute inset-0 opacity-5" style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23D4AF37' fill-opacity='0.4'%3E%3Ccircle cx='30' cy='30' r='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+            backgroundSize: '60px 60px'
+          }}></div>
+          
+          {/* Subtle Furniture Image */}
           <img 
             src={heroImage} 
             alt="Luxury furniture showcase" 
-            className="w-full h-full object-cover opacity-15"
+            className="absolute inset-0 w-full h-full object-cover opacity-8 mix-blend-soft-light"
           />
-          <div className="absolute inset-0 bg-section"></div>
+          
+          {/* Gradient Overlays */}
+          <div className="absolute inset-0 bg-gradient-to-t from-white/50 via-transparent to-white/30"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-glow-gold/10 via-transparent to-elegant-brown/10"></div>
+        </div>
+        
+        {/* Floating Decorative Elements */}
+        <div className="absolute top-20 left-1/4 text-glow-gold/30 floating" style={{animationDelay: '1s'}}>
+          <i className="fas fa-chess-knight text-4xl"></i>
+        </div>
+        <div className="absolute top-1/2 right-1/4 text-elegant-brown/20 floating" style={{animationDelay: '2s'}}>
+          <i className="fas fa-crown text-3xl"></i>
+        </div>
+        <div className="absolute bottom-1/3 left-1/6 text-champagne/40 floating" style={{animationDelay: '0.5s'}}>
+          <i className="fas fa-gem text-3xl"></i>
         </div>
         
         <div className="relative z-10 container mx-auto px-4 text-center">
-          <h1 className="text-6xl md:text-7xl font-playfair font-bold mb-6 bg-gradient-to-r from-elegant-brown via-glow-gold to-elegant-brown bg-clip-text text-transparent animate-fade-in-up drop-shadow-lg">
+          {/* Enhanced Title with Shimmer Effect */}
+          <h1 className="text-6xl md:text-7xl font-playfair font-bold mb-6 animated-gradient drop-shadow-2xl transform hover:scale-105 transition-transform duration-500">
             Blackhorse Furnitures
           </h1>
-          <p className="text-2xl md:text-3xl text-elegant-brown mb-8 max-w-4xl mx-auto leading-relaxed backdrop-blur-sm bg-card rounded-2xl p-6 shadow-lg">
-            Where traditional Indian craftsmanship meets contemporary elegance, creating extraordinary furniture pieces 
-            that define luxury living and transform spaces into timeless sanctuaries.
-          </p>
+          
+          {/* Enhanced Description with Luxury Styling */}
+          <div className="max-w-4xl mx-auto mb-8">
+            <div className="backdrop-blur-md bg-white/80 rounded-3xl p-8 shadow-2xl border border-glow-gold/30 luxury-shine">
+              <p className="text-2xl md:text-3xl text-elegant-brown leading-relaxed font-medium">
+                Where traditional Indian craftsmanship meets contemporary elegance, creating extraordinary furniture pieces 
+                that define luxury living and transform spaces into timeless sanctuaries.
+              </p>
+            </div>
+          </div>
+          
+          {/* Enhanced Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Link href="/collections">
-              <Button className="bg-elegant-brown text-white px-12 py-6 text-lg font-bold hover:bg-soft-brown transition-all duration-300 shadow-xl">
+              <Button className="bg-gradient-to-r from-elegant-brown to-glow-gold text-white px-12 py-6 text-lg font-bold hover:from-glow-gold hover:to-elegant-brown transition-all duration-500 shadow-2xl hover:shadow-glow-gold/50 transform hover:scale-105 luxury-glow">
                 Explore Collections <i className="fas fa-arrow-right ml-2"></i>
               </Button>
             </Link>
             <Link href="/story">
-              <Button variant="outline" className="border-2 border-elegant-brown text-elegant-brown px-12 py-6 text-lg font-bold hover:bg-elegant-brown hover:text-white transition-all duration-300 shadow-xl bg-card">
+              <Button variant="outline" className="border-2 border-elegant-brown text-elegant-brown px-12 py-6 text-lg font-bold hover:bg-elegant-brown hover:text-white transition-all duration-500 shadow-2xl bg-white/90 backdrop-blur-sm hover:shadow-elegant-brown/50 transform hover:scale-105">
                 Our Story <i className="fas fa-book-open ml-2"></i>
               </Button>
             </Link>
+          </div>
+          
+          {/* Scroll Indicator */}
+          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-elegant-brown/60 animate-bounce">
+            <i className="fas fa-chevron-down text-2xl"></i>
           </div>
         </div>
       </section>
