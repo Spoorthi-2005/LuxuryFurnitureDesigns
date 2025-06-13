@@ -6,16 +6,16 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 
-// Import luxury hospitality furniture images
-import luxuryLobbyProject from "@assets/IMG-20250613-WA0024_1749812797538.jpg";
-import premiumBarProject from "@assets/IMG-20250613-WA0025_1749812815133.jpg";
-import elegantDiningProject from "@assets/IMG-20250613-WA0026_1749812830979.jpg";
-import hospitalityLoungeProject from "@assets/WhatsApp Image 2025-06-13 at 16.31.07_8b6b59a2_1749812856777.jpg";
-import luxuryDecorProject from "@assets/WhatsApp Image 2025-06-13 at 16.31.07_8b6b59a2_1749812856777.jpg";
-import customBarProject from "@assets/IMG-20250613-WA0023_1749812884813.jpg";
-import restaurantProject from "@assets/IMG-20250613-WA0028_1749812922793.jpg";
-import modernDiningProject from "@assets/WhatsApp Image 2025-06-13 at 16.29.47_a47fa735_1749813023915.jpg";
-import luxuryInteriorProject from "@assets/IMG-20250613-WA0024_1749812797538.jpg";
+// Import unique luxury hospitality furniture images
+import project1Image from "@assets/IMG-20250613-WA0024_1749812797538.jpg";
+import project2Image from "@assets/IMG-20250613-WA0025_1749812815133.jpg";
+import project3Image from "@assets/IMG-20250613-WA0026_1749812830979.jpg";
+import project4Image from "@assets/WhatsApp Image 2025-06-13 at 16.31.07_8b6b59a2_1749812856777.jpg";
+import project5Image from "@assets/IMG-20250613-WA0023_1749812884813.jpg";
+import project6Image from "@assets/IMG-20250613-WA0028_1749812922793.jpg";
+import project7Image from "@assets/WhatsApp Image 2025-06-13 at 16.29.47_a47fa735_1749813023915.jpg";
+import project8Image from "@assets/IMG-20250613-WA0025_1749812815133.jpg";
+import project9Image from "@assets/IMG-20250613-WA0024_1749812797538.jpg";
 
 export default function Projects() {
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -25,7 +25,7 @@ export default function Projects() {
       id: 1,
       title: "Grand Hotel Lobby Design",
       description: "Sophisticated entrance featuring crystal chandeliers, premium marble flooring, elegant console tables, and contemporary seating arrangements creating memorable first impressions for luxury hotels.",
-      image: luxuryLobbyProject,
+      image: project1Image,
       category: "Hospitality",
       features: ["Crystal Chandelier", "Marble Flooring", "Custom Console Tables"]
     },
@@ -33,7 +33,7 @@ export default function Projects() {
       id: 2,
       title: "Premium Bar & Entertainment Space",
       description: "Upscale bar featuring rich wooden cabinetry, marble surfaces, comfortable high-back stools, and integrated lighting systems for sophisticated entertainment venues.",
-      image: premiumBarProject,
+      image: project2Image,
       category: "Bar & Lounge",
       features: ["Wooden Cabinetry", "Marble Countertops", "Integrated Lighting"]
     },
@@ -41,7 +41,7 @@ export default function Projects() {
       id: 3,
       title: "Contemporary Dining Experience",
       description: "Modern dining space with premium upholstered chairs, elegant table settings, and sophisticated ambient lighting creating exceptional dining experiences for restaurants.",
-      image: elegantDiningProject,
+      image: project3Image,
       category: "Restaurant",
       features: ["Premium Upholstery", "Ambient Lighting", "Contemporary Design"]
     },
@@ -49,7 +49,7 @@ export default function Projects() {
       id: 4,
       title: "Hospitality Lounge Collection",
       description: "Elegant lounge furniture featuring high-back cane chairs, round dining tables, premium upholstery, and carefully curated decor for comfortable hospitality environments.",
-      image: hospitalityLoungeProject,
+      image: project4Image,
       category: "Lounge",
       features: ["Cane Furniture", "Premium Upholstery", "Round Tables"]
     },
@@ -57,7 +57,7 @@ export default function Projects() {
       id: 5,
       title: "Luxury Bar Environment",
       description: "Sophisticated bar design with premium leather seating, marble-topped tables, elegant lighting fixtures, and custom cabinetry for exclusive hospitality venues.",
-      image: customBarProject,
+      image: project5Image,
       category: "Bar & Lounge",
       features: ["Leather Seating", "Marble Tables", "Custom Cabinetry"]
     },
@@ -65,7 +65,7 @@ export default function Projects() {
       id: 6,
       title: "Fine Dining Restaurant",
       description: "Comprehensive restaurant design featuring curved ceiling elements, premium wooden fixtures, elegant table arrangements, and sophisticated lighting for upscale dining.",
-      image: restaurantProject,
+      image: project6Image,
       category: "Restaurant",
       features: ["Curved Ceilings", "Wooden Elements", "Premium Lighting"]
     },
@@ -73,7 +73,7 @@ export default function Projects() {
       id: 7,
       title: "Modern Dining Experience",
       description: "Contemporary dining space with elegant chairs, premium table settings, natural lighting, and sophisticated decor creating exceptional guest experiences.",
-      image: modernDiningProject,
+      image: project7Image,
       category: "Restaurant",
       features: ["Contemporary Chairs", "Natural Lighting", "Premium Settings"]
     },
@@ -81,7 +81,7 @@ export default function Projects() {
       id: 8,
       title: "Luxury Interior Design",
       description: "Complete interior transformation featuring marble accents, elegant lighting solutions, premium furniture arrangements, and sophisticated color coordination.",
-      image: luxuryInteriorProject,
+      image: project8Image,
       category: "Hospitality",
       features: ["Marble Accents", "Elegant Lighting", "Premium Arrangements"]
     },
@@ -89,7 +89,7 @@ export default function Projects() {
       id: 9,
       title: "Executive Hospitality Suite",
       description: "High-end hospitality furniture with luxury finishes, contemporary design elements, and premium materials creating memorable experiences for distinguished guests.",
-      image: luxuryDecorProject,
+      image: project9Image,
       category: "Hospitality",
       features: ["Luxury Finishes", "Contemporary Design", "Premium Materials"]
     }
