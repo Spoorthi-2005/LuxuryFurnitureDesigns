@@ -6,32 +6,33 @@
 @tailwind utilities;
 
 :root {
-  --background: hsl(30, 20%, 96%); /* Warm Beige Background */
-  --foreground: hsl(220, 15%, 25%); /* Elegant Dark Gray */
-  --muted: hsl(30, 15%, 92%); /* Light Beige */
-  --muted-foreground: hsl(220, 10%, 50%); /* Medium Gray */
-  --popover: hsl(30, 20%, 96%);
-  --popover-foreground: hsl(220, 15%, 25%);
-  --card: hsl(30, 25%, 94%); /* Off-beige for cards */
-  --card-foreground: hsl(220, 15%, 25%);
-  --border: hsl(30, 12%, 88%); /* Beige border */
-  --input: hsl(30, 15%, 92%); /* Input background */
-  --primary: hsl(220, 15%, 25%); /* Dark Gray instead of gold */
-  --primary-foreground: hsl(30, 20%, 96%);
-  --secondary: hsl(30, 15%, 92%); /* Light Beige */
-  --secondary-foreground: hsl(220, 15%, 25%);
-  --accent: hsl(220, 10%, 35%); /* Darker Gray accent */
-  --accent-foreground: hsl(30, 20%, 96%);
+  --background: hsl(30, 30%, 98%); /* Bright Luxury Cream */
+  --foreground: hsl(25, 20%, 35%); /* Refined Brown */
+  --muted: hsl(30, 25%, 95%); /* Light Luxury Cream */
+  --muted-foreground: hsl(25, 15%, 55%); /* Soft Brown */
+  --popover: hsl(30, 30%, 98%);
+  --popover-foreground: hsl(25, 20%, 35%);
+  --card: hsl(30, 35%, 97%); /* Bright Card Background */
+  --card-foreground: hsl(25, 20%, 35%);
+  --border: hsl(30, 20%, 90%); /* Light Elegant Border */
+  --input: hsl(30, 25%, 95%); /* Bright Input Background */
+  --primary: hsl(25, 30%, 40%); /* Luxury Brown Primary */
+  --primary-foreground: hsl(30, 30%, 98%);
+  --secondary: hsl(30, 25%, 95%); /* Light Luxury */
+  --secondary-foreground: hsl(25, 20%, 35%);
+  --accent: hsl(25, 25%, 50%); /* Warm Accent */
+  --accent-foreground: hsl(30, 30%, 98%);
   --destructive: hsl(0, 84.2%, 60.2%);
   --destructive-foreground: hsl(0, 0%, 100%);
-  --ring: hsl(220, 15%, 25%);
-  --radius: 0.5rem;
-  --warm-beige: hsl(30, 20%, 96%); /* #F5F0E8 */
-  --light-beige: hsl(30, 15%, 92%); /* #EEEBE5 */
-  --platinum: hsl(0, 0%, 85%); /* #D9D9D9 */
-  --silver: hsl(0, 0%, 75%); /* #BFBFBF */
+  --ring: hsl(25, 30%, 40%);
+  --radius: 0.75rem;
+  --warm-cream: hsl(30, 30%, 98%); /* #FDFBF8 */
+  --light-cream: hsl(30, 25%, 95%); /* #F7F3EE */
+  --luxury-pearl: hsl(30, 20%, 90%); /* #E8E2DB */
+  --champagne: hsl(45, 30%, 85%); /* #E0D5C4 */
   --pure-white: hsl(0, 0%, 100%); /* #FFFFFF */
-  --elegant-brown: hsl(25, 25%, 45%); /* #8B6F47 */
+  --elegant-brown: hsl(25, 30%, 40%); /* #9A7B5D */
+  --soft-brown: hsl(25, 20%, 50%); /* #A68B73 */
 }
 
 .dark {
@@ -64,8 +65,8 @@
 
   body {
     @apply font-inter antialiased;
-    background: #F5F0E8; /* Warm Beige from reference image */
-    color: #3A3F47; /* Elegant Dark Gray */
+    background: #FDFBF8; /* Bright Luxury Cream */
+    color: #7A6045; /* Refined Brown */
     min-height: 100vh;
   }
   
@@ -95,12 +96,36 @@
   color: hsl(25, 25%, 45%);
 }
 
-.bg-warm-beige {
-  background-color: hsl(30, 20%, 96%);
+.bg-warm-cream {
+  background-color: hsl(30, 30%, 98%);
 }
 
-.text-warm-beige {
-  color: hsl(30, 20%, 96%);
+.text-warm-cream {
+  color: hsl(30, 30%, 98%);
+}
+
+.bg-light-cream {
+  background-color: hsl(30, 25%, 95%);
+}
+
+.text-light-cream {
+  color: hsl(30, 25%, 95%);
+}
+
+.bg-luxury-pearl {
+  background-color: hsl(30, 20%, 90%);
+}
+
+.text-luxury-pearl {
+  color: hsl(30, 20%, 90%);
+}
+
+.bg-champagne {
+  background-color: hsl(45, 30%, 85%);
+}
+
+.text-champagne {
+  color: hsl(45, 30%, 85%);
 }
 
 .bg-platinum {
@@ -183,14 +208,14 @@
   animation: glow 2s ease-in-out infinite;
 }
 
-/* Enhanced hover effects */
+/* Enhanced luxury hover effects */
 .hover-lift {
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hover-lift:hover {
-  transform: translateY(-12px) scale(1.02);
-  box-shadow: 0 25px 50px rgba(212, 175, 55, 0.3);
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(154, 123, 93, 0.15);
 }
 
 /* Video player enhancements */
@@ -204,19 +229,20 @@ video {
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
 }
 
-/* Button enhancements */
+/* Luxury Button enhancements */
 .btn-luxury {
-  background: linear-gradient(135deg, var(--elegant-brown) 0%, hsl(25, 30%, 50%) 100%);
+  background: linear-gradient(135deg, var(--elegant-brown) 0%, var(--soft-brown) 100%);
   color: #FFFFFF;
   font-weight: 600;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(139, 111, 71, 0.3);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 6px 20px rgba(154, 123, 93, 0.25);
+  border-radius: 0.75rem;
 }
 
 .btn-luxury:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(139, 111, 71, 0.5);
-  background: linear-gradient(135deg, hsl(25, 30%, 50%) 0%, var(--elegant-brown) 100%);
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 12px 35px rgba(154, 123, 93, 0.4);
+  background: linear-gradient(135deg, var(--soft-brown) 0%, var(--elegant-brown) 100%);
 }
 
 /* Text effects */
@@ -245,14 +271,17 @@ video {
   background: hsl(25, 30%, 50%);
 }
 
-/* Form styling */
+/* Luxury Form styling */
 input, textarea, select {
-  background: rgba(255, 255, 255, 0.95) !important;
-  border: 1px solid rgba(210, 210, 210, 0.5) !important;
-  color: #3A3F47 !important;
+  background: rgba(253, 251, 248, 0.98) !important;
+  border: 1px solid rgba(232, 226, 219, 0.6) !important;
+  color: #7A6045 !important;
+  border-radius: 0.75rem !important;
+  transition: all 0.3s ease !important;
 }
 
 input:focus, textarea:focus, select:focus {
   border-color: var(--elegant-brown) !important;
-  box-shadow: 0 0 0 3px rgba(139, 111, 71, 0.1) !important;
+  box-shadow: 0 0 0 4px rgba(154, 123, 93, 0.12) !important;
+  background: rgba(255, 255, 255, 1) !important;
 }

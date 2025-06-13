@@ -36,7 +36,7 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen bg-warm-beige text-foreground">
+    <div className="min-h-screen bg-warm-cream text-foreground">
       <Header />
       
       {/* Hero Section */}
@@ -74,7 +74,7 @@ export default function Home() {
       </section>
 
       {/* Featured Services */}
-      <section className="py-20 bg-light-gray/30">
+      <section className="py-20 bg-light-cream/50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-5xl font-playfair font-bold mb-6 text-elegant-brown">Excellence in Every Detail</h2>
@@ -144,7 +144,7 @@ export default function Home() {
       </section>
 
       {/* Process Preview */}
-      <section className="py-20 bg-light-gray/20">
+      <section className="py-20 bg-luxury-pearl/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-playfair font-bold mb-6 text-elegant-brown">Our Meticulous 6-Step Process</h2>
@@ -225,7 +225,7 @@ export default function Home() {
       </section>
 
       {/* Call to Action */}
-      <section className="py-20 bg-light-gray/30">
+      <section className="py-20 bg-champagne/30">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-5xl font-playfair font-bold mb-6 text-elegant-brown">Ready to Transform Your Space?</h2>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
