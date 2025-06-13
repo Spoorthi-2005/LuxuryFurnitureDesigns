@@ -6,8 +6,8 @@ import { Button } from "@/components/ui/button";
 
 export default function Craftsmanship() {
   const [showVideo, setShowVideo] = useState(false);
-  // Add your YouTube video ID here - replace 'YOUR_YOUTUBE_VIDEO_ID' with the actual ID
-  const youtubeVideoId = "YOUR_YOUTUBE_VIDEO_ID"; 
+  // YouTube video ID extracted from https://youtu.be/3ewXDG1TG8c?si=WxaqlgpeIJKprN8t
+  const youtubeVideoId = "3ewXDG1TG8c"; 
 
   const handleWatchVideo = () => {
     setShowVideo(true);
@@ -100,7 +100,7 @@ export default function Craftsmanship() {
                 <div 
                   className="relative bg-cover bg-center h-96"
                   style={{
-                    backgroundImage: "url('https://images.unsplash.com/photo-1604709177225-055f99402ea3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=675')"
+                    backgroundImage: "url('https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=675')"
                   }}
                 >
                   <div className="absolute inset-0 bg-elegant-brown/70 flex items-center justify-center">

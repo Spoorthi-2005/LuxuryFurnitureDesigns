@@ -26,13 +26,16 @@
   --destructive-foreground: hsl(0, 0%, 100%);
   --ring: hsl(25, 30%, 40%);
   --radius: 0.75rem;
-  --warm-cream: hsl(30, 30%, 98%); /* #FDFBF8 */
-  --light-cream: hsl(30, 25%, 95%); /* #F7F3EE */
-  --luxury-pearl: hsl(30, 20%, 90%); /* #E8E2DB */
-  --champagne: hsl(45, 30%, 85%); /* #E0D5C4 */
+  --warm-cream: hsl(35, 50%, 98%); /* Brighter warm cream */
+  --light-cream: hsl(35, 45%, 96%); /* Lighter cream */
+  --luxury-pearl: hsl(0, 0%, 98%); /* Pure pearl white */
+  --champagne: hsl(45, 40%, 88%); /* Brighter champagne */
   --pure-white: hsl(0, 0%, 100%); /* #FFFFFF */
-  --elegant-brown: hsl(25, 30%, 40%); /* #9A7B5D */
-  --soft-brown: hsl(25, 20%, 50%); /* #A68B73 */
+  --elegant-brown: hsl(25, 45%, 45%); /* Brighter elegant brown */
+  --soft-brown: hsl(25, 35%, 55%); /* Softer bright brown */
+  --glass-white: hsla(0, 0%, 100%, 0.95); /* Transparent glass effect */
+  --glow-gold: hsl(45, 60%, 80%); /* Golden glow */
+  --transparent-brown: hsla(25, 45%, 45%, 0.15); /* Transparent brown overlay */
 }
 
 .dark {
