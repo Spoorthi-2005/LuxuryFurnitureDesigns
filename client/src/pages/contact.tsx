@@ -80,11 +80,6 @@ export default function Contact() {
       icon: "fas fa-building",
       title: "India Corporate Office",
       content: "Opulence Living\n351, Khari Estate, Sultanpur MG road, New Delhi- 110030"
-    },
-    {
-      icon: "fas fa-globe",
-      title: "International Office - Italy",
-      content: "Frezza Arredementi\nViale Europa, 2- 36046 Lusiana, Vicenza- Italy"
     }
   ];
 
@@ -314,15 +309,21 @@ export default function Contact() {
             {/* Map Section */}
             <div className="mt-20">
               <h3 className="text-4xl font-playfair font-bold text-elegant-brown mb-8 text-center">Visit Our Showroom</h3>
-              <Card className="bg-white border-silver/30 hover-lift transition-all shadow-xl">
-                <CardContent className="p-6">
-                  <div className="w-full h-96 bg-gradient-to-br from-warm-beige to-light-beige rounded-lg flex items-center justify-center">
-                    <div className="text-center">
-                      <i className="fas fa-map-marked-alt text-6xl text-elegant-brown mb-6"></i>
+              <Card className="bg-card border-champagne/40 hover-lift transition-all shadow-xl">
+                <CardContent className="p-8">
+                  <div className="w-full h-96 bg-section rounded-lg border border-champagne/30 flex items-center justify-center relative overflow-hidden">
+                    <div className="absolute inset-0 bg-gradient-to-br from-glow-gold/10 to-transparent"></div>
+                    <div className="text-center z-10">
+                      <div className="w-20 h-20 bg-glow-gold rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i className="fas fa-map-marked-alt text-white text-3xl"></i>
+                      </div>
                       <h4 className="text-2xl font-playfair font-bold text-elegant-brown mb-4">Interactive Showroom Location</h4>
-                      <p className="text-muted-foreground mb-2">Plot No.B, Ground Floor, Kh No.236, Road No.3</p>
-                      <p className="text-muted-foreground">Village Ghitorni, New Delhi-110030</p>
-                      <Button className="mt-6 bg-elegant-brown text-white px-8 py-3 font-semibold hover:bg-primary transition-colors">
+                      <p className="text-soft-brown mb-2 font-medium">Plot No.B, Ground Floor, Kh No.236, Road No.3</p>
+                      <p className="text-soft-brown mb-6 font-medium">Village Ghitorni, New Delhi-110030</p>
+                      <Button 
+                        onClick={() => window.open('https://maps.google.com/?q=Plot+No.B,+Ground+Floor,+Kh+No.236,+Road+No.3,+Village+Ghitorni,+New+Delhi-110030', '_blank')}
+                        className="bg-glow-gold text-white px-8 py-3 font-semibold hover:bg-elegant-brown transition-colors shadow-lg"
+                      >
                         Get Directions <i className="fas fa-directions ml-2"></i>
                       </Button>
                     </div>

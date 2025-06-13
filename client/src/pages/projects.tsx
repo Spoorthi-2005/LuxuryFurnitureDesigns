@@ -4,22 +4,23 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 
-// Import luxury furniture images
+// Import unique luxury furniture images
 import bedroomLuxury from "@assets/img5_1749793548297.png";
 import livingRoomSet from "@assets/img13_1749793557706.png";
 import diningTable from "@assets/img20_1749793571212.png";
 import wardrobeDesign from "@assets/IMG-20250604-WA0023_1749793593319.jpg";
 import kitchenStorage from "@assets/IMG-20250604-WA0038_1749793606717.jpg";
-import customShelving from "@assets/IMG-20250604-WA0033_1749474302058.jpg";
-import officeSpace from "@assets/IMG-20250604-WA0037_1749474302059.jpg";
-import modernFurniture from "@assets/IMG-20250606-WA0034_1749474302060.jpg";
+import bathroomDesign from "@assets/image_1749795624306.png";
+import officeSpace from "@assets/image_1749796619978.png";
+import modernFurniture from "@assets/image_1749797315618.png";
+import customShelving from "@assets/image_1749797480863.png";
 
 export default function Projects() {
   const projects = [
     {
       id: 1,
       title: "Luxury Master Bedroom Suite",
-      description: "A complete bedroom transformation featuring custom-designed furniture with crystal chandeliers, premium upholstery, and sophisticated lighting.",
+      description: "A complete bedroom transformation featuring custom-designed furniture with crystal chandeliers, premium upholstery, and sophisticated lighting creating an opulent sleeping sanctuary.",
       image: bedroomLuxury,
       category: "Bedroom",
       features: ["Custom Chandelier", "Premium Fabrics", "Integrated Lighting"]
@@ -27,7 +28,7 @@ export default function Projects() {
     {
       id: 2,
       title: "Modern Living Room Collection",
-      description: "Elegant living room setup with tufted sofas, marble coffee tables, and coordinated color palettes creating a sophisticated atmosphere.",
+      description: "Elegant living room setup with tufted sofas, marble coffee tables, and coordinated color palettes creating a sophisticated atmosphere for entertainment and relaxation.",
       image: livingRoomSet,
       category: "Living Room",
       features: ["Tufted Upholstery", "Marble Surfaces", "Color Coordination"]
@@ -35,7 +36,7 @@ export default function Projects() {
     {
       id: 3,
       title: "Executive Dining Experience",
-      description: "Professional dining space featuring premium dining table with executive chairs and coordinated lighting for corporate environments.",
+      description: "Professional dining space featuring premium dining table with executive chairs and coordinated lighting for corporate environments and formal dining occasions.",
       image: diningTable,
       category: "Dining",
       features: ["Executive Seating", "Premium Materials", "Corporate Design"]
@@ -43,31 +44,31 @@ export default function Projects() {
     {
       id: 4,
       title: "Custom Wardrobe Solutions",
-      description: "Bespoke wardrobe design with integrated lighting, premium finishes, and smart storage solutions for modern living.",
+      description: "Bespoke wardrobe design with integrated lighting, premium finishes, and smart storage solutions maximizing space efficiency while maintaining aesthetic elegance.",
       image: wardrobeDesign,
-      category: "Storage",
+      category: "Wardrobe",
       features: ["Integrated LED", "Smart Storage", "Premium Finish"]
     },
     {
       id: 5,
-      title: "Contemporary Kitchen Storage",
-      description: "Modern kitchen cabinet system with glass panels, internal lighting, and sleek hardware for luxury kitchen environments.",
+      title: "Contemporary Kitchen Design",
+      description: "Modern kitchen cabinet system with glass panels, internal lighting, and sleek hardware creating a culinary workspace that blends functionality with luxury aesthetics.",
       image: kitchenStorage,
       category: "Kitchen",
       features: ["Glass Panels", "Internal Lighting", "Modern Hardware"]
     },
     {
       id: 6,
-      title: "Designer Shelving System",
-      description: "Elegant shelving solution with premium wood finish and strategic lighting to showcase decorative items and books.",
-      image: customShelving,
-      category: "Storage",
-      features: ["Premium Wood", "Display Lighting", "Custom Design"]
+      title: "Luxury Bathroom Retreat",
+      description: "Sophisticated bathroom design featuring premium materials, elegant fixtures, and spa-like ambiance creating a personal sanctuary for relaxation and rejuvenation.",
+      image: bathroomDesign,
+      category: "Bathroom",
+      features: ["Premium Materials", "Spa Design", "Luxury Fixtures"]
     },
     {
       id: 7,
       title: "Professional Office Space",
-      description: "Complete office furniture solution featuring executive desks, ergonomic seating, and storage units for professional environments.",
+      description: "Complete office furniture solution featuring executive desks, ergonomic seating, and storage units designed for productivity and professional excellence.",
       image: officeSpace,
       category: "Office",
       features: ["Executive Design", "Ergonomic Solutions", "Professional Finish"]
@@ -75,27 +76,35 @@ export default function Projects() {
     {
       id: 8,
       title: "Modern Furniture Collection",
-      description: "Contemporary furniture pieces featuring clean lines, premium materials, and sophisticated design elements for modern homes.",
+      description: "Contemporary furniture pieces featuring clean lines, premium materials, and sophisticated design elements that embody modern luxury living.",
       image: modernFurniture,
       category: "Modern",
       features: ["Clean Lines", "Premium Materials", "Contemporary Style"]
+    },
+    {
+      id: 9,
+      title: "Designer Shelving System",
+      description: "Elegant shelving solution with premium wood finish and strategic lighting to showcase decorative items while maximizing storage functionality.",
+      image: customShelving,
+      category: "Storage",
+      features: ["Premium Wood", "Display Lighting", "Custom Design"]
     }
   ];
 
-  const categories = ["All", "Bedroom", "Living Room", "Dining", "Storage", "Kitchen", "Office", "Modern"];
+  const categories = ["All", "Bedroom", "Living Room", "Dining", "Wardrobe", "Kitchen", "Bathroom", "Office", "Modern", "Storage"];
 
   return (
-    <div className="min-h-screen bg-sand-beige text-foreground">
+    <div className="min-h-screen text-foreground">
       <Header />
       <div className="pt-20">
         {/* Hero Section */}
-        <section className="py-20 bg-gradient-to-r from-sage-green/20 to-transparent">
+        <section className="py-20 bg-section">
           <div className="container mx-auto px-4">
             <div className="text-center max-w-4xl mx-auto">
-              <h1 className="text-6xl font-playfair font-bold mb-6 text-gradient-terracotta">
+              <h1 className="text-6xl font-playfair font-bold mb-6 text-gradient-brown">
                 Our Luxury Projects
               </h1>
-              <p className="text-2xl text-muted-foreground leading-relaxed">
+              <p className="text-2xl text-soft-brown leading-relaxed">
                 Discover our portfolio of exceptional furniture creations that showcase the pinnacle of 
                 craftsmanship, design excellence, and luxury living.
               </p>
@@ -104,14 +113,14 @@ export default function Projects() {
         </section>
 
         {/* Category Filter */}
-        <section className="py-8 bg-warm-beige/40">
+        <section className="py-8 bg-section">
           <div className="container mx-auto px-4">
             <div className="flex flex-wrap justify-center gap-4">
               {categories.map((category) => (
                 <Button
                   key={category}
                   variant="outline"
-                  className="border-luxury-terracotta text-luxury-terracotta hover:bg-luxury-terracotta hover:text-white transition-all duration-300"
+                  className="border-elegant-brown text-elegant-brown hover:bg-elegant-brown hover:text-white transition-all duration-300"
                 >
                   {category}
                 </Button>
@@ -123,9 +132,9 @@ export default function Projects() {
         {/* Projects Grid */}
         <section className="py-20">
           <div className="container mx-auto px-4">
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {projects.map((project) => (
-                <Card key={project.id} className="bg-warm-beige/60 border-warm-beige overflow-hidden hover:shadow-2xl transition-all duration-500 group shadow-lg">
+                <Card key={project.id} className="bg-card border-champagne/40 overflow-hidden hover:shadow-2xl transition-all duration-500 group shadow-xl">
                   <CardContent className="p-0">
                     <div className="relative overflow-hidden">
                       <img 
@@ -133,19 +142,20 @@ export default function Projects() {
                         alt={project.title} 
                         className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-luxury-terracotta/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                      <div className="absolute top-4 right-4 bg-luxury-terracotta text-white px-3 py-1 rounded-full text-sm font-bold">
+                      <div className="absolute inset-0 bg-gradient-to-t from-glow-gold/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                      <div className="absolute top-4 right-4 bg-glow-gold text-white px-3 py-1 rounded-full text-sm font-bold shadow-lg">
                         {project.category}
                       </div>
+                      <div className="absolute inset-0 bg-gradient-to-br from-champagne/10 to-transparent"></div>
                     </div>
                     <div className="p-6">
-                      <h3 className="text-xl font-playfair font-bold text-luxury-terracotta mb-3">{project.title}</h3>
-                      <p className="text-muted-foreground mb-4 text-sm leading-relaxed">{project.description}</p>
+                      <h3 className="text-xl font-playfair font-bold text-elegant-brown mb-3">{project.title}</h3>
+                      <p className="text-soft-brown mb-4 text-sm leading-relaxed">{project.description}</p>
                       <div className="space-y-2 mb-4">
                         {project.features.map((feature, index) => (
                           <div key={index} className="flex items-center">
-                            <i className="fas fa-check text-sage-green mr-2 text-xs"></i>
-                            <span className="text-muted-foreground text-sm">{feature}</span>
+                            <i className="fas fa-check text-glow-gold mr-2 text-xs"></i>
+                            <span className="text-soft-brown text-sm">{feature}</span>
                           </div>
                         ))}
                       </div>
