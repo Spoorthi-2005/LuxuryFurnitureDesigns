@@ -48,43 +48,43 @@ export default function Home() {
       
       {/* Enhanced Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Animated Background Elements */}
+        {/* Elegant Gray Background Elements */}
         <div className="absolute inset-0">
-          {/* Primary Background */}
-          <div className="absolute inset-0 bg-gradient-to-br from-luxury-pearl via-warm-cream to-champagne"></div>
+          {/* Primary Gray Background */}
+          <div className="absolute inset-0 bg-gradient-to-br from-gray-100 via-gray-200 to-gray-300"></div>
           
           {/* Decorative Geometric Shapes */}
-          <div className="absolute top-10 left-10 w-32 h-32 bg-glow-gold/20 rounded-full blur-xl animate-pulse"></div>
-          <div className="absolute top-1/3 right-20 w-24 h-24 bg-elegant-brown/20 rounded-full blur-lg floating"></div>
-          <div className="absolute bottom-1/4 left-1/4 w-40 h-40 bg-champagne/30 rounded-full blur-2xl animate-pulse"></div>
-          <div className="absolute bottom-10 right-10 w-28 h-28 bg-glow-gold/15 rounded-full blur-xl floating"></div>
+          <div className="absolute top-10 left-10 w-32 h-32 bg-glow-gold/25 rounded-full blur-xl animate-pulse"></div>
+          <div className="absolute top-1/3 right-20 w-24 h-24 bg-gray-400/30 rounded-full blur-lg floating"></div>
+          <div className="absolute bottom-1/4 left-1/4 w-40 h-40 bg-gray-300/40 rounded-full blur-2xl animate-pulse"></div>
+          <div className="absolute bottom-10 right-10 w-28 h-28 bg-glow-gold/20 rounded-full blur-xl floating"></div>
           
           {/* Luxury Pattern Overlay */}
-          <div className="absolute inset-0 opacity-5" style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23D4AF37' fill-opacity='0.4'%3E%3Ccircle cx='30' cy='30' r='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-            backgroundSize: '60px 60px'
+          <div className="absolute inset-0 opacity-8" style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23666666' fill-opacity='0.1'%3E%3Ccircle cx='40' cy='40' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+            backgroundSize: '80px 80px'
           }}></div>
           
           {/* Subtle Furniture Image */}
           <img 
             src={heroImage} 
             alt="Luxury furniture showcase" 
-            className="absolute inset-0 w-full h-full object-cover opacity-8 mix-blend-soft-light"
+            className="absolute inset-0 w-full h-full object-cover opacity-10 mix-blend-multiply"
           />
           
           {/* Gradient Overlays */}
-          <div className="absolute inset-0 bg-gradient-to-t from-white/50 via-transparent to-white/30"></div>
-          <div className="absolute inset-0 bg-gradient-to-r from-glow-gold/10 via-transparent to-elegant-brown/10"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-gray-50/80 via-transparent to-gray-100/60"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-glow-gold/8 via-transparent to-gray-400/15"></div>
         </div>
         
         {/* Floating Decorative Elements */}
-        <div className="absolute top-20 left-1/4 text-glow-gold/30 floating" style={{animationDelay: '1s'}}>
+        <div className="absolute top-20 left-1/4 text-glow-gold/40 floating" style={{animationDelay: '1s'}}>
           <i className="fas fa-chess-knight text-4xl"></i>
         </div>
-        <div className="absolute top-1/2 right-1/4 text-elegant-brown/20 floating" style={{animationDelay: '2s'}}>
+        <div className="absolute top-1/2 right-1/4 text-gray-600/30 floating" style={{animationDelay: '2s'}}>
           <i className="fas fa-crown text-3xl"></i>
         </div>
-        <div className="absolute bottom-1/3 left-1/6 text-champagne/40 floating" style={{animationDelay: '0.5s'}}>
+        <div className="absolute bottom-1/3 left-1/6 text-glow-gold/50 floating" style={{animationDelay: '0.5s'}}>
           <i className="fas fa-gem text-3xl"></i>
         </div>
         
@@ -96,8 +96,8 @@ export default function Home() {
           
           {/* Enhanced Description with Luxury Styling */}
           <div className="max-w-4xl mx-auto mb-8">
-            <div className="backdrop-blur-md bg-white/80 rounded-3xl p-8 shadow-2xl border border-glow-gold/30 luxury-shine">
-              <p className="text-2xl md:text-3xl text-elegant-brown leading-relaxed font-medium">
+            <div className="backdrop-blur-sm bg-white/90 rounded-3xl p-8 shadow-2xl border border-gray-300/40 luxury-shine">
+              <p className="text-2xl md:text-3xl text-gray-800 leading-relaxed font-medium">
                 Where traditional Indian craftsmanship meets contemporary elegance, creating extraordinary furniture pieces 
                 that define luxury living and transform spaces into timeless sanctuaries.
               </p>
@@ -119,7 +119,7 @@ export default function Home() {
           </div>
           
           {/* Scroll Indicator */}
-          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-elegant-brown/60 animate-bounce">
+          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-gray-600/70 animate-bounce">
             <i className="fas fa-chevron-down text-2xl"></i>
           </div>
         </div>
