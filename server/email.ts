@@ -39,9 +39,10 @@ export async function sendConsultationNotification(consultationData: {
   firstName: string;
   lastName: string;
   email: string;
-  phone: string;
+  phone?: string | null;
   projectDetails: string;
 }): Promise<boolean> {
+  const phoneDisplay = consultationData.phone || 'Not provided';
   const emailHtml = `
     <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
       <h2 style="color: #FFD700; border-bottom: 2px solid #FFD700; padding-bottom: 10px;">
@@ -52,7 +53,7 @@ export async function sendConsultationNotification(consultationData: {
         <h3 style="color: #333; margin-top: 0;">Client Information</h3>
         <p><strong>Name:</strong> ${consultationData.firstName} ${consultationData.lastName}</p>
         <p><strong>Email:</strong> ${consultationData.email}</p>
-        <p><strong>Phone:</strong> ${consultationData.phone}</p>
+        <p><strong>Phone:</strong> ${phoneDisplay}</p>
       </div>
       
       <div style="background-color: #fff; padding: 20px; border-left: 4px solid #FFD700; margin: 20px 0;">
@@ -72,7 +73,7 @@ export async function sendConsultationNotification(consultationData: {
     to: 'amarchauhan@email.com',
     from: 'noreply@blackhorsefurnitures.com',
     subject: `New Consultation Request from ${consultationData.firstName} ${consultationData.lastName}`,
-    text: `New consultation request from ${consultationData.firstName} ${consultationData.lastName} (${consultationData.email}, ${consultationData.phone}). Project Details: ${consultationData.projectDetails}`,
+    text: `New consultation request from ${consultationData.firstName} ${consultationData.lastName} (${consultationData.email}, ${phoneDisplay}). Project Details: ${consultationData.projectDetails}`,
     html: emailHtml
   });
 }

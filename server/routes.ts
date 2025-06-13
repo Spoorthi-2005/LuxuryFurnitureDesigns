@@ -1,6 +1,7 @@
 import type { Express } from "express";
 import { createServer, type Server } from "http";
 import { storage } from "./storage";
+import { sendConsultationNotification } from "./email";
 import { 
   insertConsultationRequestSchema,
   insertCategorySchema,
@@ -18,6 +19,15 @@ export async function registerRoutes(app: Express): Promise<Server> {
     try {
       const validatedData = insertConsultationRequestSchema.parse(req.body);
       const request = await storage.createConsultationRequest(validatedData);
+      
+      // Send email notification
+      try {
+        await sendConsultationNotification(validatedData);
+      } catch (emailError) {
+        console.error('Failed to send email notification:', emailError);
+        // Continue with response even if email fails
+      }
+      
       res.json({ success: true, data: request });
     } catch (error) {
       res.status(400).json({ success: false, error: "Invalid request data" });
