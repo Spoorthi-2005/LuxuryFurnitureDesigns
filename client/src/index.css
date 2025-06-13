@@ -26,16 +26,18 @@
   --destructive-foreground: hsl(0, 0%, 100%);
   --ring: hsl(25, 30%, 40%);
   --radius: 0.75rem;
-  --warm-cream: hsl(35, 50%, 98%); /* Brighter warm cream */
-  --light-cream: hsl(35, 45%, 96%); /* Lighter cream */
-  --luxury-pearl: hsl(0, 0%, 98%); /* Pure pearl white */
-  --champagne: hsl(45, 40%, 88%); /* Brighter champagne */
-  --pure-white: hsl(0, 0%, 100%); /* #FFFFFF */
-  --elegant-brown: hsl(25, 45%, 45%); /* Brighter elegant brown */
-  --soft-brown: hsl(25, 35%, 55%); /* Softer bright brown */
-  --glass-white: hsla(0, 0%, 100%, 0.95); /* Transparent glass effect */
-  --glow-gold: hsl(45, 60%, 80%); /* Golden glow */
-  --transparent-brown: hsla(25, 45%, 45%, 0.15); /* Transparent brown overlay */
+  --warm-cream: #F8F6F3; /* Soft beige */
+  --light-cream: #F5F1EA; /* Light beige */
+  --luxury-pearl: #F2EDE4; /* Pearl beige */
+  --champagne: #F0EBE2; /* Champagne beige */
+  --pure-white: #FFFFFF; /* Pure white */
+  --elegant-brown: #8B7355; /* Elegant brown */
+  --soft-brown: #A68B73; /* Soft brown */
+  --glass-white: rgba(248, 246, 243, 0.90); /* Glass effect */
+  --glow-gold: #D4B896; /* Muted gold */
+  --transparent-brown: rgba(139, 115, 85, 0.10); /* Transparent overlay */
+  --section-bg: rgba(245, 241, 234, 0.60); /* Section background */
+  --card-bg: rgba(255, 255, 255, 0.85); /* Card background */
 }
 
 .dark {
@@ -68,8 +70,9 @@
 
   body {
     @apply font-inter antialiased;
-    background: #FDFBF8; /* Bright Luxury Cream */
-    color: #7A6045; /* Refined Brown */
+    background: linear-gradient(135deg, #F8F6F3 0%, #F5F1EA 25%, #F2EDE4 50%, #F0EBE2 75%, #EDE8DF 100%);
+    background-attachment: fixed;
+    color: #6B5B47;
     min-height: 100vh;
   }
   
@@ -100,63 +103,71 @@
 }
 
 .bg-warm-cream {
-  background-color: hsl(30, 30%, 98%);
+  background-color: var(--warm-cream);
 }
 
 .text-warm-cream {
-  color: hsl(30, 30%, 98%);
+  color: var(--warm-cream);
 }
 
 .bg-light-cream {
-  background-color: hsl(30, 25%, 95%);
+  background-color: var(--light-cream);
 }
 
 .text-light-cream {
-  color: hsl(30, 25%, 95%);
+  color: var(--light-cream);
 }
 
 .bg-luxury-pearl {
-  background-color: hsl(0, 0%, 98%);
+  background-color: var(--luxury-pearl);
 }
 
 .text-luxury-pearl {
-  color: hsl(0, 0%, 98%);
+  color: var(--luxury-pearl);
 }
 
 .bg-champagne {
-  background-color: hsl(45, 40%, 88%);
+  background-color: var(--champagne);
 }
 
 .text-champagne {
-  color: hsl(45, 40%, 88%);
+  color: var(--champagne);
 }
 
 .bg-soft-brown {
-  background-color: hsl(25, 35%, 55%);
+  background-color: var(--soft-brown);
 }
 
 .text-soft-brown {
-  color: hsl(25, 35%, 55%);
+  color: var(--soft-brown);
 }
 
 .bg-glass-white {
-  background-color: hsla(0, 0%, 100%, 0.95);
+  background-color: var(--glass-white);
 }
 
 .text-glass-white {
-  color: hsla(0, 0%, 100%, 0.95);
+  color: var(--glass-white);
 }
 
 .bg-glow-gold {
-  background-color: hsl(45, 60%, 80%);
+  background-color: var(--glow-gold);
 }
 
 .text-glow-gold {
-  color: hsl(45, 60%, 80%);
+  color: var(--glow-gold);
 }
 
 .bg-transparent-brown {
-  background-color: hsla(25, 45%, 45%, 0.15);
+  background-color: var(--transparent-brown);
+}
+
+.bg-section {
+  background-color: var(--section-bg);
+}
+
+.bg-card {
+  background-color: var(--card-bg);
 }
 
 /* Custom utility classes */
