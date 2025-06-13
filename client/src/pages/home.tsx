@@ -48,45 +48,48 @@ export default function Home() {
       
       {/* Enhanced Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Elegant Black-Gray Background Elements */}
+        {/* Sophisticated Dark-to-Light Gradient Background */}
         <div className="absolute inset-0">
-          {/* Primary Black-Gray Background */}
-          <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-700"></div>
+          {/* Primary Gradient Background */}
+          <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-700"></div>
           
-          {/* Decorative Geometric Shapes */}
-          <div className="absolute top-10 left-10 w-32 h-32 bg-glow-gold/30 rounded-full blur-xl animate-pulse"></div>
-          <div className="absolute top-1/3 right-20 w-24 h-24 bg-gray-600/40 rounded-full blur-lg floating"></div>
-          <div className="absolute bottom-1/4 left-1/4 w-40 h-40 bg-gray-500/30 rounded-full blur-2xl animate-pulse"></div>
-          <div className="absolute bottom-10 right-10 w-28 h-28 bg-glow-gold/25 rounded-full blur-xl floating"></div>
+          {/* Smooth Transition to Light */}
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-slate-600/20 to-slate-100/90"></div>
           
-          {/* Luxury Pattern Overlay */}
-          <div className="absolute inset-0 opacity-15" style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23D4AF37' fill-opacity='0.1'%3E%3Ccircle cx='50' cy='50' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-            backgroundSize: '100px 100px'
+          {/* Decorative Geometric Elements */}
+          <div className="absolute top-16 left-16 w-32 h-32 bg-gradient-to-br from-amber-400/30 to-amber-600/20 rounded-full blur-2xl animate-pulse"></div>
+          <div className="absolute top-1/3 right-20 w-24 h-24 bg-gradient-to-br from-slate-400/30 to-slate-600/20 rounded-full blur-lg floating"></div>
+          <div className="absolute bottom-1/3 left-1/4 w-40 h-40 bg-gradient-to-br from-amber-300/20 to-amber-500/15 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-20 right-16 w-28 h-28 bg-gradient-to-br from-amber-500/25 to-amber-700/15 rounded-full blur-xl floating"></div>
+          
+          {/* Luxury Texture Pattern */}
+          <div className="absolute inset-0 opacity-10" style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23D4AF37' fill-opacity='0.15'%3E%3Cpath d='M60 60l30-30v60l-30-30zm-30 30l30-30h-60l30 30z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+            backgroundSize: '120px 120px'
           }}></div>
           
-          {/* Sophisticated Furniture Image */}
+          {/* Elegant Furniture Image Overlay */}
           <img 
             src={heroImage} 
             alt="Luxury furniture showcase" 
-            className="absolute inset-0 w-full h-full object-cover opacity-15 mix-blend-overlay"
+            className="absolute inset-0 w-full h-full object-cover opacity-12 mix-blend-soft-light"
           />
           
-          {/* Dramatic Gradient Overlays */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-gray-800/40"></div>
-          <div className="absolute inset-0 bg-gradient-to-r from-glow-gold/12 via-transparent to-gray-600/20"></div>
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-gray-800/20 to-black/30"></div>
+          {/* Multi-layered Gradient System */}
+          <div className="absolute inset-0 bg-gradient-to-t from-slate-100/70 via-slate-200/30 to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-amber-100/15 via-transparent to-slate-200/25"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-slate-900/80 via-slate-700/40 to-slate-100/60"></div>
         </div>
         
         {/* Floating Decorative Elements */}
-        <div className="absolute top-20 left-1/4 text-glow-gold/60 floating" style={{animationDelay: '1s'}}>
-          <i className="fas fa-chess-knight text-4xl drop-shadow-lg"></i>
+        <div className="absolute top-20 left-1/4 text-amber-400/70 floating" style={{animationDelay: '1s'}}>
+          <i className="fas fa-chess-knight text-4xl drop-shadow-2xl filter drop-shadow-[0_0_10px_rgba(245,158,11,0.5)]"></i>
         </div>
-        <div className="absolute top-1/2 right-1/4 text-gray-400/50 floating" style={{animationDelay: '2s'}}>
-          <i className="fas fa-crown text-3xl drop-shadow-lg"></i>
+        <div className="absolute top-1/2 right-1/4 text-slate-300/60 floating" style={{animationDelay: '2s'}}>
+          <i className="fas fa-crown text-3xl drop-shadow-2xl filter drop-shadow-[0_0_8px_rgba(203,213,225,0.7)]"></i>
         </div>
-        <div className="absolute bottom-1/3 left-1/6 text-glow-gold/70 floating" style={{animationDelay: '0.5s'}}>
-          <i className="fas fa-gem text-3xl drop-shadow-lg"></i>
+        <div className="absolute bottom-1/3 left-1/6 text-amber-500/80 floating" style={{animationDelay: '0.5s'}}>
+          <i className="fas fa-gem text-3xl drop-shadow-2xl filter drop-shadow-[0_0_12px_rgba(245,158,11,0.6)]"></i>
         </div>
         
         <div className="relative z-10 container mx-auto px-4 text-center">
@@ -97,8 +100,8 @@ export default function Home() {
           
           {/* Enhanced Description with Luxury Styling */}
           <div className="max-w-4xl mx-auto mb-8">
-            <div className="backdrop-blur-md bg-white/10 rounded-3xl p-8 shadow-2xl border border-glow-gold/30 luxury-shine">
-              <p className="text-2xl md:text-3xl text-white leading-relaxed font-medium drop-shadow-lg">
+            <div className="backdrop-blur-lg bg-white/15 rounded-3xl p-8 shadow-2xl border border-amber-400/40 luxury-shine">
+              <p className="text-2xl md:text-3xl text-slate-100 leading-relaxed font-medium drop-shadow-xl">
                 Where traditional Indian craftsmanship meets contemporary elegance, creating extraordinary furniture pieces 
                 that define luxury living and transform spaces into timeless sanctuaries.
               </p>
@@ -113,15 +116,15 @@ export default function Home() {
               </Button>
             </Link>
             <Link href="/story">
-              <Button variant="outline" className="border-2 border-glow-gold text-glow-gold px-12 py-6 text-lg font-bold hover:bg-glow-gold hover:text-black transition-all duration-500 shadow-2xl bg-black/20 backdrop-blur-sm hover:shadow-glow-gold/50 transform hover:scale-105">
+              <Button variant="outline" className="border-2 border-amber-400 text-amber-400 px-12 py-6 text-lg font-bold hover:bg-amber-400 hover:text-slate-900 transition-all duration-500 shadow-2xl bg-slate-800/30 backdrop-blur-sm hover:shadow-amber-400/50 transform hover:scale-105">
                 Our Story <i className="fas fa-book-open ml-2"></i>
               </Button>
             </Link>
           </div>
           
           {/* Scroll Indicator */}
-          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-glow-gold/70 animate-bounce">
-            <i className="fas fa-chevron-down text-2xl drop-shadow-lg"></i>
+          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-amber-400/80 animate-bounce">
+            <i className="fas fa-chevron-down text-2xl drop-shadow-2xl filter drop-shadow-[0_0_8px_rgba(245,158,11,0.6)]"></i>
           </div>
         </div>
       </section>
