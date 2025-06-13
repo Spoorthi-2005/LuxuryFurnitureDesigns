@@ -156,63 +156,86 @@ export default function Contact() {
                     </Card>
                   ))}
 
-                  <div className="grid md:grid-cols-2 gap-6">
+                  <div className="space-y-6">
                     {contactDetails.map((detail, index) => (
-                      <Card key={index} className="bg-white border-silver/30 hover-lift transition-all">
-                        <CardContent className="p-6">
-                          <div className="flex items-center space-x-4 mb-4">
-                            <i className={`${detail.icon} text-elegant-brown text-xl`}></i>
-                            <span className="font-playfair font-bold text-elegant-brown text-lg">{detail.title}</span>
-                          </div>
-                          {detail.items.map((item, itemIndex) => (
-                            <div key={itemIndex} className="mb-2">
-                              <p className="text-sm text-muted-foreground">{item.label}</p>
-                              <p className="text-foreground font-medium">{item.value}</p>
+                      <Card key={index} className="bg-card border-champagne/40 hover-lift transition-all">
+                        <CardContent className="p-8">
+                          <div className="flex items-center space-x-4 mb-6">
+                            <div className="w-12 h-12 bg-glow-gold rounded-full flex items-center justify-center">
+                              <i className={`${detail.icon} text-white text-lg`}></i>
                             </div>
-                          ))}
+                            <h3 className="font-playfair font-bold text-elegant-brown text-xl">{detail.title}</h3>
+                          </div>
+                          <div className="space-y-4">
+                            {detail.items.map((item, itemIndex) => (
+                              <div key={itemIndex} className="bg-section rounded-lg p-4 border border-champagne/30">
+                                <p className="text-sm text-soft-brown mb-1 font-medium">{item.label}</p>
+                                <p className="text-elegant-brown font-semibold text-lg break-all">{item.value}</p>
+                              </div>
+                            ))}
+                          </div>
                         </CardContent>
                       </Card>
                     ))}
                   </div>
 
                   {/* Business Hours */}
-                  <Card className="bg-elegant-brown text-white">
+                  <Card className="bg-glow-gold text-white shadow-lg">
                     <CardContent className="p-8">
-                      <h3 className="text-2xl font-playfair font-bold mb-6">Consultation Hours</h3>
-                      {businessHours.map((schedule, index) => (
-                        <div key={index} className="flex justify-between items-center py-2 border-b border-white/20 last:border-b-0">
-                          <span className="font-semibold">{schedule.day}</span>
-                          <span>{schedule.hours}</span>
+                      <div className="flex items-center space-x-4 mb-6">
+                        <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
+                          <i className="fas fa-clock text-white text-lg"></i>
                         </div>
-                      ))}
+                        <h3 className="text-2xl font-playfair font-bold">Consultation Hours</h3>
+                      </div>
+                      <div className="space-y-3">
+                        {businessHours.map((schedule, index) => (
+                          <div key={index} className="flex justify-between items-center py-3 px-4 bg-white/10 rounded-lg">
+                            <span className="font-semibold">{schedule.day}</span>
+                            <span className="font-medium">{schedule.hours}</span>
+                          </div>
+                        ))}
+                      </div>
                     </CardContent>
                   </Card>
 
-                  <Card className="bg-white border-elegant-brown">
-                    <CardContent className="p-6">
-                      <h4 className="text-xl font-playfair font-bold text-elegant-brown mb-4">Visit Our Online Gallery</h4>
-                      <p className="text-muted-foreground mb-4">Explore our exclusive collection of printed canvas wall art</p>
-                      <a 
-                        href="http://www.opulencelivingwalls.com" 
-                        className="text-elegant-brown hover:text-primary transition-colors font-semibold" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                      >
-                        www.opulencelivingwalls.com <i className="fas fa-external-link-alt ml-2"></i>
-                      </a>
+                  <Card className="bg-card border-champagne/40 shadow-lg">
+                    <CardContent className="p-8">
+                      <div className="flex items-center space-x-4 mb-4">
+                        <div className="w-12 h-12 bg-glow-gold rounded-full flex items-center justify-center">
+                          <i className="fas fa-palette text-white text-lg"></i>
+                        </div>
+                        <h4 className="text-xl font-playfair font-bold text-elegant-brown">Visit Our Online Gallery</h4>
+                      </div>
+                      <p className="text-soft-brown mb-6">Explore our exclusive collection of printed canvas wall art</p>
+                      <div className="bg-section rounded-lg p-4 border border-champagne/30">
+                        <a 
+                          href="http://www.opulencelivingwalls.com" 
+                          className="text-elegant-brown hover:text-glow-gold transition-colors font-semibold text-lg inline-flex items-center" 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                        >
+                          www.opulencelivingwalls.com <i className="fas fa-external-link-alt ml-2"></i>
+                        </a>
+                      </div>
                     </CardContent>
                   </Card>
                 </div>
               </div>
 
               {/* Contact Form */}
-              <Card className="bg-white border-silver/30 hover-lift transition-all shadow-xl">
+              <Card className="bg-card border-champagne/40 hover-lift transition-all shadow-xl">
                 <CardContent className="p-10">
-                  <h3 className="text-3xl font-playfair font-bold text-elegant-brown mb-8">Schedule Your Consultation</h3>
-                  <form onSubmit={handleSubmit} className="space-y-6">
+                  <div className="flex items-center space-x-4 mb-8">
+                    <div className="w-16 h-16 bg-glow-gold rounded-full flex items-center justify-center">
+                      <i className="fas fa-calendar-check text-white text-xl"></i>
+                    </div>
+                    <h3 className="text-3xl font-playfair font-bold text-elegant-brown">Schedule Your Consultation</h3>
+                  </div>
+                  <form onSubmit={handleSubmit} className="space-y-8">
                     <div className="grid md:grid-cols-2 gap-6">
                       <div>
-                        <Label htmlFor="firstName" className="text-sm font-medium text-foreground mb-2 block">First Name *</Label>
+                        <Label htmlFor="firstName" className="text-sm font-medium text-elegant-brown mb-2 block">First Name *</Label>
                         <Input
                           id="firstName"
                           name="firstName"
@@ -220,12 +243,12 @@ export default function Contact() {
                           value={formData.firstName}
                           onChange={handleInputChange}
                           placeholder="Your first name"
-                          className="bg-warm-beige border-elegant-brown/30 text-foreground placeholder-muted-foreground"
+                          className="bg-section border-champagne/50 text-elegant-brown placeholder-soft-brown focus:border-glow-gold focus:ring-glow-gold/20"
                           required
                         />
                       </div>
                       <div>
-                        <Label htmlFor="lastName" className="text-sm font-medium text-foreground mb-2 block">Last Name *</Label>
+                        <Label htmlFor="lastName" className="text-sm font-medium text-elegant-brown mb-2 block">Last Name *</Label>
                         <Input
                           id="lastName"
                           name="lastName"
@@ -233,13 +256,13 @@ export default function Contact() {
                           value={formData.lastName}
                           onChange={handleInputChange}
                           placeholder="Your last name"
-                          className="bg-warm-beige border-elegant-brown/30 text-foreground placeholder-muted-foreground"
+                          className="bg-section border-champagne/50 text-elegant-brown placeholder-soft-brown focus:border-glow-gold focus:ring-glow-gold/20"
                           required
                         />
                       </div>
                     </div>
                     <div>
-                      <Label htmlFor="email" className="text-sm font-medium text-foreground mb-2 block">Email Address *</Label>
+                      <Label htmlFor="email" className="text-sm font-medium text-elegant-brown mb-2 block">Email Address *</Label>
                       <Input
                         id="email"
                         name="email"
@@ -247,12 +270,12 @@ export default function Contact() {
                         value={formData.email}
                         onChange={handleInputChange}
                         placeholder="your.email@example.com"
-                        className="bg-warm-beige border-elegant-brown/30 text-foreground placeholder-muted-foreground"
+                        className="bg-section border-champagne/50 text-elegant-brown placeholder-soft-brown focus:border-glow-gold focus:ring-glow-gold/20"
                         required
                       />
                     </div>
                     <div>
-                      <Label htmlFor="phone" className="text-sm font-medium text-foreground mb-2 block">Phone Number</Label>
+                      <Label htmlFor="phone" className="text-sm font-medium text-elegant-brown mb-2 block">Phone Number</Label>
                       <Input
                         id="phone"
                         name="phone"
@@ -260,11 +283,11 @@ export default function Contact() {
                         value={formData.phone}
                         onChange={handleInputChange}
                         placeholder="+91 98765 43210"
-                        className="bg-warm-beige border-elegant-brown/30 text-foreground placeholder-muted-foreground"
+                        className="bg-section border-champagne/50 text-elegant-brown placeholder-soft-brown focus:border-glow-gold focus:ring-glow-gold/20"
                       />
                     </div>
                     <div>
-                      <Label htmlFor="projectDetails" className="text-sm font-medium text-foreground mb-2 block">Project Details *</Label>
+                      <Label htmlFor="projectDetails" className="text-sm font-medium text-elegant-brown mb-2 block">Project Details *</Label>
                       <Textarea
                         id="projectDetails"
                         name="projectDetails"
@@ -272,14 +295,14 @@ export default function Contact() {
                         value={formData.projectDetails}
                         onChange={handleInputChange}
                         placeholder="Describe your furniture requirements, space dimensions, style preferences, and any specific needs..."
-                        className="bg-warm-beige border-elegant-brown/30 text-foreground placeholder-muted-foreground"
+                        className="bg-section border-champagne/50 text-elegant-brown placeholder-soft-brown focus:border-glow-gold focus:ring-glow-gold/20"
                         required
                       />
                     </div>
                     <Button 
                       type="submit" 
                       disabled={consultationMutation.isPending}
-                      className="w-full bg-elegant-brown text-white py-4 text-lg font-bold hover:bg-primary transition-colors disabled:opacity-50"
+                      className="w-full bg-glow-gold text-white py-4 text-lg font-bold hover:bg-elegant-brown transition-colors disabled:opacity-50 shadow-lg"
                     >
                       {consultationMutation.isPending ? "Submitting..." : "Send Consultation Request"}
                     </Button>

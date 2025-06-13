@@ -61,17 +61,17 @@ export default function Process() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white">
+    <div className="min-h-screen text-foreground">
       <Header />
       <div className="pt-20">
         {/* Hero Section */}
-        <section className="py-20 bg-gradient-to-r from-luxury-gold/20 to-transparent">
+        <section className="py-20 bg-section">
           <div className="container mx-auto px-4">
             <div className="text-center max-w-4xl mx-auto">
-              <h1 className="text-6xl font-playfair font-bold mb-6 bg-gradient-to-r from-luxury-gold to-yellow-300 bg-clip-text text-transparent">
+              <h1 className="text-6xl font-playfair font-bold mb-6 text-gradient-brown">
                 Our Meticulous Craftsmanship Process
               </h1>
-              <p className="text-2xl text-gray-300 leading-relaxed">
+              <p className="text-2xl text-soft-brown leading-relaxed">
                 Witness the extraordinary journey from conceptual design to finished masterpiece through our time-honored 
                 six-step process that ensures every piece meets the highest standards of quality and artisanal excellence.
               </p>
@@ -84,7 +84,7 @@ export default function Process() {
           <div className="container mx-auto px-4">
             <div className="space-y-16">
               {processSteps.map((step, index) => (
-                <Card key={step.id} className="bg-gray-800/30 border-gray-700 overflow-hidden hover:shadow-2xl transition-all duration-500">
+                <Card key={step.id} className="bg-card border-champagne/40 overflow-hidden hover:shadow-2xl transition-all duration-500">
                   <CardContent className="p-0">
                     <div className={`grid lg:grid-cols-2 gap-0 items-center ${index % 2 === 1 ? 'lg:grid-cols-2' : ''}`}>
                       <div className={`relative overflow-hidden ${index % 2 === 1 ? 'lg:order-2' : ''}`}>
@@ -93,18 +93,18 @@ export default function Process() {
                           alt={step.alt} 
                           className="w-full h-96 lg:h-full object-cover transition-transform duration-300 hover:scale-105"
                         />
-                        <div className="absolute top-6 left-6 w-16 h-16 bg-luxury-gold rounded-full flex items-center justify-center">
-                          <span className="text-black font-bold text-2xl">{step.id}</span>
+                        <div className="absolute top-6 left-6 w-16 h-16 bg-glow-gold rounded-full flex items-center justify-center">
+                          <span className="text-white font-bold text-2xl">{step.id}</span>
                         </div>
                       </div>
                       <div className={`p-12 ${index % 2 === 1 ? 'lg:order-1' : ''}`}>
                         <div className="flex items-center mb-6">
-                          <div className="w-12 h-12 bg-luxury-gold rounded-full flex items-center justify-center mr-4">
-                            <i className={`${step.icon} text-black text-lg`}></i>
+                          <div className="w-12 h-12 bg-glow-gold rounded-full flex items-center justify-center mr-4">
+                            <i className={`${step.icon} text-white text-lg`}></i>
                           </div>
-                          <h3 className="text-3xl font-playfair font-bold text-luxury-gold">{step.title}</h3>
+                          <h3 className="text-3xl font-playfair font-bold text-elegant-brown">{step.title}</h3>
                         </div>
-                        <p className="text-lg text-gray-300 leading-relaxed">{step.description}</p>
+                        <p className="text-lg text-soft-brown leading-relaxed">{step.description}</p>
                       </div>
                     </div>
                   </CardContent>
@@ -115,11 +115,11 @@ export default function Process() {
         </section>
 
         {/* Process Timeline */}
-        <section className="py-20 bg-gradient-to-r from-luxury-gold/10 to-transparent">
+        <section className="py-20 bg-section">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-playfair font-bold mb-6 text-luxury-gold">Journey to Perfection</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <h2 className="text-4xl font-playfair font-bold mb-6 text-elegant-brown">Journey to Perfection</h2>
+              <p className="text-xl text-soft-brown max-w-3xl mx-auto">
                 Each step in our process is carefully orchestrated to ensure the highest quality standards and customer satisfaction.
               </p>
             </div>
@@ -127,11 +127,11 @@ export default function Process() {
             <div className="grid md:grid-cols-3 lg:grid-cols-6 gap-8">
               {processSteps.map((step) => (
                 <div key={step.id} className="text-center group">
-                  <div className="w-20 h-20 bg-gradient-to-r from-luxury-gold to-yellow-400 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                    <i className={`${step.icon} text-black text-2xl`}></i>
+                  <div className="w-20 h-20 bg-glow-gold rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                    <i className={`${step.icon} text-white text-2xl`}></i>
                   </div>
-                  <h4 className="text-lg font-semibold text-luxury-gold mb-2">{step.title.split(' &')[0]}</h4>
-                  <div className="w-8 h-1 bg-luxury-gold mx-auto"></div>
+                  <h4 className="text-lg font-semibold text-elegant-brown mb-2">{step.title.split(' &')[0]}</h4>
+                  <div className="w-8 h-1 bg-elegant-brown mx-auto"></div>
                 </div>
               ))}
             </div>
