@@ -1,27 +1,20 @@
-import { useState, useRef } from "react";
+import { useState } from "react";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import craftVideo from "@assets/VID-20250604-WA0001_1749474302061.mp4";
 
 export default function Craftsmanship() {
-  const [isPlaying, setIsPlaying] = useState(false);
-  const videoRef = useRef<HTMLVideoElement>(null);
+  const [showVideo, setShowVideo] = useState(false);
+  // Add your YouTube video ID here - replace 'YOUR_YOUTUBE_VIDEO_ID' with the actual ID
+  const youtubeVideoId = "YOUR_YOUTUBE_VIDEO_ID"; 
 
-  const handlePlayVideo = () => {
-    if (videoRef.current) {
-      videoRef.current.play();
-      setIsPlaying(true);
-    }
+  const handleWatchVideo = () => {
+    setShowVideo(true);
   };
 
-  const handleVideoEnded = () => {
-    setIsPlaying(false);
-  };
-
-  const handleVideoPause = () => {
-    setIsPlaying(false);
+  const handleCloseVideo = () => {
+    setShowVideo(false);
   };
 
   const craftmanshipFeatures = [
@@ -104,32 +97,32 @@ export default function Craftsmanship() {
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto">
               <div className="relative bg-luxury-pearl rounded-2xl overflow-hidden shadow-2xl">
-                <video 
-                  ref={videoRef}
-                  className="w-full h-auto" 
-                  controls 
-                  poster="https://images.unsplash.com/photo-1604709177225-055f99402ea3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=675"
-                  onEnded={handleVideoEnded}
-                  onPause={handleVideoPause}
-                  onPlay={() => setIsPlaying(true)}
+                <div 
+                  className="relative bg-cover bg-center h-96"
+                  style={{
+                    backgroundImage: "url('https://images.unsplash.com/photo-1604709177225-055f99402ea3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=675')"
+                  }}
                 >
-                  <source src={craftVideo} type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
-                
-                {!isPlaying && (
-                  <div 
-                    className="absolute inset-0 flex items-center justify-center bg-elegant-brown/70 cursor-pointer video-overlay"
-                    onClick={handlePlayVideo}
-                  >
-                    <Button
-                      size="lg"
-                      className="w-24 h-24 bg-elegant-brown rounded-full hover:scale-110 transition-transform p-0 shadow-2xl"
-                    >
-                      <i className="fas fa-play text-white text-3xl ml-1"></i>
-                    </Button>
+                  <div className="absolute inset-0 bg-elegant-brown/70 flex items-center justify-center">
+                    <div className="text-center">
+                      <Button
+                        size="lg"
+                        onClick={handleWatchVideo}
+                        className="w-24 h-24 bg-elegant-brown rounded-full hover:scale-110 transition-transform p-0 shadow-2xl mb-6"
+                      >
+                        <i className="fas fa-play text-white text-3xl ml-1"></i>
+                      </Button>
+                      <div>
+                        <h3 className="text-2xl font-playfair font-bold text-white mb-4">
+                          Watch Our Craftsmanship Video
+                        </h3>
+                        <p className="text-lg text-warm-cream max-w-2xl mx-auto">
+                          Click to watch our exclusive behind-the-scenes footage showcasing master craftsmen at work
+                        </p>
+                      </div>
+                    </div>
                   </div>
-                )}
+                </div>
               </div>
 
               <div className="text-center mt-8">
@@ -144,6 +137,31 @@ export default function Craftsmanship() {
             </div>
           </div>
         </section>
+
+        {/* YouTube Video Modal */}
+        {showVideo && (
+          <div className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4">
+            <div className="relative max-w-4xl w-full">
+              <button
+                onClick={handleCloseVideo}
+                className="absolute -top-12 right-0 text-white text-2xl hover:text-elegant-brown transition-colors"
+              >
+                <i className="fas fa-times"></i>
+              </button>
+              <div className="aspect-video bg-black rounded-lg overflow-hidden">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src={`https://www.youtube.com/embed/${youtubeVideoId}?autoplay=1`}
+                  title="Craftsmanship Video"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        )}
 
         {/* Craftsmanship Features */}
         <section className="py-20 bg-light-cream/50">
@@ -200,13 +218,13 @@ export default function Craftsmanship() {
         </section>
 
         {/* Call to Action */}
-        <section className="py-20 bg-gradient-to-r from-luxury-gold/20 to-transparent">
+        <section className="py-20 bg-gradient-to-r from-elegant-brown/10 to-transparent">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="text-4xl font-playfair font-bold mb-6 text-luxury-gold">Experience Our Craftsmanship</h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            <h2 className="text-4xl font-playfair font-bold mb-6 text-elegant-brown">Experience Our Craftsmanship</h2>
+            <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
               Ready to own a piece of this extraordinary craftsmanship? Let us create something exceptional for your space.
             </p>
-            <Button className="bg-luxury-gold text-black px-12 py-4 text-lg font-bold hover:bg-yellow-400 transition-colors">
+            <Button className="bg-elegant-brown text-white px-12 py-4 text-lg font-bold hover:bg-soft-brown transition-colors">
               Commission Your Piece
             </Button>
           </div>
