@@ -8,36 +8,36 @@ import AnimatedCounter from "@/components/animated-counter";
 import TestimonialsCarousel from "@/components/testimonials-carousel";
 import LuxuryFeatures from "@/components/luxury-features";
 import AIChatAssistant from "@/components/ai-chat-assistant";
-import heroImage from "@assets/img35_1749474302052.png";
-import founderImage from "@assets/WhatsApp Image 2025-06-02 at 18.04.55_ae1d9bc2_1749473393971.jpg";
-import workshopImage from "@assets/IMG-20250606-WA0034_1749474302060.jpg";
-import luxuryBedroom from "@assets/WhatsApp Image 2025-06-09 at 11.14.28_edf5b472_1749800699879.jpg";
-import craftsmanshipImage from "@assets/IMG-20250604-WA0023_1749793593319.jpg";
+import heroImage from "@assets/IMG-20250613-WA0024_1749812797538.jpg";
+import founderImage from "@assets/IMG-20250613-WA0025_1749812815133.jpg";
+import workshopImage from "@assets/IMG-20250613-WA0026_1749812830979.jpg";
+import luxuryBedroom from "@assets/WhatsApp Image 2025-06-13 at 16.31.07_8b6b59a2_1749812856777.jpg";
+import craftsmanshipImage from "@assets/IMG-20250613-WA0023_1749812884813.jpg";
 
 export default function Home() {
   const featuredServices = [
     {
-      icon: "fas fa-couch",
-      title: "Luxurious Living Rooms",
-      description: "Elegant furniture pieces that transform your living space into a sophisticated sanctuary of comfort and style.",
+      icon: "fas fa-home",
+      title: "Luxury Interior Design",
+      description: "Sophisticated foyer and entrance designs featuring elegant chandeliers, premium marble flooring, and custom furniture arrangements.",
+      link: "/collections"
+    },
+    {
+      icon: "fas fa-glass-martini-alt",
+      title: "Premium Bar & Lounge",
+      description: "Exquisite bar furniture with rich wooden cabinetry, marble surfaces, and comfortable seating for entertainment spaces.",
       link: "/collections"
     },
     {
       icon: "fas fa-utensils",
-      title: "Premium Kitchen Solutions",
-      description: "Bespoke kitchen designs that seamlessly blend functionality with aesthetic excellence for the modern home.",
-      link: "/collections"
-    },
-    {
-      icon: "fas fa-bed",
-      title: "Bedroom Collections",
-      description: "Meticulously crafted bedroom furniture that creates peaceful retreats for rest and rejuvenation.",
+      title: "Fine Dining Collections",
+      description: "Elegant dining furniture with contemporary chairs, premium table settings, and sophisticated ambient lighting solutions.",
       link: "/collections"
     },
     {
       icon: "fas fa-tools",
       title: "Custom Craftsmanship",
-      description: "Witness our master artisans at work, creating extraordinary pieces through traditional techniques and modern precision.",
+      description: "Witness our master artisans creating extraordinary pieces through traditional techniques and modern precision in luxury hospitality furniture.",
       link: "/craftsmanship"
     }
   ];
@@ -177,16 +177,17 @@ export default function Home() {
             <CardContent className="p-0">
               <div className="grid lg:grid-cols-2 gap-0 items-center">
                 <div className="p-12">
-                  <h2 className="text-4xl font-playfair font-bold text-elegant-brown mb-6">Crafting Legacy Since Inception</h2>
+                  <h2 className="text-4xl font-playfair font-bold text-elegant-brown mb-6">Crafting Luxury Hospitality Experiences</h2>
                   <p className="text-lg text-soft-brown mb-6 leading-relaxed">
-                    Founded by visionary entrepreneurs Amar Chauhan and Diksha Shringi, Blackhorse Furnitures represents 
-                    the perfect synthesis of traditional Indian woodworking heritage and contemporary design innovation. 
-                    With over 15 years of specialized experience in the Indian furniture industry, our founders have 
-                    established a reputation for creating exceptional pieces that transcend ordinary expectations.
+                    Founded by visionary entrepreneurs Amar Chauhan and Diksha Shringi, Blackhorse Furnitures specializes 
+                    in creating exceptional hospitality and luxury interior furniture. Our expertise spans elegant hotel 
+                    lobbies, sophisticated dining establishments, premium bars, and upscale commercial spaces that define 
+                    modern luxury.
                   </p>
                   <p className="text-lg text-soft-brown mb-8 leading-relaxed">
-                    Every piece we create tells a story of passion, precision, and unwavering commitment to excellence, 
-                    ensuring that our furniture becomes a cherished part of your home for generations to come.
+                    From grand chandeliers and marble-topped tables to custom bar furniture and contemporary dining sets, 
+                    we transform commercial spaces into extraordinary environments that captivate guests and create 
+                    unforgettable experiences.
                   </p>
                   <Link href="/story">
                     <Button className="bg-elegant-brown text-white px-8 py-4 text-lg font-bold hover:bg-soft-brown transition-all duration-300 shadow-lg">

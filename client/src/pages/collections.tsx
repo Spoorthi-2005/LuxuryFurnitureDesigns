@@ -3,56 +3,56 @@ import Footer from "@/components/footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
-import kitchenImage from "@assets/IMG-20250604-WA0017_1749474302053.jpg";
-import bathroomImage from "@assets/IMG-20250604-WA0021_1749474302056.jpg";
-import wardrobeImage from "@assets/IMG-20250604-WA0029_1749474302058.jpg";
-import livingRoomImage from "@assets/img35_1749474302052.png";
-import modernKitchenImage from "@assets/IMG-20250604-WA0025_1749474302057.jpg";
-import luxuryBathroomImage from "@assets/IMG-20250604-WA0033_1749474302058.jpg";
+import luxuryLobbyImage from "@assets/IMG-20250613-WA0024_1749812797538.jpg";
+import premiumBarImage from "@assets/IMG-20250613-WA0025_1749812815133.jpg";
+import elegantDiningImage from "@assets/IMG-20250613-WA0026_1749812830979.jpg";
+import hospitalityLoungeImage from "@assets/WhatsApp Image 2025-06-13 at 16.31.07_8b6b59a2_1749812856777.jpg";
+import luxuryDecorImage from "@assets/WhatsApp Image 2025-06-13 at 16.31.07_8b6b59a2_1749812856777.jpg";
+import customBarImage from "@assets/IMG-20250613-WA0023_1749812884813.jpg";
 
 export default function Collections() {
   const collections = [
     {
       id: 1,
-      title: "Exquisite Kitchen Solutions",
-      description: "Masterfully crafted kitchen interiors that seamlessly blend functionality with aesthetic grandeur, featuring premium materials and innovative storage solutions.",
-      image: kitchenImage,
-      alt: "Luxury modular kitchen with sophisticated design elements"
+      title: "Luxury Hotel Lobbies",
+      description: "Sophisticated entrance designs featuring elegant chandeliers, premium marble flooring, custom console tables, and contemporary seating arrangements that create memorable first impressions.",
+      image: luxuryLobbyImage,
+      alt: "Elegant hotel lobby with chandelier and marble flooring"
     },
     {
       id: 2,
-      title: "Opulent Living Spaces",
-      description: "Magnificently designed living room collections that epitomize comfort and elegance, creating harmonious spaces for relaxation and entertainment.",
-      image: livingRoomImage,
-      alt: "Contemporary living room furniture with artistic accents"
+      title: "Premium Bar & Lounge Collections",
+      description: "Exquisite bar furniture with rich wooden cabinetry, marble countertops, comfortable high-back stools, and integrated lighting for sophisticated entertainment spaces.",
+      image: premiumBarImage,
+      alt: "Luxury bar area with wooden cabinetry and marble surfaces"
     },
     {
       id: 3,
-      title: "Sophisticated Bathroom Retreats",
-      description: "Luxuriously appointed bathroom designs featuring premium marble finishes and contemporary fixtures for the ultimate sanctuary experience.",
-      image: bathroomImage,
-      alt: "Premium bathroom interior with marble walls"
+      title: "Fine Dining Furniture",
+      description: "Contemporary dining spaces featuring premium chairs with upholstered seating, elegant table settings, and sophisticated ambient lighting for exceptional dining experiences.",
+      image: elegantDiningImage,
+      alt: "Modern dining area with contemporary furniture"
     },
     {
       id: 4,
-      title: "Bespoke Wardrobe Systems",
-      description: "Meticulously designed storage solutions that maximize space while maintaining aesthetic appeal through innovative design and premium materials.",
-      image: wardrobeImage,
-      alt: "Custom built wardrobe with modern finishes"
+      title: "Hospitality Lounge Spaces",
+      description: "Comfortable lounge furniture with high-back cane chairs, round dining tables, premium upholstery, and carefully curated decor for relaxing hospitality environments.",
+      image: hospitalityLoungeImage,
+      alt: "Elegant lounge area with cane chairs and dining tables"
     },
     {
       id: 5,
-      title: "Contemporary Kitchen Excellence",
-      description: "State-of-the-art kitchen designs that showcase modern functionality with timeless elegance, perfect for the discerning homeowner.",
-      image: modernKitchenImage,
-      alt: "Modern kitchen design with premium appliances"
+      title: "Custom Bar Solutions",
+      description: "Sophisticated bar environments with premium leather seating, marble-topped tables, elegant lighting fixtures, and custom cabinetry for exclusive hospitality venues.",
+      image: customBarImage,
+      alt: "Upscale bar with leather seating and marble tables"
     },
     {
       id: 6,
-      title: "Luxury Bathroom Concepts",
-      description: "Sophisticated bathroom designs featuring exquisite marble work and contemporary fixtures that transform daily routines into luxurious experiences.",
-      image: luxuryBathroomImage,
-      alt: "Luxury bathroom with marble surfaces and modern fixtures"
+      title: "Restaurant & Dining Halls",
+      description: "Comprehensive dining solutions with curved ceiling designs, premium wooden elements, elegant table arrangements, and sophisticated lighting for upscale restaurants.",
+      image: luxuryDecorImage,
+      alt: "Upscale restaurant dining hall with elegant design"
     }
   ];
 
