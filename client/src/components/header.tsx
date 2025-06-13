@@ -39,7 +39,7 @@ export default function Header() {
               alt="Blackhorse Furnitures Logo" 
               className="w-12 h-12 object-contain"
             />
-            <span className="text-2xl font-playfair font-bold text-luxury-gold">
+            <span className="text-2xl font-playfair font-bold text-elegant-brown">
               Blackhorse Furnitures
             </span>
           </Link>
@@ -50,8 +50,8 @@ export default function Header() {
               <Link
                 key={item.path}
                 href={item.path}
-                className={`text-white hover:text-luxury-gold transition-colors font-medium ${
-                  location === item.path ? 'text-luxury-gold' : ''
+                className={`text-foreground hover:text-elegant-brown transition-colors font-medium ${
+                  location === item.path ? 'text-elegant-brown' : ''
                 }`}
               >
                 {item.label}
@@ -63,17 +63,17 @@ export default function Header() {
           <Sheet>
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon" className="md:hidden">
-                <i className="fas fa-bars text-2xl text-white"></i>
+                <i className="fas fa-bars text-2xl text-elegant-brown"></i>
               </Button>
             </SheetTrigger>
-            <SheetContent className="bg-black border-gray-800">
+            <SheetContent className="bg-warm-beige border-elegant-brown/30">
               <div className="flex flex-col space-y-4 mt-8">
                 {navItems.map((item) => (
                   <Link
                     key={item.path}
                     href={item.path}
-                    className={`text-left text-white hover:text-luxury-gold transition-colors text-lg ${
-                      location === item.path ? 'text-luxury-gold' : ''
+                    className={`text-left text-foreground hover:text-elegant-brown transition-colors text-lg ${
+                      location === item.path ? 'text-elegant-brown' : ''
                     }`}
                   >
                     {item.label}
