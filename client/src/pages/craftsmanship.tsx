@@ -96,19 +96,19 @@ export default function Craftsmanship() {
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto">
-              <div className="relative bg-luxury-pearl rounded-2xl overflow-hidden shadow-2xl">
+              <div className="relative bg-card rounded-2xl overflow-hidden shadow-xl">
                 <div 
                   className="relative bg-cover bg-center h-96"
                   style={{
                     backgroundImage: "url('https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=675')"
                   }}
                 >
-                  <div className="absolute inset-0 bg-elegant-brown/70 flex items-center justify-center">
+                  <div className="absolute inset-0 bg-elegant-brown/60 flex items-center justify-center">
                     <div className="text-center">
                       <Button
                         size="lg"
                         onClick={handleWatchVideo}
-                        className="w-24 h-24 bg-elegant-brown rounded-full hover:scale-110 transition-transform p-0 shadow-2xl mb-6"
+                        className="w-24 h-24 bg-elegant-brown rounded-full hover:scale-110 transition-transform p-0 shadow-xl mb-6"
                       >
                         <i className="fas fa-play text-white text-3xl ml-1"></i>
                       </Button>
@@ -116,7 +116,7 @@ export default function Craftsmanship() {
                         <h3 className="text-2xl font-playfair font-bold text-white mb-4">
                           Watch Our Craftsmanship Video
                         </h3>
-                        <p className="text-lg text-warm-cream max-w-2xl mx-auto">
+                        <p className="text-lg text-light-cream max-w-2xl mx-auto">
                           Click to watch our exclusive behind-the-scenes footage showcasing master craftsmen at work
                         </p>
                       </div>
@@ -129,7 +129,7 @@ export default function Craftsmanship() {
                 <h3 className="text-2xl font-playfair font-bold text-elegant-brown mb-4">
                   Experience Our Artisanal Excellence
                 </h3>
-                <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+                <p className="text-lg text-soft-brown max-w-3xl mx-auto">
                   This exclusive behind-the-scenes footage showcases our master craftsmen at work, 
                   demonstrating the precision, skill, and passion that goes into every piece we create.
                 </p>
@@ -164,24 +164,24 @@ export default function Craftsmanship() {
         )}
 
         {/* Craftsmanship Features */}
-        <section className="py-20 bg-light-cream/50">
+        <section className="py-20 bg-section">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-playfair font-bold mb-6 text-elegant-brown">Excellence in Every Detail</h2>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              <p className="text-xl text-soft-brown max-w-3xl mx-auto">
                 Our commitment to craftsmanship excellence is reflected in every aspect of our furniture creation process.
               </p>
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {craftmanshipFeatures.map((feature, index) => (
-                <Card key={index} className="bg-white border-silver/30 hover:shadow-xl transition-all duration-300 hover-lift">
+                <Card key={index} className="bg-card border-champagne/40 hover:shadow-xl transition-all duration-300 hover-lift">
                   <CardContent className="p-8 text-center">
-                    <div className="w-20 h-20 bg-gradient-to-r from-elegant-brown to-soft-brown rounded-full flex items-center justify-center mx-auto mb-6">
+                    <div className="w-20 h-20 bg-elegant-brown rounded-full flex items-center justify-center mx-auto mb-6">
                       <i className={`${feature.icon} text-white text-2xl`}></i>
                     </div>
                     <h3 className="text-xl font-playfair font-bold text-elegant-brown mb-4">{feature.title}</h3>
-                    <p className="text-muted-foreground leading-relaxed">{feature.description}</p>
+                    <p className="text-soft-brown leading-relaxed">{feature.description}</p>
                   </CardContent>
                 </Card>
               ))}
@@ -190,11 +190,11 @@ export default function Craftsmanship() {
         </section>
 
         {/* Crafting Process */}
-        <section className="py-20 bg-luxury-pearl/30">
+        <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-playfair font-bold mb-6 text-elegant-brown">The Art of Creation</h2>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              <p className="text-xl text-soft-brown max-w-3xl mx-auto">
                 Every piece undergoes a meticulous transformation process that ensures exceptional quality and enduring beauty.
               </p>
             </div>
@@ -208,7 +208,7 @@ export default function Craftsmanship() {
                     </div>
                     <div className="flex-1">
                       <h3 className="text-2xl font-playfair font-bold text-elegant-brown mb-2">{stage.title}</h3>
-                      <p className="text-muted-foreground text-lg">{stage.description}</p>
+                      <p className="text-soft-brown text-lg">{stage.description}</p>
                     </div>
                   </div>
                 ))}
@@ -218,10 +218,10 @@ export default function Craftsmanship() {
         </section>
 
         {/* Call to Action */}
-        <section className="py-20 bg-gradient-to-r from-elegant-brown/10 to-transparent">
+        <section className="py-20 bg-section">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-4xl font-playfair font-bold mb-6 text-elegant-brown">Experience Our Craftsmanship</h2>
-            <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-soft-brown mb-8 max-w-2xl mx-auto">
               Ready to own a piece of this extraordinary craftsmanship? Let us create something exceptional for your space.
             </p>
             <Button className="bg-elegant-brown text-white px-12 py-4 text-lg font-bold hover:bg-soft-brown transition-colors">
