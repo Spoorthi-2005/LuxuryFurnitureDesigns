@@ -148,7 +148,7 @@ export default function Home() {
                   <img 
                     src={founderImage} 
                     alt="Blackhorse Furnitures founders and team" 
-                    className="w-full h-full object-cover min-h-[500px] rounded-r-lg"
+                    className="w-full h-full object-cover min-h-[500px] rounded-r-lg image-luxury image-glossy"
                   />
                   <div className="absolute inset-0 bg-transparent-brown"></div>
                 </div>
@@ -297,7 +297,7 @@ export default function Home() {
                   <img 
                     src={heroImage} 
                     alt="Premium quality materials" 
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 image-3d image-glossy"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-elegant-brown/80 to-transparent"></div>
                   <div className="absolute bottom-4 left-4 right-4">
@@ -317,7 +317,7 @@ export default function Home() {
                   <img 
                     src={founderImage} 
                     alt="Master craftsmen at work" 
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 image-3d image-glossy"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-elegant-brown/80 to-transparent"></div>
                   <div className="absolute bottom-4 left-4 right-4">
@@ -337,7 +337,7 @@ export default function Home() {
                   <img 
                     src={workshopImage} 
                     alt="Custom design consultation" 
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 image-3d image-glossy"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-elegant-brown/80 to-transparent"></div>
                   <div className="absolute bottom-4 left-4 right-4">
@@ -394,7 +394,7 @@ export default function Home() {
                   <img 
                     src={craftsmanshipImage} 
                     alt="Blackhorse Furnitures workshop with skilled craftsmen" 
-                    className="w-full h-full object-cover min-h-[500px]"
+                    className="w-full h-full object-cover min-h-[500px] image-luxury image-glossy"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-elegant-brown/10 to-transparent"></div>
                 </div>
@@ -431,7 +431,7 @@ export default function Home() {
                   <img 
                     src={luxuryBedroom} 
                     alt="Luxury bedroom furniture delivery and installation" 
-                    className="w-full h-full object-cover min-h-[500px]"
+                    className="w-full h-full object-cover min-h-[500px] image-luxury image-glossy"
                   />
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent to-elegant-brown/20"></div>
                 </div>

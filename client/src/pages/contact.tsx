@@ -2,6 +2,8 @@ import { useState } from "react";
 import { useMutation } from "@tanstack/react-query";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
+import FloatingContact from "@/components/floating-contact";
+import WhatsAppContact from "@/components/whatsapp-contact";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";

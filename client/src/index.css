@@ -563,3 +563,56 @@ input:focus, textarea:focus, select:focus {
   background-clip: text;
   animation: shimmer 2s ease-in-out infinite;
 }
+
+/* 3D Image Effects */
+.image-3d {
+  transform-style: preserve-3d;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3), 0 0 0 1px rgba(255,255,255,0.1) inset;
+}
+
+.image-3d:hover {
+  transform: translateY(-5px) rotateX(3deg) rotateY(3deg) scale(1.02);
+  box-shadow: 0 25px 60px rgba(0,0,0,0.4), 0 0 0 1px rgba(255,255,255,0.2) inset;
+}
+
+.image-glossy {
+  position: relative;
+  overflow: hidden;
+}
+
+.image-glossy::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.6), transparent);
+  transition: left 0.8s;
+  z-index: 1;
+}
+
+.image-glossy:hover::before {
+  left: 100%;
+}
+
+.image-luxury {
+  border-radius: 16px;
+  box-shadow: 
+    0 20px 40px rgba(0,0,0,0.2),
+    0 0 0 1px rgba(255,255,255,0.1) inset,
+    0 1px 0 rgba(255,255,255,0.2) inset;
+  backdrop-filter: blur(1px);
+  transition: all 0.4s ease;
+}
+
+.image-luxury:hover {
+  transform: translateY(-3px) scale(1.01);
+  box-shadow: 
+    0 30px 60px rgba(0,0,0,0.3),
+    0 0 0 1px rgba(255,255,255,0.2) inset,
+    0 1px 0 rgba(255,255,255,0.3) inset;
+}
