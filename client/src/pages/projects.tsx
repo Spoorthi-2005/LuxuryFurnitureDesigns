@@ -85,17 +85,17 @@ export default function Projects() {
   const categories = ["All", "Bedroom", "Living Room", "Dining", "Storage", "Kitchen", "Office", "Modern"];
 
   return (
-    <div className="min-h-screen bg-[#2E2E2E] text-white">
+    <div className="min-h-screen bg-sand-beige text-foreground">
       <Header />
       <div className="pt-20">
         {/* Hero Section */}
-        <section className="py-20 bg-gradient-to-r from-[#C9B037]/20 to-transparent">
+        <section className="py-20 bg-gradient-to-r from-sage-green/20 to-transparent">
           <div className="container mx-auto px-4">
             <div className="text-center max-w-4xl mx-auto">
-              <h1 className="text-6xl font-playfair font-bold mb-6 bg-gradient-to-r from-[#C9B037] to-[#D4AF37] bg-clip-text text-transparent">
+              <h1 className="text-6xl font-playfair font-bold mb-6 text-gradient-terracotta">
                 Our Luxury Projects
               </h1>
-              <p className="text-2xl text-[#F5F5F5] leading-relaxed">
+              <p className="text-2xl text-muted-foreground leading-relaxed">
                 Discover our portfolio of exceptional furniture creations that showcase the pinnacle of 
                 craftsmanship, design excellence, and luxury living.
               </p>
@@ -104,14 +104,14 @@ export default function Projects() {
         </section>
 
         {/* Category Filter */}
-        <section className="py-8 bg-gray-800/20">
+        <section className="py-8 bg-warm-beige/40">
           <div className="container mx-auto px-4">
             <div className="flex flex-wrap justify-center gap-4">
               {categories.map((category) => (
                 <Button
                   key={category}
                   variant="outline"
-                  className="border-[#C9B037] text-[#C9B037] hover:bg-[#C9B037] hover:text-black transition-all duration-300"
+                  className="border-luxury-terracotta text-luxury-terracotta hover:bg-luxury-terracotta hover:text-white transition-all duration-300"
                 >
                   {category}
                 </Button>
@@ -125,7 +125,7 @@ export default function Projects() {
           <div className="container mx-auto px-4">
             <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
               {projects.map((project) => (
-                <Card key={project.id} className="bg-gray-800/30 border-gray-700 overflow-hidden hover:shadow-2xl transition-all duration-500 group">
+                <Card key={project.id} className="bg-warm-beige/60 border-warm-beige overflow-hidden hover:shadow-2xl transition-all duration-500 group shadow-lg">
                   <CardContent className="p-0">
                     <div className="relative overflow-hidden">
                       <img 
@@ -133,23 +133,23 @@ export default function Projects() {
                         alt={project.title} 
                         className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                      <div className="absolute top-4 right-4 bg-[#C9B037] text-black px-3 py-1 rounded-full text-sm font-bold">
+                      <div className="absolute inset-0 bg-gradient-to-t from-luxury-terracotta/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                      <div className="absolute top-4 right-4 bg-luxury-terracotta text-white px-3 py-1 rounded-full text-sm font-bold">
                         {project.category}
                       </div>
                     </div>
                     <div className="p-6">
-                      <h3 className="text-xl font-playfair font-bold text-[#C9B037] mb-3">{project.title}</h3>
-                      <p className="text-gray-300 mb-4 text-sm leading-relaxed">{project.description}</p>
+                      <h3 className="text-xl font-playfair font-bold text-luxury-terracotta mb-3">{project.title}</h3>
+                      <p className="text-muted-foreground mb-4 text-sm leading-relaxed">{project.description}</p>
                       <div className="space-y-2 mb-4">
                         {project.features.map((feature, index) => (
                           <div key={index} className="flex items-center">
-                            <i className="fas fa-check text-[#C9B037] mr-2 text-xs"></i>
-                            <span className="text-gray-400 text-sm">{feature}</span>
+                            <i className="fas fa-check text-sage-green mr-2 text-xs"></i>
+                            <span className="text-muted-foreground text-sm">{feature}</span>
                           </div>
                         ))}
                       </div>
-                      <Button className="w-full bg-[#C9B037] text-black hover:bg-[#D4AF37] transition-colors">
+                      <Button className="w-full bg-luxury-terracotta text-white hover:bg-warm-terracotta transition-colors">
                         View Details
                       </Button>
                     </div>
@@ -161,20 +161,20 @@ export default function Projects() {
         </section>
 
         {/* Call to Action */}
-        <section className="py-20 bg-gradient-to-r from-[#C9B037]/20 to-transparent">
+        <section className="py-20 bg-gradient-to-r from-olive-green/20 to-transparent">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="text-4xl font-playfair font-bold mb-6 text-[#C9B037]">Ready to Create Your Dream Space?</h2>
-            <p className="text-xl text-[#F5F5F5] mb-8 max-w-2xl mx-auto">
+            <h2 className="text-4xl font-playfair font-bold mb-6 text-luxury-terracotta">Ready to Create Your Dream Space?</h2>
+            <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
               Let us bring your vision to life with our bespoke furniture solutions and exceptional craftsmanship.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Link href="/contact">
-                <Button className="bg-[#C9B037] text-black px-12 py-4 text-lg font-bold hover:bg-[#D4AF37] transition-colors">
+                <Button className="bg-luxury-terracotta text-white px-12 py-4 text-lg font-bold hover:bg-warm-terracotta transition-colors">
                   Schedule Consultation
                 </Button>
               </Link>
               <Link href="/collections">
-                <Button variant="outline" className="border-2 border-[#C9B037] text-[#C9B037] px-12 py-4 text-lg font-bold hover:bg-[#C9B037] hover:text-black transition-colors">
+                <Button variant="outline" className="border-2 border-luxury-terracotta text-luxury-terracotta px-12 py-4 text-lg font-bold hover:bg-luxury-terracotta hover:text-white transition-colors">
                   Browse Collections
                 </Button>
               </Link>

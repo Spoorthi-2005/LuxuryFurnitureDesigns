@@ -6,32 +6,32 @@
 @tailwind utilities;
 
 :root {
-  --background: hsl(54, 30%, 95%); /* Beige/Sand #F5F5DC */
-  --foreground: hsl(25, 25%, 20%); /* Dark Brown for text */
-  --muted: hsl(30, 20%, 85%); /* Light beige for muted elements */
-  --muted-foreground: hsl(25, 15%, 40%); /* Medium brown for muted text */
-  --popover: hsl(54, 30%, 95%);
-  --popover-foreground: hsl(25, 25%, 20%);
-  --card: hsl(54, 30%, 97%); /* Slightly lighter beige for cards */
-  --card-foreground: hsl(25, 25%, 20%);
-  --border: hsl(30, 20%, 80%); /* Soft beige border */
-  --input: hsl(54, 25%, 92%); /* Input background */
-  --primary: hsl(15, 50%, 55%); /* Terracotta #D2996B */
-  --primary-foreground: hsl(0, 0%, 100%);
-  --secondary: hsl(80, 25%, 70%); /* Sage Green #9CAF88 */
-  --secondary-foreground: hsl(25, 25%, 20%);
-  --accent: hsl(15, 60%, 65%); /* Warm Terracotta #E2725B */
-  --accent-foreground: hsl(0, 0%, 100%);
+  --background: hsl(0, 0%, 100%); /* Pure White #FFFFFF */
+  --foreground: hsl(220, 15%, 25%); /* Elegant Dark Gray */
+  --muted: hsl(210, 20%, 95%); /* Very Light Gray */
+  --muted-foreground: hsl(220, 10%, 50%); /* Medium Gray */
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(220, 15%, 25%);
+  --card: hsl(0, 0%, 98%); /* Off-white for cards */
+  --card-foreground: hsl(220, 15%, 25%);
+  --border: hsl(210, 20%, 90%); /* Light Gray border */
+  --input: hsl(210, 20%, 96%); /* Input background */
+  --primary: hsl(45, 100%, 50%); /* Luxury Gold #FFD700 */
+  --primary-foreground: hsl(220, 15%, 25%);
+  --secondary: hsl(210, 20%, 95%); /* Light Gray */
+  --secondary-foreground: hsl(220, 15%, 25%);
+  --accent: hsl(35, 80%, 60%); /* Warm Gold #E6B800 */
+  --accent-foreground: hsl(220, 15%, 25%);
   --destructive: hsl(0, 84.2%, 60.2%);
   --destructive-foreground: hsl(0, 0%, 100%);
-  --ring: hsl(15, 50%, 55%);
+  --ring: hsl(45, 100%, 50%);
   --radius: 0.5rem;
-  --luxury-terracotta: hsl(15, 50%, 55%); /* #D2996B */
-  --warm-terracotta: hsl(15, 60%, 65%); /* #E2725B */
-  --sage-green: hsl(80, 25%, 70%); /* #9CAF88 */
-  --olive-green: hsl(75, 20%, 65%); /* #B6C4A2 */
-  --sand-beige: hsl(54, 30%, 95%); /* #F5F5DC */
-  --warm-beige: hsl(30, 25%, 88%); /* #E3D5C0 */
+  --luxury-gold: hsl(45, 100%, 50%); /* #FFD700 */
+  --warm-gold: hsl(35, 80%, 60%); /* #E6B800 */
+  --platinum: hsl(0, 0%, 85%); /* #D9D9D9 */
+  --silver: hsl(0, 0%, 75%); /* #BFBFBF */
+  --pure-white: hsl(0, 0%, 100%); /* #FFFFFF */
+  --light-gray: hsl(210, 20%, 95%); /* #F5F6F8 */
 }
 
 .dark {
@@ -247,12 +247,12 @@ video {
 
 /* Form styling */
 input, textarea, select {
-  background: rgba(30, 30, 30, 0.8) !important;
-  border: 1px solid rgba(255, 255, 255, 0.2) !important;
-  color: white !important;
+  background: rgba(245, 245, 220, 0.9) !important;
+  border: 1px solid rgba(210, 153, 107, 0.3) !important;
+  color: #4A3728 !important;
 }
 
 input:focus, textarea:focus, select:focus {
-  border-color: var(--luxury-gold) !important;
-  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1) !important;
+  border-color: var(--luxury-terracotta) !important;
+  box-shadow: 0 0 0 3px rgba(210, 153, 107, 0.1) !important;
 }
