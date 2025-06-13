@@ -6,38 +6,37 @@
 @tailwind utilities;
 
 :root {
-  --background: hsl(30, 30%, 98%); /* Bright Luxury Cream */
-  --foreground: hsl(25, 20%, 35%); /* Refined Brown */
-  --muted: hsl(30, 25%, 95%); /* Light Luxury Cream */
-  --muted-foreground: hsl(25, 15%, 55%); /* Soft Brown */
-  --popover: hsl(30, 30%, 98%);
-  --popover-foreground: hsl(25, 20%, 35%);
-  --card: hsl(30, 35%, 97%); /* Bright Card Background */
-  --card-foreground: hsl(25, 20%, 35%);
-  --border: hsl(30, 20%, 90%); /* Light Elegant Border */
-  --input: hsl(30, 25%, 95%); /* Bright Input Background */
-  --primary: hsl(25, 30%, 40%); /* Luxury Brown Primary */
-  --primary-foreground: hsl(30, 30%, 98%);
-  --secondary: hsl(30, 25%, 95%); /* Light Luxury */
-  --secondary-foreground: hsl(25, 20%, 35%);
-  --accent: hsl(25, 25%, 50%); /* Warm Accent */
-  --accent-foreground: hsl(30, 30%, 98%);
+  --background: linear-gradient(135deg, #C5A880 0%, #7A6240 100%); /* Matte Gold Gradient */
+  --foreground: hsl(30, 15%, 25%); /* Deep Brown Text */
+  --muted: rgba(197, 168, 128, 0.15); /* Light Matte Gold */
+  --muted-foreground: hsl(30, 20%, 40%); /* Medium Brown */
+  --popover: rgba(197, 168, 128, 0.95);
+  --popover-foreground: hsl(30, 15%, 25%);
+  --card: rgba(197, 168, 128, 0.20); /* Subtle Gold Card */
+  --card-foreground: hsl(30, 15%, 25%);
+  --border: rgba(122, 98, 64, 0.30); /* Matte Gold Border */
+  --input: rgba(197, 168, 128, 0.25); /* Gold Input Background */
+  --primary: #7A6240; /* Dark Matte Gold Primary */
+  --primary-foreground: #FFFFFF;
+  --secondary: rgba(197, 168, 128, 0.20); /* Light Matte Gold */
+  --secondary-foreground: hsl(30, 15%, 25%);
+  --accent: #C5A880; /* Light Matte Gold Accent */
+  --accent-foreground: hsl(30, 15%, 25%);
   --destructive: hsl(0, 84.2%, 60.2%);
   --destructive-foreground: hsl(0, 0%, 100%);
-  --ring: hsl(25, 30%, 40%);
+  --ring: #7A6240;
   --radius: 0.75rem;
-  --warm-cream: #FFF9F1; /* Warm ivory */
-  --light-cream: #FFF5E6; /* Light ivory */
-  --luxury-pearl: #FFEFD6; /* Pearl gold */
-  --champagne: #FFE8C5; /* Rich champagne */
-  --pure-white: #FFFFFF; /* Pure white */
-  --elegant-brown: #B8860B; /* Elegant gold-brown */
-  --soft-brown: #CD853F; /* Soft gold-brown */
-  --glass-white: rgba(255, 249, 241, 0.90); /* Glass effect */
-  --glow-gold: #DAA520; /* Rich gold */
-  --transparent-brown: rgba(184, 134, 11, 0.15); /* Transparent overlay */
-  --section-bg: rgba(255, 245, 230, 0.70); /* Section background */
-  --card-bg: rgba(255, 255, 255, 0.90); /* Card background */
+  --matte-gold-light: #C5A880; /* Light Matte Gold */
+  --matte-gold-dark: #7A6240; /* Dark Matte Gold */
+  --luxury-gold: #B8A075; /* Medium Gold */
+  --champagne: rgba(197, 168, 128, 0.30); /* Champagne overlay */
+  --elegant-brown: #7A6240; /* Primary brand color */
+  --soft-brown: #A08660; /* Softer brown variant */
+  --glass-gold: rgba(197, 168, 128, 0.15); /* Glass effect */
+  --glow-gold: #C5A880; /* Glowing gold */
+  --transparent-brown: rgba(122, 98, 64, 0.20); /* Transparent overlay */
+  --section-bg: rgba(197, 168, 128, 0.08); /* Subtle section background */
+  --card-bg: rgba(255, 255, 255, 0.10); /* Card background with gold tint */
 }
 
 .dark {
@@ -70,9 +69,9 @@
 
   body {
     @apply font-inter antialiased;
-    background: linear-gradient(135deg, #FFF9F1 0%, #FFF5E6 25%, #FFEFD6 50%, #FFE8C5 75%, #FFE1B3 100%);
+    background: linear-gradient(135deg, #C5A880 0%, #7A6240 100%);
     background-attachment: fixed;
-    color: #8B6914;
+    color: hsl(30, 15%, 25%);
     min-height: 100vh;
   }
   
@@ -91,15 +90,15 @@
 }
 
 .elegant-brown {
-  color: hsl(25, 25%, 45%);
+  color: var(--elegant-brown);
 }
 
 .bg-elegant-brown {
-  background-color: hsl(25, 25%, 45%);
+  background-color: var(--elegant-brown);
 }
 
 .text-elegant-brown {
-  color: hsl(25, 25%, 45%);
+  color: var(--elegant-brown);
 }
 
 .bg-warm-cream {
@@ -172,10 +171,38 @@
 
 /* Custom utility classes */
 .text-gradient-brown {
-  background: linear-gradient(135deg, #B8860B, #DAA520, #FFD700);
+  background: linear-gradient(135deg, #C5A880, #7A6240, #A08660);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+
+/* Matte Gold Gradient Backgrounds */
+.bg-matte-gold-gradient {
+  background: linear-gradient(135deg, #C5A880 0%, #7A6240 100%);
+}
+
+.bg-matte-gold-light {
+  background-color: #C5A880;
+}
+
+.bg-matte-gold-dark {
+  background-color: #7A6240;
+}
+
+.text-matte-gold-light {
+  color: #C5A880;
+}
+
+.text-matte-gold-dark {
+  color: #7A6240;
+}
+
+/* Luxury Gold Glass Effect */
+.glass-gold {
+  background: rgba(197, 168, 128, 0.15);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(197, 168, 128, 0.25);
 }
 
 .hover-lift {
@@ -184,7 +211,7 @@
 
 .hover-lift:hover {
   transform: translateY(-8px);
-  box-shadow: 0 25px 50px rgba(184, 149, 111, 0.25);
+  box-shadow: 0 25px 50px rgba(197, 168, 128, 0.35);
 }
 
 .animate-fade-in-up {
@@ -232,15 +259,15 @@
 /* Enhanced luxury shine effect */
 @keyframes luxury-shine {
   0% { 
-    box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+    box-shadow: 0 0 20px rgba(197, 168, 128, 0.4);
     transform: translateY(0);
   }
   50% { 
-    box-shadow: 0 0 40px rgba(212, 175, 55, 0.6);
+    box-shadow: 0 0 40px rgba(197, 168, 128, 0.7);
     transform: translateY(-2px);
   }
   100% { 
-    box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+    box-shadow: 0 0 20px rgba(197, 168, 128, 0.4);
     transform: translateY(0);
   }
 }
