@@ -215,7 +215,7 @@
 
 .hover-lift:hover {
   transform: translateY(-8px);
-  box-shadow: 0 25px 50px rgba(212, 175, 55, 0.25);
+  box-shadow: 0 25px 50px rgba(255, 215, 0, 0.3);
 }
 
 .animate-fade-in-up {
@@ -263,15 +263,15 @@
 /* Enhanced luxury shine effect */
 @keyframes luxury-shine {
   0% { 
-    box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
     transform: translateY(0);
   }
   50% { 
-    box-shadow: 0 0 40px rgba(212, 175, 55, 0.6);
+    box-shadow: 0 0 40px rgba(255, 215, 0, 0.7);
     transform: translateY(-2px);
   }
   100% { 
-    box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
     transform: translateY(0);
   }
 }
@@ -282,22 +282,24 @@
 
 /* Additional luxury styling */
 .premium-card {
-  background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(20px);
-  border: 1px solid rgba(212, 175, 55, 0.2);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(25px);
+  border: 1px solid rgba(255, 215, 0, 0.15);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
 }
 
 .glossy-btn {
-  background: linear-gradient(135deg, hsl(39, 85%, 60%) 0%, hsl(45, 80%, 55%) 100%);
-  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+  background: linear-gradient(135deg, hsl(45, 100%, 70%) 0%, hsl(50, 95%, 65%) 100%);
+  box-shadow: 0 6px 20px rgba(255, 215, 0, 0.4);
   border: none;
+  color: hsl(240, 50%, 8%);
+  font-weight: 600;
 }
 
 .glossy-btn:hover {
-  background: linear-gradient(135deg, hsl(45, 80%, 55%) 0%, hsl(39, 85%, 60%) 100%);
-  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.6);
-  transform: translateY(-2px);
+  background: linear-gradient(135deg, hsl(50, 95%, 65%) 0%, hsl(45, 100%, 70%) 100%);
+  box-shadow: 0 8px 25px rgba(255, 215, 0, 0.6);
+  transform: translateY(-3px);
 }
 
 .image-luxury {
