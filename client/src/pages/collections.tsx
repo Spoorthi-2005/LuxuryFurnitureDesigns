@@ -111,31 +111,43 @@ export default function Collections() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-800">
+    <div 
+      className="min-h-screen relative overflow-hidden"
+      style={{
+        background: 'linear-gradient(135deg, #1a1a2e 0%, #16213e 25%, #0f3460 50%, #533483 75%, #8b5a9f 100%)',
+        backgroundSize: '400% 400%',
+        animation: 'gradient-flow 20s ease infinite'
+      }}
+    >
+      {/* Enhanced Background Elements */}
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-gradient-to-r from-amber-100/15 via-transparent to-slate-200/25"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-900/80 via-slate-700/40 to-slate-100/60"></div>
+      </div>
+
       <Header />
 
       {/* Hero Section */}
       <section className="relative py-24 px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-900/90 via-purple-900/80 to-slate-800/90"></div>
         <div className="relative z-10 container mx-auto text-center">
-          <h1 className="text-6xl md:text-8xl font-bold text-transparent bg-gradient-to-r from-gold via-yellow-300 to-gold bg-clip-text mb-8">
+          <h1 className="text-6xl md:text-8xl font-bold text-transparent bg-gradient-to-r from-gold via-yellow-300 to-gold bg-clip-text mb-8 animated-gradient">
             Our Collections
           </h1>
           <div className="w-32 h-2 bg-gradient-to-r from-transparent via-gold to-transparent mx-auto mb-8"></div>
-          <p className="text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-2xl md:text-3xl text-slate-100 max-w-4xl mx-auto leading-relaxed drop-shadow-xl">
             Discover our meticulously curated furniture collections, where luxury meets craftsmanship in perfect harmony.
           </p>
         </div>
       </section>
 
       {/* Collections Sections */}
-      <div className="container mx-auto px-4 py-12">
+      <div className="container mx-auto px-4 py-12 relative z-10">
         {collections.map((collection, index) => (
           <div key={collection.id} className="mb-20">
             <Card className="bg-gradient-to-br from-slate-900/95 via-purple-900/90 to-slate-800/95 border-gold/20 backdrop-blur-xl shadow-2xl overflow-hidden">
               <CardContent className="p-10 md:p-16">
                 <div className="text-center mb-16">
-                  <h2 className="text-5xl md:text-7xl font-bold text-transparent bg-gradient-to-r from-gold via-yellow-300 to-gold bg-clip-text mb-8 tracking-wide">
+                  <h2 className="text-5xl md:text-7xl font-bold text-transparent bg-gradient-to-r from-gold via-yellow-300 to-gold bg-clip-text mb-8 tracking-wide animated-gradient">
                     {collection.title}
                   </h2>
                   <div className="w-32 h-1.5 bg-gradient-to-r from-transparent via-gold to-transparent mx-auto mb-8"></div>
@@ -181,7 +193,7 @@ export default function Collections() {
                   <Link href="/contact">
                     <Button 
                       variant="outline" 
-                      className="bg-gradient-to-r from-gold to-yellow-400 text-slate-900 border-2 border-gold hover:bg-gradient-to-r hover:from-yellow-400 hover:to-gold transition-all duration-300 px-8 py-3 font-semibold"
+                      className="bg-gradient-to-r from-elegant-brown to-glow-gold text-white border-2 border-amber-400 hover:bg-gradient-to-r hover:from-glow-gold hover:to-elegant-brown transition-all duration-500 px-8 py-3 font-semibold shadow-2xl hover:shadow-glow-gold/50 transform hover:scale-105 luxury-glow"
                     >
                       Explore {collection.title} Collection
                     </Button>
@@ -194,19 +206,21 @@ export default function Collections() {
       </div>
 
       {/* Call to Action */}
-      <section className="py-20 bg-gradient-to-r from-slate-900 via-purple-900 to-slate-800">
+      <section className="py-20 relative z-10">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl md:text-6xl font-bold text-transparent bg-gradient-to-r from-gold via-yellow-300 to-gold bg-clip-text mb-6">
-            Ready to Transform Your Space?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Let our expert designers create bespoke solutions that perfectly complement your lifestyle and aesthetic preferences.
-          </p>
-          <Link href="/contact">
-            <Button className="bg-gradient-to-r from-gold to-yellow-400 text-slate-900 px-12 py-4 text-lg font-bold hover:bg-gradient-to-r hover:from-yellow-400 hover:to-gold transition-all duration-300">
-              Schedule Consultation
-            </Button>
-          </Link>
+          <div className="backdrop-blur-lg bg-white/15 rounded-3xl p-12 shadow-2xl border border-amber-400/40 luxury-shine">
+            <h2 className="text-4xl md:text-6xl font-bold text-transparent bg-gradient-to-r from-gold via-yellow-300 to-gold bg-clip-text mb-6 animated-gradient">
+              Ready to Transform Your Space?
+            </h2>
+            <p className="text-xl text-slate-100 mb-8 max-w-3xl mx-auto drop-shadow-xl">
+              Let our expert designers create bespoke solutions that perfectly complement your lifestyle and aesthetic preferences.
+            </p>
+            <Link href="/contact">
+              <Button className="bg-gradient-to-r from-elegant-brown to-glow-gold text-white px-12 py-4 text-lg font-bold hover:from-glow-gold hover:to-elegant-brown transition-all duration-500 shadow-2xl hover:shadow-glow-gold/50 transform hover:scale-105 luxury-glow">
+                Schedule Consultation <i className="fas fa-arrow-right ml-2"></i>
+              </Button>
+            </Link>
+          </div>
         </div>
       </section>
       
