@@ -1,8 +1,13 @@
+import { useState, useEffect } from "react";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
+import RotatingCarousel from "@/components/rotating-carousel";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
+import bed1Image from "@assets/WhatsApp Image 2025-06-13 at 17.42.07_42a0a09c_1749820754155.jpg";
+import bed2Image from "@assets/WhatsApp Image 2025-06-13 at 17.42.07_59a98bc1_1749820775528.jpg";
+import bed3Image from "@assets/WhatsApp Image 2025-06-13 at 17.42.07_d1a6fdb1_1749924832204.jpg";
 
 export default function Collections() {
   const collections = [
@@ -28,10 +33,11 @@ export default function Collections() {
       id: 3,
       title: "Beds",
       description: "Exquisite bed designs that transform your bedroom into a luxurious sanctuary of comfort and style.",
-      images: Array(6).fill("/api/placeholder/400/300").map((src, index) => ({
-        src: `${src}?bed=${index + 1}`,
-        alt: `Luxury bed design ${index + 1}`
-      }))
+      images: [
+        { src: bed1Image, alt: "Luxury master bedroom with upholstered headboard and elegant chandelier" },
+        { src: bed2Image, alt: "Contemporary bedroom suite with golden accents and crystal lighting" },
+        { src: bed3Image, alt: "Modern platform bed with integrated nightstands and ambient lighting" }
+      ]
     },
     {
       id: 4,
@@ -115,29 +121,39 @@ export default function Collections() {
                 </p>
               </div>
               
-              {/* Image Grid - 6 images per collection */}
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-                {collection.images.map((image, imageIndex) => (
-                  <Card 
-                    key={imageIndex} 
-                    className="overflow-hidden hover-lift transition-all duration-500 group shadow-lg"
-                  >
-                    <div className="relative overflow-hidden">
-                      <img 
-                        src={image.src}
-                        alt={image.alt}
-                        className="w-full h-64 object-cover transition-all duration-700 group-hover:scale-110"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-                    </div>
-                    <CardContent className="p-4">
-                      <p className="text-sm text-medium-grey font-medium">
-                        {image.alt}
-                      </p>
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
+              {/* Image Display - Special treatment for Beds with rotational carousel */}
+              {collection.title === "Beds" ? (
+                <div className="mb-8">
+                  <RotatingCarousel 
+                    images={collection.images}
+                    autoRotate={true}
+                    rotationInterval={4000}
+                  />
+                </div>
+              ) : (
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+                  {collection.images.map((image, imageIndex) => (
+                    <Card 
+                      key={imageIndex} 
+                      className="overflow-hidden hover-lift transition-all duration-500 group shadow-lg premium-card"
+                    >
+                      <div className="relative overflow-hidden">
+                        <img 
+                          src={image.src}
+                          alt={image.alt}
+                          className="w-full h-64 object-cover transition-all duration-700 group-hover:scale-110 image-luxury"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-luxury-gold/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+                      </div>
+                      <CardContent className="p-4">
+                        <p className="text-sm text-medium-grey font-medium">
+                          {image.alt}
+                        </p>
+                      </CardContent>
+                    </Card>
+                  ))}
+                </div>
+              )}
               
               {/* Collection Action Button */}
               <div className="text-center">
