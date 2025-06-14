@@ -15,6 +15,13 @@ import sofa3Image from "@assets/WhatsApp Image 2025-06-13 at 17.46.30_e5dda6ca_1
 import sofa4Image from "@assets/WhatsApp Image 2025-06-13 at 17.53.10_93778160_1749925564575.jpg";
 import sofa5Image from "@assets/WhatsApp Image 2025-06-13 at 18.00.24_13f5bd2d_1749925600218.jpg";
 import sofa6Image from "@assets/WhatsApp Image 2025-06-13 at 18.00.24_923ac9ce_1749925690778.jpg";
+import armchair1Image from "@assets/WhatsApp Image 2025-06-13 at 18.00.24_f39218d1_1749925944206.jpg";
+import armchair2Image from "@assets/WhatsApp Image 2025-06-13 at 17.46.29_96be9a21_1749926026154.jpg";
+import armchair3Image from "@assets/WhatsApp Image 2025-06-13 at 17.46.29_832ad829_1749926048525.jpg";
+import armchair4Image from "@assets/WhatsApp Image 2025-06-13 at 18.00.23_4baba346_1749926150994.jpg";
+import armchair5Image from "@assets/WhatsApp Image 2025-06-13 at 18.00.23_ec4ada1b_1749926171722.jpg";
+import armchair6Image from "@assets/WhatsApp Image 2025-06-13 at 18.00.23_51df9eb3_1749926198325.jpg";
+import armchair7Image from "@assets/WhatsApp Image 2025-06-13 at 18.00.23_6d9adf69_1749926242727.jpg";
 
 export default function Collections() {
   const collections = [
@@ -35,10 +42,15 @@ export default function Collections() {
       id: 2,
       title: "Arm Chairs",
       description: "Elegant arm chairs combining comfort and sophistication, perfect for creating intimate seating arrangements.",
-      images: Array(6).fill("/api/placeholder/400/300").map((src, index) => ({
-        src: `${src}?armchair=${index + 1}`,
-        alt: `Premium arm chair ${index + 1}`
-      }))
+      images: [
+        { src: armchair1Image, alt: "Luxurious navy blue round armchair with golden brass frame and city view" },
+        { src: armchair2Image, alt: "Sophisticated white leather armchair with marble console and crystal chandelier" },
+        { src: armchair3Image, alt: "Elegant rose gold velvet armchair with brass accents and marble side table" },
+        { src: armchair4Image, alt: "Classic beige wing-back armchair with ottoman in traditional wood paneled library" },
+        { src: armchair5Image, alt: "Contemporary mustard yellow armchairs with sleek design and wooden slat backdrop" },
+        { src: armchair6Image, alt: "Vintage olive green tufted armchair with decorative pillows and brass lamp" },
+        { src: armchair7Image, alt: "Modern coral leather armchairs with tropical botanical wallpaper and stylish decor" }
+      ]
     },
     {
       id: 3,
@@ -133,13 +145,16 @@ export default function Collections() {
                 </p>
               </div>
               
-              {/* Image Display - Special treatment for Beds and Sofas with rotational carousel */}
-              {collection.title === "Beds" || collection.title === "Sofas" ? (
-                <div className="mb-8">
+              {/* Image Display - Special treatment for Beds, Sofas, and Arm Chairs with rotational carousel */}
+              {collection.title === "Beds" || collection.title === "Sofas" || collection.title === "Arm Chairs" ? (
+                <div className="mb-8 luxury-carousel-container">
                   <RotatingCarousel 
                     images={collection.images}
                     autoRotate={true}
-                    rotationInterval={collection.title === "Sofas" ? 3500 : 4000}
+                    rotationInterval={
+                      collection.title === "Sofas" ? 3500 : 
+                      collection.title === "Arm Chairs" ? 3000 : 4000
+                    }
                   />
                 </div>
               ) : (
