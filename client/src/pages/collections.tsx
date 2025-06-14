@@ -69,151 +69,147 @@ export default function Collections() {
       description: "Sophisticated dining sets that create the perfect atmosphere for memorable dining experiences.",
       images: Array(6).fill("/api/placeholder/400/300").map((src, index) => ({
         src: `${src}?dining=${index + 1}`,
-        alt: `Dining table and chairs set ${index + 1}`
+        alt: `Elegant dining set ${index + 1}`
       }))
     },
     {
       id: 5,
       title: "Consoles",
-      description: "Elegant console tables that serve as functional art pieces, perfect for entryways and living spaces.",
-      images: Array(6).fill("/api/placeholder/400/300").map((src, index) => ({
+      description: "Stylish console tables that serve as functional art pieces, perfect for entryways and living spaces.",
+      images: Array(4).fill("/api/placeholder/400/300").map((src, index) => ({
         src: `${src}?console=${index + 1}`,
-        alt: `Luxury console table ${index + 1}`
+        alt: `Designer console table ${index + 1}`
       }))
     },
     {
       id: 6,
       title: "Coffee Tables",
-      description: "Stunning coffee tables that become the centerpiece of your living room with their exceptional design.",
-      images: Array(6).fill("/api/placeholder/400/300").map((src, index) => ({
+      description: "Statement coffee tables that anchor your living space with style and functionality.",
+      images: Array(5).fill("/api/placeholder/400/300").map((src, index) => ({
         src: `${src}?coffee=${index + 1}`,
-        alt: `Designer coffee table ${index + 1}`
+        alt: `Luxury coffee table ${index + 1}`
       }))
     },
     {
       id: 7,
       title: "Centre Tables",
-      description: "Beautifully crafted centre tables that add elegance and functionality to any living space.",
-      images: Array(6).fill("/api/placeholder/400/300").map((src, index) => ({
+      description: "Elegant centre tables designed to be the focal point of any sophisticated living room.",
+      images: Array(4).fill("/api/placeholder/400/300").map((src, index) => ({
         src: `${src}?centre=${index + 1}`,
-        alt: `Elegant centre table ${index + 1}`
+        alt: `Premium centre table ${index + 1}`
       }))
     },
     {
       id: 8,
       title: "Pouf and Benches",
-      description: "Versatile poufs and benches that provide additional seating while enhancing your interior design.",
-      images: Array(6).fill("/api/placeholder/400/300").map((src, index) => ({
+      description: "Versatile seating solutions that combine comfort with contemporary design aesthetics.",
+      images: Array(4).fill("/api/placeholder/400/300").map((src, index) => ({
         src: `${src}?pouf=${index + 1}`,
-        alt: `Luxury pouf and bench ${index + 1}`
+        alt: `Stylish pouf and bench ${index + 1}`
       }))
     }
   ];
 
   return (
-    <div className="min-h-screen text-foreground">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-800">
       <Header />
-      <div className="pt-20">
-        {/* Hero Section */}
-        <section className="py-20 glass-elegant">
-          <div className="container mx-auto px-4">
-            <div className="text-center max-w-4xl mx-auto">
-              <h1 className="text-6xl font-playfair font-bold mb-6 text-gradient-brown">
-                Luxury Furniture Collections
-              </h1>
-              <p className="text-2xl text-dark-elegant leading-relaxed">
-                Discover our expertly curated collections of premium furniture, each piece representing 
-                the pinnacle of craftsmanship and contemporary design excellence.
-              </p>
-            </div>
-          </div>
-        </section>
 
-        {/* Collections Sections */}
+      {/* Hero Section */}
+      <section className="relative py-24 px-4 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-900/90 via-purple-900/80 to-slate-800/90"></div>
+        <div className="relative z-10 container mx-auto text-center">
+          <h1 className="text-6xl md:text-8xl font-bold text-transparent bg-gradient-to-r from-gold via-yellow-300 to-gold bg-clip-text mb-8">
+            Our Collections
+          </h1>
+          <div className="w-32 h-2 bg-gradient-to-r from-transparent via-gold to-transparent mx-auto mb-8"></div>
+          <p className="text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+            Discover our meticulously curated furniture collections, where luxury meets craftsmanship in perfect harmony.
+          </p>
+        </div>
+      </section>
+
+      {/* Collections Sections */}
+      <div className="container mx-auto px-4 py-12">
         {collections.map((collection, index) => (
-          <section 
-            key={collection.id} 
-            className={`py-16 ${index % 2 === 0 ? 'bg-light-grey' : 'bg-white'}`}
-          >
-            <div className="container mx-auto px-4">
-              <div className="text-center mb-12">
-                <h2 className="text-4xl font-playfair font-bold mb-4 text-dark-elegant">
-                  {collection.title}
-                </h2>
-                <p className="text-lg text-medium-grey max-w-3xl mx-auto leading-relaxed">
-                  {collection.description}
-                </p>
-              </div>
-              
-              {/* Image Display - Special treatment for Beds, Sofas, and Arm Chairs with rotational carousel */}
-              {collection.title === "Beds" || collection.title === "Sofas" || collection.title === "Arm Chairs" ? (
-                <div className="mb-8 luxury-carousel-container">
-                  <RotatingCarousel 
-                    images={collection.images}
-                    autoRotate={true}
-                    rotationInterval={
-                      collection.title === "Sofas" ? 3500 : 
-                      collection.title === "Arm Chairs" ? 3000 : 4000
-                    }
-                  />
+          <div key={collection.id} className="mb-20">
+            <Card className="bg-gradient-to-br from-slate-900/95 via-purple-900/90 to-slate-800/95 border-gold/20 backdrop-blur-xl shadow-2xl overflow-hidden">
+              <CardContent className="p-10 md:p-16">
+                <div className="text-center mb-16">
+                  <h2 className="text-5xl md:text-7xl font-bold text-transparent bg-gradient-to-r from-gold via-yellow-300 to-gold bg-clip-text mb-8 tracking-wide">
+                    {collection.title}
+                  </h2>
+                  <div className="w-32 h-1.5 bg-gradient-to-r from-transparent via-gold to-transparent mx-auto mb-8"></div>
+                  <p className="text-xl md:text-2xl text-gray-300 max-w-5xl mx-auto leading-relaxed font-light">
+                    {collection.description}
+                  </p>
                 </div>
-              ) : (
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-                  {collection.images.map((image, imageIndex) => (
-                    <Card 
-                      key={imageIndex} 
-                      className="overflow-hidden hover-lift transition-all duration-500 group shadow-lg premium-card"
+              
+                {/* Image Display - Special treatment for Beds, Sofas, and Arm Chairs with rotational carousel */}
+                {collection.title === "Beds" || collection.title === "Sofas" || collection.title === "Arm Chairs" ? (
+                  <div className="mb-8 luxury-carousel-container">
+                    <RotatingCarousel 
+                      images={collection.images}
+                      autoRotate={true}
+                      rotationInterval={
+                        collection.title === "Sofas" ? 3500 : 
+                        collection.title === "Arm Chairs" ? 3000 : 4000
+                      }
+                    />
+                  </div>
+                ) : (
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+                    {collection.images.map((image, imageIndex) => (
+                      <Card 
+                        key={imageIndex} 
+                        className="overflow-hidden bg-slate-800/50 border-gold/10 hover:border-gold/30 transition-all duration-500 group shadow-xl"
+                      >
+                        <div className="relative overflow-hidden">
+                          <img 
+                            src={image.src}
+                            alt={image.alt}
+                            className="w-full h-80 object-cover transition-transform duration-700 group-hover:scale-110"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        </div>
+                      </Card>
+                    ))}
+                  </div>
+                )}
+                
+                {/* Collection Action Button */}
+                <div className="text-center">
+                  <Link href="/contact">
+                    <Button 
+                      variant="outline" 
+                      className="bg-gradient-to-r from-gold to-yellow-400 text-slate-900 border-2 border-gold hover:bg-gradient-to-r hover:from-yellow-400 hover:to-gold transition-all duration-300 px-8 py-3 font-semibold"
                     >
-                      <div className="relative overflow-hidden">
-                        <img 
-                          src={image.src}
-                          alt={image.alt}
-                          className="w-full h-64 object-cover transition-all duration-700 group-hover:scale-110 image-luxury"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-luxury-gold/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-                      </div>
-                      <CardContent className="p-4">
-                        <p className="text-sm text-medium-grey font-medium">
-                          {image.alt}
-                        </p>
-                      </CardContent>
-                    </Card>
-                  ))}
+                      Explore {collection.title} Collection
+                    </Button>
+                  </Link>
                 </div>
-              )}
-              
-              {/* Collection Action Button */}
-              <div className="text-center">
-                <Link href="/contact">
-                  <Button 
-                    variant="outline" 
-                    className="text-dark-elegant border-2 border-dark-elegant hover:bg-dark-elegant hover:text-white transition-all duration-300 px-8 py-3 font-semibold"
-                  >
-                    Explore {collection.title} Collection
-                  </Button>
-                </Link>
-              </div>
-            </div>
-          </section>
-        ))}
-
-        {/* Call to Action */}
-        <section className="py-20 bg-dark-elegant">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-4xl font-playfair font-bold mb-6 text-white">
-              Ready to Transform Your Space?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Let our expert designers create bespoke solutions that perfectly complement your lifestyle and aesthetic preferences.
-            </p>
-            <Link href="/contact">
-              <Button className="bg-white text-dark-elegant px-12 py-4 text-lg font-bold hover:bg-gray-100 transition-colors">
-                Schedule Consultation
-              </Button>
-            </Link>
+              </CardContent>
+            </Card>
           </div>
-        </section>
+        ))}
       </div>
+
+      {/* Call to Action */}
+      <section className="py-20 bg-gradient-to-r from-slate-900 via-purple-900 to-slate-800">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-4xl md:text-6xl font-bold text-transparent bg-gradient-to-r from-gold via-yellow-300 to-gold bg-clip-text mb-6">
+            Ready to Transform Your Space?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Let our expert designers create bespoke solutions that perfectly complement your lifestyle and aesthetic preferences.
+          </p>
+          <Link href="/contact">
+            <Button className="bg-gradient-to-r from-gold to-yellow-400 text-slate-900 px-12 py-4 text-lg font-bold hover:bg-gradient-to-r hover:from-yellow-400 hover:to-gold transition-all duration-300">
+              Schedule Consultation
+            </Button>
+          </Link>
+        </div>
+      </section>
+      
       <Footer />
     </div>
   );
