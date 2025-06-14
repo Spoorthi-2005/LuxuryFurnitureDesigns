@@ -8,6 +8,7 @@ import { Link } from "wouter";
 import bed1Image from "@assets/WhatsApp Image 2025-06-13 at 17.42.07_42a0a09c_1749820754155.jpg";
 import bed2Image from "@assets/WhatsApp Image 2025-06-13 at 17.42.07_59a98bc1_1749820775528.jpg";
 import bed3Image from "@assets/WhatsApp Image 2025-06-13 at 17.42.07_d1a6fdb1_1749924832204.jpg";
+import bed4Image from "@assets/WhatsApp Image 2025-06-13 at 18.00.24_99040198_1749925916156.jpg";
 import sofa1Image from "@assets/WhatsApp Image 2025-06-13 at 17.44.32_3966bed2_1749925461685.jpg";
 import sofa2Image from "@assets/WhatsApp Image 2025-06-13 at 17.44.32_558cfe2f_1749925476189.jpg";
 import sofa3Image from "@assets/WhatsApp Image 2025-06-13 at 17.46.30_e5dda6ca_1749925498313.jpg";
@@ -46,7 +47,8 @@ export default function Collections() {
       images: [
         { src: bed1Image, alt: "Luxury master bedroom with upholstered headboard and elegant chandelier" },
         { src: bed2Image, alt: "Contemporary bedroom suite with golden accents and crystal lighting" },
-        { src: bed3Image, alt: "Modern platform bed with integrated nightstands and ambient lighting" }
+        { src: bed3Image, alt: "Modern platform bed with integrated nightstands and ambient lighting" },
+        { src: bed4Image, alt: "Sophisticated grey upholstered bed with wooden slat wall accent and modern styling" }
       ]
     },
     {
