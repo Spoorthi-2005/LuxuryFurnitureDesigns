@@ -33,7 +33,9 @@ export default function RotatingCarousel({
     const diff = (index - currentIndex + totalImages) % totalImages;
     
     if (diff === 0) return "active";
-    if (diff === 1 || diff === totalImages - 1) return diff === 1 ? "next" : "prev";
+    if (diff === 1) return "next";
+    if (diff === totalImages - 1) return "prev";
+    if (diff === 2 || diff === totalImages - 2) return diff === 2 ? "far-next" : "far-prev";
     return "hidden";
   };
 

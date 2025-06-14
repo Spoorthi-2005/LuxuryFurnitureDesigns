@@ -8,6 +8,12 @@ import { Link } from "wouter";
 import bed1Image from "@assets/WhatsApp Image 2025-06-13 at 17.42.07_42a0a09c_1749820754155.jpg";
 import bed2Image from "@assets/WhatsApp Image 2025-06-13 at 17.42.07_59a98bc1_1749820775528.jpg";
 import bed3Image from "@assets/WhatsApp Image 2025-06-13 at 17.42.07_d1a6fdb1_1749924832204.jpg";
+import sofa1Image from "@assets/WhatsApp Image 2025-06-13 at 17.44.32_3966bed2_1749925461685.jpg";
+import sofa2Image from "@assets/WhatsApp Image 2025-06-13 at 17.44.32_558cfe2f_1749925476189.jpg";
+import sofa3Image from "@assets/WhatsApp Image 2025-06-13 at 17.46.30_e5dda6ca_1749925498313.jpg";
+import sofa4Image from "@assets/WhatsApp Image 2025-06-13 at 17.53.10_93778160_1749925564575.jpg";
+import sofa5Image from "@assets/WhatsApp Image 2025-06-13 at 18.00.24_13f5bd2d_1749925600218.jpg";
+import sofa6Image from "@assets/WhatsApp Image 2025-06-13 at 18.00.24_923ac9ce_1749925690778.jpg";
 
 export default function Collections() {
   const collections = [
@@ -15,10 +21,14 @@ export default function Collections() {
       id: 1,
       title: "Sofas",
       description: "Luxurious and comfortable sofas crafted with premium materials, offering exceptional seating solutions for modern living spaces.",
-      images: Array(6).fill("/api/placeholder/400/300").map((src, index) => ({
-        src: `${src}?sofa=${index + 1}`,
-        alt: `Luxury sofa design ${index + 1}`
-      }))
+      images: [
+        { src: sofa1Image, alt: "Contemporary grey sofa with luxurious fur throw and modern coffee table" },
+        { src: sofa2Image, alt: "Elegant velvet sofa with decorative pillows and designer lighting" },
+        { src: sofa3Image, alt: "Modern navy blue sectional sofa with crystal accents and marble tables" },
+        { src: sofa4Image, alt: "Sophisticated brown leather sofa with geometric patterns and gold fixtures" },
+        { src: sofa5Image, alt: "Classic green tufted chesterfield sofa with brass frame details" },
+        { src: sofa6Image, alt: "Luxurious cream tufted sofa with elegant button detailing" }
+      ]
     },
     {
       id: 2,
@@ -121,13 +131,13 @@ export default function Collections() {
                 </p>
               </div>
               
-              {/* Image Display - Special treatment for Beds with rotational carousel */}
-              {collection.title === "Beds" ? (
+              {/* Image Display - Special treatment for Beds and Sofas with rotational carousel */}
+              {collection.title === "Beds" || collection.title === "Sofas" ? (
                 <div className="mb-8">
                   <RotatingCarousel 
                     images={collection.images}
                     autoRotate={true}
-                    rotationInterval={4000}
+                    rotationInterval={collection.title === "Sofas" ? 3500 : 4000}
                   />
                 </div>
               ) : (
