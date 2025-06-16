@@ -901,6 +901,65 @@
   justify-content: center;
 }
 
+/* Opulence-inspired background gradients */
+.opulence-bg-primary {
+  background: linear-gradient(135deg, 
+    #ffffff 0%, 
+    #f8f9fa 15%, 
+    #e9ecef 30%, 
+    #dee2e6 45%, 
+    #adb5bd 60%, 
+    #6c757d 75%, 
+    #495057 90%, 
+    #212529 100%);
+  background-size: 400% 400%;
+  animation: opulence-flow 20s ease infinite;
+}
+
+.opulence-bg-secondary {
+  background: linear-gradient(45deg, 
+    #f8f9fa 0%, 
+    #ffffff 20%, 
+    #e9ecef 40%, 
+    #ced4da 60%, 
+    #868e96 80%, 
+    #343a40 100%);
+  background-size: 300% 300%;
+  animation: opulence-flow-alt 25s ease infinite;
+}
+
+.opulence-bg-accent {
+  background: linear-gradient(90deg, 
+    #ffffff 0%, 
+    #f1f3f4 25%, 
+    #d3d3d3 50%, 
+    #a0a0a0 75%, 
+    #2c2c2c 100%);
+  background-size: 500% 500%;
+  animation: opulence-shimmer 15s ease infinite;
+}
+
+@keyframes opulence-flow {
+  0% { background-position: 0% 50%; }
+  25% { background-position: 100% 25%; }
+  50% { background-position: 50% 100%; }
+  75% { background-position: 25% 0%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes opulence-flow-alt {
+  0% { background-position: 0% 0%; }
+  33% { background-position: 100% 50%; }
+  66% { background-position: 0% 100%; }
+  100% { background-position: 0% 0%; }
+}
+
+@keyframes opulence-shimmer {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
 /* Gradient background animation */
 @keyframes gradient-flow {
   0% { background-position: 0% 50%; }

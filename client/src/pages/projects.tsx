@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "wouter";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import { Card, CardContent } from "@/components/ui/card";
@@ -300,9 +301,11 @@ export default function Projects() {
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
             Let's collaborate to bring your hospitality or restaurant vision to life with our expert design and craftsmanship.
           </p>
-          <Button className="bg-gradient-to-r from-gold to-yellow-600 text-slate-900 font-semibold px-8 py-4 text-lg hover:from-yellow-600 hover:to-gold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
-            Start Your Project
-          </Button>
+          <Link href="/contact">
+            <Button className="bg-gradient-to-r from-gold to-yellow-600 text-slate-900 font-semibold px-8 py-4 text-lg hover:from-yellow-600 hover:to-gold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+              Start Your Project
+            </Button>
+          </Link>
         </div>
       </section>
 

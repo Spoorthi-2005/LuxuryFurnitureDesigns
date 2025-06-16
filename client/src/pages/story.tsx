@@ -3,11 +3,11 @@ import Footer from "@/components/footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
-import foundersImage from "@assets/IMG-20250613-WA0025_1749812815133.jpg";
+import foundersImage from "@assets/WhatsApp Image 2025-06-02 at 18.04.55_6060650b_1750062974940.jpg";
 
 export default function Story() {
   return (
-    <div className="min-h-screen text-foreground">
+    <div className="min-h-screen text-foreground opulence-bg-accent">
       <Header />
       <div className="pt-20">
         {/* Hero Section */}
