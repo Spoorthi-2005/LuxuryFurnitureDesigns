@@ -33,12 +33,12 @@ import diningImage2 from "@assets/IMG-20250613-WA0063_1750075014558.jpg";
 import diningImage3 from "@assets/IMG-20250613-WA0065_1750075036744.jpg";
 import diningImage4 from "@assets/IMG-20250613-WA0072_1750075059985.jpg";
 
-// Import coffee table images
-import coffeeImage1 from "@assets/WhatsApp Image 2025-06-13 at 17.53.10_1f9b6f05_1750054139202.jpg";
-import coffeeImage2 from "@assets/WhatsApp Image 2025-06-13 at 17.50.39_3a325e8b_1750053048917.jpg";
-import coffeeImage3 from "@assets/WhatsApp Image 2025-06-13 at 17.50.39_40864f70_1750053029587.jpg";
-import coffeeImage4 from "@assets/WhatsApp Image 2025-06-13 at 17.50.39_9b0313bc_1750053012321.jpg";
-import coffeeImage5 from "@assets/WhatsApp Image 2025-06-13 at 17.53.09_d76b07b5_1750055071634.jpg";
+// Import coffee table images (your specific luxury coffee table collection)
+import coffeeImage1 from "@assets/IMG-20250613-WA0055_1750075185902.jpg";
+import coffeeImage2 from "@assets/img13_1750075197306.png";
+import coffeeImage3 from "@assets/IMG-20250613-WA0066_1750075214024.jpg";
+import coffeeImage4 from "@assets/IMG-20250613-WA0085_1750075237878.jpg";
+import coffeeImage5 from "@assets/IMG-20250613-WA0091_1750075251165.jpg";
 
 // Import center table images
 import centreImage1 from "@assets/WhatsApp Image 2025-06-13 at 17.53.10_93778160_1749925564575.jpg";
@@ -109,10 +109,11 @@ export default function Collections() {
       title: "Coffee Tables",
       description: "Functional art pieces that serve as stunning centerpieces while providing practical elegance for modern living spaces.",
       images: [
-        { src: coffeeImage1, alt: "Modern black coffee table with white sofa and luxury interior design" },
-        { src: coffeeImage2, alt: "Designer coffee table featuring contemporary style and premium materials" },
-        { src: coffeeImage3, alt: "Sophisticated coffee table showcasing elegant functionality and design" },
-        { src: coffeeImage4, alt: "Luxury coffee table with refined details and modern proportions" }
+        { src: coffeeImage1, alt: "Luxurious dark wood coffee tables with gold accents in sophisticated living room" },
+        { src: coffeeImage2, alt: "Elegant round coffee table set with marble top and rich wood finish" },
+        { src: coffeeImage3, alt: "Modern living room featuring geometric gold coffee table with black glass top" },
+        { src: coffeeImage4, alt: "Contemporary marble coffee tables with gold metal frame and sleek design" },
+        { src: coffeeImage5, alt: "Premium white marble coffee table set with luxurious gold cylindrical base" }
       ]
     },
     {
@@ -189,7 +190,7 @@ export default function Collections() {
                     {/* Premium inner border effect */}
                     <div className="absolute inset-1 rounded-3xl border border-gold/10"></div>
                     
-                    {collection.id === "beds" || collection.id === "sofas" || collection.id === "armchairs" || collection.id === "dining" ? (
+                    {collection.id === "beds" || collection.id === "sofas" || collection.id === "armchairs" || collection.id === "dining" || collection.id === "coffee" ? (
                       <div className="p-8">
                         <SimpleImageRotator 
                           images={collection.images}
