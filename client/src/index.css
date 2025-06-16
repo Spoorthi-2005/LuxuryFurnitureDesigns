@@ -794,10 +794,10 @@
 
 /* Rotational Carousel Effect */
 .rotating-carousel {
-  perspective: 2000px;
+  perspective: 2500px;
   transform-style: preserve-3d;
   position: relative;
-  height: 500px;
+  height: 700px;
   width: 100%;
   overflow: visible;
   display: flex;
@@ -808,16 +808,16 @@
 
 .carousel-item {
   position: absolute;
-  width: 350px;
-  height: 250px;
+  width: 600px;
+  height: 400px;
   top: 50%;
   left: 50%;
-  margin-top: -125px;
-  margin-left: -175px;
+  margin-top: -200px;
+  margin-left: -300px;
   backface-visibility: hidden;
   transform-style: preserve-3d;
   transition: all 1.2s cubic-bezier(0.23, 1, 0.320, 1);
-  border-radius: 16px;
+  border-radius: 20px;
   overflow: hidden;
 }
 
@@ -839,39 +839,39 @@
 }
 
 .carousel-item.active {
-  transform: translateZ(100px) scale(1.0);
+  transform: translateZ(150px) scale(1.0);
   z-index: 10;
   opacity: 1;
 }
 
 .carousel-item.prev {
-  transform: rotateY(-40deg) translateZ(-30px) translateX(-160px) scale(0.8);
+  transform: rotateY(-35deg) translateZ(-50px) translateX(-300px) scale(0.75);
   z-index: 8;
-  opacity: 0.9;
+  opacity: 0.85;
 }
 
 .carousel-item.next {
-  transform: rotateY(40deg) translateZ(-30px) translateX(160px) scale(0.8);
+  transform: rotateY(35deg) translateZ(-50px) translateX(300px) scale(0.75);
   z-index: 8;
-  opacity: 0.9;
+  opacity: 0.85;
 }
 
 .carousel-item.far-prev {
-  transform: rotateY(-65deg) translateZ(-60px) translateX(-280px) scale(0.65);
+  transform: rotateY(-60deg) translateZ(-100px) translateX(-500px) scale(0.6);
   z-index: 6;
-  opacity: 0.8;
+  opacity: 0.7;
 }
 
 .carousel-item.far-next {
-  transform: rotateY(65deg) translateZ(-60px) translateX(280px) scale(0.65);
+  transform: rotateY(60deg) translateZ(-100px) translateX(500px) scale(0.6);
   z-index: 6;
-  opacity: 0.8;
+  opacity: 0.7;
 }
 
 .carousel-item.hidden {
-  transform: rotateY(100deg) translateZ(-100px) scale(0.5);
+  transform: rotateY(90deg) translateZ(-150px) scale(0.45);
   z-index: 4;
-  opacity: 0.6;
+  opacity: 0.5;
 }
 
 /* Auto-rotating animation */
@@ -895,7 +895,7 @@
   box-shadow: none;
   position: relative;
   overflow: visible;
-  height: 500px;
+  height: 700px;
   display: flex;
   align-items: center;
   justify-content: center;
