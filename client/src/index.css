@@ -901,63 +901,83 @@
   justify-content: center;
 }
 
-/* Opulence-inspired background gradients */
-.opulence-bg-primary {
+/* Elegant lustrous background gradients */
+.elegant-lustrous-primary {
   background: linear-gradient(135deg, 
-    #ffffff 0%, 
-    #f8f9fa 15%, 
-    #e9ecef 30%, 
-    #dee2e6 45%, 
-    #adb5bd 60%, 
-    #6c757d 75%, 
-    #495057 90%, 
-    #212529 100%);
+    #f8f4f0 0%, 
+    #e8ddd4 15%, 
+    #d4c5b9 30%, 
+    #c5b5a8 45%, 
+    #b8a895 60%, 
+    #a69988 75%, 
+    #958976 90%, 
+    #867a68 100%);
   background-size: 400% 400%;
-  animation: opulence-flow 20s ease infinite;
+  animation: elegant-flow 25s ease infinite;
 }
 
-.opulence-bg-secondary {
+.elegant-lustrous-secondary {
   background: linear-gradient(45deg, 
-    #f8f9fa 0%, 
-    #ffffff 20%, 
-    #e9ecef 40%, 
-    #ced4da 60%, 
-    #868e96 80%, 
-    #343a40 100%);
-  background-size: 300% 300%;
-  animation: opulence-flow-alt 25s ease infinite;
+    #faf7f4 0%, 
+    #f0ebe6 20%, 
+    #e6ddd4 40%, 
+    #d9cfc4 60%, 
+    #ccc1b4 80%, 
+    #bfb3a4 100%);
+  background-size: 350% 350%;
+  animation: elegant-shimmer 20s ease infinite;
 }
 
-.opulence-bg-accent {
+.elegant-lustrous-accent {
   background: linear-gradient(90deg, 
-    #ffffff 0%, 
-    #f1f3f4 25%, 
-    #d3d3d3 50%, 
-    #a0a0a0 75%, 
-    #2c2c2c 100%);
-  background-size: 500% 500%;
-  animation: opulence-shimmer 15s ease infinite;
+    #f5f1ed 0%, 
+    #eae3db 25%, 
+    #dfd5c9 50%, 
+    #d4c7b7 75%, 
+    #c9b9a5 100%);
+  background-size: 300% 300%;
+  animation: elegant-glow 18s ease infinite;
 }
 
-@keyframes opulence-flow {
+.elegant-lustrous-warm {
+  background: linear-gradient(120deg, 
+    #f9f6f2 0%, 
+    #f2ede8 20%, 
+    #ebe4dd 40%, 
+    #e4dbd2 60%, 
+    #ddd2c7 80%, 
+    #d6c9bc 100%);
+  background-size: 400% 400%;
+  animation: elegant-warm 22s ease infinite;
+}
+
+@keyframes elegant-flow {
   0% { background-position: 0% 50%; }
-  25% { background-position: 100% 25%; }
+  25% { background-position: 100% 30%; }
   50% { background-position: 50% 100%; }
-  75% { background-position: 25% 0%; }
+  75% { background-position: 30% 0%; }
   100% { background-position: 0% 50%; }
 }
 
-@keyframes opulence-flow-alt {
+@keyframes elegant-shimmer {
   0% { background-position: 0% 0%; }
   33% { background-position: 100% 50%; }
   66% { background-position: 0% 100%; }
   100% { background-position: 0% 0%; }
 }
 
-@keyframes opulence-shimmer {
+@keyframes elegant-glow {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
+}
+
+@keyframes elegant-warm {
+  0% { background-position: 0% 25%; }
+  25% { background-position: 75% 50%; }
+  50% { background-position: 100% 75%; }
+  75% { background-position: 25% 100%; }
+  100% { background-position: 0% 25%; }
 }
 
 /* Gradient background animation */

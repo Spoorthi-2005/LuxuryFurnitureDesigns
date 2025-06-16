@@ -144,14 +144,7 @@ export default function Collections() {
   ];
 
   return (
-    <div 
-      className="min-h-screen relative overflow-hidden"
-      style={{
-        background: 'linear-gradient(135deg, #1a1a2e 0%, #16213e 25%, #0f3460 50%, #533483 75%, #8b5a9f 100%)',
-        backgroundSize: '400% 400%',
-        animation: 'gradient-flow 20s ease infinite'
-      }}
-    >
+    <div className="min-h-screen relative overflow-hidden elegant-lustrous-secondary">
       {/* Enhanced Background Elements */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-r from-amber-100/15 via-transparent to-slate-200/25"></div>

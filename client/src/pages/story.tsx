@@ -7,7 +7,7 @@ import foundersImage from "@assets/WhatsApp Image 2025-06-02 at 18.04.55_6060650
 
 export default function Story() {
   return (
-    <div className="min-h-screen text-foreground">
+    <div className="min-h-screen text-foreground elegant-lustrous-accent">
       <Header />
       <div className="pt-20">
         {/* Hero Section */}
