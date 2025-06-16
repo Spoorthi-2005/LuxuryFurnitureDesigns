@@ -199,19 +199,23 @@ export default function Collections() {
                     />
                   </div>
                 ) : (
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
                     {collection.images.map((image, imageIndex) => (
                       <Card 
                         key={imageIndex} 
-                        className="overflow-hidden bg-slate-800/50 border-gold/10 hover:border-gold/30 transition-all duration-500 group shadow-xl"
+                        className="overflow-hidden bg-slate-900/60 border-gold/20 hover:border-gold/50 transition-all duration-600 group shadow-2xl hover:shadow-gold/30 hover:shadow-2xl"
                       >
                         <div className="relative overflow-hidden">
                           <img 
                             src={image.src}
                             alt={image.alt}
-                            className="w-full h-80 object-cover transition-transform duration-700 group-hover:scale-110"
+                            className="w-full h-96 object-cover object-center transition-all duration-800 group-hover:scale-105 group-hover:brightness-110 group-hover:contrast-115"
+                            style={{
+                              filter: 'contrast(1.1) brightness(1.05) saturate(1.15)'
+                            }}
                           />
-                          <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                          <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-600"></div>
+                          <div className="absolute inset-0 bg-gradient-to-r from-gold/5 via-transparent to-gold/5 opacity-0 group-hover:opacity-100 transition-opacity duration-600"></div>
                         </div>
                       </Card>
                     ))}
