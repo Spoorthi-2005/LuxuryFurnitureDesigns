@@ -271,7 +271,7 @@ export default function Home() {
                 <div className="text-4xl font-playfair font-bold text-elegant-brown mb-2 text-shimmer">
                   <AnimatedCounter end={200} suffix="+" />
                 </div>
-                <p className="text-gray-200 font-medium">Happy Customers</p>
+                <p className="text-soft-brown font-medium">Happy Customers</p>
               </CardContent>
             </Card>
 
@@ -283,7 +283,7 @@ export default function Home() {
                 <div className="text-4xl font-playfair font-bold text-elegant-brown mb-2 text-shimmer">
                   <AnimatedCounter end={700} suffix="+" />
                 </div>
-                <p className="text-gray-200 font-medium">Projects Completed</p>
+                <p className="text-soft-brown font-medium">Projects Completed</p>
               </CardContent>
             </Card>
 
@@ -295,7 +295,7 @@ export default function Home() {
                 <div className="text-4xl font-playfair font-bold text-elegant-brown mb-2 text-shimmer">
                   <AnimatedCounter end={15} suffix="+" />
                 </div>
-                <p className="text-gray-200 font-medium">Years of Excellence</p>
+                <p className="text-soft-brown font-medium">Years of Excellence</p>
               </CardContent>
             </Card>
 
@@ -307,7 +307,7 @@ export default function Home() {
                 <div className="text-4xl font-playfair font-bold text-elegant-brown mb-2 text-shimmer">
                   <AnimatedCounter end={98} suffix="%" />
                 </div>
-                <p className="text-gray-200 font-medium">Client Satisfaction</p>
+                <p className="text-soft-brown font-medium">Client Satisfaction</p>
               </CardContent>
             </Card>
           </div>
@@ -318,8 +318,8 @@ export default function Home() {
       <section className="py-20 bg-section">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-playfair font-bold mb-6 text-white">What Our Clients Say</h2>
-            <p className="text-xl text-gray-200 max-w-3xl mx-auto">
+            <h2 className="text-4xl font-playfair font-bold mb-6 text-gradient-brown">What Our Clients Say</h2>
+            <p className="text-xl text-soft-brown max-w-3xl mx-auto">
               Discover why discerning customers choose Blackhorse Furnitures for their most important spaces.
             </p>
           </div>
@@ -334,8 +334,8 @@ export default function Home() {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-playfair font-bold mb-6 text-white">Why Choose Blackhorse</h2>
-            <p className="text-xl text-gray-200 max-w-3xl mx-auto">
+            <h2 className="text-4xl font-playfair font-bold mb-6 text-gradient-brown">Why Choose Blackhorse</h2>
+            <p className="text-xl text-soft-brown max-w-3xl mx-auto">
               Experience the difference that sets us apart in the luxury furniture industry.
             </p>
           </div>
@@ -346,8 +346,8 @@ export default function Home() {
                 <div className="w-20 h-20 bg-glow-gold rounded-full flex items-center justify-center mx-auto mb-6 shadow-xl luxury-glow">
                   <i className="fas fa-gem text-white text-2xl"></i>
                 </div>
-                <h3 className="text-xl font-playfair font-bold text-white mb-4">Premium Materials</h3>
-                <p className="text-gray-200 leading-relaxed">Only the finest woods, metals, and fabrics sourced from trusted suppliers worldwide for exceptional quality and durability.</p>
+                <h3 className="text-xl font-playfair font-bold text-elegant-brown mb-4">Premium Materials</h3>
+                <p className="text-soft-brown leading-relaxed">Only the finest woods, metals, and fabrics sourced from trusted suppliers worldwide for exceptional quality and durability.</p>
               </CardContent>
             </Card>
 
@@ -356,8 +356,8 @@ export default function Home() {
                 <div className="w-20 h-20 bg-glow-gold rounded-full flex items-center justify-center mx-auto mb-6 shadow-xl luxury-glow">
                   <i className="fas fa-tools text-white text-2xl"></i>
                 </div>
-                <h3 className="text-xl font-playfair font-bold text-white mb-4">Master Craftsmen</h3>
-                <p className="text-gray-200 leading-relaxed">Skilled artisans with decades of experience creating furniture masterpieces that combine traditional techniques with modern innovation.</p>
+                <h3 className="text-xl font-playfair font-bold text-elegant-brown mb-4">Master Craftsmen</h3>
+                <p className="text-soft-brown leading-relaxed">Skilled artisans with decades of experience creating furniture masterpieces that combine traditional techniques with modern innovation.</p>
               </CardContent>
             </Card>
 
@@ -366,8 +366,8 @@ export default function Home() {
                 <div className="w-20 h-20 bg-glow-gold rounded-full flex items-center justify-center mx-auto mb-6 shadow-xl luxury-glow">
                   <i className="fas fa-palette text-white text-2xl"></i>
                 </div>
-                <h3 className="text-xl font-playfair font-bold text-white mb-4">Custom Design</h3>
-                <p className="text-gray-200 leading-relaxed">Bespoke solutions tailored to your unique vision and space requirements with personalized design consultations.</p>
+                <h3 className="text-xl font-playfair font-bold text-elegant-brown mb-4">Custom Design</h3>
+                <p className="text-soft-brown leading-relaxed">Bespoke solutions tailored to your unique vision and space requirements with personalized design consultations.</p>
               </CardContent>
             </Card>
 
@@ -376,8 +376,8 @@ export default function Home() {
                 <div className="w-20 h-20 bg-glow-gold rounded-full flex items-center justify-center mx-auto mb-6 shadow-xl luxury-glow">
                   <i className="fas fa-shield-alt text-white text-2xl"></i>
                 </div>
-                <h3 className="text-xl font-playfair font-bold text-white mb-4">Lifetime Warranty</h3>
-                <p className="text-gray-200 leading-relaxed">Comprehensive warranty coverage ensuring your furniture investment is protected for generations with quality guarantees.</p>
+                <h3 className="text-xl font-playfair font-bold text-elegant-brown mb-4">Lifetime Warranty</h3>
+                <p className="text-soft-brown leading-relaxed">Comprehensive warranty coverage ensuring your furniture investment is protected for generations with quality guarantees.</p>
               </CardContent>
             </Card>
 
@@ -386,8 +386,8 @@ export default function Home() {
                 <div className="w-20 h-20 bg-glow-gold rounded-full flex items-center justify-center mx-auto mb-6 shadow-xl luxury-glow">
                   <i className="fas fa-shipping-fast text-white text-2xl"></i>
                 </div>
-                <h3 className="text-xl font-playfair font-bold text-white mb-4">White Glove Delivery</h3>
-                <p className="text-gray-200 leading-relaxed">Professional installation and setup service with care, precision, and complete room styling for perfect presentation.</p>
+                <h3 className="text-xl font-playfair font-bold text-elegant-brown mb-4">White Glove Delivery</h3>
+                <p className="text-soft-brown leading-relaxed">Professional installation and setup service with care, precision, and complete room styling for perfect presentation.</p>
               </CardContent>
             </Card>
 
@@ -396,8 +396,8 @@ export default function Home() {
                 <div className="w-20 h-20 bg-glow-gold rounded-full flex items-center justify-center mx-auto mb-6 shadow-xl luxury-glow">
                   <i className="fas fa-headset text-white text-2xl"></i>
                 </div>
-                <h3 className="text-xl font-playfair font-bold text-white mb-4">24/7 Support</h3>
-                <p className="text-gray-200 leading-relaxed">Dedicated customer service team available round the clock for assistance with all your furniture needs and queries.</p>
+                <h3 className="text-xl font-playfair font-bold text-elegant-brown mb-4">24/7 Support</h3>
+                <p className="text-soft-brown leading-relaxed">Dedicated customer service team available round the clock for assistance with all your furniture needs and queries.</p>
               </CardContent>
             </Card>
           </div>

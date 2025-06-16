@@ -155,7 +155,7 @@ export default function Collections() {
             Our Collections
           </h1>
           <div className="w-32 h-2 bg-gradient-to-r from-transparent via-gold to-transparent mx-auto mb-8"></div>
-          <p className="text-2xl md:text-3xl text-slate-100 max-w-4xl mx-auto leading-relaxed drop-shadow-xl">
+          <p className="text-2xl md:text-3xl text-soft-brown max-w-4xl mx-auto leading-relaxed drop-shadow-xl">
             Discover our meticulously curated furniture collections, where luxury meets craftsmanship in perfect harmony.
           </p>
         </div>
@@ -172,7 +172,7 @@ export default function Collections() {
                     {collection.title}
                   </h2>
                   <div className="w-32 h-1.5 bg-gradient-to-r from-transparent via-gold to-transparent mx-auto mb-8"></div>
-                  <p className="text-xl md:text-2xl text-gray-300 max-w-5xl mx-auto leading-relaxed font-light">
+                  <p className="text-xl md:text-2xl text-soft-brown max-w-5xl mx-auto leading-relaxed font-light">
                     {collection.description}
                   </p>
                 </div>
