@@ -808,12 +808,12 @@
 
 .carousel-item {
   position: absolute;
-  width: 80%;
-  height: 80%;
+  width: 65%;
+  height: 65%;
   backface-visibility: hidden;
   transform-style: preserve-3d;
   transition: all 1.2s cubic-bezier(0.23, 1, 0.320, 1);
-  border-radius: 20px;
+  border-radius: 16px;
   overflow: hidden;
 }
 
@@ -835,39 +835,39 @@
 }
 
 .carousel-item.active {
-  transform: translateZ(200px) scale(1.15);
+  transform: translateZ(120px) scale(1.05);
   z-index: 10;
   opacity: 1;
 }
 
 .carousel-item.prev {
-  transform: rotateY(-50deg) translateZ(-60px) translateX(-180px) scale(0.9);
+  transform: rotateY(-45deg) translateZ(-40px) translateX(-140px) scale(0.85);
   z-index: 8;
-  opacity: 0.85;
+  opacity: 0.9;
 }
 
 .carousel-item.next {
-  transform: rotateY(50deg) translateZ(-60px) translateX(180px) scale(0.9);
+  transform: rotateY(45deg) translateZ(-40px) translateX(140px) scale(0.85);
   z-index: 8;
-  opacity: 0.85;
+  opacity: 0.9;
 }
 
 .carousel-item.far-prev {
-  transform: rotateY(-100deg) translateZ(-150px) translateX(-320px) scale(0.75);
+  transform: rotateY(-75deg) translateZ(-80px) translateX(-240px) scale(0.7);
   z-index: 6;
-  opacity: 0.6;
+  opacity: 0.75;
 }
 
 .carousel-item.far-next {
-  transform: rotateY(100deg) translateZ(-150px) translateX(320px) scale(0.75);
+  transform: rotateY(75deg) translateZ(-80px) translateX(240px) scale(0.7);
   z-index: 6;
-  opacity: 0.6;
+  opacity: 0.75;
 }
 
 .carousel-item.hidden {
-  transform: rotateY(150deg) translateZ(-300px) scale(0.6);
+  transform: rotateY(120deg) translateZ(-120px) scale(0.55);
   z-index: 4;
-  opacity: 0.3;
+  opacity: 0.5;
 }
 
 /* Auto-rotating animation */
@@ -886,11 +886,15 @@
 .luxury-carousel-container {
   background: transparent;
   border-radius: 0;
-  padding: 2rem 0;
+  padding: 3rem 0;
   border: none;
   box-shadow: none;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Gradient background animation */
