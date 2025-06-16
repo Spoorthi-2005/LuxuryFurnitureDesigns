@@ -7,7 +7,7 @@ import foundersImage from "@assets/WhatsApp Image 2025-06-02 at 18.04.55_6060650
 
 export default function Story() {
   return (
-    <div className="min-h-screen text-foreground opulence-bg-accent">
+    <div className="min-h-screen text-foreground">
       <Header />
       <div className="pt-20">
         {/* Hero Section */}
@@ -64,13 +64,13 @@ export default function Story() {
                     </div>
                   </div>
                   
-                  <div className="relative">
+                  <div className="relative overflow-hidden rounded-2xl shadow-2xl">
                     <img 
                       src={foundersImage} 
                       alt="Amar Chauhan and Diksha Shringi - Founders of Blackhorse Furnitures" 
-                      className="w-full h-full object-cover min-h-[600px]"
+                      className="w-full h-[700px] object-cover object-center"
                     />
-                    <div className="absolute inset-0 bg-transparent-brown"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900/20 via-transparent to-transparent"></div>
                   </div>
                 </div>
               </CardContent>

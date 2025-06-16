@@ -111,7 +111,7 @@ export default function Contact() {
   ];
 
   return (
-    <div className="min-h-screen opulence-bg-accent text-foreground">
+    <div className="min-h-screen bg-warm-cream text-foreground">
       <Header />
       <div className="pt-20">
         {/* Hero Section */}
