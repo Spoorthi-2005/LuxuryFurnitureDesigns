@@ -72,24 +72,52 @@ export default function RotatingCarousel({
   };
 
   const getItemStyle = (index: number) => {
-    const angle = getRotationAngle(index);
-    const radius = 250; // Distance from center
-    const scale = index === currentIndex ? 1.1 : 0.8;
-    const opacity = index === currentIndex ? 1 : 0.6;
-    const zIndex = index === currentIndex ? 10 : 1;
+    const totalImages = images.length;
+    const diff = (index - currentIndex + totalImages) % totalImages;
     
-    // Calculate 3D position
-    const x = Math.sin((angle * Math.PI) / 180) * radius;
-    const z = Math.cos((angle * Math.PI) / 180) * radius;
-    
-    return {
-      transform: `translate3d(${x}px, 0, ${z}px) scale(${scale}) rotateY(${-angle}deg)`,
-      opacity,
-      zIndex,
-      transition: isTransitioning 
-        ? 'all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)' 
-        : 'all 1.2s cubic-bezier(0.23, 1, 0.320, 1)'
-    };
+    if (diff === 0) {
+      // Active item - center stage
+      return {
+        transform: 'translateX(0) translateZ(0) scale(1)',
+        opacity: 1,
+        zIndex: 10,
+        transition: isTransitioning 
+          ? 'all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94)' 
+          : 'all 0.8s cubic-bezier(0.23, 1, 0.320, 1)'
+      };
+    } else if (diff === 1 || diff === totalImages - 1) {
+      // Adjacent items with 3D rotation
+      const isNext = diff === 1;
+      return {
+        transform: `translateX(${isNext ? '60%' : '-60%'}) rotateY(${isNext ? '-25deg' : '25deg'}) scale(0.85)`,
+        opacity: 0.7,
+        zIndex: 5,
+        transition: isTransitioning 
+          ? 'all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94)' 
+          : 'all 0.8s cubic-bezier(0.23, 1, 0.320, 1)'
+      };
+    } else if (diff === 2 || diff === totalImages - 2) {
+      // Far items with more rotation
+      const isFarNext = diff === 2;
+      return {
+        transform: `translateX(${isFarNext ? '100%' : '-100%'}) rotateY(${isFarNext ? '-45deg' : '45deg'}) scale(0.7)`,
+        opacity: 0.4,
+        zIndex: 2,
+        transition: isTransitioning 
+          ? 'all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94)' 
+          : 'all 0.8s cubic-bezier(0.23, 1, 0.320, 1)'
+      };
+    } else {
+      // Hidden items
+      return {
+        transform: 'translateX(150%) rotateY(-60deg) scale(0.5)',
+        opacity: 0,
+        zIndex: 1,
+        transition: isTransitioning 
+          ? 'all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94)' 
+          : 'all 0.8s cubic-bezier(0.23, 1, 0.320, 1)'
+      };
+    }
   };
 
   if (images.length === 0) return null;
