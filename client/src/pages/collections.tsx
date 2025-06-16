@@ -188,18 +188,18 @@ export default function Collections() {
                     {/* Premium inner border effect */}
                     <div className="absolute inset-1 rounded-3xl border border-gold/10"></div>
                     
-                    <RotatingCarousel 
-                      images={collection.images}
-                      autoRotate={true}
-                      rotationInterval={
-                        collection.title === "Sofas" ? 4200 : 
-                        collection.title === "Arm Chairs" ? 3800 :
-                        collection.title === "Pouf and Benches" ? 3600 :
-                        collection.title === "Dining Tables and Chairs" ? 4500 :
-                        collection.title === "Coffee Tables" ? 4000 :
-                        collection.title === "Centre Tables" ? 3900 : 4300
-                      }
-                    />
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-8">
+                      {collection.images.map((image, imageIndex) => (
+                        <div key={imageIndex} className="relative group">
+                          <img
+                            src={image.src}
+                            alt={image.alt}
+                            className="w-full h-64 object-cover rounded-lg shadow-lg transition-transform duration-300 group-hover:scale-105 border border-gold/20"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg"></div>
+                        </div>
+                      ))}
+                    </div>
                   </div>
                   
                   {/* Opulence-style premium overlay effects */}
