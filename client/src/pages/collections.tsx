@@ -27,6 +27,13 @@ import bench2Image from "@assets/WhatsApp Image 2025-06-13 at 17.33.24_a0ec5bfa_
 import bench3Image from "@assets/WhatsApp Image 2025-06-13 at 17.42.07_bd458000_1750051930904.jpg";
 import bench4Image from "@assets/WhatsApp Image 2025-06-13 at 17.56.10_7440dc07_1750052008318.jpg";
 import bench5Image from "@assets/WhatsApp Image 2025-06-13 at 18.00.24_7f6e5a9a_1750052057626.jpg";
+// Import dining furniture images
+import diningTable1Image from '@assets/WhatsApp Image 2025-06-13 at 17.50.38_ad095622_1750052982237.jpg';
+import diningTable2Image from '@assets/WhatsApp Image 2025-06-13 at 17.50.39_37b37c32_1750052994832.jpg';
+import diningTable3Image from '@assets/WhatsApp Image 2025-06-13 at 17.50.39_9b0313bc_1750053012321.jpg';
+import diningTable4Image from '@assets/WhatsApp Image 2025-06-13 at 17.50.39_40864f70_1750053029587.jpg';
+import diningTable5Image from '@assets/WhatsApp Image 2025-06-13 at 17.50.39_3a325e8b_1750053048917.jpg';
+import diningTable6Image from '@assets/WhatsApp Image 2025-06-13 at 18.00.25_4059b846_1750053121511.jpg';
 
 export default function Collections() {
   const collections = [
@@ -72,10 +79,14 @@ export default function Collections() {
       id: 4,
       title: "Dining Tables and Chairs",
       description: "Sophisticated dining sets that create the perfect atmosphere for memorable dining experiences.",
-      images: Array(6).fill("/api/placeholder/400/300").map((src, index) => ({
-        src: `${src}?dining=${index + 1}`,
-        alt: `Elegant dining set ${index + 1}`
-      }))
+      images: [
+        { src: diningTable1Image, alt: "Luxury dining room with elegant dark wood table and upholstered chairs with golden accents" },
+        { src: diningTable2Image, alt: "Modern round dining table with white leather chairs and sophisticated lighting" },
+        { src: diningTable3Image, alt: "Contemporary marble dining table with beige chairs and decorative centerpiece" },
+        { src: diningTable4Image, alt: "Classic formal dining room with dark wood table and cream upholstered chairs" },
+        { src: diningTable5Image, alt: "Designer dining table with striking blue base and modern black chairs" },
+        { src: diningTable6Image, alt: "Sleek oval dining table with contemporary black chairs in modern setting" }
+      ]
     },
     {
       id: 5,
@@ -164,8 +175,8 @@ export default function Collections() {
                   </p>
                 </div>
               
-                {/* Image Display - Special treatment for Beds, Sofas, Arm Chairs, and Pouf and Benches with rotational carousel */}
-                {collection.title === "Beds" || collection.title === "Sofas" || collection.title === "Arm Chairs" || collection.title === "Pouf and Benches" ? (
+                {/* Image Display - Special treatment for Beds, Sofas, Arm Chairs, Pouf and Benches, and Dining Tables and Chairs with rotational carousel */}
+                {collection.title === "Beds" || collection.title === "Sofas" || collection.title === "Arm Chairs" || collection.title === "Pouf and Benches" || collection.title === "Dining Tables and Chairs" ? (
                   <div className="mb-8 luxury-carousel-container">
                     <RotatingCarousel 
                       images={collection.images}
@@ -173,7 +184,8 @@ export default function Collections() {
                       rotationInterval={
                         collection.title === "Sofas" ? 3500 : 
                         collection.title === "Arm Chairs" ? 3000 :
-                        collection.title === "Pouf and Benches" ? 3200 : 4000
+                        collection.title === "Pouf and Benches" ? 3200 :
+                        collection.title === "Dining Tables and Chairs" ? 3800 : 4000
                       }
                     />
                   </div>
