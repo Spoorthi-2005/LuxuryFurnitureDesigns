@@ -177,14 +177,14 @@ export default function Home() {
             <CardContent className="p-0">
               <div className="grid lg:grid-cols-2 gap-0 items-center">
                 <div className="p-12">
-                  <h2 className="text-4xl font-playfair font-bold text-elegant-brown mb-6">Crafting Legacy Since Inception</h2>
-                  <p className="text-lg text-soft-brown mb-6 leading-relaxed">
+                  <h2 className="text-4xl font-playfair font-bold text-white mb-6">Crafting Legacy Since Inception</h2>
+                  <p className="text-lg text-gray-200 mb-6 leading-relaxed">
                     Founded by visionary entrepreneurs Amar Chauhan and Diksha Shringi, Blackhorse Furnitures represents 
                     the perfect synthesis of traditional Indian woodworking heritage and contemporary design innovation. 
                     With over 15 years of specialized experience in the Indian furniture industry, our founders have 
                     established a reputation for creating exceptional pieces that transcend ordinary expectations.
                   </p>
-                  <p className="text-lg text-soft-brown mb-8 leading-relaxed">
+                  <p className="text-lg text-gray-200 mb-8 leading-relaxed">
                     Every piece we create tells a story of passion, precision, and unwavering commitment to excellence, 
                     ensuring that our furniture becomes a cherished part of your home for generations to come.
                   </p>
