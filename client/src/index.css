@@ -794,10 +794,10 @@
 
 /* Rotational Carousel Effect */
 .rotating-carousel {
-  perspective: 2500px;
+  perspective: 3000px;
   transform-style: preserve-3d;
   position: relative;
-  height: 700px;
+  height: 80vh;
   width: 100%;
   overflow: visible;
   display: flex;
@@ -808,12 +808,12 @@
 
 .carousel-item {
   position: absolute;
-  width: 600px;
-  height: 400px;
+  width: 90vw;
+  height: 60vh;
   top: 50%;
   left: 50%;
-  margin-top: -200px;
-  margin-left: -300px;
+  margin-top: -30vh;
+  margin-left: -45vw;
   backface-visibility: hidden;
   transform-style: preserve-3d;
   transition: all 1.2s cubic-bezier(0.23, 1, 0.320, 1);
@@ -839,39 +839,39 @@
 }
 
 .carousel-item.active {
-  transform: translateZ(150px) scale(1.0);
+  transform: translateZ(200px) scale(1.0);
   z-index: 10;
   opacity: 1;
 }
 
 .carousel-item.prev {
-  transform: rotateY(-35deg) translateZ(-50px) translateX(-300px) scale(0.75);
+  transform: rotateY(-30deg) translateZ(-100px) translateX(-40vw) scale(0.7);
   z-index: 8;
-  opacity: 0.85;
+  opacity: 0.8;
 }
 
 .carousel-item.next {
-  transform: rotateY(35deg) translateZ(-50px) translateX(300px) scale(0.75);
+  transform: rotateY(30deg) translateZ(-100px) translateX(40vw) scale(0.7);
   z-index: 8;
-  opacity: 0.85;
+  opacity: 0.8;
 }
 
 .carousel-item.far-prev {
-  transform: rotateY(-60deg) translateZ(-100px) translateX(-500px) scale(0.6);
+  transform: rotateY(-50deg) translateZ(-200px) translateX(-60vw) scale(0.55);
   z-index: 6;
-  opacity: 0.7;
+  opacity: 0.6;
 }
 
 .carousel-item.far-next {
-  transform: rotateY(60deg) translateZ(-100px) translateX(500px) scale(0.6);
+  transform: rotateY(50deg) translateZ(-200px) translateX(60vw) scale(0.55);
   z-index: 6;
-  opacity: 0.7;
+  opacity: 0.6;
 }
 
 .carousel-item.hidden {
-  transform: rotateY(90deg) translateZ(-150px) scale(0.45);
+  transform: rotateY(80deg) translateZ(-250px) scale(0.4);
   z-index: 4;
-  opacity: 0.5;
+  opacity: 0.4;
 }
 
 /* Auto-rotating animation */
@@ -895,7 +895,7 @@
   box-shadow: none;
   position: relative;
   overflow: visible;
-  height: 700px;
+  height: 80vh;
   display: flex;
   align-items: center;
   justify-content: center;
