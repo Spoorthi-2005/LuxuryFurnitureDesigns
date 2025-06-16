@@ -115,7 +115,7 @@ export default function Home() {
                 Explore Collections <i className="fas fa-arrow-right ml-2"></i>
               </Button>
             </Link>
-            <Link href="/story">
+            <Link href="/our-story">
               <Button variant="outline" className="border-2 border-amber-400 text-amber-400 px-12 py-6 text-lg font-bold hover:bg-amber-400 hover:text-slate-900 transition-all duration-500 shadow-2xl bg-slate-800/30 backdrop-blur-sm hover:shadow-amber-400/50 transform hover:scale-105">
                 Our Story <i className="fas fa-book-open ml-2"></i>
               </Button>
@@ -188,7 +188,7 @@ export default function Home() {
                     Every piece we create tells a story of passion, precision, and unwavering commitment to excellence, 
                     ensuring that our furniture becomes a cherished part of your home for generations to come.
                   </p>
-                  <Link href="/story">
+                  <Link href="/our-story">
                     <Button className="bg-elegant-brown text-white px-8 py-4 text-lg font-bold hover:bg-soft-brown transition-all duration-300 shadow-lg">
                       Discover Our Journey
                     </Button>
