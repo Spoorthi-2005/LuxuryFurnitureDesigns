@@ -40,12 +40,11 @@ import coffeeImage3 from "@assets/IMG-20250613-WA0066_1750075214024.jpg";
 import coffeeImage4 from "@assets/IMG-20250613-WA0085_1750075237878.jpg";
 import coffeeImage5 from "@assets/IMG-20250613-WA0091_1750075251165.jpg";
 
-// Import center table images
-import centreImage1 from "@assets/WhatsApp Image 2025-06-13 at 17.53.10_93778160_1749925564575.jpg";
-import centreImage2 from "@assets/WhatsApp Image 2025-06-13 at 17.53.10_d0678884_1750055089890.jpg";
-import centreImage3 from "@assets/WhatsApp Image 2025-06-13 at 17.56.10_7440dc07_1750052008318.jpg";
-import centreImage4 from "@assets/WhatsApp Image 2025-06-13 at 18.00.23_4baba346_1749926150994.jpg";
-import centreImage5 from "@assets/WhatsApp Image 2025-06-13 at 17.50.38_ad095622_1750052982237.jpg";
+// Import center table images (your specific luxury centre table collection)
+import centreImage1 from "@assets/IMG-20250613-WA0067_1750075360352.jpg";
+import centreImage2 from "@assets/IMG-20250613-WA0083_1750075377871.jpg";
+import centreImage3 from "@assets/IMG-20250613-WA0075_1750075398163.jpg";
+import centreImage4 from "@assets/IMG-20250613-WA0103_1750075427226.jpg";
 
 // Import bench and pouf images
 import benchImage1 from "@assets/WhatsApp Image 2025-06-13 at 18.00.24_13f5bd2d_1749925600218.jpg";
@@ -121,10 +120,10 @@ export default function Collections() {
       title: "Centre Tables",
       description: "Distinctive focal points that combine artistic design with practical functionality, elevating any space with sophisticated presence.",
       images: [
-        { src: centreImage1, alt: "Elegant centre table in sophisticated interior design setting" },
-        { src: centreImage2, alt: "Designer centre table featuring premium materials and refined styling" },
-        { src: centreImage3, alt: "Contemporary centre table showcasing modern elegance and functionality" },
-        { src: centreImage4, alt: "Luxury centre table with exceptional craftsmanship and sophisticated design" }
+        { src: centreImage1, alt: "Elegant black glass centre table with decorative accessories in luxury living room" },
+        { src: centreImage2, alt: "Round centre table with gold geometric base and black glass top" },
+        { src: centreImage3, alt: "Sophisticated side table with gold vertical slat design and black glass shelves" },
+        { src: centreImage4, alt: "Luxury centre table with curved gold metal base and white marble top" }
       ]
     },
     {
@@ -190,7 +189,7 @@ export default function Collections() {
                     {/* Premium inner border effect */}
                     <div className="absolute inset-1 rounded-3xl border border-gold/10"></div>
                     
-                    {collection.id === "beds" || collection.id === "sofas" || collection.id === "armchairs" || collection.id === "dining" || collection.id === "coffee" ? (
+                    {collection.id === "beds" || collection.id === "sofas" || collection.id === "armchairs" || collection.id === "dining" || collection.id === "coffee" || collection.id === "centre" ? (
                       <div className="p-8">
                         <SimpleImageRotator 
                           images={collection.images}
