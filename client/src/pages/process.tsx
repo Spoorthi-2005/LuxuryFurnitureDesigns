@@ -6,7 +6,7 @@ import carpentryImage from "@assets/WhatsApp Image 2025-06-09 at 13.13.31_21d3a5
 import foamingImage from "@assets/WhatsApp Image 2025-06-09 at 13.07.01_2a278a20_1749473665532.jpg";
 import upholsteryImage from "@assets/WhatsApp Image 2025-06-09 at 12.00.39_8ba48a52_1749473681038.jpg";
 import polishingImage from "@assets/WhatsApp Image 2025-06-09 at 11.55.15_1041ad24_1749793175676.jpg";
-import deliveryImage from "@assets/IMG-20250606-WA0034_1749474302060.jpg";
+import deliveryImage from "@assets/WhatsApp Image 2025-06-13 at 17.12.54_447c518f_1750075880764.jpg";
 
 export default function Process() {
   const processSteps = [
