@@ -41,6 +41,13 @@ import coffeeTable3Image from '@assets/WhatsApp Image 2025-06-13 at 17.53.10_1f9
 import coffeeTable4Image from '@assets/WhatsApp Image 2025-06-13 at 18.00.24_4e1199b0_1750054472778.jpg';
 import coffeeTable5Image from '@assets/WhatsApp Image 2025-06-13 at 18.00.25_ab7d6f3d_1750054642873.jpg';
 import coffeeTable6Image from '@assets/WhatsApp Image 2025-06-13 at 17.46.30_789b8cef_1750054732586.jpg';
+// Import centre table images
+import centreTable1Image from '@assets/WhatsApp Image 2025-06-13 at 18.00.25_6249c87e_1750055030632.jpg';
+import centreTable2Image from '@assets/WhatsApp Image 2025-06-13 at 17.46.30_0a42d700_1750055042784.jpg';
+import centreTable3Image from '@assets/WhatsApp Image 2025-06-13 at 17.53.09_d76b07b5_1750055071634.jpg';
+import centreTable4Image from '@assets/WhatsApp Image 2025-06-13 at 17.53.10_d0678884_1750055089890.jpg';
+import centreTable5Image from '@assets/WhatsApp Image 2025-06-13 at 18.00.25_fb03fb31_1750055232448.jpg';
+import centreTable6Image from '@assets/WhatsApp Image 2025-06-13 at 18.00.25_aba52472_1750055260392.jpg';
 
 export default function Collections() {
   const collections = [
@@ -121,10 +128,14 @@ export default function Collections() {
       id: 7,
       title: "Centre Tables",
       description: "Elegant centre tables designed to be the focal point of any sophisticated living room.",
-      images: Array(4).fill("/api/placeholder/400/300").map((src, index) => ({
-        src: `${src}?centre=${index + 1}`,
-        alt: `Premium centre table ${index + 1}`
-      }))
+      images: [
+        { src: centreTable1Image, alt: "Elegant glass centre table with gold frame in green velvet sofa living room with art gallery wall" },
+        { src: centreTable2Image, alt: "Designer centre table with textured surface and navy blue sofa in dramatic marble-walled setting" },
+        { src: centreTable3Image, alt: "Sophisticated black glass centre table with gold base in neutral toned living room" },
+        { src: centreTable4Image, alt: "Luxurious black glass centre table with decorative accessories in beige sectional sofa setting" },
+        { src: centreTable5Image, alt: "Modern round centre table with distinctive gold ribbed base and black glass top" },
+        { src: centreTable6Image, alt: "Contemporary gold metal centre table with white marble top and decorative crystal elements" }
+      ]
     },
     {
       id: 8,
@@ -186,8 +197,8 @@ export default function Collections() {
                   </p>
                 </div>
               
-                {/* Image Display - Special treatment for Beds, Sofas, Arm Chairs, Pouf and Benches, Dining Tables and Chairs, and Coffee Tables with rotational carousel */}
-                {collection.title === "Beds" || collection.title === "Sofas" || collection.title === "Arm Chairs" || collection.title === "Pouf and Benches" || collection.title === "Dining Tables and Chairs" || collection.title === "Coffee Tables" ? (
+                {/* Image Display - Special treatment for Beds, Sofas, Arm Chairs, Pouf and Benches, Dining Tables and Chairs, Coffee Tables, and Centre Tables with rotational carousel */}
+                {collection.title === "Beds" || collection.title === "Sofas" || collection.title === "Arm Chairs" || collection.title === "Pouf and Benches" || collection.title === "Dining Tables and Chairs" || collection.title === "Coffee Tables" || collection.title === "Centre Tables" ? (
                   <div className="mb-8 luxury-carousel-container">
                     <RotatingCarousel 
                       images={collection.images}
@@ -197,7 +208,8 @@ export default function Collections() {
                         collection.title === "Arm Chairs" ? 3000 :
                         collection.title === "Pouf and Benches" ? 3200 :
                         collection.title === "Dining Tables and Chairs" ? 3800 :
-                        collection.title === "Coffee Tables" ? 3600 : 4000
+                        collection.title === "Coffee Tables" ? 3600 :
+                        collection.title === "Centre Tables" ? 3400 : 4000
                       }
                     />
                   </div>
