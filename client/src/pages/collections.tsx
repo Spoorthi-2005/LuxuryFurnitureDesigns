@@ -102,15 +102,7 @@ export default function Collections() {
         { src: diningTable6Image, alt: "Sleek oval dining table with contemporary black chairs in modern setting" }
       ]
     },
-    {
-      id: 5,
-      title: "Consoles",
-      description: "Stylish console tables that serve as functional art pieces, perfect for entryways and living spaces.",
-      images: Array(4).fill("/api/placeholder/400/300").map((src, index) => ({
-        src: `${src}?console=${index + 1}`,
-        alt: `Designer console table ${index + 1}`
-      }))
-    },
+
     {
       id: 6,
       title: "Coffee Tables",
