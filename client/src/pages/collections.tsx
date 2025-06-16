@@ -5,12 +5,12 @@ import Footer from "@/components/footer";
 import RotatingCarousel from "@/components/rotating-carousel";
 import { Link } from "wouter";
 
-// Import bed/bedroom images
+// Import bed/bedroom images (actual bedroom images)
 import bedImage1 from "@assets/WhatsApp Image 2025-06-13 at 17.33.24_a0ec5bfa_1750051914724.jpg";
-import bedImage2 from "@assets/WhatsApp Image 2025-06-13 at 16.29.47_37877b1c_1750056061341.jpg";
-import bedImage3 from "@assets/WhatsApp Image 2025-06-13 at 16.29.47_593f7c9b_1750056874168.jpg";
-import bedImage4 from "@assets/WhatsApp Image 2025-06-13 at 16.29.47_8d285b60_1750056034362.jpg";
-import bedImage5 from "@assets/WhatsApp Image 2025-06-13 at 16.29.47_9e6edafe_1750056017054.jpg";
+import bedImage2 from "@assets/WhatsApp Image 2025-06-13 at 16.30.16_e304955a_1750056145268.jpg";
+import bedImage3 from "@assets/WhatsApp Image 2025-06-13 at 16.31.07_7dc38a64_1750056097211.jpg";
+import bedImage4 from "@assets/WhatsApp Image 2025-06-13 at 16.31.07_8b6b59a2_1749812856777.jpg";
+import bedImage5 from "@assets/WhatsApp Image 2025-06-13 at 16.29.47_c71c5951_1750056003015.jpg";
 
 // Import sofa images
 import sofaImage1 from "@assets/WhatsApp Image 2025-06-13 at 17.44.32_3966bed2_1749925461685.jpg";
@@ -26,12 +26,12 @@ import chairImage3 from "@assets/WhatsApp Image 2025-06-13 at 17.44.32_bad0d9e3_
 import chairImage4 from "@assets/WhatsApp Image 2025-06-13 at 17.46.29_832ad829_1749926048525.jpg";
 import chairImage5 from "@assets/WhatsApp Image 2025-06-13 at 17.46.29_96be9a21_1749926026154.jpg";
 
-// Import dining table and chair images
+// Import dining table and chair images (restaurant and commercial dining)
 import diningImage1 from "@assets/WhatsApp Image 2025-06-13 at 17.50.39_37b37c32_1750052994832.jpg";
 import diningImage2 from "@assets/WhatsApp Image 2025-06-13 at 16.29.47_37877b1c_1750056061341.jpg";
-import diningImage3 from "@assets/WhatsApp Image 2025-06-13 at 17.46.30_789b8cef_1750054732586.jpg";
-import diningImage4 from "@assets/WhatsApp Image 2025-06-13 at 17.46.30_e32dcc23_1750053498355.jpg";
-import diningImage5 from "@assets/WhatsApp Image 2025-06-13 at 17.46.30_e5dda6ca_1749925498313.jpg";
+import diningImage3 from "@assets/WhatsApp Image 2025-06-13 at 16.29.47_593f7c9b_1750056874168.jpg";
+import diningImage4 from "@assets/WhatsApp Image 2025-06-13 at 16.29.47_8d285b60_1750056034362.jpg";
+import diningImage5 from "@assets/WhatsApp Image 2025-06-13 at 16.29.47_9e6edafe_1750056017054.jpg";
 
 // Import coffee table images
 import coffeeImage1 from "@assets/WhatsApp Image 2025-06-13 at 17.53.10_1f9b6f05_1750054139202.jpg";
@@ -62,9 +62,9 @@ export default function Collections() {
       description: "Luxurious sleeping sanctuaries crafted with premium materials and sophisticated design elements for ultimate comfort and elegance.",
       images: [
         { src: bedImage1, alt: "Luxury bedroom with premium bed and sophisticated interior design" },
-        { src: bedImage3, alt: "Contemporary bedroom suite with premium bedding and lighting" },
-        { src: bedImage4, alt: "Sophisticated bedroom interior with luxury furnishings" },
-        { src: bedImage5, alt: "Modern bedroom design with elegant decor and premium materials" }
+        { src: bedImage2, alt: "Contemporary bedroom suite with premium bedding and lighting" },
+        { src: bedImage3, alt: "Sophisticated bedroom interior with luxury furnishings" },
+        { src: bedImage4, alt: "Modern bedroom design with elegant decor and premium materials" }
       ]
     },
     {
@@ -95,9 +95,9 @@ export default function Collections() {
       description: "Exquisite dining ensembles that transform meals into memorable experiences through exceptional craftsmanship and elegant design.",
       images: [
         { src: diningImage1, alt: "Luxury round dining table with quilted chairs and gold accents" },
-        { src: diningImage2, alt: "Restaurant dining setup with premium furniture and sophisticated ambiance" },
-        { src: diningImage3, alt: "Contemporary dining arrangement with designer table and premium seating" },
-        { src: diningImage4, alt: "Elegant dining ensemble with refined table and luxury chairs" }
+        { src: diningImage2, alt: "Restaurant dining area with premium furniture and sophisticated ambiance" },
+        { src: diningImage3, alt: "Commercial dining space with elegant table and chair arrangements" },
+        { src: diningImage4, alt: "Professional restaurant interior with premium dining furniture" }
       ]
     },
     {
