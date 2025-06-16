@@ -159,82 +159,77 @@ export default function Collections() {
         </div>
       </section>
 
-      {/* Collections Masonry Layout */}
+      {/* Collections Sections */}
       <div className="container mx-auto px-4 py-12 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {collections.map((collection, index) => (
-            <div 
-              key={collection.id} 
-              className={`${index % 2 === 0 ? 'lg:mb-16' : 'lg:mt-16'} ${index % 3 === 0 ? 'lg:scale-105' : ''} transition-all duration-700 hover:scale-102`}
-            >
-              <Card className="bg-gradient-to-br from-slate-900/95 via-slate-800/90 to-slate-700/95 border-gold/20 backdrop-blur-xl shadow-2xl overflow-hidden hover:shadow-gold/20 hover:shadow-3xl">
-                <CardContent className="p-8 md:p-12">
-                  <div className="text-center mb-12">
-                    <h2 className="text-3xl md:text-5xl font-bold text-transparent bg-gradient-to-r from-gold via-yellow-300 to-gold bg-clip-text mb-6 tracking-wide animated-gradient">
-                      {collection.title}
-                    </h2>
-                    <div className="w-24 h-1 bg-gradient-to-r from-transparent via-gold to-transparent mx-auto mb-6"></div>
-                    <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed font-light">
-                      {collection.description}
-                    </p>
+        {collections.map((collection, index) => (
+          <div key={collection.id} className="mb-20">
+            <Card className="bg-gradient-to-br from-slate-900/95 via-slate-800/90 to-slate-700/95 border-gold/20 backdrop-blur-xl shadow-2xl overflow-hidden">
+              <CardContent className="p-10 md:p-16">
+                <div className="text-center mb-16">
+                  <h2 className="text-5xl md:text-7xl font-bold text-transparent bg-gradient-to-r from-gold via-yellow-300 to-gold bg-clip-text mb-8 tracking-wide animated-gradient">
+                    {collection.title}
+                  </h2>
+                  <div className="w-32 h-1.5 bg-gradient-to-r from-transparent via-gold to-transparent mx-auto mb-8"></div>
+                  <p className="text-xl md:text-2xl text-gray-300 max-w-5xl mx-auto leading-relaxed font-light">
+                    {collection.description}
+                  </p>
+                </div>
+              
+                {/* Image Display - Special treatment for Beds, Sofas, Arm Chairs, Pouf and Benches, Dining Tables and Chairs, Coffee Tables, and Centre Tables with rotational carousel */}
+                {collection.title === "Beds" || collection.title === "Sofas" || collection.title === "Arm Chairs" || collection.title === "Pouf and Benches" || collection.title === "Dining Tables and Chairs" || collection.title === "Coffee Tables" || collection.title === "Centre Tables" ? (
+                  <div className="mb-8 luxury-carousel-container">
+                    <RotatingCarousel 
+                      images={collection.images}
+                      autoRotate={true}
+                      rotationInterval={
+                        collection.title === "Sofas" ? 3500 : 
+                        collection.title === "Arm Chairs" ? 3000 :
+                        collection.title === "Pouf and Benches" ? 3200 :
+                        collection.title === "Dining Tables and Chairs" ? 3800 :
+                        collection.title === "Coffee Tables" ? 3600 :
+                        collection.title === "Centre Tables" ? 3400 : 4000
+                      }
+                    />
                   </div>
-
-                  {/* Image Display - Carousel for special collections, grid for others */}
-                  {collection.title === "Beds" || collection.title === "Sofas" || collection.title === "Arm Chairs" || collection.title === "Pouf and Benches" || collection.title === "Dining Tables and Chairs" || collection.title === "Coffee Tables" || collection.title === "Centre Tables" ? (
-                    <div className="mb-8 luxury-carousel-container">
-                      <RotatingCarousel 
-                        images={collection.images}
-                        autoRotate={true}
-                        rotationInterval={
-                          collection.title === "Sofas" ? 3500 : 
-                          collection.title === "Arm Chairs" ? 3000 :
-                          collection.title === "Pouf and Benches" ? 3200 :
-                          collection.title === "Dining Tables and Chairs" ? 3800 :
-                          collection.title === "Coffee Tables" ? 3600 :
-                          collection.title === "Centre Tables" ? 3400 : 4000
-                        }
-                      />
-                    </div>
-                  ) : (
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
-                      {collection.images.map((image, imageIndex) => (
-                        <Card 
-                          key={imageIndex} 
-                          className="overflow-hidden bg-slate-900/60 border-gold/20 hover:border-gold/50 transition-all duration-600 group shadow-2xl hover:shadow-gold/30 hover:shadow-2xl"
-                        >
-                          <div className="relative overflow-hidden">
-                            <img 
-                              src={image.src}
-                              alt={image.alt}
-                              className="w-full h-96 object-cover object-center transition-all duration-800 group-hover:scale-105 group-hover:brightness-110 group-hover:contrast-115"
-                              style={{
-                                filter: 'contrast(1.1) brightness(1.05) saturate(1.15)'
-                              }}
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-600"></div>
-                            <div className="absolute inset-0 bg-gradient-to-r from-gold/5 via-transparent to-gold/5 opacity-0 group-hover:opacity-100 transition-opacity duration-600"></div>
-                          </div>
-                        </Card>
-                      ))}
-                    </div>
-                  )}
-                
-                  {/* Collection Action Button */}
-                  <div className="text-center">
-                    <Link href="/contact">
-                      <Button 
-                        variant="outline" 
-                        className="bg-gradient-to-r from-elegant-brown to-glow-gold text-white border-2 border-amber-400 hover:bg-gradient-to-r hover:from-glow-gold hover:to-elegant-brown transition-all duration-500 px-8 py-3 font-semibold shadow-2xl hover:shadow-glow-gold/50 transform hover:scale-105 luxury-glow"
+                ) : (
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
+                    {collection.images.map((image, imageIndex) => (
+                      <Card 
+                        key={imageIndex} 
+                        className="overflow-hidden bg-slate-900/60 border-gold/20 hover:border-gold/50 transition-all duration-600 group shadow-2xl hover:shadow-gold/30 hover:shadow-2xl"
                       >
-                        Explore {collection.title} Collection
-                      </Button>
-                    </Link>
+                        <div className="relative overflow-hidden">
+                          <img 
+                            src={image.src}
+                            alt={image.alt}
+                            className="w-full h-96 object-cover object-center transition-all duration-800 group-hover:scale-105 group-hover:brightness-110 group-hover:contrast-115"
+                            style={{
+                              filter: 'contrast(1.1) brightness(1.05) saturate(1.15)'
+                            }}
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-600"></div>
+                          <div className="absolute inset-0 bg-gradient-to-r from-gold/5 via-transparent to-gold/5 opacity-0 group-hover:opacity-100 transition-opacity duration-600"></div>
+                        </div>
+                      </Card>
+                    ))}
                   </div>
-                </CardContent>
-              </Card>
-            </div>
-          ))}
-        </div>
+                )}
+                
+                {/* Collection Action Button */}
+                <div className="text-center">
+                  <Link href="/contact">
+                    <Button 
+                      variant="outline" 
+                      className="bg-gradient-to-r from-elegant-brown to-glow-gold text-white border-2 border-amber-400 hover:bg-gradient-to-r hover:from-glow-gold hover:to-elegant-brown transition-all duration-500 px-8 py-3 font-semibold shadow-2xl hover:shadow-glow-gold/50 transform hover:scale-105 luxury-glow"
+                    >
+                      Explore {collection.title} Collection
+                    </Button>
+                  </Link>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        ))}
       </div>
 
       {/* Call to Action */}
