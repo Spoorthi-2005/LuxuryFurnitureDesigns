@@ -20,12 +20,12 @@ import sofaImage3 from "@assets/IMG-20250613-WA0051_1750074586521.jpg";
 import sofaImage4 from "@assets/IMG-20250613-WA0057_1750074600000.jpg";
 import sofaImage5 from "@assets/IMG-20250613-WA0067_1750074632032.jpg";
 
-// Import armchair images  
-import chairImage1 from "@assets/WhatsApp Image 2025-06-13 at 18.00.23_51df9eb3_1749926198325.jpg";
-import chairImage2 from "@assets/WhatsApp Image 2025-06-13 at 17.44.32_558cfe2f_1749925476189.jpg";
-import chairImage3 from "@assets/WhatsApp Image 2025-06-13 at 17.44.32_bad0d9e3_1750053485982.jpg";
-import chairImage4 from "@assets/WhatsApp Image 2025-06-13 at 17.46.29_832ad829_1749926048525.jpg";
-import chairImage5 from "@assets/WhatsApp Image 2025-06-13 at 17.46.29_96be9a21_1749926026154.jpg";
+// Import armchair images (your specific luxury armchair collection)
+import chairImage1 from "@assets/IMG-20250613-WA0052_1750074773597.jpg";
+import chairImage2 from "@assets/IMG-20250613-WA0077_1750074805978.jpg";
+import chairImage3 from "@assets/IMG-20250613-WA0054_1750074817619.jpg";
+import chairImage4 from "@assets/IMG-20250613-WA0076_1750074840325.jpg";
+import chairImage5 from "@assets/IMG-20250613-WA0078_1750074861484.jpg";
 
 // Import dining table and chair images (restaurant and commercial dining)
 import diningImage1 from "@assets/WhatsApp Image 2025-06-13 at 17.50.39_37b37c32_1750052994832.jpg";
@@ -87,10 +87,11 @@ export default function Collections() {
       title: "Arm Chairs",
       description: "Statement seating pieces that embody comfort and style, meticulously crafted to enhance any interior with sophistication.",
       images: [
-        { src: chairImage3, alt: "Luxury olive green tufted armchair with premium fabric and elegant styling" },
-        { src: chairImage2, alt: "Designer accent chair with sophisticated upholstery and modern appeal" },
-        { src: chairImage4, alt: "Elegant seating solution with luxury armchair and sophisticated design" },
-        { src: chairImage5, alt: "Premium accent chair showcasing exceptional craftsmanship and style" }
+        { src: chairImage1, alt: "Elegant white armchair with gold accents and luxury console in sophisticated interior" },
+        { src: chairImage2, alt: "Luxury olive green tufted armchair with premium fabric and elegant styling" },
+        { src: chairImage3, alt: "Premium rose gold armchair with quilted detailing and metallic frame" },
+        { src: chairImage4, alt: "Contemporary mustard yellow armchairs with modern design and gold legs" },
+        { src: chairImage5, alt: "Sophisticated grey velvet armchair with curved design and premium upholstery" }
       ]
     },
     {
@@ -189,7 +190,7 @@ export default function Collections() {
                     {/* Premium inner border effect */}
                     <div className="absolute inset-1 rounded-3xl border border-gold/10"></div>
                     
-                    {collection.id === "beds" || collection.id === "sofas" ? (
+                    {collection.id === "beds" || collection.id === "sofas" || collection.id === "armchairs" ? (
                       <div className="p-8">
                         <SimpleImageRotator 
                           images={collection.images}
