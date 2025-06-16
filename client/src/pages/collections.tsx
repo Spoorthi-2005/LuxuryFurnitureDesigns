@@ -27,12 +27,11 @@ import chairImage3 from "@assets/IMG-20250613-WA0054_1750074817619.jpg";
 import chairImage4 from "@assets/IMG-20250613-WA0076_1750074840325.jpg";
 import chairImage5 from "@assets/IMG-20250613-WA0078_1750074861484.jpg";
 
-// Import dining table and chair images (restaurant and commercial dining)
-import diningImage1 from "@assets/WhatsApp Image 2025-06-13 at 17.50.39_37b37c32_1750052994832.jpg";
-import diningImage2 from "@assets/WhatsApp Image 2025-06-13 at 16.29.47_37877b1c_1750056061341.jpg";
-import diningImage3 from "@assets/WhatsApp Image 2025-06-13 at 16.29.47_593f7c9b_1750056874168.jpg";
-import diningImage4 from "@assets/WhatsApp Image 2025-06-13 at 16.29.47_8d285b60_1750056034362.jpg";
-import diningImage5 from "@assets/WhatsApp Image 2025-06-13 at 16.29.47_9e6edafe_1750056017054.jpg";
+// Import dining table images (your specific luxury dining collection)
+import diningImage1 from "@assets/IMG-20250613-WA0060_1750074999071.jpg";
+import diningImage2 from "@assets/IMG-20250613-WA0063_1750075014558.jpg";
+import diningImage3 from "@assets/IMG-20250613-WA0065_1750075036744.jpg";
+import diningImage4 from "@assets/IMG-20250613-WA0072_1750075059985.jpg";
 
 // Import coffee table images
 import coffeeImage1 from "@assets/WhatsApp Image 2025-06-13 at 17.53.10_1f9b6f05_1750054139202.jpg";
@@ -99,10 +98,10 @@ export default function Collections() {
       title: "Dining Tables and Chairs",
       description: "Exquisite dining ensembles that transform meals into memorable experiences through exceptional craftsmanship and elegant design.",
       images: [
-        { src: diningImage1, alt: "Luxury round dining table with quilted chairs and gold accents" },
-        { src: diningImage2, alt: "Restaurant dining area with premium furniture and sophisticated ambiance" },
-        { src: diningImage3, alt: "Commercial dining space with elegant table and chair arrangements" },
-        { src: diningImage4, alt: "Professional restaurant interior with premium dining furniture" }
+        { src: diningImage1, alt: "Contemporary dining table with blue sculptural base and quilted chairs" },
+        { src: diningImage2, alt: "Luxury dark wood dining table with tufted brown chairs and gold accents" },
+        { src: diningImage3, alt: "Elegant round black glass dining table with white quilted swivel chairs" },
+        { src: diningImage4, alt: "Modern dining set with geometric gold base and cream upholstered chairs" }
       ]
     },
     {
@@ -190,7 +189,7 @@ export default function Collections() {
                     {/* Premium inner border effect */}
                     <div className="absolute inset-1 rounded-3xl border border-gold/10"></div>
                     
-                    {collection.id === "beds" || collection.id === "sofas" || collection.id === "armchairs" ? (
+                    {collection.id === "beds" || collection.id === "sofas" || collection.id === "armchairs" || collection.id === "dining" ? (
                       <div className="p-8">
                         <SimpleImageRotator 
                           images={collection.images}
