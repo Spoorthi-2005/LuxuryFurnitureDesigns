@@ -177,7 +177,7 @@ export default function Collections() {
                   </p>
                 </div>
               
-                {/* Opulence-Style 3D Rotating Carousel with Premium Effects */}
+                {/* Bed Collection with 3D Rotation, Others with Grid */}
                 <div className="mb-12 luxury-carousel-container relative group">
                   {/* Sophisticated background gradient layers */}
                   <div className="absolute inset-0 bg-gradient-to-r from-gold/8 via-amber-200/3 to-gold/8 rounded-3xl blur-sm"></div>
@@ -188,18 +188,26 @@ export default function Collections() {
                     {/* Premium inner border effect */}
                     <div className="absolute inset-1 rounded-3xl border border-gold/10"></div>
                     
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-8">
-                      {collection.images.map((image, imageIndex) => (
-                        <div key={imageIndex} className="relative group">
-                          <img
-                            src={image.src}
-                            alt={image.alt}
-                            className="w-full h-64 object-cover rounded-lg shadow-lg transition-transform duration-300 group-hover:scale-105 border border-gold/20"
-                          />
-                          <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg"></div>
-                        </div>
-                      ))}
-                    </div>
+                    {collection.id === "beds" ? (
+                      <RotatingCarousel 
+                        images={collection.images}
+                        autoRotate={true}
+                        rotationInterval={4000}
+                      />
+                    ) : (
+                      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-8">
+                        {collection.images.map((image, imageIndex) => (
+                          <div key={imageIndex} className="relative group">
+                            <img
+                              src={image.src}
+                              alt={image.alt}
+                              className="w-full h-64 object-cover rounded-lg shadow-lg transition-transform duration-300 group-hover:scale-105 border border-gold/20"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg"></div>
+                          </div>
+                        ))}
+                      </div>
+                    )}
                   </div>
                   
                   {/* Opulence-style premium overlay effects */}

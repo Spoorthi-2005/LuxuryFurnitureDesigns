@@ -120,7 +120,7 @@ export default function RotatingCarousel({
     }
   };
 
-  if (images.length === 0) return <div>No images available</div>;
+  if (images.length === 0) return null;
 
   return (
     <div 
@@ -128,11 +128,6 @@ export default function RotatingCarousel({
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      {/* Debug info */}
-      <div style={{ position: 'absolute', top: '10px', left: '10px', color: 'white', zIndex: 100, fontSize: '12px' }}>
-        Images: {images.length}, Current: {currentIndex}
-      </div>
-      
       {/* 3D Rotating Carousel */}
       <div className="rotating-3d-carousel">
         <div className="carousel-stage">
@@ -149,8 +144,6 @@ export default function RotatingCarousel({
                   alt={image.alt}
                   className="carousel-image-full"
                   loading="lazy"
-                  onError={(e) => console.error('Image failed to load:', image.src, e)}
-                  onLoad={() => console.log('Image loaded:', image.src)}
                 />
                 {/* Luxury overlay effects */}
                 <div className="image-overlay-luxury"></div>
