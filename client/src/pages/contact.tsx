@@ -121,7 +121,7 @@ export default function Contact() {
               <h1 className="text-6xl font-playfair font-bold mb-6 text-gradient-brown">
                 Connect With Excellence
               </h1>
-              <p className="text-2xl text-muted-foreground leading-relaxed">
+              <p className="text-2xl text-soft-brown leading-relaxed">
                 Transform your living spaces with our exceptional furniture solutions. Our expert consultants are ready to 
                 discuss your vision and create bespoke pieces that reflect your unique style and sophistication.
               </p>
@@ -161,7 +161,7 @@ export default function Contact() {
                           </div>
                           <div>
                             <h3 className="text-2xl font-playfair font-bold text-elegant-brown mb-3">{info.title}</h3>
-                            <p className="text-muted-foreground whitespace-pre-line leading-relaxed">{info.content}</p>
+                            <p className="text-soft-brown whitespace-pre-line leading-relaxed">{info.content}</p>
                           </div>
                         </div>
                       </CardContent>

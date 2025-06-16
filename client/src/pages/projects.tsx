@@ -93,7 +93,7 @@ export default function Projects() {
             <h1 className="text-5xl md:text-7xl font-bold text-transparent bg-gradient-to-r from-gold via-yellow-300 to-gold bg-clip-text mb-8 tracking-wide animated-gradient">
               Our Projects
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 leading-relaxed mb-8">
+            <p className="text-xl md:text-2xl text-soft-brown leading-relaxed mb-8">
               Explore our portfolio of exceptional hospitality and restaurant designs that showcase luxury, innovation, and impeccable craftsmanship.
             </p>
             
@@ -106,7 +106,7 @@ export default function Projects() {
                   className={`px-6 py-3 rounded-full transition-all duration-300 ${
                     activeFilter === category
                       ? "bg-gradient-to-r from-gold to-yellow-600 text-slate-900 font-semibold"
-                      : "bg-slate-800/50 text-gray-300 border border-gold/30 hover:bg-gold/20"
+                      : "bg-slate-800/50 text-soft-brown border border-gold/30 hover:bg-gold/20"
                   }`}
                 >
                   {category}
@@ -185,7 +185,7 @@ export default function Projects() {
                           <Badge 
                             key={featureIndex} 
                             variant="outline" 
-                            className="border-gold/30 text-gray-300 bg-slate-800/50 text-xs"
+                            className="border-gold/30 text-soft-brown bg-slate-800/50 text-xs"
                           >
                             {feature}
                           </Badge>
@@ -199,7 +199,7 @@ export default function Projects() {
                           <Star key={i} className="w-3 h-3 fill-current" />
                         ))}
                       </div>
-                      <p className="text-gray-300 text-xs italic leading-relaxed">
+                      <p className="text-soft-brown text-xs italic leading-relaxed">
                         "{project.testimonial}"
                       </p>
                     </div>
@@ -224,7 +224,7 @@ export default function Projects() {
             <h2 className="text-4xl md:text-6xl font-bold text-transparent bg-gradient-to-r from-gold via-yellow-300 to-gold bg-clip-text mb-6 animated-gradient">
               Virtual Design Studio
             </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-soft-brown mb-8 max-w-3xl mx-auto">
               Experience our designs in an immersive virtual environment. Hover over elements to see interactive details and design variations.
             </p>
           </div>
