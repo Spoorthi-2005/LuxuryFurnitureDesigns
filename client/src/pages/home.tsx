@@ -133,8 +133,8 @@ export default function Home() {
       <section className="py-20 bg-section">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-5xl font-playfair font-bold mb-6 text-elegant-brown">Excellence in Every Detail</h2>
-            <p className="text-xl text-soft-brown max-w-3xl mx-auto">
+            <h2 className="text-5xl font-playfair font-bold mb-6 text-white">Excellence in Every Detail</h2>
+            <p className="text-xl text-gray-200 max-w-3xl mx-auto">
               Discover our comprehensive range of premium furniture solutions, each crafted with meticulous attention 
               to detail and an unwavering commitment to quality that defines luxury living.
             </p>
@@ -156,8 +156,8 @@ export default function Home() {
                       </div>
                     </div>
                   </div>
-                  <h3 className="text-xl font-playfair font-bold text-elegant-brown mb-4">{service.title}</h3>
-                  <p className="text-soft-brown mb-6 leading-relaxed">{service.description}</p>
+                  <h3 className="text-xl font-playfair font-bold text-white mb-4">{service.title}</h3>
+                  <p className="text-gray-200 mb-6 leading-relaxed">{service.description}</p>
                   <Link href={service.link}>
                     <Button variant="ghost" className="text-elegant-brown border border-elegant-brown hover:bg-elegant-brown hover:text-white transition-all duration-300 shadow-md">
                       Learn More
@@ -236,7 +236,7 @@ export default function Home() {
                   <div className="w-12 h-12 bg-glow-gold rounded-full flex items-center justify-center mx-auto mb-4 shadow-md">
                     <i className={`${process.icon} text-elegant-brown text-lg`}></i>
                   </div>
-                  <h3 className="text-lg font-playfair font-bold text-elegant-brown">{process.title}</h3>
+                  <h3 className="text-lg font-playfair font-bold text-white">{process.title}</h3>
                 </CardContent>
               </Card>
             ))}
@@ -256,8 +256,8 @@ export default function Home() {
       <section className="py-20 bg-gradient-to-r from-glow-gold/10 to-transparent">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-playfair font-bold mb-6 text-elegant-brown">Our Legacy in Numbers</h2>
-            <p className="text-xl text-soft-brown max-w-3xl mx-auto">
+            <h2 className="text-4xl font-playfair font-bold mb-6 text-white">Our Legacy in Numbers</h2>
+            <p className="text-xl text-gray-200 max-w-3xl mx-auto">
               Decades of excellence reflected in satisfied customers, completed projects, and recognition in the luxury furniture industry.
             </p>
           </div>
@@ -271,7 +271,7 @@ export default function Home() {
                 <div className="text-4xl font-playfair font-bold text-elegant-brown mb-2 text-shimmer">
                   <AnimatedCounter end={200} suffix="+" />
                 </div>
-                <p className="text-soft-brown font-medium">Happy Customers</p>
+                <p className="text-gray-200 font-medium">Happy Customers</p>
               </CardContent>
             </Card>
 
@@ -283,7 +283,7 @@ export default function Home() {
                 <div className="text-4xl font-playfair font-bold text-elegant-brown mb-2 text-shimmer">
                   <AnimatedCounter end={700} suffix="+" />
                 </div>
-                <p className="text-soft-brown font-medium">Projects Completed</p>
+                <p className="text-gray-200 font-medium">Projects Completed</p>
               </CardContent>
             </Card>
 
@@ -295,7 +295,7 @@ export default function Home() {
                 <div className="text-4xl font-playfair font-bold text-elegant-brown mb-2 text-shimmer">
                   <AnimatedCounter end={15} suffix="+" />
                 </div>
-                <p className="text-soft-brown font-medium">Years of Excellence</p>
+                <p className="text-gray-200 font-medium">Years of Excellence</p>
               </CardContent>
             </Card>
 
@@ -307,7 +307,7 @@ export default function Home() {
                 <div className="text-4xl font-playfair font-bold text-elegant-brown mb-2 text-shimmer">
                   <AnimatedCounter end={98} suffix="%" />
                 </div>
-                <p className="text-soft-brown font-medium">Client Satisfaction</p>
+                <p className="text-gray-200 font-medium">Client Satisfaction</p>
               </CardContent>
             </Card>
           </div>
@@ -318,8 +318,8 @@ export default function Home() {
       <section className="py-20 bg-section">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-playfair font-bold mb-6 text-elegant-brown">What Our Clients Say</h2>
-            <p className="text-xl text-soft-brown max-w-3xl mx-auto">
+            <h2 className="text-4xl font-playfair font-bold mb-6 text-white">What Our Clients Say</h2>
+            <p className="text-xl text-gray-200 max-w-3xl mx-auto">
               Discover why discerning customers choose Blackhorse Furnitures for their most important spaces.
             </p>
           </div>
