@@ -5,12 +5,13 @@ import Footer from "@/components/footer";
 import RotatingCarousel from "@/components/rotating-carousel";
 import { Link } from "wouter";
 
-// Import bed/bedroom images (actual bedroom images)
-import bedImage1 from "@assets/WhatsApp Image 2025-06-13 at 17.33.24_a0ec5bfa_1750051914724.jpg";
-import bedImage2 from "@assets/WhatsApp Image 2025-06-13 at 16.30.16_e304955a_1750056145268.jpg";
-import bedImage3 from "@assets/WhatsApp Image 2025-06-13 at 16.31.07_7dc38a64_1750056097211.jpg";
-import bedImage4 from "@assets/WhatsApp Image 2025-06-13 at 16.31.07_8b6b59a2_1749812856777.jpg";
-import bedImage5 from "@assets/WhatsApp Image 2025-06-13 at 16.29.47_c71c5951_1750056003015.jpg";
+// Import bed/bedroom images (your specific luxury bed collection)
+import bedImage1 from "@assets/IMG-20250613-WA0038_1750069478869.jpg";
+import bedImage2 from "@assets/img5_1750069489466.png";
+import bedImage3 from "@assets/img27_1750069505780.png";
+import bedImage4 from "@assets/IMG-20250613-WA0041_1750069532482.jpg";
+import bedImage5 from "@assets/IMG-20250613-WA0042_1750069552770.jpg";
+import bedImage6 from "@assets/IMG-20250613-WA0097_1750069572598.jpg";
 
 // Import sofa images
 import sofaImage1 from "@assets/WhatsApp Image 2025-06-13 at 17.44.32_3966bed2_1749925461685.jpg";
@@ -61,10 +62,12 @@ export default function Collections() {
       title: "Beds",
       description: "Luxurious sleeping sanctuaries crafted with premium materials and sophisticated design elements for ultimate comfort and elegance.",
       images: [
-        { src: bedImage1, alt: "Luxury bedroom with premium bed and sophisticated interior design" },
-        { src: bedImage2, alt: "Contemporary bedroom suite with premium bedding and lighting" },
-        { src: bedImage3, alt: "Sophisticated bedroom interior with luxury furnishings" },
-        { src: bedImage4, alt: "Modern bedroom design with elegant decor and premium materials" }
+        { src: bedImage1, alt: "Luxury bedroom with premium grey upholstered bed and sophisticated lighting" },
+        { src: bedImage2, alt: "Contemporary black bed with crystal chandeliers and modern design" },
+        { src: bedImage3, alt: "Elegant quilted headboard bed with gold accents and premium materials" },
+        { src: bedImage4, alt: "Art deco inspired bed with curved headboard and luxury finishes" },
+        { src: bedImage5, alt: "Modern platform bed with textured headboard and premium upholstery" },
+        { src: bedImage6, alt: "Minimalist bed design with clean lines and sophisticated styling" }
       ]
     },
     {
