@@ -845,33 +845,33 @@
 }
 
 .carousel-item.prev {
-  transform: rotateY(-30deg) translateZ(-100px) translateX(-40vw) scale(0.7);
+  transform: rotateY(-45deg) translateZ(-100px) translateX(-30vw) scale(0.75);
   z-index: 8;
-  opacity: 0.8;
+  opacity: 0.85;
 }
 
 .carousel-item.next {
-  transform: rotateY(30deg) translateZ(-100px) translateX(40vw) scale(0.7);
+  transform: rotateY(45deg) translateZ(-100px) translateX(30vw) scale(0.75);
   z-index: 8;
-  opacity: 0.8;
+  opacity: 0.85;
 }
 
 .carousel-item.far-prev {
-  transform: rotateY(-50deg) translateZ(-200px) translateX(-60vw) scale(0.55);
+  transform: rotateY(-75deg) translateZ(-150px) translateX(-50vw) scale(0.6);
   z-index: 6;
-  opacity: 0.6;
+  opacity: 0.7;
 }
 
 .carousel-item.far-next {
-  transform: rotateY(50deg) translateZ(-200px) translateX(60vw) scale(0.55);
+  transform: rotateY(75deg) translateZ(-150px) translateX(50vw) scale(0.6);
   z-index: 6;
-  opacity: 0.6;
+  opacity: 0.7;
 }
 
 .carousel-item.hidden {
-  transform: rotateY(80deg) translateZ(-250px) scale(0.4);
+  transform: rotateY(120deg) translateZ(-200px) scale(0.45);
   z-index: 4;
-  opacity: 0.4;
+  opacity: 0.5;
 }
 
 /* Auto-rotating animation */
