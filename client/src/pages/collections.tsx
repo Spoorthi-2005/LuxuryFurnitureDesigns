@@ -144,7 +144,7 @@ export default function Collections() {
   ];
 
   return (
-    <div className="min-h-screen relative overflow-hidden elegant-lustrous-secondary">
+    <div className="min-h-screen relative overflow-hidden luxury-platinum-secondary">
       {/* Enhanced Background Elements */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-r from-amber-100/15 via-transparent to-slate-200/25"></div>

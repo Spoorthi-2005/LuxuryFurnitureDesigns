@@ -82,7 +82,7 @@ export default function Projects() {
     : projects.filter(project => project.category === activeFilter);
 
   return (
-    <div className="min-h-screen elegant-lustrous-warm">
+    <div className="min-h-screen luxury-platinum-warm">
       <Header />
       
       {/* Hero Section */}

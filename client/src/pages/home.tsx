@@ -43,7 +43,7 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen text-foreground elegant-lustrous-primary">
+    <div className="min-h-screen luxury-platinum-primary">
       <Header />
       
       {/* Enhanced Hero Section */}

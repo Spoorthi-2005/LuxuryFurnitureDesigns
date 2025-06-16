@@ -16,25 +16,25 @@
   --card-foreground: hsl(0, 0%, 98%);
   --border: hsl(280, 30%, 25%); /* Purple-tinted border */
   --input: hsl(240, 40%, 15%); /* Dark navy input */
-  --primary: hsl(45, 100%, 70%); /* Bright gold */
-  --primary-foreground: hsl(240, 50%, 8%);
-  --secondary: hsl(240, 40%, 15%); /* Dark navy */
-  --secondary-foreground: hsl(0, 0%, 98%);
-  --accent: hsl(45, 100%, 70%); /* Bright gold accent */
-  --accent-foreground: hsl(240, 50%, 8%);
-  --destructive: hsl(0, 84.2%, 60.2%);
+  --primary: hsl(35, 85%, 75%); /* Sophisticated gold */
+  --primary-foreground: hsl(0, 0%, 15%);
+  --secondary: hsl(30, 25%, 85%); /* Platinum silver */
+  --secondary-foreground: hsl(0, 0%, 20%);
+  --accent: hsl(40, 70%, 65%); /* Rich bronze accent */
+  --accent-foreground: hsl(0, 0%, 15%);
+  --destructive: hsl(0, 75%, 55%);
   --destructive-foreground: hsl(0, 0%, 100%);
-  --ring: hsl(45, 100%, 70%);
+  --ring: hsl(35, 85%, 75%);
   --radius: 0.75rem;
-  --elegant-brown: hsl(45, 100%, 70%); /* Bright luxury gold */
-  --soft-brown: hsl(0, 0%, 75%); /* Light grey */
-  --glass-white: rgba(255, 255, 255, 0.08); /* Enhanced glass effect */
-  --glow-gold: hsl(45, 100%, 70%); /* Bright gold */
-  --transparent-brown: rgba(255, 215, 0, 0.12); /* Gold overlay */
-  --section-bg: rgba(255, 255, 255, 0.02); /* Ultra-subtle section */
-  --card-bg: rgba(255, 255, 255, 0.05); /* Glass card */
-  --champagne: hsl(45, 60%, 85%); /* Champagne */
-  --luxury-gold: hsl(45, 100%, 70%); /* Primary bright gold */
+  --elegant-brown: hsl(35, 85%, 75%); /* Sophisticated gold */
+  --soft-brown: hsl(30, 20%, 80%); /* Warm platinum */
+  --glass-white: rgba(255, 255, 255, 0.12); /* Enhanced glass effect */
+  --glow-gold: hsl(35, 85%, 75%); /* Sophisticated gold glow */
+  --transparent-brown: rgba(218, 165, 32, 0.15); /* Gold overlay */
+  --section-bg: rgba(255, 255, 255, 0.08); /* Subtle section */
+  --card-bg: rgba(255, 255, 255, 0.10); /* Glass card */
+  --champagne: hsl(40, 50%, 88%); /* Refined champagne */
+  --luxury-gold: hsl(35, 85%, 75%); /* Primary sophisticated gold */
 }
 
 .dark {
@@ -901,57 +901,61 @@
   justify-content: center;
 }
 
-/* Elegant lustrous background gradients */
-.elegant-lustrous-primary {
+/* Luxurious background gradients with perfect text contrast */
+.luxury-platinum-primary {
   background: linear-gradient(135deg, 
-    #f8f4f0 0%, 
-    #e8ddd4 15%, 
-    #d4c5b9 30%, 
-    #c5b5a8 45%, 
-    #b8a895 60%, 
-    #a69988 75%, 
-    #958976 90%, 
-    #867a68 100%);
+    #0a0a0a 0%, 
+    #1a1a1a 15%, 
+    #2d2d2d 30%, 
+    #404040 45%, 
+    #525252 60%, 
+    #666666 75%, 
+    #7a7a7a 90%, 
+    #8d8d8d 100%);
   background-size: 400% 400%;
-  animation: elegant-flow 25s ease infinite;
+  animation: luxury-flow 25s ease infinite;
+  color: #ffffff;
 }
 
-.elegant-lustrous-secondary {
+.luxury-platinum-secondary {
   background: linear-gradient(45deg, 
-    #faf7f4 0%, 
-    #f0ebe6 20%, 
-    #e6ddd4 40%, 
-    #d9cfc4 60%, 
-    #ccc1b4 80%, 
-    #bfb3a4 100%);
+    #111111 0%, 
+    #1e1e1e 20%, 
+    #2b2b2b 40%, 
+    #383838 60%, 
+    #454545 80%, 
+    #525252 100%);
   background-size: 350% 350%;
-  animation: elegant-shimmer 20s ease infinite;
+  animation: luxury-shimmer 20s ease infinite;
+  color: #f5f5f5;
 }
 
-.elegant-lustrous-accent {
+.luxury-platinum-accent {
   background: linear-gradient(90deg, 
-    #f5f1ed 0%, 
-    #eae3db 25%, 
-    #dfd5c9 50%, 
-    #d4c7b7 75%, 
-    #c9b9a5 100%);
+    #0d0d0d 0%, 
+    #202020 25%, 
+    #333333 50%, 
+    #464646 75%, 
+    #595959 100%);
   background-size: 300% 300%;
-  animation: elegant-glow 18s ease infinite;
+  animation: luxury-glow 18s ease infinite;
+  color: #ffffff;
 }
 
-.elegant-lustrous-warm {
+.luxury-platinum-warm {
   background: linear-gradient(120deg, 
-    #f9f6f2 0%, 
-    #f2ede8 20%, 
-    #ebe4dd 40%, 
-    #e4dbd2 60%, 
-    #ddd2c7 80%, 
-    #d6c9bc 100%);
+    #0f0f0f 0%, 
+    #1c1c1c 20%, 
+    #292929 40%, 
+    #363636 60%, 
+    #434343 80%, 
+    #505050 100%);
   background-size: 400% 400%;
-  animation: elegant-warm 22s ease infinite;
+  animation: luxury-warm 22s ease infinite;
+  color: #f8f8f8;
 }
 
-@keyframes elegant-flow {
+@keyframes luxury-flow {
   0% { background-position: 0% 50%; }
   25% { background-position: 100% 30%; }
   50% { background-position: 50% 100%; }
@@ -959,20 +963,20 @@
   100% { background-position: 0% 50%; }
 }
 
-@keyframes elegant-shimmer {
+@keyframes luxury-shimmer {
   0% { background-position: 0% 0%; }
   33% { background-position: 100% 50%; }
   66% { background-position: 0% 100%; }
   100% { background-position: 0% 0%; }
 }
 
-@keyframes elegant-glow {
+@keyframes luxury-glow {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
 
-@keyframes elegant-warm {
+@keyframes luxury-warm {
   0% { background-position: 0% 25%; }
   25% { background-position: 75% 50%; }
   50% { background-position: 100% 75%; }

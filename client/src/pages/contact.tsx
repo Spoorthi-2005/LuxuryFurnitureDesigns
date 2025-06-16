@@ -111,7 +111,7 @@ export default function Contact() {
   ];
 
   return (
-    <div className="min-h-screen elegant-lustrous-secondary text-foreground">
+    <div className="min-h-screen luxury-platinum-secondary">
       <Header />
       <div className="pt-20">
         {/* Hero Section */}
