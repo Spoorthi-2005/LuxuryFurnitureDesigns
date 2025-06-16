@@ -46,12 +46,11 @@ import centreImage2 from "@assets/IMG-20250613-WA0083_1750075377871.jpg";
 import centreImage3 from "@assets/IMG-20250613-WA0075_1750075398163.jpg";
 import centreImage4 from "@assets/IMG-20250613-WA0103_1750075427226.jpg";
 
-// Import bench and pouf images
-import benchImage1 from "@assets/WhatsApp Image 2025-06-13 at 18.00.24_13f5bd2d_1749925600218.jpg";
-import benchImage2 from "@assets/WhatsApp Image 2025-06-13 at 18.00.24_4e1199b0_1750054472778.jpg";
-import benchImage3 from "@assets/WhatsApp Image 2025-06-13 at 18.00.24_7f6e5a9a_1750052057626.jpg";
-import benchImage4 from "@assets/WhatsApp Image 2025-06-13 at 18.00.24_923ac9ce_1749925690778.jpg";
-import benchImage5 from "@assets/WhatsApp Image 2025-06-13 at 18.00.24_99040198_1749925916156.jpg";
+// Import bench and pouf images (your specific luxury bedroom bench collection)
+import benchImage1 from "@assets/IMG-20250613-WA0038_1750075553412.jpg";
+import benchImage2 from "@assets/IMG-20250613-WA0039_1750075593138.jpg";
+import benchImage3 from "@assets/IMG-20250613-WA0041_1750075606070.jpg";
+import benchImage4 from "@assets/IMG-20250613-WA0074_1750075628284.jpg";
 
 export default function Collections() {
   const collections = [
@@ -131,10 +130,10 @@ export default function Collections() {
       title: "Pouf and Benches",
       description: "Versatile seating and accent pieces that add both functionality and style, perfect for creating flexible and elegant interiors.",
       images: [
-        { src: benchImage1, alt: "Elegant bench in sophisticated bedroom with luxury furnishings" },
-        { src: benchImage2, alt: "Designer pouf and bench arrangement in premium interior setting" },
-        { src: benchImage3, alt: "Contemporary bench design featuring refined materials and styling" },
-        { src: benchImage4, alt: "Luxury bench showcasing exceptional comfort and elegant design" }
+        { src: benchImage1, alt: "Elegant grey upholstered bench at foot of luxury bed with geometric pattern rug" },
+        { src: benchImage2, alt: "Modern white leather bench with gold legs in sophisticated bedroom setting" },
+        { src: benchImage3, alt: "Luxury cream bench with tufted detailing in opulent bedroom with art deco styling" },
+        { src: benchImage4, alt: "Premium pink velvet bench with gold frame beneath crystal chandelier" }
       ]
     }
   ];
@@ -189,7 +188,7 @@ export default function Collections() {
                     {/* Premium inner border effect */}
                     <div className="absolute inset-1 rounded-3xl border border-gold/10"></div>
                     
-                    {collection.id === "beds" || collection.id === "sofas" || collection.id === "armchairs" || collection.id === "dining" || collection.id === "coffee" || collection.id === "centre" ? (
+                    {collection.id === "beds" || collection.id === "sofas" || collection.id === "armchairs" || collection.id === "dining" || collection.id === "coffee" || collection.id === "centre" || collection.id === "benches" ? (
                       <div className="p-8">
                         <SimpleImageRotator 
                           images={collection.images}
