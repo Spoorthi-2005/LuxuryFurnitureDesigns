@@ -22,7 +22,6 @@ export default function Projects() {
     {
       id: 1,
       title: "Grand Hotel Lobby",
-      location: "Mumbai, Maharashtra",
       year: "2024",
       category: "Hospitality",
       client: "Luxury Hotels Group",
@@ -37,7 +36,6 @@ export default function Projects() {
     {
       id: 2,
       title: "Heritage Club Lounge",
-      location: "Delhi, NCR",
       year: "2024",
       category: "Hospitality",
       client: "Elite Club Management",
@@ -52,7 +50,6 @@ export default function Projects() {
     {
       id: 3,
       title: "Fine Dining Restaurant",
-      location: "Bangalore, Karnataka",
       year: "2023",
       category: "Restaurant",
       client: "Gourmet Restaurant Chain",
@@ -67,7 +64,6 @@ export default function Projects() {
     {
       id: 4,
       title: "Resort Restaurant",
-      location: "Goa",
       year: "2023",
       category: "Restaurant",
       client: "Coastal Resort",
@@ -82,7 +78,6 @@ export default function Projects() {
     {
       id: 5,
       title: "Luxury Hotel Entrance",
-      location: "Jaipur, Rajasthan",
       year: "2024",
       category: "Hospitality",
       client: "Heritage Hotels",
@@ -97,7 +92,6 @@ export default function Projects() {
     {
       id: 6,
       title: "Boutique Hotel Lounge",
-      location: "Chennai, Tamil Nadu",
       year: "2023",
       category: "Hospitality",
       client: "Boutique Hotels",
@@ -161,16 +155,16 @@ export default function Projects() {
               return (
                 <Card 
                   key={project.id}
-                  className="project-card bg-gradient-to-br from-slate-900/95 via-slate-800/90 to-slate-700/95 border-gold/20 backdrop-blur-xl shadow-2xl overflow-hidden group cursor-pointer transform transition-all duration-700 hover:scale-105 hover:shadow-3xl"
+                  className="project-card opulence-3d bg-gradient-to-br from-slate-900/95 via-slate-800/90 to-slate-700/95 border-gold/20 backdrop-blur-xl shadow-2xl overflow-hidden group cursor-pointer"
                   onMouseEnter={() => setHoveredProject(project.id)}
                   onMouseLeave={() => setHoveredProject(null)}
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
-                  <div className="relative overflow-hidden h-64">
+                  <div className="relative overflow-hidden h-64 opulence-image-container">
                     <img
                       src={project.image}
                       alt={project.title}
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                      className="w-full h-full object-cover opulence-image"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                     <div className="absolute top-4 left-4">
@@ -183,12 +177,6 @@ export default function Projects() {
                       <Badge variant="outline" className="border-white/30 text-white bg-black/30 backdrop-blur-sm">
                         {project.year}
                       </Badge>
-                    </div>
-                    <div className="absolute bottom-4 left-4 right-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">
-                      <div className="flex items-center text-white/90 text-sm">
-                        <MapPin className="w-4 h-4 mr-2" />
-                        <span>{project.location}</span>
-                      </div>
                     </div>
                   </div>
 

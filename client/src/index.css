@@ -474,6 +474,182 @@
   height: 300px;
 }
 
+/* Opulence-style 3D Image Movement */
+.opulence-3d {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.opulence-image-container {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  overflow: hidden;
+  position: relative;
+}
+
+.opulence-image {
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  will-change: transform;
+}
+
+/* Advanced 3D hover effects inspired by Opulence */
+.opulence-3d:hover {
+  transform: perspective(1000px) rotateX(5deg) rotateY(-5deg) scale3d(1.05, 1.05, 1.05);
+  box-shadow: 
+    0 20px 60px rgba(0, 0, 0, 0.4),
+    0 10px 30px rgba(255, 215, 0, 0.2),
+    inset 0 0 0 1px rgba(255, 215, 0, 0.1);
+}
+
+.opulence-3d:hover .opulence-image {
+  transform: 
+    perspective(1000px) 
+    rotateX(-3deg) 
+    rotateY(3deg) 
+    translateZ(20px) 
+    scale3d(1.08, 1.08, 1.08);
+  filter: brightness(1.1) contrast(1.1) saturate(1.2);
+}
+
+/* Smooth parallax movement on mouse move */
+.opulence-image-container::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent 0%,
+    rgba(255, 215, 0, 0.1) 25%,
+    transparent 50%,
+    rgba(255, 215, 0, 0.05) 75%,
+    transparent 100%
+  );
+  transform: translateX(-100%) translateY(-100%) rotate(45deg);
+  transition: transform 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.opulence-3d:hover .opulence-image-container::before {
+  transform: translateX(0%) translateY(0%) rotate(45deg);
+}
+
+/* Advanced depth and layering */
+.opulence-3d::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 215, 0, 0.05) 0%,
+    transparent 30%,
+    transparent 70%,
+    rgba(255, 215, 0, 0.05) 100%
+  );
+  opacity: 0;
+  transition: opacity 0.6s ease;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.opulence-3d:hover::after {
+  opacity: 1;
+}
+
+/* Smooth floating animation */
+@keyframes opulence-float {
+  0%, 100% {
+    transform: translateY(0px) rotateX(0deg) rotateY(0deg);
+  }
+  25% {
+    transform: translateY(-3px) rotateX(1deg) rotateY(-1deg);
+  }
+  50% {
+    transform: translateY(-5px) rotateX(0deg) rotateY(0deg);
+  }
+  75% {
+    transform: translateY(-3px) rotateX(-1deg) rotateY(1deg);
+  }
+}
+
+.opulence-3d {
+  animation: opulence-float 8s ease-in-out infinite;
+}
+
+/* Enhanced depth with multiple shadows */
+.opulence-3d {
+  box-shadow: 
+    0 4px 20px rgba(0, 0, 0, 0.1),
+    0 8px 40px rgba(0, 0, 0, 0.08),
+    0 16px 80px rgba(0, 0, 0, 0.06);
+}
+
+/* Micro-interactions for premium feel */
+.opulence-image {
+  transform-origin: center center;
+}
+
+.opulence-3d:hover .opulence-image {
+  animation: none;
+}
+
+/* Advanced tilt effect */
+.opulence-tilt {
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.opulence-tilt:hover {
+  transform: perspective(1000px) rotateX(10deg) rotateY(-10deg) translateZ(30px);
+}
+
+/* Smooth reveal animation */
+@keyframes opulence-reveal {
+  0% {
+    opacity: 0;
+    transform: perspective(1000px) rotateX(20deg) translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: perspective(1000px) rotateX(0deg) translateY(0px);
+  }
+}
+
+.project-card {
+  animation: opulence-reveal 1s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+
+/* Dynamic lighting effect */
+.opulence-image-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgba(255, 215, 0, 0.15) 0%,
+    transparent 60%
+  );
+  opacity: 0;
+  transition: opacity 0.8s ease;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.opulence-3d:hover .opulence-image-container::after {
+  opacity: 1;
+}
+
 .image-luxury {
   filter: contrast(1.1) brightness(1.05) saturate(1.1);
 }
