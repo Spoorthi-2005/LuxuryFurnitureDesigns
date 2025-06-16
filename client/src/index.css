@@ -794,22 +794,26 @@
 
 /* Rotational Carousel Effect */
 .rotating-carousel {
-  perspective: 2500px;
+  perspective: 2000px;
   transform-style: preserve-3d;
   position: relative;
-  height: 650px;
+  height: 400px;
   width: 100%;
   overflow: visible;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 3rem 0;
+  margin: 0;
 }
 
 .carousel-item {
   position: absolute;
-  width: 65%;
-  height: 65%;
+  width: 280px;
+  height: 200px;
+  top: 50%;
+  left: 50%;
+  margin-top: -100px;
+  margin-left: -140px;
   backface-visibility: hidden;
   transform-style: preserve-3d;
   transition: all 1.2s cubic-bezier(0.23, 1, 0.320, 1);
