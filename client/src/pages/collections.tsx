@@ -22,6 +22,11 @@ import armchair4Image from "@assets/WhatsApp Image 2025-06-13 at 18.00.23_4baba3
 import armchair5Image from "@assets/WhatsApp Image 2025-06-13 at 18.00.23_ec4ada1b_1749926171722.jpg";
 import armchair6Image from "@assets/WhatsApp Image 2025-06-13 at 18.00.23_51df9eb3_1749926198325.jpg";
 import armchair7Image from "@assets/WhatsApp Image 2025-06-13 at 18.00.23_6d9adf69_1749926242727.jpg";
+import bench1Image from "@assets/WhatsApp Image 2025-06-13 at 17.35.01_3208808f_1750051896719.jpg";
+import bench2Image from "@assets/WhatsApp Image 2025-06-13 at 17.33.24_a0ec5bfa_1750051914724.jpg";
+import bench3Image from "@assets/WhatsApp Image 2025-06-13 at 17.42.07_bd458000_1750051930904.jpg";
+import bench4Image from "@assets/WhatsApp Image 2025-06-13 at 17.56.10_7440dc07_1750052008318.jpg";
+import bench5Image from "@assets/WhatsApp Image 2025-06-13 at 18.00.24_7f6e5a9a_1750052057626.jpg";
 
 export default function Collections() {
   const collections = [
@@ -103,10 +108,13 @@ export default function Collections() {
       id: 8,
       title: "Pouf and Benches",
       description: "Versatile seating solutions that combine comfort with contemporary design aesthetics.",
-      images: Array(4).fill("/api/placeholder/400/300").map((src, index) => ({
-        src: `${src}?pouf=${index + 1}`,
-        alt: `Stylish pouf and bench ${index + 1}`
-      }))
+      images: [
+        { src: bench1Image, alt: "Luxury bedroom with elegant white upholstered bench and golden accents" },
+        { src: bench2Image, alt: "Modern grey bedroom with sophisticated bench seating and geometric patterns" },
+        { src: bench3Image, alt: "Classic cream bedroom with tufted bench and traditional wood paneling" },
+        { src: bench4Image, alt: "Contemporary bedroom with plush pink bench and crystal chandelier" },
+        { src: bench5Image, alt: "Elegant beige bedroom suite with premium bench and luxury lighting" }
+      ]
     }
   ];
 
@@ -144,7 +152,7 @@ export default function Collections() {
       <div className="container mx-auto px-4 py-12 relative z-10">
         {collections.map((collection, index) => (
           <div key={collection.id} className="mb-20">
-            <Card className="bg-gradient-to-br from-slate-900/95 via-purple-900/90 to-slate-800/95 border-gold/20 backdrop-blur-xl shadow-2xl overflow-hidden">
+            <Card className="bg-gradient-to-br from-slate-900/95 via-slate-800/90 to-slate-700/95 border-gold/20 backdrop-blur-xl shadow-2xl overflow-hidden">
               <CardContent className="p-10 md:p-16">
                 <div className="text-center mb-16">
                   <h2 className="text-5xl md:text-7xl font-bold text-transparent bg-gradient-to-r from-gold via-yellow-300 to-gold bg-clip-text mb-8 tracking-wide animated-gradient">
@@ -156,15 +164,16 @@ export default function Collections() {
                   </p>
                 </div>
               
-                {/* Image Display - Special treatment for Beds, Sofas, and Arm Chairs with rotational carousel */}
-                {collection.title === "Beds" || collection.title === "Sofas" || collection.title === "Arm Chairs" ? (
+                {/* Image Display - Special treatment for Beds, Sofas, Arm Chairs, and Pouf and Benches with rotational carousel */}
+                {collection.title === "Beds" || collection.title === "Sofas" || collection.title === "Arm Chairs" || collection.title === "Pouf and Benches" ? (
                   <div className="mb-8 luxury-carousel-container">
                     <RotatingCarousel 
                       images={collection.images}
                       autoRotate={true}
                       rotationInterval={
                         collection.title === "Sofas" ? 3500 : 
-                        collection.title === "Arm Chairs" ? 3000 : 4000
+                        collection.title === "Arm Chairs" ? 3000 :
+                        collection.title === "Pouf and Benches" ? 3200 : 4000
                       }
                     />
                   </div>
