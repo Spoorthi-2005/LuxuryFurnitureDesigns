@@ -13,12 +13,12 @@ import bedImage4 from "@assets/IMG-20250613-WA0041_1750069532482.jpg";
 import bedImage5 from "@assets/IMG-20250613-WA0042_1750069552770.jpg";
 import bedImage6 from "@assets/IMG-20250613-WA0097_1750069572598.jpg";
 
-// Import sofa images
-import sofaImage1 from "@assets/WhatsApp Image 2025-06-13 at 17.44.32_3966bed2_1749925461685.jpg";
-import sofaImage2 from "@assets/WhatsApp Image 2025-06-13 at 17.46.30_0a42d700_1750055042784.jpg";
-import sofaImage3 from "@assets/WhatsApp Image 2025-06-13 at 18.00.23_51df9eb3_1749926198325.jpg";
-import sofaImage4 from "@assets/WhatsApp Image 2025-06-13 at 17.53.10_1f9b6f05_1750054139202.jpg";
-import sofaImage5 from "@assets/WhatsApp Image 2025-06-13 at 17.42.07_42a0a09c_1749820754155.jpg";
+// Import sofa images (your specific luxury sofa collection)
+import sofaImage1 from "@assets/IMG-20250613-WA0044_1750074551763.jpg";
+import sofaImage2 from "@assets/IMG-20250613-WA0045_1750074570055.jpg";
+import sofaImage3 from "@assets/IMG-20250613-WA0051_1750074586521.jpg";
+import sofaImage4 from "@assets/IMG-20250613-WA0057_1750074600000.jpg";
+import sofaImage5 from "@assets/IMG-20250613-WA0067_1750074632032.jpg";
 
 // Import armchair images  
 import chairImage1 from "@assets/WhatsApp Image 2025-06-13 at 18.00.23_51df9eb3_1749926198325.jpg";
@@ -75,10 +75,11 @@ export default function Collections() {
       title: "Sofas",
       description: "Handcrafted seating solutions that combine exceptional comfort with timeless elegance, perfect for sophisticated living spaces.",
       images: [
-        { src: sofaImage1, alt: "Premium grey sofa with luxury throw pillows and contemporary styling" },
-        { src: sofaImage2, alt: "Sophisticated living room setup with designer sofa and coffee table" },
-        { src: sofaImage4, alt: "Modern white sectional sofa with black coffee table and premium decor" },
-        { src: sofaImage5, alt: "Contemporary sofa arrangement in sophisticated interior setting" }
+        { src: sofaImage1, alt: "Luxury taupe sofa with quilted detailing and designer throw pillows in sophisticated interior" },
+        { src: sofaImage2, alt: "Contemporary grey sofa with plush fur throws and modern styling" },
+        { src: sofaImage3, alt: "Elegant white sofa with gold accent frame in luxury living room" },
+        { src: sofaImage4, alt: "Premium navy blue sofa with metallic coffee table and designer decor" },
+        { src: sofaImage5, alt: "Modern sectional sofa with striped accents and glass coffee table" }
       ]
     },
     {
@@ -188,7 +189,7 @@ export default function Collections() {
                     {/* Premium inner border effect */}
                     <div className="absolute inset-1 rounded-3xl border border-gold/10"></div>
                     
-                    {collection.id === "beds" ? (
+                    {collection.id === "beds" || collection.id === "sofas" ? (
                       <div className="p-8">
                         <SimpleImageRotator 
                           images={collection.images}
