@@ -2,7 +2,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
-import RotatingCarousel from "@/components/rotating-carousel";
+import SimpleImageRotator from "@/components/simple-image-rotator";
 import { Link } from "wouter";
 
 // Import bed/bedroom images (your specific luxury bed collection)
@@ -189,11 +189,12 @@ export default function Collections() {
                     <div className="absolute inset-1 rounded-3xl border border-gold/10"></div>
                     
                     {collection.id === "beds" ? (
-                      <RotatingCarousel 
-                        images={collection.images}
-                        autoRotate={true}
-                        rotationInterval={4000}
-                      />
+                      <div className="p-8">
+                        <SimpleImageRotator 
+                          images={collection.images}
+                          rotationInterval={3000}
+                        />
+                      </div>
                     ) : (
                       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-8">
                         {collection.images.map((image, imageIndex) => (
