@@ -34,6 +34,13 @@ import diningTable3Image from '@assets/WhatsApp Image 2025-06-13 at 17.50.39_9b0
 import diningTable4Image from '@assets/WhatsApp Image 2025-06-13 at 17.50.39_40864f70_1750053029587.jpg';
 import diningTable5Image from '@assets/WhatsApp Image 2025-06-13 at 17.50.39_3a325e8b_1750053048917.jpg';
 import diningTable6Image from '@assets/WhatsApp Image 2025-06-13 at 18.00.25_4059b846_1750053121511.jpg';
+// Import coffee table images
+import coffeeTable1Image from '@assets/WhatsApp Image 2025-06-13 at 17.44.32_bad0d9e3_1750053485982.jpg';
+import coffeeTable2Image from '@assets/WhatsApp Image 2025-06-13 at 17.46.30_e32dcc23_1750053498355.jpg';
+import coffeeTable3Image from '@assets/WhatsApp Image 2025-06-13 at 17.53.10_1f9b6f05_1750054139202.jpg';
+import coffeeTable4Image from '@assets/WhatsApp Image 2025-06-13 at 18.00.24_4e1199b0_1750054472778.jpg';
+import coffeeTable5Image from '@assets/WhatsApp Image 2025-06-13 at 18.00.25_ab7d6f3d_1750054642873.jpg';
+import coffeeTable6Image from '@assets/WhatsApp Image 2025-06-13 at 17.46.30_789b8cef_1750054732586.jpg';
 
 export default function Collections() {
   const collections = [
@@ -101,10 +108,14 @@ export default function Collections() {
       id: 6,
       title: "Coffee Tables",
       description: "Statement coffee tables that anchor your living space with style and functionality.",
-      images: Array(5).fill("/api/placeholder/400/300").map((src, index) => ({
-        src: `${src}?coffee=${index + 1}`,
-        alt: `Luxury coffee table ${index + 1}`
-      }))
+      images: [
+        { src: coffeeTable1Image, alt: "Luxury round coffee table with bronze finish and leather sofa in marble-walled living room" },
+        { src: coffeeTable2Image, alt: "Modern multi-level coffee tables with gold accents in sophisticated living space" },
+        { src: coffeeTable3Image, alt: "Contemporary chrome coffee table with white sectional sofa and crystal chandelier" },
+        { src: coffeeTable4Image, alt: "Elegant marble-top coffee table with gold cylindrical base and decorative crystals" },
+        { src: coffeeTable5Image, alt: "Sleek modern coffee table with curved design in minimalist living room" },
+        { src: coffeeTable6Image, alt: "Designer coffee table with textured surface and navy blue sofa backdrop" }
+      ]
     },
     {
       id: 7,
@@ -175,8 +186,8 @@ export default function Collections() {
                   </p>
                 </div>
               
-                {/* Image Display - Special treatment for Beds, Sofas, Arm Chairs, Pouf and Benches, and Dining Tables and Chairs with rotational carousel */}
-                {collection.title === "Beds" || collection.title === "Sofas" || collection.title === "Arm Chairs" || collection.title === "Pouf and Benches" || collection.title === "Dining Tables and Chairs" ? (
+                {/* Image Display - Special treatment for Beds, Sofas, Arm Chairs, Pouf and Benches, Dining Tables and Chairs, and Coffee Tables with rotational carousel */}
+                {collection.title === "Beds" || collection.title === "Sofas" || collection.title === "Arm Chairs" || collection.title === "Pouf and Benches" || collection.title === "Dining Tables and Chairs" || collection.title === "Coffee Tables" ? (
                   <div className="mb-8 luxury-carousel-container">
                     <RotatingCarousel 
                       images={collection.images}
@@ -185,7 +196,8 @@ export default function Collections() {
                         collection.title === "Sofas" ? 3500 : 
                         collection.title === "Arm Chairs" ? 3000 :
                         collection.title === "Pouf and Benches" ? 3200 :
-                        collection.title === "Dining Tables and Chairs" ? 3800 : 4000
+                        collection.title === "Dining Tables and Chairs" ? 3800 :
+                        collection.title === "Coffee Tables" ? 3600 : 4000
                       }
                     />
                   </div>
