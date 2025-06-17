@@ -5,35 +5,24 @@ import { Button } from "@/components/ui/button";
 const testimonials = [
   {
     id: 1,
-    name: "Rajesh Sharma",
-    position: "CEO, Sharma Industries",
-    content: "Blackhorse Furnitures transformed our corporate office with exceptional craftsmanship. The attention to detail and quality is unmatched. Our clients are always impressed with the elegant furniture pieces.",
-    rating: 5,
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face"
+    name: "Viswas Sethi",
+    position: "Business Owner",
+    content: "Blackhorse Furnitures delivered beyond my expectations. The craftsmanship is extraordinary and every piece reflects true luxury. Their attention to detail and commitment to quality is unparalleled in the industry.",
+    rating: 5
   },
   {
     id: 2,
-    name: "Priya Malhotra",
-    position: "Interior Designer",
-    content: "Working with Blackhorse has been a dream. Their ability to bring custom designs to life while maintaining premium quality standards makes them my go-to choice for all luxury projects.",
-    rating: 5,
-    image: "https://images.unsplash.com/photo-1494790108755-2616c55100fc?w=100&h=100&fit=crop&crop=face"
+    name: "Vikram Yadav",
+    position: "Interior Designer", 
+    content: "Working with Blackhorse has been an absolute pleasure. Their ability to transform concepts into stunning reality while maintaining the highest standards makes them my preferred choice for all premium projects.",
+    rating: 5
   },
   {
     id: 3,
-    name: "Vikram Singh",
-    position: "Homeowner",
-    content: "The bedroom suite we ordered exceeded all expectations. The craftsmanship, materials, and finishing are absolutely perfect. It's been two years and the furniture still looks brand new.",
-    rating: 5,
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face"
-  },
-  {
-    id: 4,
-    name: "Anita Gupta",
-    position: "Restaurant Owner",
-    content: "Our restaurant's dining area was completely transformed with Blackhorse's custom furniture. The elegant design and durability have impressed our customers and enhanced our dining experience.",
-    rating: 5,
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face"
+    name: "Rakesh Vasal",
+    position: "Hotel Owner",
+    content: "The furniture collection for our luxury hotel exceeded all expectations. Blackhorse's combination of traditional Indian craftsmanship with contemporary design has created pieces that our guests admire constantly.",
+    rating: 5
   }
 ];
 
@@ -58,29 +47,22 @@ export default function TestimonialsCarousel() {
 
   return (
     <div className="relative">
-      <Card className="bg-card border-champagne/40 shadow-xl">
+      <Card className="bg-black/50 border-white/20 shadow-xl">
         <CardContent className="p-8">
           <div className="text-center">
             <div className="flex justify-center mb-4">
               {[...Array(testimonials[currentIndex].rating)].map((_, i) => (
-                <i key={i} className="fas fa-star text-glow-gold text-xl mx-1"></i>
+                <i key={i} className="fas fa-star text-gold text-xl mx-1"></i>
               ))}
             </div>
-            <blockquote className="text-lg text-soft-brown mb-6 italic leading-relaxed">
+            <blockquote className="text-lg text-white mb-6 italic leading-relaxed">
               "{testimonials[currentIndex].content}"
             </blockquote>
-            <div className="flex items-center justify-center space-x-4">
-              <img 
-                src={testimonials[currentIndex].image} 
-                alt={testimonials[currentIndex].name}
-                className="w-16 h-16 rounded-full border-2 border-glow-gold"
-              />
-              <div>
-                <h4 className="font-playfair font-bold text-elegant-brown text-lg">
-                  {testimonials[currentIndex].name}
-                </h4>
-                <p className="text-soft-brown text-sm">{testimonials[currentIndex].position}</p>
-              </div>
+            <div className="text-center">
+              <h4 className="font-playfair font-bold text-white text-xl mb-2">
+                {testimonials[currentIndex].name}
+              </h4>
+              <p className="text-gray-300 text-sm">{testimonials[currentIndex].position}</p>
             </div>
           </div>
         </CardContent>
@@ -91,7 +73,7 @@ export default function TestimonialsCarousel() {
           onClick={prevTestimonial}
           variant="outline"
           size="sm"
-          className="border-elegant-brown text-elegant-brown hover:bg-elegant-brown hover:text-white"
+          className="border-white/50 text-white hover:bg-white hover:text-black"
         >
           <i className="fas fa-chevron-left"></i>
         </Button>
@@ -101,7 +83,7 @@ export default function TestimonialsCarousel() {
               key={index}
               onClick={() => setCurrentIndex(index)}
               className={`w-3 h-3 rounded-full transition-colors ${
-                index === currentIndex ? 'bg-glow-gold' : 'bg-champagne'
+                index === currentIndex ? 'bg-gold' : 'bg-white/40'
               }`}
             />
           ))}
@@ -110,7 +92,7 @@ export default function TestimonialsCarousel() {
           onClick={nextTestimonial}
           variant="outline"
           size="sm"
-          className="border-elegant-brown text-elegant-brown hover:bg-elegant-brown hover:text-white"
+          className="border-white/50 text-white hover:bg-white hover:text-black"
         >
           <i className="fas fa-chevron-right"></i>
         </Button>
