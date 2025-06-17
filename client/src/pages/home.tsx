@@ -326,73 +326,73 @@ export default function Home() {
       </section>
 
       {/* Luxury Features Showcase */}
-      <section className="py-20">
+      <section className="py-20 bg-slate-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-playfair font-bold mb-6 text-gradient-brown">Why Choose Blackhorse</h2>
-            <p className="text-xl text-soft-brown max-w-3xl mx-auto">
+            <h2 className="text-4xl font-playfair font-bold mb-6 text-gold">Why Choose Blackhorse</h2>
+            <p className="text-xl text-white max-w-3xl mx-auto">
               Experience the difference that sets us apart in the luxury furniture industry.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card className="premium-card hover-3d transition-all shadow-xl group luxury-shine">
+            <Card className="bg-slate-800 border-gold/30 hover:border-gold/50 transition-all shadow-xl group">
               <CardContent className="p-8 text-center">
-                <div className="w-20 h-20 bg-glow-gold rounded-full flex items-center justify-center mx-auto mb-6 shadow-xl luxury-glow">
-                  <i className="fas fa-gem text-white text-2xl"></i>
+                <div className="w-20 h-20 bg-gold rounded-full flex items-center justify-center mx-auto mb-6 shadow-xl">
+                  <i className="fas fa-gem text-slate-900 text-2xl"></i>
                 </div>
-                <h3 className="text-xl font-playfair font-bold text-elegant-brown mb-4">Premium Materials</h3>
-                <p className="text-soft-brown leading-relaxed">Only the finest woods, metals, and fabrics sourced from trusted suppliers worldwide for exceptional quality and durability.</p>
+                <h3 className="text-xl font-playfair font-bold text-gold mb-4">Premium Materials</h3>
+                <p className="text-white leading-relaxed">Only the finest woods, metals, and fabrics sourced from trusted suppliers worldwide for exceptional quality and durability.</p>
               </CardContent>
             </Card>
 
-            <Card className="premium-card hover-3d transition-all shadow-xl group luxury-shine">
+            <Card className="bg-slate-800 border-gold/30 hover:border-gold/50 transition-all shadow-xl group">
               <CardContent className="p-8 text-center">
-                <div className="w-20 h-20 bg-glow-gold rounded-full flex items-center justify-center mx-auto mb-6 shadow-xl luxury-glow">
-                  <i className="fas fa-tools text-white text-2xl"></i>
+                <div className="w-20 h-20 bg-gold rounded-full flex items-center justify-center mx-auto mb-6 shadow-xl">
+                  <i className="fas fa-tools text-slate-900 text-2xl"></i>
                 </div>
-                <h3 className="text-xl font-playfair font-bold text-elegant-brown mb-4">Master Craftsmen</h3>
-                <p className="text-soft-brown leading-relaxed">Skilled artisans with decades of experience creating furniture masterpieces that combine traditional techniques with modern innovation.</p>
+                <h3 className="text-xl font-playfair font-bold text-gold mb-4">Master Craftsmen</h3>
+                <p className="text-white leading-relaxed">Skilled artisans with decades of experience creating furniture masterpieces that combine traditional techniques with modern innovation.</p>
               </CardContent>
             </Card>
 
-            <Card className="premium-card hover-3d transition-all shadow-xl group luxury-shine">
+            <Card className="bg-slate-800 border-gold/30 hover:border-gold/50 transition-all shadow-xl group">
               <CardContent className="p-8 text-center">
-                <div className="w-20 h-20 bg-glow-gold rounded-full flex items-center justify-center mx-auto mb-6 shadow-xl luxury-glow">
-                  <i className="fas fa-palette text-white text-2xl"></i>
+                <div className="w-20 h-20 bg-gold rounded-full flex items-center justify-center mx-auto mb-6 shadow-xl">
+                  <i className="fas fa-palette text-slate-900 text-2xl"></i>
                 </div>
-                <h3 className="text-xl font-playfair font-bold text-elegant-brown mb-4">Custom Design</h3>
-                <p className="text-soft-brown leading-relaxed">Bespoke solutions tailored to your unique vision and space requirements with personalized design consultations.</p>
+                <h3 className="text-xl font-playfair font-bold text-gold mb-4">Custom Design</h3>
+                <p className="text-white leading-relaxed">Bespoke solutions tailored to your unique vision and space requirements with personalized design consultations.</p>
               </CardContent>
             </Card>
 
-            <Card className="premium-card hover-3d transition-all shadow-xl group luxury-shine">
+            <Card className="bg-slate-800 border-gold/30 hover:border-gold/50 transition-all shadow-xl group">
               <CardContent className="p-8 text-center">
-                <div className="w-20 h-20 bg-glow-gold rounded-full flex items-center justify-center mx-auto mb-6 shadow-xl luxury-glow">
-                  <i className="fas fa-shield-alt text-white text-2xl"></i>
+                <div className="w-20 h-20 bg-gold rounded-full flex items-center justify-center mx-auto mb-6 shadow-xl">
+                  <i className="fas fa-shield-alt text-slate-900 text-2xl"></i>
                 </div>
-                <h3 className="text-xl font-playfair font-bold text-elegant-brown mb-4">Lifetime Warranty</h3>
-                <p className="text-soft-brown leading-relaxed">Comprehensive warranty coverage ensuring your furniture investment is protected for generations with quality guarantees.</p>
+                <h3 className="text-xl font-playfair font-bold text-gold mb-4">Lifetime Warranty</h3>
+                <p className="text-white leading-relaxed">Comprehensive warranty coverage ensuring your furniture investment is protected for generations with quality guarantees.</p>
               </CardContent>
             </Card>
 
-            <Card className="premium-card hover-3d transition-all shadow-xl group luxury-shine">
+            <Card className="bg-slate-800 border-gold/30 hover:border-gold/50 transition-all shadow-xl group">
               <CardContent className="p-8 text-center">
-                <div className="w-20 h-20 bg-glow-gold rounded-full flex items-center justify-center mx-auto mb-6 shadow-xl luxury-glow">
-                  <i className="fas fa-shipping-fast text-white text-2xl"></i>
+                <div className="w-20 h-20 bg-gold rounded-full flex items-center justify-center mx-auto mb-6 shadow-xl">
+                  <i className="fas fa-shipping-fast text-slate-900 text-2xl"></i>
                 </div>
-                <h3 className="text-xl font-playfair font-bold text-elegant-brown mb-4">White Glove Delivery</h3>
-                <p className="text-soft-brown leading-relaxed">Professional installation and setup service with care, precision, and complete room styling for perfect presentation.</p>
+                <h3 className="text-xl font-playfair font-bold text-gold mb-4">White Glove Delivery</h3>
+                <p className="text-white leading-relaxed">Professional installation and setup service with care, precision, and complete room styling for perfect presentation.</p>
               </CardContent>
             </Card>
 
-            <Card className="premium-card hover-3d transition-all shadow-xl group luxury-shine">
+            <Card className="bg-slate-800 border-gold/30 hover:border-gold/50 transition-all shadow-xl group">
               <CardContent className="p-8 text-center">
-                <div className="w-20 h-20 bg-glow-gold rounded-full flex items-center justify-center mx-auto mb-6 shadow-xl luxury-glow">
-                  <i className="fas fa-headset text-white text-2xl"></i>
+                <div className="w-20 h-20 bg-gold rounded-full flex items-center justify-center mx-auto mb-6 shadow-xl">
+                  <i className="fas fa-headset text-slate-900 text-2xl"></i>
                 </div>
-                <h3 className="text-xl font-playfair font-bold text-elegant-brown mb-4">24/7 Support</h3>
-                <p className="text-soft-brown leading-relaxed">Dedicated customer service team available round the clock for assistance with all your furniture needs and queries.</p>
+                <h3 className="text-xl font-playfair font-bold text-gold mb-4">24/7 Support</h3>
+                <p className="text-white leading-relaxed">Dedicated customer service team available round the clock for assistance with all your furniture needs and queries.</p>
               </CardContent>
             </Card>
           </div>
@@ -437,9 +437,9 @@ export default function Home() {
       </section>
 
       {/* Luxury Bedroom Showcase */}
-      <section className="py-20 bg-section">
+      <section className="py-20 bg-slate-900">
         <div className="container mx-auto px-4">
-          <Card className="premium-card hover-3d overflow-hidden shadow-2xl">
+          <Card className="bg-slate-800 border-gold/30 overflow-hidden shadow-2xl">
             <CardContent className="p-0">
               <div className="grid lg:grid-cols-2 gap-0 items-center">
                 <div className="relative">
@@ -448,34 +448,34 @@ export default function Home() {
                     alt="Luxury bedroom furniture delivery and installation" 
                     className="w-full h-full object-cover min-h-[500px] image-luxury image-glossy"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent to-elegant-brown/20"></div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent to-slate-900/30"></div>
                 </div>
-                <div className="p-12">
-                  <h2 className="text-4xl font-playfair font-bold text-elegant-brown mb-6 animated-gradient">Curated Piece Delivery & Installation</h2>
-                  <p className="text-lg text-soft-brown mb-6 leading-relaxed floating">
+                <div className="p-12 bg-slate-800">
+                  <h2 className="text-4xl font-playfair font-bold text-gold mb-6">Curated Piece Delivery & Installation</h2>
+                  <p className="text-lg text-white mb-6 leading-relaxed">
                     Experience seamless delivery and professional installation of your custom furniture pieces. 
                     Our specialized team ensures every detail is perfect, from placement to final adjustments, 
                     creating the luxurious ambiance you've envisioned.
                   </p>
                   <div className="space-y-4 mb-8">
                     <div className="flex items-center space-x-3">
-                      <div className="w-3 h-3 bg-glow-gold rounded-full luxury-glow"></div>
-                      <span className="text-soft-brown">White-glove delivery service</span>
+                      <div className="w-3 h-3 bg-gold rounded-full"></div>
+                      <span className="text-white font-medium">White-glove delivery service</span>
                     </div>
                     <div className="flex items-center space-x-3">
-                      <div className="w-3 h-3 bg-glow-gold rounded-full luxury-glow"></div>
-                      <span className="text-soft-brown">Professional assembly and installation</span>
+                      <div className="w-3 h-3 bg-gold rounded-full"></div>
+                      <span className="text-white font-medium">Professional assembly and installation</span>
                     </div>
                     <div className="flex items-center space-x-3">
-                      <div className="w-3 h-3 bg-glow-gold rounded-full luxury-glow"></div>
-                      <span className="text-soft-brown">Room styling and arrangement</span>
+                      <div className="w-3 h-3 bg-gold rounded-full"></div>
+                      <span className="text-white font-medium">Room styling and arrangement</span>
                     </div>
                     <div className="flex items-center space-x-3">
-                      <div className="w-3 h-3 bg-glow-gold rounded-full luxury-glow"></div>
-                      <span className="text-soft-brown">Final quality inspection</span>
+                      <div className="w-3 h-3 bg-gold rounded-full"></div>
+                      <span className="text-white font-medium">Final quality inspection</span>
                     </div>
                   </div>
-                  <Button className="glossy-btn px-8 py-4 text-lg font-bold text-white">
+                  <Button className="bg-gold text-slate-900 px-8 py-4 text-lg font-bold hover:bg-yellow-500 transition-colors">
                     Schedule Delivery
                   </Button>
                 </div>
