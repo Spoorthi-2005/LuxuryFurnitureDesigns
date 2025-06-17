@@ -3,11 +3,10 @@ import Header from "@/components/header";
 import Footer from "@/components/footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import videoFile from "@assets/introo_1750163712016.mp4";
 
 export default function Craftsmanship() {
-  const [showVideo, setShowVideo] = useState(false);
-  // YouTube video ID extracted from https://youtu.be/3ewXDG1TG8c?si=WxaqlgpeIJKprN8t
-  const youtubeVideoId = "3ewXDG1TG8c"; 
+  const [showVideo, setShowVideo] = useState(false); 
 
   const handleWatchVideo = () => {
     setShowVideo(true);
@@ -151,26 +150,27 @@ export default function Craftsmanship() {
           </div>
         </section>
 
-        {/* YouTube Video Modal */}
+        {/* Local Video Modal */}
         {showVideo && (
           <div className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4">
             <div className="relative max-w-4xl w-full">
               <button
                 onClick={handleCloseVideo}
-                className="absolute -top-12 right-0 text-white text-2xl hover:text-elegant-brown transition-colors"
+                className="absolute -top-12 right-0 text-white text-2xl hover:text-white/70 transition-colors"
               >
                 <i className="fas fa-times"></i>
               </button>
               <div className="aspect-video bg-black rounded-lg overflow-hidden">
-                <iframe
+                <video
                   width="100%"
                   height="100%"
-                  src={`https://www.youtube.com/embed/${youtubeVideoId}?autoplay=1&rel=0&modestbranding=1`}
-                  title="Craftsmanship Video"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
+                  controls
+                  autoPlay
+                  className="w-full h-full object-cover"
+                >
+                  <source src={videoFile} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
               </div>
             </div>
           </div>
