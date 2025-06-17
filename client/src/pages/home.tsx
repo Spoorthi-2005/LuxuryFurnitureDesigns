@@ -102,12 +102,11 @@ export default function Home() {
             Blackhorse Furnitures
           </ShimmerText>
           
-          {/* Enhanced Description with Luxury Styling */}
+          {/* Streamlined Description */}
           <div className="max-w-4xl mx-auto mb-8">
             <div className="backdrop-blur-lg bg-slate-800/30 rounded-3xl p-8 shadow-2xl border border-amber-400/40 luxury-shine">
               <p className="text-2xl md:text-3xl text-white leading-relaxed font-medium drop-shadow-xl">
-                Where traditional Indian craftsmanship meets contemporary elegance, creating extraordinary furniture pieces 
-                that define luxury living and transform spaces into timeless sanctuaries.
+                Where traditional Indian craftsmanship meets contemporary elegance. Creating extraordinary furniture pieces that define luxury living.
               </p>
             </div>
           </div>

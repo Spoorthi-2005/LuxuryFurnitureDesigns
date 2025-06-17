@@ -10,16 +10,29 @@ export default function Story() {
     <div className="min-h-screen bg-black text-white">
       <Header />
       <div className="pt-20">
+        {/* Story Page - Flowing Wave Pattern */}
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-black"></div>
+          <div className="absolute inset-0 opacity-[0.008]" style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='100' height='40' viewBox='0 0 100 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 20 Q25 5 50 20 T100 20' stroke='%23FFFFFF' stroke-width='0.5' fill='none'/%3E%3Cpath d='M0 30 Q25 15 50 30 T100 30' stroke='%23FFFFFF' stroke-width='0.3' fill='none'/%3E%3C/svg%3E")`,
+            backgroundSize: '100px 40px'
+          }}></div>
+          <div className="absolute inset-0 bg-gradient-to-bl from-rose-900/[0.01] via-transparent to-amber-900/[0.01]"></div>
+        </div>
+
+        {/* Organic Light Elements */}
+        <div className="absolute top-1/5 left-1/6 w-80 h-80 bg-rose-500/[0.015] rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-1/5 right-1/6 w-80 h-80 bg-amber-500/[0.015] rounded-full blur-3xl animate-pulse" style={{animationDelay: '7s'}}></div>
+
         {/* Hero Section */}
-        <section className="py-20 bg-black">
+        <section className="py-20 bg-transparent relative z-10">
           <div className="container mx-auto px-4">
             <div className="text-center max-w-4xl mx-auto">
               <h1 className="text-6xl font-playfair font-bold mb-6 text-white">
                 Our Extraordinary Journey
               </h1>
               <p className="text-2xl text-gray-300 leading-relaxed">
-                Discover the passionate story behind Blackhorse Furnitures - where traditional Indian craftsmanship 
-                meets contemporary design excellence, creating extraordinary hospitality and luxury commercial furniture that transforms spaces into memorable experiences.
+                Discover the passionate story behind Blackhorse Furnitures. Where traditional Indian craftsmanship meets contemporary design excellence.
               </p>
             </div>
           </div>

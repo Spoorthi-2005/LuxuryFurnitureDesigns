@@ -162,8 +162,8 @@ export default function Projects() {
                           <div className="w-16 h-1 bg-gradient-to-r from-white/50 to-transparent"></div>
                         </div>
 
-                        <p className="text-gray-300 text-lg leading-relaxed">
-                          {project.description}
+                        <p className="text-gray-300 text-lg leading-relaxed line-clamp-2">
+                          {project.description.split('.').slice(0, 2).join('.')}
                         </p>
 
                         {project.location && (

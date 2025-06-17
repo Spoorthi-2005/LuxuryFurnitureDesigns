@@ -148,15 +148,19 @@ export default function Collections() {
       <ScrollProgress />
       <FloatingOrbs />
       
-      {/* Opulence Black Background */}
+      {/* Collections Page - Hexagonal Pattern */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-black"></div>
-        <div className="absolute inset-0 bg-gradient-to-b from-white/3 via-transparent to-white/2"></div>
+        <div className="absolute inset-0 opacity-[0.015]" style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23FFFFFF' stroke-width='1'%3E%3Cpath d='M30 5l20 12v26L30 55 10 43V17z'/%3E%3C/g%3E%3C/svg%3E")`,
+          backgroundSize: '60px 60px'
+        }}></div>
+        <div className="absolute inset-0 bg-gradient-to-tr from-purple-900/[0.02] via-transparent to-blue-900/[0.02]"></div>
       </div>
 
-      {/* Minimal Ambient Lighting */}
-      <div className="absolute top-0 left-1/3 w-80 h-80 bg-white/5 rounded-full blur-3xl animate-pulse"></div>
-      <div className="absolute bottom-0 right-1/3 w-80 h-80 bg-gold/8 rounded-full blur-3xl animate-pulse" style={{animationDelay: '3s'}}></div>
+      {/* Geometric Light Elements */}
+      <div className="absolute top-1/3 left-1/5 w-72 h-72 bg-purple-500/[0.02] rounded-full blur-3xl animate-pulse"></div>
+      <div className="absolute bottom-1/3 right-1/5 w-72 h-72 bg-blue-500/[0.02] rounded-full blur-3xl animate-pulse" style={{animationDelay: '4s'}}></div>
 
       <Header />
 

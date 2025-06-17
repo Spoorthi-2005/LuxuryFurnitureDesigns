@@ -64,16 +64,29 @@ export default function Process() {
     <div className="min-h-screen bg-black text-white">
       <Header />
       <div className="pt-20">
+        {/* Process Page - Circuit Pattern Background */}
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-black"></div>
+          <div className="absolute inset-0 opacity-[0.01]" style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23FFFFFF' stroke-width='0.5'%3E%3Cpath d='M20 20h40v40H20zM10 10h60v60H10'/%3E%3Ccircle cx='20' cy='20' r='2'/%3E%3Ccircle cx='60' cy='20' r='2'/%3E%3Ccircle cx='20' cy='60' r='2'/%3E%3Ccircle cx='60' cy='60' r='2'/%3E%3C/g%3E%3C/svg%3E")`,
+            backgroundSize: '80px 80px'
+          }}></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-green-900/[0.015] via-transparent to-cyan-900/[0.015]"></div>
+        </div>
+
+        {/* Technical Light Elements */}
+        <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-green-500/[0.02] rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-1/4 left-1/4 w-64 h-64 bg-cyan-500/[0.02] rounded-full blur-3xl animate-pulse" style={{animationDelay: '5s'}}></div>
+
         {/* Hero Section */}
-        <section className="py-20 bg-black">
+        <section className="py-20 bg-transparent relative z-10">
           <div className="container mx-auto px-4">
             <div className="text-center max-w-4xl mx-auto">
               <h1 className="text-6xl font-playfair font-bold mb-6 text-white">
                 Our Meticulous Craftsmanship Process
               </h1>
               <p className="text-2xl text-gray-300 leading-relaxed">
-                Witness the extraordinary journey from conceptual design to finished masterpiece through our time-honored 
-                six-step process that ensures every piece meets the highest standards of quality and artisanal excellence.
+                Witness the extraordinary journey from conceptual design to finished masterpiece. Our time-honored six-step process ensures every piece meets the highest standards.
               </p>
             </div>
           </div>
@@ -91,7 +104,7 @@ export default function Process() {
                         <img 
                           src={step.image} 
                           alt={step.alt} 
-                          className="w-full h-96 lg:h-full object-cover transition-transform duration-300 hover:scale-105"
+                          className="w-full h-[500px] lg:h-[600px] object-cover transition-transform duration-300 hover:scale-105"
                         />
                         <div className="absolute top-6 left-6 w-16 h-16 bg-glow-gold rounded-full flex items-center justify-center">
                           <span className="text-white font-bold text-2xl">{step.id}</span>
@@ -104,7 +117,7 @@ export default function Process() {
                           </div>
                           <h3 className="text-3xl font-playfair font-bold text-white">{step.title}</h3>
                         </div>
-                        <p className="text-lg text-gray-300 leading-relaxed">{step.description}</p>
+                        <p className="text-lg text-gray-300 leading-relaxed line-clamp-2">{step.description.split('.').slice(0, 2).join('.')}</p>
                       </div>
                     </div>
                   </CardContent>
