@@ -141,22 +141,22 @@ export default function Collections() {
   ];
 
   return (
-    <div className="min-h-screen relative overflow-hidden luxury-platinum-secondary">
+    <div className="min-h-screen relative overflow-hidden bg-black text-white">
       {/* Luxury Effects */}
       <LuxuryParticles />
       <LuxuryCursorTrail />
       <ScrollProgress />
       <FloatingOrbs />
       
-      {/* Enhanced Background Elements */}
+      {/* Opulence Black Background */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-r from-amber-100/15 via-transparent to-slate-200/25"></div>
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-900/80 via-slate-700/40 to-slate-100/60"></div>
+        <div className="absolute inset-0 bg-black"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-white/3 via-transparent to-white/2"></div>
       </div>
 
-      {/* Premium Ambient Lighting */}
-      <div className="absolute top-0 left-1/3 w-80 h-80 bg-gold/10 rounded-full blur-3xl animate-pulse"></div>
-      <div className="absolute bottom-0 right-1/3 w-80 h-80 bg-amber-400/10 rounded-full blur-3xl animate-pulse" style={{animationDelay: '3s'}}></div>
+      {/* Minimal Ambient Lighting */}
+      <div className="absolute top-0 left-1/3 w-80 h-80 bg-white/5 rounded-full blur-3xl animate-pulse"></div>
+      <div className="absolute bottom-0 right-1/3 w-80 h-80 bg-gold/8 rounded-full blur-3xl animate-pulse" style={{animationDelay: '3s'}}></div>
 
       <Header />
 
@@ -177,26 +177,22 @@ export default function Collections() {
       <div className="container mx-auto px-4 py-12 relative z-10">
         {collections.map((collection, index) => (
           <div key={collection.id} className="mb-20">
-            <Card className="bg-gradient-to-br from-slate-900/95 via-slate-800/90 to-slate-700/95 border-gold/20 backdrop-blur-xl shadow-2xl overflow-hidden">
-              <CardContent className="p-10 md:p-16">
-                <div className="text-center mb-16">
-                  <h2 className="text-5xl md:text-7xl font-bold text-transparent bg-gradient-to-r from-gold via-yellow-300 to-gold bg-clip-text mb-8 tracking-wide animated-gradient">
+            <Card className="bg-black/50 border-white/10 backdrop-blur-xl shadow-2xl overflow-hidden">
+              <CardContent className="p-8 md:p-12">
+                <div className="text-center mb-12">
+                  <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 tracking-wide">
                     {collection.title}
                   </h2>
-                  <div className="w-32 h-1.5 bg-gradient-to-r from-transparent via-gold to-transparent mx-auto mb-8"></div>
-                  <p className="text-xl md:text-2xl text-soft-brown max-w-5xl mx-auto leading-relaxed font-light">
+                  <div className="w-20 h-px bg-gradient-to-r from-transparent via-white/50 to-transparent mx-auto mb-6"></div>
+                  <p className="text-gray-300 max-w-4xl mx-auto leading-relaxed">
                     {collection.description}
                   </p>
                 </div>
               
-                {/* Bed Collection with 3D Rotation, Others with Grid */}
-                <div className="mb-12 luxury-carousel-container relative group">
-                  {/* Sophisticated background gradient layers */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-gold/8 via-amber-200/3 to-gold/8 rounded-3xl blur-sm"></div>
-                  <div className="absolute inset-0 bg-gradient-to-b from-slate-800/20 via-transparent to-slate-900/30 rounded-3xl"></div>
-                  
-                  {/* Main carousel container with enhanced styling */}
-                  <div className="relative overflow-hidden rounded-3xl shadow-2xl border-2 border-gold/15 bg-gradient-to-br from-slate-900/40 via-slate-800/50 to-slate-700/60 backdrop-blur-xl">
+                {/* Clean Image Container */}
+                <div className="mb-8 relative group">
+                  {/* Minimal Image Container */}
+                  <div className="relative overflow-hidden rounded-lg shadow-2xl border border-white/20 bg-black/80">
                     {/* Premium inner border effect */}
                     <div className="absolute inset-1 rounded-3xl border border-gold/10"></div>
                     

@@ -46,7 +46,7 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen luxury-platinum-accent">
+    <div className="min-h-screen bg-black text-white">
       {/* Luxury Effects */}
       <LuxuryParticles />
       <LuxuryCursorTrail />
@@ -57,16 +57,16 @@ export default function Home() {
       
       {/* Enhanced Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Improved Dark Background for Better Text Contrast */}
+        {/* Opulence Black Background */}
         <div className="absolute inset-0">
-          {/* Primary Dark Background */}
-          <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-700"></div>
+          {/* Pure Black Background */}
+          <div className="absolute inset-0 bg-black"></div>
           
-          {/* Decorative Elements */}
-          <div className="absolute top-16 left-16 w-32 h-32 bg-gradient-to-br from-amber-400/20 to-amber-600/10 rounded-full blur-2xl animate-pulse"></div>
-          <div className="absolute top-1/3 right-20 w-24 h-24 bg-gradient-to-br from-slate-400/20 to-slate-600/10 rounded-full blur-lg floating"></div>
-          <div className="absolute bottom-1/3 left-1/4 w-40 h-40 bg-gradient-to-br from-amber-300/15 to-amber-500/10 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-20 right-16 w-28 h-28 bg-gradient-to-br from-amber-500/20 to-amber-700/10 rounded-full blur-xl floating"></div>
+          {/* Minimal White Accent Elements */}
+          <div className="absolute top-16 left-16 w-32 h-32 bg-white/5 rounded-full blur-2xl animate-pulse"></div>
+          <div className="absolute top-1/3 right-20 w-24 h-24 bg-white/3 rounded-full blur-lg floating"></div>
+          <div className="absolute bottom-1/3 left-1/4 w-40 h-40 bg-white/4 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-20 right-16 w-28 h-28 bg-gold/10 rounded-full blur-xl floating"></div>
           
           {/* Luxury Texture Pattern */}
           <div className="absolute inset-0 opacity-5" style={{
@@ -380,8 +380,8 @@ export default function Home() {
                 <div className="w-20 h-20 bg-gold rounded-full flex items-center justify-center mx-auto mb-6 shadow-xl">
                   <i className="fas fa-shield-alt text-slate-900 text-2xl"></i>
                 </div>
-                <h3 className="text-xl font-playfair font-bold text-gold mb-4">Lifetime Warranty</h3>
-                <p className="text-white leading-relaxed">Comprehensive warranty coverage ensuring your furniture investment is protected for generations with quality guarantees.</p>
+                <h3 className="text-xl font-playfair font-bold text-gold mb-4">3 Years Warranty</h3>
+                <p className="text-white leading-relaxed">Comprehensive 3-year warranty coverage ensuring your furniture investment is protected with quality guarantees and expert support.</p>
               </CardContent>
             </Card>
 
