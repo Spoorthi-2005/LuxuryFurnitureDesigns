@@ -30,10 +30,10 @@ export default function SimpleImageRotator({
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      {/* Luxury Background Texture */}
-      <div className="absolute inset-0 opacity-10">
+      {/* Minimal Background Texture */}
+      <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23D4AF37' fill-opacity='0.1'%3E%3Cpath d='M20 20l10-10v20l-10-10zm-10 10l10-10h-20l10 10z'/%3E%3C/g%3E%3C/svg%3E")`,
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23FFFFFF' fill-opacity='0.1'%3E%3Cpath d='M20 20l10-10v20l-10-10zm-10 10l10-10h-20l10 10z'/%3E%3C/g%3E%3C/svg%3E")`,
           backgroundSize: '40px 40px'
         }}></div>
       </div>

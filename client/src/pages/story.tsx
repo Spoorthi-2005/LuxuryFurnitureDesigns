@@ -11,13 +11,13 @@ export default function Story() {
       <Header />
       <div className="pt-20">
         {/* Hero Section */}
-        <section className="py-20 bg-section">
+        <section className="py-20 bg-black">
           <div className="container mx-auto px-4">
             <div className="text-center max-w-4xl mx-auto">
-              <h1 className="text-6xl font-playfair font-bold mb-6 text-gradient-brown">
+              <h1 className="text-6xl font-playfair font-bold mb-6 text-white">
                 Our Extraordinary Journey
               </h1>
-              <p className="text-2xl text-soft-brown leading-relaxed">
+              <p className="text-2xl text-gray-300 leading-relaxed">
                 Discover the passionate story behind Blackhorse Furnitures - where traditional Indian craftsmanship 
                 meets contemporary design excellence, creating extraordinary hospitality and luxury commercial furniture that transforms spaces into memorable experiences.
               </p>
