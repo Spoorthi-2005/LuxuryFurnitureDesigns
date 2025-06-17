@@ -26,7 +26,7 @@ export default function SimpleImageRotator({
 
   return (
     <div 
-      className="relative w-full h-96 overflow-hidden rounded-lg"
+      className="relative w-full h-[500px] overflow-hidden rounded-lg"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >

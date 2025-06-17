@@ -122,63 +122,33 @@ export default function Projects() {
         </div>
       </section>
 
-      {/* Projects Linear Layout */}
+      {/* Projects Grid Layout */}
       <div className="container mx-auto px-4 py-12 relative z-10">
-        {projects.map((project, index) => (
-          <div key={project.id} className="mb-20">
-            <Card className="bg-gradient-to-br from-slate-900/95 via-slate-800/90 to-slate-700/95 border-gold/20 backdrop-blur-xl shadow-2xl overflow-hidden">
-              <CardContent className="p-10 md:p-16">
-                <div className="text-center mb-16">
-                  <h2 className="text-5xl md:text-7xl font-bold text-transparent bg-gradient-to-r from-gold via-yellow-300 to-gold bg-clip-text mb-8 tracking-wide animated-gradient">
-                    {project.title}
-                  </h2>
-                  <div className="w-32 h-1.5 bg-gradient-to-r from-transparent via-gold to-transparent mx-auto"></div>
-                </div>
-              
-                {project.isPlaceholder ? (
-                  // Placeholder Layout
-                  <div className="text-center py-20">
-                    <div className="w-32 h-32 bg-gradient-to-br from-gold/20 to-yellow-600/20 rounded-full flex items-center justify-center mx-auto mb-8">
-                      <div className="w-16 h-16 border-4 border-gold/30 border-dashed rounded-full flex items-center justify-center">
-                        <span className="text-gold text-2xl font-bold">?</span>
-                      </div>
+        <div className="grid gap-8">
+          {projects.map((project, index) => (
+            <div key={project.id}>
+              {!project.isPlaceholder && (
+                <Card className="bg-gradient-to-br from-slate-900/95 via-slate-800/90 to-slate-700/95 border-gold/20 backdrop-blur-xl shadow-2xl overflow-hidden">
+                  <CardContent className="p-0">
+                    <div className="text-center py-8 px-8">
+                      <h2 className="text-4xl md:text-5xl font-bold text-transparent bg-gradient-to-r from-gold via-yellow-300 to-gold bg-clip-text mb-4 tracking-wide animated-gradient">
+                        {project.title}
+                      </h2>
+                      <div className="w-24 h-1 bg-gradient-to-r from-transparent via-gold to-transparent mx-auto mb-6"></div>
                     </div>
-                    <h3 className="text-3xl font-bold text-gold mb-4">Coming Soon</h3>
-                    <p className="text-lg text-soft-brown max-w-2xl mx-auto">
-                      This exciting project is currently in development. Stay tuned for stunning visuals and detailed information about our latest luxury furniture creation.
-                    </p>
-                  </div>
-                ) : (
-                  // Alternating Project Layout
-                  <div className={`grid lg:grid-cols-2 gap-12 items-center ${
-                    index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''
-                  }`}>
-                    {/* Image Section */}
-                    <div className={`relative ${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
+                    
+                    <div className="w-full">
                       <SimpleImageRotator
                         images={project.images.map((img) => ({ src: img, alt: project.title }))}
                         rotationInterval={3000}
                       />
                     </div>
-
-                    {/* Content Section */}
-                    <div className={`space-y-6 ${index % 2 === 1 ? 'lg:col-start-1' : ''}`}>
-                      <div>
-                        <span className="inline-block bg-gold/20 text-gold px-4 py-2 rounded-full text-sm font-semibold mb-4">
-                          {project.category}
-                        </span>
-                        <h3 className="text-3xl font-bold text-gold mb-6">{project.title}</h3>
-                        <p className="text-soft-brown text-lg leading-relaxed">
-                          {project.description}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                )}
-              </CardContent>
-            </Card>
-          </div>
-        ))}
+                  </CardContent>
+                </Card>
+              )}
+            </div>
+          ))}
+        </div>
       </div>
 
       <Footer />
