@@ -74,17 +74,17 @@ export default function Craftsmanship() {
   ];
 
   return (
-    <div className="min-h-screen text-foreground">
+    <div className="min-h-screen bg-black text-white">
       <Header />
       <div className="pt-20">
         {/* Hero Section */}
-        <section className="py-20 bg-section">
+        <section className="py-20 bg-black">
           <div className="container mx-auto px-4">
             <div className="text-center max-w-4xl mx-auto">
-              <h1 className="text-6xl font-playfair font-bold mb-6 text-elegant-brown">
+              <h1 className="text-6xl font-playfair font-bold mb-6 text-white">
                 Craftsmanship in Action
               </h1>
-              <p className="text-2xl text-soft-brown leading-relaxed">
+              <p className="text-2xl text-gray-300 leading-relaxed">
                 Witness the extraordinary artistry and meticulous precision of our master craftsmen as they transform 
                 premium materials into exquisite furniture pieces that embody the perfect fusion of traditional techniques and contemporary innovation.
               </p>

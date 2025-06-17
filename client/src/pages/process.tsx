@@ -61,17 +61,17 @@ export default function Process() {
   ];
 
   return (
-    <div className="min-h-screen text-foreground">
+    <div className="min-h-screen bg-black text-white">
       <Header />
       <div className="pt-20">
         {/* Hero Section */}
-        <section className="py-20 bg-section">
+        <section className="py-20 bg-black">
           <div className="container mx-auto px-4">
             <div className="text-center max-w-4xl mx-auto">
-              <h1 className="text-6xl font-playfair font-bold mb-6 text-gradient-brown">
+              <h1 className="text-6xl font-playfair font-bold mb-6 text-white">
                 Our Meticulous Craftsmanship Process
               </h1>
-              <p className="text-2xl text-soft-brown leading-relaxed">
+              <p className="text-2xl text-gray-300 leading-relaxed">
                 Witness the extraordinary journey from conceptual design to finished masterpiece through our time-honored 
                 six-step process that ensures every piece meets the highest standards of quality and artisanal excellence.
               </p>
@@ -80,11 +80,11 @@ export default function Process() {
         </section>
 
         {/* Process Steps */}
-        <section className="py-20">
+        <section className="py-20 bg-black">
           <div className="container mx-auto px-4">
             <div className="space-y-16">
               {processSteps.map((step, index) => (
-                <Card key={step.id} className="bg-card border-champagne/40 overflow-hidden hover:shadow-2xl transition-all duration-500">
+                <Card key={step.id} className="bg-black/50 border-white/20 overflow-hidden hover:shadow-2xl transition-all duration-500">
                   <CardContent className="p-0">
                     <div className={`grid lg:grid-cols-2 gap-0 items-center ${index % 2 === 1 ? 'lg:grid-cols-2' : ''}`}>
                       <div className={`relative overflow-hidden ${index % 2 === 1 ? 'lg:order-2' : ''}`}>
@@ -99,12 +99,12 @@ export default function Process() {
                       </div>
                       <div className={`p-12 ${index % 2 === 1 ? 'lg:order-1' : ''}`}>
                         <div className="flex items-center mb-6">
-                          <div className="w-12 h-12 bg-glow-gold rounded-full flex items-center justify-center mr-4">
+                          <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mr-4">
                             <i className={`${step.icon} text-white text-lg`}></i>
                           </div>
-                          <h3 className="text-3xl font-playfair font-bold text-elegant-brown">{step.title}</h3>
+                          <h3 className="text-3xl font-playfair font-bold text-white">{step.title}</h3>
                         </div>
-                        <p className="text-lg text-soft-brown leading-relaxed">{step.description}</p>
+                        <p className="text-lg text-gray-300 leading-relaxed">{step.description}</p>
                       </div>
                     </div>
                   </CardContent>
