@@ -334,11 +334,11 @@ export default function Home() {
       </section>
 
       {/* Luxury Features Showcase */}
-      <section className="py-20 bg-slate-900">
+      <section className="py-20 bg-black">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-playfair font-bold mb-6 text-gold">Why Choose Blackhorse</h2>
-            <p className="text-xl text-white max-w-3xl mx-auto">
+            <h2 className="text-4xl font-playfair font-bold mb-6 text-white">Why Choose Blackhorse</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience the difference that sets us apart in the luxury furniture industry.
             </p>
           </div>
@@ -445,9 +445,9 @@ export default function Home() {
       </section>
 
       {/* Luxury Bedroom Showcase */}
-      <section className="py-20 bg-slate-900">
+      <section className="py-20 bg-black">
         <div className="container mx-auto px-4">
-          <Card className="bg-slate-800 border-gold/30 overflow-hidden shadow-2xl">
+          <Card className="bg-black/50 border-white/20 overflow-hidden shadow-2xl">
             <CardContent className="p-0">
               <div className="grid lg:grid-cols-2 gap-0 items-center">
                 <div className="relative">

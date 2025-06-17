@@ -165,10 +165,10 @@ export default function Story() {
         {/* Values & Mission */}
         <section className="py-20">
           <div className="container mx-auto px-4">
-            <Card className="bg-gradient-to-r from-luxury-gold to-yellow-400 text-black overflow-hidden">
+            <Card className="bg-black/60 border-white/20 text-white overflow-hidden">
               <CardContent className="p-12 text-center">
-                <h2 className="text-4xl font-playfair font-bold mb-8">Our Unwavering Commitment</h2>
-                <p className="text-xl mb-12 max-w-4xl mx-auto leading-relaxed">
+                <h2 className="text-4xl font-playfair font-bold mb-8 text-white">Our Unwavering Commitment</h2>
+                <p className="text-xl mb-12 max-w-4xl mx-auto leading-relaxed text-gray-300">
                   At Blackhorse Furnitures, every piece we create embodies our foundational values of excellence, 
                   integrity, and innovation. From the initial design consultation to the final installation, 
                   we ensure that your investment in our furniture represents not just a purchase, but a legacy 
@@ -177,25 +177,25 @@ export default function Story() {
                 
                 <div className="grid md:grid-cols-3 gap-12">
                   <div>
-                    <div className="w-20 h-20 bg-black rounded-full flex items-center justify-center mx-auto mb-6">
-                      <i className="fas fa-award text-luxury-gold text-3xl"></i>
+                    <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <i className="fas fa-award text-white text-3xl"></i>
                     </div>
-                    <h3 className="text-2xl font-playfair font-bold mb-4">Uncompromising Quality</h3>
-                    <p className="text-lg">Premium materials, precision craftsmanship, and rigorous quality control ensure exceptional durability and timeless beauty.</p>
+                    <h3 className="text-2xl font-playfair font-bold mb-4 text-white">Uncompromising Quality</h3>
+                    <p className="text-lg text-gray-300">Premium materials, precision craftsmanship, and rigorous quality control ensure exceptional durability and timeless beauty.</p>
                   </div>
                   <div>
-                    <div className="w-20 h-20 bg-black rounded-full flex items-center justify-center mx-auto mb-6">
-                      <i className="fas fa-users text-luxury-gold text-3xl"></i>
+                    <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <i className="fas fa-users text-white text-3xl"></i>
                     </div>
-                    <h3 className="text-2xl font-playfair font-bold mb-4">Client-First Approach</h3>
-                    <p className="text-lg">Personalized service, transparent communication, and unwavering dedication to bringing your vision to life.</p>
+                    <h3 className="text-2xl font-playfair font-bold mb-4 text-white">Client-First Approach</h3>
+                    <p className="text-lg text-gray-300">Personalized service, transparent communication, and unwavering dedication to bringing your vision to life.</p>
                   </div>
                   <div>
-                    <div className="w-20 h-20 bg-black rounded-full flex items-center justify-center mx-auto mb-6">
-                      <i className="fas fa-leaf text-luxury-gold text-3xl"></i>
+                    <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <i className="fas fa-leaf text-white text-3xl"></i>
                     </div>
-                    <h3 className="text-2xl font-playfair font-bold mb-4">Sustainable Practices</h3>
-                    <p className="text-lg">Environmentally responsible sourcing, eco-friendly processes, and commitment to preserving our planet's resources.</p>
+                    <h3 className="text-2xl font-playfair font-bold mb-4 text-white">Sustainable Practices</h3>
+                    <p className="text-lg text-gray-300">Environmentally responsible sourcing, eco-friendly processes, and commitment to preserving our planet's resources.</p>
                   </div>
                 </div>
               </CardContent>

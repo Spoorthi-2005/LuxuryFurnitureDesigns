@@ -38,28 +38,50 @@ export default function SimpleImageRotator({
         }}></div>
       </div>
 
-      {/* Main Image Display */}
-      <div className="relative w-full h-full p-4">
+      {/* Enhanced Furniture Image Display */}
+      <div className="relative w-full h-full p-3 group">
         <div className="relative w-full h-full rounded-lg overflow-hidden shadow-2xl">
-          <img
-            src={images[currentIndex].src}
-            alt={images[currentIndex].alt}
-            className="w-full h-full object-contain transition-all duration-1000 ease-in-out"
-            style={{
-              filter: 'contrast(1.1) saturate(1.1) brightness(1.05)',
-            }}
-          />
+          {/* Premium Spotlight Border */}
+          <div className="absolute -inset-1 bg-gradient-to-r from-white/20 via-white/5 to-white/20 rounded-xl blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
           
-          {/* Luxury Vignette Effect */}
-          <div className="absolute inset-0 bg-gradient-radial from-transparent via-transparent to-black/10"></div>
-          
-          {/* Hover Glow Effect */}
-          <div className="absolute inset-0 bg-gradient-to-t from-gold/5 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-500"></div>
+          {/* Main Image Container */}
+          <div className="relative w-full h-full rounded-lg overflow-hidden bg-black/20">
+            <img
+              src={images[currentIndex].src}
+              alt={images[currentIndex].alt}
+              className="w-full h-full object-contain transition-all duration-1000 ease-in-out group-hover:scale-[1.02] group-hover:brightness-110"
+              style={{
+                filter: 'contrast(1.15) saturate(1.2) brightness(1.1)',
+              }}
+            />
+            
+            {/* Premium Furniture Highlight Frame */}
+            <div className="absolute inset-0 border-2 border-white/0 group-hover:border-white/30 transition-all duration-500 rounded-lg"></div>
+            
+            {/* Corner Accent Lines */}
+            <div className="absolute top-3 left-3 w-6 h-6 border-l-2 border-t-2 border-white/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div className="absolute top-3 right-3 w-6 h-6 border-r-2 border-t-2 border-white/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div className="absolute bottom-3 left-3 w-6 h-6 border-l-2 border-b-2 border-white/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div className="absolute bottom-3 right-3 w-6 h-6 border-r-2 border-b-2 border-white/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            
+            {/* Furniture Focus Overlay */}
+            <div className="absolute inset-0 bg-gradient-radial from-transparent via-transparent to-black/5"></div>
+            
+            {/* Premium Label */}
+            <div className="absolute bottom-4 left-4 bg-white/10 backdrop-blur-sm text-white px-3 py-1.5 rounded-full text-xs font-semibold border border-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+              HANDCRAFTED FURNITURE
+            </div>
+            
+            {/* Image Counter with Style */}
+            <div className="absolute top-4 right-4 bg-black/60 backdrop-blur-sm text-white px-3 py-1.5 rounded-full text-sm font-medium border border-white/20">
+              {currentIndex + 1} / {images.length}
+            </div>
+          </div>
         </div>
       </div>
 
-      {/* Elegant Navigation Dots */}
-      <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-3">
+      {/* Enhanced Navigation Dots */}
+      <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-3 bg-black/30 backdrop-blur-sm px-4 py-2 rounded-full border border-white/10">
         {images.map((_, index) => (
           <button
             key={index}
@@ -73,11 +95,11 @@ export default function SimpleImageRotator({
           >
             <div className={`w-full h-full rounded-full transition-all duration-500 ${
               index === currentIndex 
-                ? 'bg-gold shadow-lg shadow-gold/50 ring-2 ring-gold/30 ring-offset-2 ring-offset-slate-800' 
-                : 'bg-white/40 hover:bg-white/60 border border-gold/20'
+                ? 'bg-white shadow-lg shadow-white/50 ring-2 ring-white/30 ring-offset-1 ring-offset-black' 
+                : 'bg-white/40 hover:bg-white/60 border border-white/20'
             }`} />
             {index === currentIndex && (
-              <div className="absolute inset-0 bg-gold rounded-full animate-ping opacity-20"></div>
+              <div className="absolute inset-0 bg-white rounded-full animate-ping opacity-20"></div>
             )}
           </button>
         ))}
