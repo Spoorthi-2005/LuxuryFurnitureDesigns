@@ -50,6 +50,8 @@ export default function Home() {
       {/* Luxury Effects */}
       <LuxuryParticles />
       <LuxuryCursorTrail />
+      <LuxuryStatusBar />
+      <OpulentFloatingMenu />
       
       <Header />
       
