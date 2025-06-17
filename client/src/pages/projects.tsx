@@ -101,21 +101,20 @@ export default function Projects() {
   ];
 
   return (
-    <div className="min-h-screen relative overflow-hidden luxury-platinum-secondary">
+    <div className="min-h-screen relative overflow-hidden bg-black text-white">
       {/* Luxury Effects */}
       <LuxuryParticles />
       <LuxuryCursorTrail />
       
-      {/* Enhanced Background Elements */}
+      {/* Opulence Black Background with Subtle White Accents */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-r from-amber-100/15 via-transparent to-slate-200/25"></div>
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-900/80 via-slate-700/40 to-slate-100/60"></div>
+        <div className="absolute inset-0 bg-black"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-white/5 via-transparent to-white/3"></div>
       </div>
 
-      {/* Premium Ambient Lighting */}
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-gold/8 rounded-full blur-3xl animate-pulse"></div>
-      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-amber-400/8 rounded-full blur-3xl animate-pulse" style={{animationDelay: '2s'}}></div>
-      <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-yellow-300/5 rounded-full blur-2xl animate-pulse" style={{animationDelay: '4s'}}></div>
+      {/* Minimal Ambient Lighting for Elegance */}
+      <div className="absolute top-0 left-1/4 w-80 h-80 bg-white/3 rounded-full blur-3xl animate-pulse"></div>
+      <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-gold/5 rounded-full blur-3xl animate-pulse" style={{animationDelay: '3s'}}></div>
 
       <Header />
 
@@ -148,64 +147,33 @@ export default function Projects() {
               <div key={project.id}>
                 {!project.isPlaceholder && (
                   <div className="group">
-                    {/* Opulent Project Header */}
-                    <div className="text-center mb-12">
-                      <div className="inline-block relative">
-                        <h2 className="text-5xl md:text-6xl lg:text-7xl font-playfair font-bold text-transparent bg-gradient-to-r from-amber-300 via-gold to-amber-600 bg-clip-text mb-6 tracking-wider">
-                          {project.title}
-                        </h2>
-                        <div className="absolute -inset-2 bg-gradient-to-r from-transparent via-gold/20 to-transparent blur-2xl opacity-50"></div>
-                      </div>
-                      
-                      {/* Luxury Divider */}
-                      <div className="flex items-center justify-center space-x-4 mb-8">
-                        <div className="w-16 h-px bg-gradient-to-r from-transparent to-gold"></div>
-                        <div className="w-3 h-3 bg-gold rounded-full shadow-lg shadow-gold/50"></div>
-                        <div className="w-24 h-px bg-gold"></div>
-                        <div className="w-3 h-3 bg-gold rounded-full shadow-lg shadow-gold/50"></div>
-                        <div className="w-16 h-px bg-gradient-to-l from-transparent to-gold"></div>
-                      </div>
-                      
-                      <div className="inline-block px-6 py-2 bg-gradient-to-r from-gold/20 to-amber-500/20 rounded-full border border-gold/30">
-                        <span className="text-gold font-semibold text-lg tracking-wide">{project.category}</span>
-                      </div>
+                    {/* Minimal Project Header */}
+                    <div className="text-center mb-8">
+                      <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 tracking-wide">
+                        {project.title}
+                      </h2>
+                      <div className="w-20 h-px bg-gradient-to-r from-transparent via-white/50 to-transparent mx-auto mb-4"></div>
+                      <span className="text-gray-300 text-sm uppercase tracking-wider">{project.category}</span>
                     </div>
 
-                    {/* Luxury Image Frame */}
-                    <div className="relative max-w-6xl mx-auto">
-                      {/* Ornate Border */}
-                      <div className="absolute -inset-6 bg-gradient-to-br from-amber-400/20 via-gold/30 to-amber-600/20 rounded-3xl blur-xl"></div>
-                      <div className="absolute -inset-4 bg-gradient-to-br from-slate-800 via-slate-700 to-slate-900 rounded-2xl shadow-2xl"></div>
-                      <div className="absolute -inset-3 bg-gradient-to-br from-gold/30 via-amber-500/20 to-gold/30 rounded-2xl"></div>
-                      
-                      {/* Main Image Container */}
-                      <div className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 rounded-xl overflow-hidden shadow-2xl border border-gold/40">
-                        {/* Inner Luxury Frame */}
-                        <div className="absolute inset-2 border border-gold/20 rounded-lg pointer-events-none z-10"></div>
+                    {/* Clean Image Display */}
+                    <div className="relative max-w-5xl mx-auto">
+                      {/* Minimal White Frame */}
+                      <div className="relative bg-black rounded-lg overflow-hidden shadow-2xl border border-white/20">
+                        {/* Simple Corner Accents */}
+                        <div className="absolute top-2 left-2 w-4 h-4 border-l border-t border-white/30"></div>
+                        <div className="absolute top-2 right-2 w-4 h-4 border-r border-t border-white/30"></div>
+                        <div className="absolute bottom-2 left-2 w-4 h-4 border-l border-b border-white/30"></div>
+                        <div className="absolute bottom-2 right-2 w-4 h-4 border-r border-b border-white/30"></div>
                         
-                        {/* Corner Ornaments */}
-                        <div className="absolute top-4 left-4 w-6 h-6 border-l-2 border-t-2 border-gold/50 z-10"></div>
-                        <div className="absolute top-4 right-4 w-6 h-6 border-r-2 border-t-2 border-gold/50 z-10"></div>
-                        <div className="absolute bottom-4 left-4 w-6 h-6 border-l-2 border-b-2 border-gold/50 z-10"></div>
-                        <div className="absolute bottom-4 right-4 w-6 h-6 border-r-2 border-b-2 border-gold/50 z-10"></div>
-                        
-                        {/* Image Display */}
-                        <div className="relative p-6">
+                        {/* Image Display - Focus on Furniture */}
+                        <div className="relative p-2">
                           <SimpleImageRotator
                             images={project.images.map((img) => ({ src: img, alt: project.title }))}
                             rotationInterval={4000}
                           />
                         </div>
-                        
-                        {/* Subtle Glow Effect */}
-                        <div className="absolute inset-0 bg-gradient-to-t from-gold/5 via-transparent to-transparent pointer-events-none"></div>
                       </div>
-                      
-                      {/* Floating Elements */}
-                      <div className="absolute -top-2 -left-2 w-4 h-4 bg-gold rounded-full shadow-lg shadow-gold/50 animate-pulse"></div>
-                      <div className="absolute -top-2 -right-2 w-4 h-4 bg-gold rounded-full shadow-lg shadow-gold/50 animate-pulse" style={{animationDelay: '1s'}}></div>
-                      <div className="absolute -bottom-2 -left-2 w-4 h-4 bg-gold rounded-full shadow-lg shadow-gold/50 animate-pulse" style={{animationDelay: '2s'}}></div>
-                      <div className="absolute -bottom-2 -right-2 w-4 h-4 bg-gold rounded-full shadow-lg shadow-gold/50 animate-pulse" style={{animationDelay: '0.5s'}}></div>
                     </div>
                   </div>
                 )}

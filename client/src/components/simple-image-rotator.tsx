@@ -26,7 +26,7 @@ export default function SimpleImageRotator({
 
   return (
     <div 
-      className="relative w-full h-[600px] overflow-hidden rounded-xl bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900"
+      className="relative w-full h-[400px] overflow-hidden rounded-xl bg-gradient-to-br from-black via-gray-900 to-black"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >

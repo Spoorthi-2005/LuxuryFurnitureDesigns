@@ -6,35 +6,36 @@
 @tailwind utilities;
 
 :root {
-  --background: hsl(240, 50%, 8%); /* Deep navy */
+  /* Opulence Black & White Theme */
+  --background: hsl(0, 0%, 5%); /* Pure black background */
   --foreground: hsl(0, 0%, 98%); /* Pure white text */
-  --muted: hsl(240, 40%, 15%); /* Dark navy */
-  --muted-foreground: hsl(0, 0%, 75%); /* Light grey */
-  --popover: hsl(240, 50%, 10%);
+  --muted: hsl(0, 0%, 10%); /* Dark black */
+  --muted-foreground: hsl(0, 0%, 85%); /* Light grey text */
+  --popover: hsl(0, 0%, 8%);
   --popover-foreground: hsl(0, 0%, 98%);
-  --card: rgba(255, 255, 255, 0.05); /* Ultra-subtle glass */
+  --card: rgba(255, 255, 255, 0.08); /* Subtle white glass */
   --card-foreground: hsl(0, 0%, 98%);
-  --border: hsl(280, 30%, 25%); /* Purple-tinted border */
-  --input: hsl(240, 40%, 15%); /* Dark navy input */
-  --primary: hsl(35, 85%, 75%); /* Sophisticated gold */
-  --primary-foreground: hsl(0, 0%, 15%);
-  --secondary: hsl(30, 25%, 85%); /* Platinum silver */
+  --border: hsl(0, 0%, 20%); /* Subtle grey border */
+  --input: hsl(0, 0%, 12%); /* Dark input */
+  --primary: hsl(45, 100%, 60%); /* Gold accent */
+  --primary-foreground: hsl(0, 0%, 8%);
+  --secondary: hsl(350, 100%, 88%); /* Pastel rose */
   --secondary-foreground: hsl(0, 0%, 20%);
-  --accent: hsl(40, 70%, 65%); /* Rich bronze accent */
+  --accent: hsl(210, 100%, 90%); /* Pastel blue */
   --accent-foreground: hsl(0, 0%, 15%);
   --destructive: hsl(0, 75%, 55%);
   --destructive-foreground: hsl(0, 0%, 100%);
-  --ring: hsl(35, 85%, 75%);
+  --ring: hsl(45, 100%, 60%);
   --radius: 0.75rem;
-  --elegant-brown: hsl(35, 85%, 75%); /* Sophisticated gold */
-  --soft-brown: hsl(30, 20%, 80%); /* Warm platinum */
-  --glass-white: rgba(255, 255, 255, 0.12); /* Enhanced glass effect */
-  --glow-gold: hsl(35, 85%, 75%); /* Sophisticated gold glow */
-  --transparent-brown: rgba(218, 165, 32, 0.15); /* Gold overlay */
-  --section-bg: rgba(255, 255, 255, 0.08); /* Subtle section */
-  --card-bg: rgba(255, 255, 255, 0.10); /* Glass card */
-  --champagne: hsl(40, 50%, 88%); /* Refined champagne */
-  --luxury-gold: hsl(35, 85%, 75%); /* Primary sophisticated gold */
+  --elegant-brown: hsl(0, 0%, 95%); /* White text */
+  --soft-brown: hsl(0, 0%, 90%); /* Light grey text */
+  --glass-white: rgba(255, 255, 255, 0.15); /* Enhanced white glass */
+  --glow-gold: hsl(45, 100%, 60%); /* Gold glow */
+  --transparent-brown: rgba(255, 255, 255, 0.08); /* White overlay */
+  --section-bg: rgba(255, 255, 255, 0.03); /* Subtle white section */
+  --card-bg: rgba(255, 255, 255, 0.05); /* White glass card */
+  --champagne: hsl(270, 100%, 92%); /* Pastel lavender */
+  --luxury-gold: hsl(45, 100%, 60%); /* Primary gold */
 }
 
 .dark {
