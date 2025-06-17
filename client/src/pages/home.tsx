@@ -134,7 +134,7 @@ export default function Home() {
                 Explore Collections <i className="fas fa-arrow-right ml-2"></i>
               </Button>
             </Link>
-            <Link href="/story">
+            <Link href="/our-story">
               <Button variant="outline" className="border-2 border-gold text-gold px-12 py-6 text-lg font-bold hover:bg-gold hover:text-black transition-all duration-500 shadow-2xl bg-black/30 backdrop-blur-sm hover:shadow-gold/50 transform hover:scale-105 rounded-full">
                 Our Story <i className="fas fa-book-open ml-2"></i>
               </Button>
