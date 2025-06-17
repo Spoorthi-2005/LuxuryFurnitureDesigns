@@ -13,7 +13,7 @@ const testimonials = [
   {
     id: 2,
     name: "Vikram Yadav",
-    position: "Interior Designer", 
+    position: "Residential Client", 
     content: "Working with Blackhorse has been an absolute pleasure. Their ability to transform concepts into stunning reality while maintaining the highest standards makes them my preferred choice for all premium projects.",
     rating: 5
   },
