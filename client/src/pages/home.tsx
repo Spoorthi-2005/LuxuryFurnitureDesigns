@@ -98,25 +98,30 @@ export default function Home() {
         
         <div className="relative z-10 container mx-auto px-4 text-center">
           {/* Enhanced Title with Shimmer Effect */}
-          <ShimmerText className="text-6xl md:text-8xl font-playfair font-bold mb-8 drop-shadow-2xl transform hover:scale-105 transition-transform duration-500">
+          <ShimmerText className="text-6xl md:text-7xl font-playfair font-bold mb-6 drop-shadow-2xl transform hover:scale-105 transition-transform duration-500 whitespace-nowrap">
             Blackhorse Furnitures
           </ShimmerText>
           
-          {/* Streamlined Description with Enhanced Styling */}
-          <div className="max-w-4xl mx-auto mb-12">
+          {/* 3D Description Box */}
+          <div className="max-w-4xl mx-auto mb-8">
             <div className="relative group">
-              {/* Golden Border with Rounded Corners */}
-              <div className="absolute -inset-1 bg-gradient-to-r from-gold via-amber-400 to-gold rounded-3xl opacity-80 group-hover:opacity-100 transition-opacity duration-500"></div>
+              {/* 3D Shadow Layers for Depth */}
+              <div className="absolute inset-0 bg-gradient-to-r from-gold via-amber-400 to-gold rounded-3xl transform translate-x-2 translate-y-2 opacity-30"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-gold via-amber-400 to-gold rounded-3xl transform translate-x-1 translate-y-1 opacity-50"></div>
               
-              {/* Content Container with Better Styling */}
-              <div className="relative backdrop-blur-lg bg-black/70 rounded-3xl p-8 shadow-2xl">
+              {/* Main Golden Border */}
+              <div className="absolute -inset-1 bg-gradient-to-r from-gold via-amber-400 to-gold rounded-3xl opacity-90 group-hover:opacity-100 transition-opacity duration-500"></div>
+              
+              {/* Content Container with 3D Effect */}
+              <div className="relative backdrop-blur-lg bg-black/80 rounded-3xl p-8 shadow-2xl transform group-hover:translate-x-1 group-hover:translate-y-1 transition-transform duration-300">
                 <p className="text-2xl md:text-3xl text-white leading-relaxed font-medium drop-shadow-xl">
                   Where traditional Indian craftsmanship meets contemporary elegance. Creating extraordinary furniture pieces that define luxury living.
                 </p>
                 
-                {/* Small Golden Arrow Pointer */}
+                {/* 3D Golden Arrow Pointer */}
                 <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2">
-                  <div className="w-4 h-4 bg-gold rotate-45"></div>
+                  <div className="w-4 h-4 bg-gold rotate-45 shadow-lg"></div>
+                  <div className="absolute inset-0 w-4 h-4 bg-amber-300 rotate-45 transform translate-x-0.5 translate-y-0.5 -z-10"></div>
                 </div>
               </div>
             </div>
