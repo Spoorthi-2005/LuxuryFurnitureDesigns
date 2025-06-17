@@ -55,79 +55,132 @@ export default function Home() {
       
       <Header />
       
-      {/* Enhanced Hero Section */}
+      {/* Spectacular Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Opulence Black Background */}
+        {/* Dynamic Background System */}
         <div className="absolute inset-0">
-          {/* Pure Black Background */}
+          {/* Base Black Canvas */}
           <div className="absolute inset-0 bg-black"></div>
           
-          {/* Minimal White Accent Elements */}
-          <div className="absolute top-16 left-16 w-32 h-32 bg-white/5 rounded-full blur-2xl animate-pulse"></div>
-          <div className="absolute top-1/3 right-20 w-24 h-24 bg-white/3 rounded-full blur-lg floating"></div>
-          <div className="absolute bottom-1/3 left-1/4 w-40 h-40 bg-white/4 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-20 right-16 w-28 h-28 bg-gold/10 rounded-full blur-xl floating"></div>
+          {/* Cinematic Furniture Showcase */}
+          <div className="absolute inset-0">
+            <img 
+              src={heroImage} 
+              alt="Luxury furniture showcase" 
+              className="w-full h-full object-cover opacity-15 mix-blend-overlay"
+            />
+            <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/50"></div>
+          </div>
           
-          {/* Luxury Texture Pattern */}
-          <div className="absolute inset-0 opacity-5" style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23D4AF37' fill-opacity='0.1'%3E%3Cpath d='M60 60l30-30v60l-30-30zm-30 30l30-30h-60l30 30z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-            backgroundSize: '120px 120px'
+          {/* Premium Light Orchestra */}
+          <div className="absolute top-1/4 left-1/5 w-96 h-96 bg-gradient-radial from-gold/10 via-gold/5 to-transparent rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-1/4 right-1/5 w-80 h-80 bg-gradient-radial from-white/8 via-white/3 to-transparent rounded-full blur-3xl animate-pulse" style={{animationDelay: '2s'}}></div>
+          <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-gradient-radial from-amber-500/8 via-amber-300/4 to-transparent rounded-full blur-2xl animate-pulse" style={{animationDelay: '4s'}}></div>
+          
+          {/* Geometric Elegance Pattern */}
+          <div className="absolute inset-0 opacity-[0.02]" style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='200' height='200' viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23D4AF37' stroke-width='0.5'%3E%3Cpath d='M0 100h200M100 0v200M50 50l100 100M150 50l-100 100'/%3E%3Ccircle cx='100' cy='100' r='80'/%3E%3Ccircle cx='100' cy='100' r='40'/%3E%3C/g%3E%3C/svg%3E")`,
+            backgroundSize: '200px 200px'
           }}></div>
-          
-          {/* Subtle Furniture Image Overlay */}
-          <img 
-            src={heroImage} 
-            alt="Luxury furniture showcase" 
-            className="absolute inset-0 w-full h-full object-cover opacity-8 mix-blend-soft-light"
-          />
-          
-          {/* Dark overlay for better text contrast */}
-          <div className="absolute inset-0 bg-slate-900/40"></div>
         </div>
         
-        {/* Floating Decorative Elements */}
-        <div className="absolute top-20 left-1/4 text-amber-400/70 floating" style={{animationDelay: '1s'}}>
-          <i className="fas fa-chess-knight text-4xl drop-shadow-2xl filter drop-shadow-[0_0_10px_rgba(245,158,11,0.5)]"></i>
+        {/* Luxury Floating Ornaments */}
+        <div className="absolute top-16 left-16 text-gold/40 floating" style={{animationDelay: '1s'}}>
+          <i className="fas fa-crown text-5xl drop-shadow-2xl filter drop-shadow-[0_0_15px_rgba(212,175,55,0.6)]"></i>
         </div>
-        <div className="absolute top-1/2 right-1/4 text-slate-300/60 floating" style={{animationDelay: '2s'}}>
-          <i className="fas fa-crown text-3xl drop-shadow-2xl filter drop-shadow-[0_0_8px_rgba(203,213,225,0.7)]"></i>
+        <div className="absolute top-20 right-20 text-white/30 floating" style={{animationDelay: '3s'}}>
+          <i className="fas fa-gem text-4xl drop-shadow-2xl filter drop-shadow-[0_0_12px_rgba(255,255,255,0.4)]"></i>
         </div>
-        <div className="absolute bottom-1/3 left-1/6 text-amber-500/80 floating" style={{animationDelay: '0.5s'}}>
-          <i className="fas fa-gem text-3xl drop-shadow-2xl filter drop-shadow-[0_0_12px_rgba(245,158,11,0.6)]"></i>
+        <div className="absolute bottom-20 left-20 text-gold/50 floating" style={{animationDelay: '0.5s'}}>
+          <i className="fas fa-chess-rook text-4xl drop-shadow-2xl filter drop-shadow-[0_0_10px_rgba(212,175,55,0.5)]"></i>
+        </div>
+        <div className="absolute bottom-16 right-16 text-amber-400/40 floating" style={{animationDelay: '2.5s'}}>
+          <i className="fas fa-star text-3xl drop-shadow-2xl filter drop-shadow-[0_0_8px_rgba(245,158,11,0.6)]"></i>
         </div>
         
         <div className="relative z-10 container mx-auto px-4 text-center">
-          {/* Enhanced Title with Shimmer Effect */}
-          <ShimmerText className="text-6xl md:text-7xl font-playfair font-bold mb-6 drop-shadow-2xl transform hover:scale-105 transition-transform duration-500">
-            Blackhorse Furnitures
-          </ShimmerText>
+          {/* Magnificent Brand Title */}
+          <div className="mb-8">
+            <h1 className="text-7xl md:text-8xl lg:text-9xl font-playfair font-bold mb-4 tracking-wider">
+              <span className="bg-gradient-to-r from-gold via-amber-300 to-gold bg-clip-text text-transparent drop-shadow-2xl animate-pulse">
+                Blackhorse
+              </span>
+            </h1>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-playfair font-medium text-white/90 tracking-widest drop-shadow-xl">
+              F U R N I T U R E S
+            </h2>
+            <div className="mt-4 w-40 h-1 bg-gradient-to-r from-transparent via-gold to-transparent mx-auto"></div>
+          </div>
           
-          {/* Streamlined Description */}
-          <div className="max-w-4xl mx-auto mb-8">
-            <div className="backdrop-blur-lg bg-slate-800/30 rounded-3xl p-8 shadow-2xl border border-amber-400/40 luxury-shine">
-              <p className="text-2xl md:text-3xl text-white leading-relaxed font-medium drop-shadow-xl">
-                Where traditional Indian craftsmanship meets contemporary elegance. Creating extraordinary furniture pieces that define luxury living.
-              </p>
+          {/* Captivating Description */}
+          <div className="max-w-5xl mx-auto mb-12">
+            <div className="relative group">
+              {/* Glowing Frame Effect */}
+              <div className="absolute -inset-1 bg-gradient-to-r from-gold/20 via-white/10 to-gold/20 rounded-3xl blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+              
+              {/* Content Container */}
+              <div className="relative backdrop-blur-xl bg-black/40 rounded-3xl p-10 md:p-12 shadow-2xl border border-white/20">
+                <p className="text-2xl md:text-3xl lg:text-4xl text-white leading-relaxed font-light tracking-wide">
+                  Where traditional Indian craftsmanship meets
+                  <span className="block mt-2 font-medium bg-gradient-to-r from-amber-200 via-white to-amber-200 bg-clip-text text-transparent">
+                    contemporary elegance
+                  </span>
+                </p>
+                <div className="mt-6 text-lg md:text-xl text-gray-300 font-light">
+                  Creating extraordinary furniture pieces that define luxury living
+                </div>
+              </div>
             </div>
           </div>
           
-          {/* Enhanced Action Buttons */}
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+          {/* Premium Action Buttons */}
+          <div className="flex flex-col sm:flex-row gap-8 justify-center items-center mb-16">
             <Link href="/collections">
-              <Button className="bg-gradient-to-r from-elegant-brown to-glow-gold text-white px-12 py-6 text-lg font-bold hover:from-glow-gold hover:to-elegant-brown transition-all duration-500 shadow-2xl hover:shadow-glow-gold/50 transform hover:scale-105 luxury-glow">
-                Explore Collections <i className="fas fa-arrow-right ml-2"></i>
+              <Button className="group relative bg-gradient-to-r from-gold to-amber-400 text-black px-14 py-6 text-xl font-bold rounded-full shadow-2xl hover:shadow-gold/50 transform hover:scale-105 transition-all duration-500 overflow-hidden">
+                <span className="absolute inset-0 bg-gradient-to-r from-amber-300 to-gold opacity-0 group-hover:opacity-100 transition-opacity duration-500"></span>
+                <span className="relative flex items-center">
+                  Explore Collections 
+                  <i className="fas fa-arrow-right ml-3 group-hover:translate-x-1 transition-transform duration-300"></i>
+                </span>
               </Button>
             </Link>
-            <Link href="/our-story">
-              <Button variant="outline" className="border-2 border-amber-400 text-amber-400 px-12 py-6 text-lg font-bold hover:bg-amber-400 hover:text-slate-900 transition-all duration-500 shadow-2xl bg-slate-800/30 backdrop-blur-sm hover:shadow-amber-400/50 transform hover:scale-105">
-                Our Story <i className="fas fa-book-open ml-2"></i>
+            
+            <Link href="/story">
+              <Button variant="outline" className="group border-2 border-white/50 text-white px-14 py-6 text-xl font-bold rounded-full hover:bg-white hover:text-black transition-all duration-500 shadow-2xl backdrop-blur-sm hover:shadow-white/30 transform hover:scale-105">
+                <span className="flex items-center">
+                  Our Story 
+                  <i className="fas fa-book-open ml-3 group-hover:rotate-12 transition-transform duration-300"></i>
+                </span>
               </Button>
             </Link>
           </div>
           
-          {/* Scroll Indicator */}
-          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-amber-400/80 animate-bounce">
-            <i className="fas fa-chevron-down text-2xl drop-shadow-2xl filter drop-shadow-[0_0_8px_rgba(245,158,11,0.6)]"></i>
+          {/* Trust Indicators */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-8 text-white/70">
+            <div className="flex items-center space-x-2">
+              <i className="fas fa-award text-gold text-lg"></i>
+              <span className="text-sm font-medium">20+ Years Excellence</span>
+            </div>
+            <div className="hidden sm:block w-px h-6 bg-white/30"></div>
+            <div className="flex items-center space-x-2">
+              <i className="fas fa-users text-gold text-lg"></i>
+              <span className="text-sm font-medium">200+ Happy Clients</span>
+            </div>
+            <div className="hidden sm:block w-px h-6 bg-white/30"></div>
+            <div className="flex items-center space-x-2">
+              <i className="fas fa-shield-alt text-gold text-lg"></i>
+              <span className="text-sm font-medium">3 Years Warranty</span>
+            </div>
+          </div>
+          
+          {/* Elegant Scroll Indicator */}
+          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-center">
+            <div className="animate-bounce">
+              <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center">
+                <div className="w-1 h-3 bg-white/70 rounded-full mt-2 animate-pulse"></div>
+              </div>
+              <p className="text-white/50 text-xs mt-2 tracking-widest">SCROLL</p>
+            </div>
           </div>
         </div>
       </section>
