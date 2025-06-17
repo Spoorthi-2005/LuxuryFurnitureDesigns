@@ -21,6 +21,12 @@ import sethi3 from '@assets/WhatsApp Image 2025-06-16 at 17.02.26_f3722efd_17501
 import sethi4 from '@assets/WhatsApp Image 2025-06-16 at 17.02.26_96d22181_1750139820133.jpg';
 import sethi5 from '@assets/WhatsApp Image 2025-06-16 at 17.02.29_e0dbe3dc_1750139873457.jpg';
 
+// Import Mr. Vasal Colonel's project images
+import vasal1 from '@assets/Screenshot 2025-06-17 113615_1750140670653.png';
+import vasal2 from '@assets/Screenshot 2025-06-17 113642_1750140682883.png';
+import vasal3 from '@assets/Screenshot 2025-06-17 113755_1750140694605.png';
+import vasal4 from '@assets/Screenshot 2025-06-17 113932_1750140718262.png';
+
 interface Project {
   id: number;
   title: string;
@@ -68,11 +74,17 @@ export default function Projects() {
     },
     {
       id: 3,
-      title: "Corporate Office Interiors",
-      category: "Commercial",
-      description: "Coming Soon - Modern office spaces with custom furniture solutions and professional design aesthetics for contemporary workplaces.",
-      images: [],
-      isPlaceholder: true
+      title: "Col. Vasal's Premium Furniture Collection",
+      category: "Residential",
+      description: "An elegant residential furniture project featuring custom-designed premium seating, sophisticated bedroom furniture, and luxurious display units. The collection showcases exquisite craftsmanship with rich velvet upholstery, contemporary design elements, and premium materials creating a refined living environment.",
+      images: [vasal1, vasal2, vasal3, vasal4],
+      completionDate: "2024",
+      location: "Distinguished Residence, Delhi NCR",
+      features: ["Custom Velvet Seating", "Premium Bedroom Furniture", "Luxury Display Units", "Contemporary Design", "Rich Upholstery", "Glass Elements"],
+      clientTestimonial: "Exceptional craftsmanship and attention to detail. The furniture pieces have transformed our home with elegance and comfort.",
+      projectScope: "Complete custom furniture design and manufacturing for premium residential spaces",
+      area: "2,800 sq ft",
+      isPlaceholder: false
     },
     {
       id: 4,
