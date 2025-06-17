@@ -29,11 +29,58 @@ export default function Story() {
           <div className="container mx-auto px-4">
             <div className="text-center max-w-4xl mx-auto">
               <h1 className="text-6xl font-playfair font-bold mb-6 text-white">
-                Our Extraordinary Journey
+                Our Story - Amar Chauhan & Team
               </h1>
               <p className="text-2xl text-gray-300 leading-relaxed">
                 Discover the passionate story behind Blackhorse Furnitures. Where traditional Indian craftsmanship meets contemporary design excellence.
               </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Amar Chauhan Spotlight Section */}
+        <section className="py-20 bg-gradient-to-r from-gold/5 to-amber-400/5">
+          <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto">
+              <div className="text-center mb-12">
+                <h2 className="text-5xl font-playfair font-bold text-gold mb-4">AMAR CHAUHAN</h2>
+                <h3 className="text-2xl text-white mb-6">Founder & Visionary Leader</h3>
+                <div className="w-32 h-1 bg-gold mx-auto"></div>
+              </div>
+              
+              <div className="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                  <img 
+                    src={foundersImage} 
+                    alt="Amar Chauhan - Founder of Blackhorse Furnitures" 
+                    className="w-full h-96 object-cover rounded-lg shadow-2xl"
+                  />
+                </div>
+                <div className="space-y-6">
+                  <div className="bg-black/70 p-8 rounded-lg border border-gold/30">
+                    <h4 className="text-2xl font-playfair font-bold text-gold mb-4">The Visionary Behind Blackhorse</h4>
+                    <p className="text-white text-lg leading-relaxed mb-4">
+                      Amar Chauhan established Blackhorse Furnitures with over 20 years of expertise in luxury hospitality design. 
+                      His passion for creating exceptional commercial spaces has transformed the furniture industry.
+                    </p>
+                    <p className="text-white text-lg leading-relaxed">
+                      Specializing in hotels, restaurants, bars, and premium commercial environments, Amar combines traditional 
+                      Indian craftsmanship with contemporary luxury to create furniture that defines excellence.
+                    </p>
+                  </div>
+                  
+                  <div className="grid grid-cols-2 gap-4">
+                    <div className="bg-gold/10 p-4 rounded-lg text-center">
+                      <div className="text-3xl font-bold text-gold">20+</div>
+                      <div className="text-white">Years Experience</div>
+                    </div>
+                    <div className="bg-gold/10 p-4 rounded-lg text-center">
+                      <div className="text-3xl font-bold text-gold">200+</div>
+                      <div className="text-white">Projects Completed</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -48,18 +95,22 @@ export default function Story() {
                     <h2 className="text-4xl font-playfair font-bold text-white mb-8">Meet Our Visionary Founders</h2>
                     
                     <div className="space-y-8">
-                      <div>
-                        <h3 className="text-2xl font-playfair font-bold text-white mb-3">Amar Chauhan - Founder & Creative Director</h3>
-                        <p className="text-gray-300 leading-relaxed mb-4">
+                      <div className="bg-gold/10 p-6 rounded-lg border border-gold/30">
+                        <h3 className="text-3xl font-playfair font-bold text-gold mb-4">Amar Chauhan - Founder & Creative Director</h3>
+                        <p className="text-white leading-relaxed mb-4 text-lg">
                           With an unwavering passion for excellence and specialized expertise in luxury hospitality furniture, 
                           Amar Chauhan established Blackhorse Furnitures with a revolutionary vision to create exceptional 
                           commercial spaces. His entrepreneurial journey spans over two decades in the hospitality industry, 
                           designing premium hotels, restaurants, bars, and luxury commercial environments.
                         </p>
-                        <p className="text-gray-300 leading-relaxed">
+                        <p className="text-white leading-relaxed text-lg">
                           Amar's expertise lies in understanding hospitality requirements, creating memorable guest experiences, 
                           and designing furniture that combines functionality with luxury aesthetics for commercial success.
                         </p>
+                        <div className="mt-4 flex items-center">
+                          <i className="fas fa-crown text-gold text-xl mr-3"></i>
+                          <span className="text-gold font-semibold">20+ Years Experience in Hospitality Design</span>
+                        </div>
                       </div>
                       
                       <div>
