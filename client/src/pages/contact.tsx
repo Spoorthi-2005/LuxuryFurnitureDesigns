@@ -114,16 +114,29 @@ export default function Contact() {
     <div className="min-h-screen bg-black text-white">
       <Header />
       <div className="pt-20">
+        {/* Contact Page - Network Connection Pattern */}
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-black"></div>
+          <div className="absolute inset-0 opacity-[0.01]" style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='150' height='150' viewBox='0 0 150 150' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23FFFFFF' stroke-width='0.4'%3E%3Ccircle cx='30' cy='30' r='4'/%3E%3Ccircle cx='120' cy='30' r='4'/%3E%3Ccircle cx='75' cy='75' r='4'/%3E%3Ccircle cx='30' cy='120' r='4'/%3E%3Ccircle cx='120' cy='120' r='4'/%3E%3Cline x1='30' y1='30' x2='75' y2='75'/%3E%3Cline x1='120' y1='30' x2='75' y2='75'/%3E%3Cline x1='75' y1='75' x2='30' y2='120'/%3E%3Cline x1='75' y1='75' x2='120' y2='120'/%3E%3C/g%3E%3C/svg%3E")`,
+            backgroundSize: '150px 150px'
+          }}></div>
+          <div className="absolute inset-0 bg-gradient-to-tr from-teal-900/[0.01] via-transparent to-indigo-900/[0.015]"></div>
+        </div>
+
+        {/* Connection Light Elements */}
+        <div className="absolute top-1/4 left-1/3 w-64 h-64 bg-teal-500/[0.02] rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-1/4 right-1/3 w-64 h-64 bg-indigo-500/[0.02] rounded-full blur-3xl animate-pulse" style={{animationDelay: '9s'}}></div>
+
         {/* Hero Section */}
-        <section className="py-20 bg-black">
+        <section className="py-20 bg-transparent relative z-10">
           <div className="container mx-auto px-4">
             <div className="text-center max-w-4xl mx-auto">
               <h1 className="text-6xl font-playfair font-bold mb-6 text-white">
                 Connect With Excellence
               </h1>
               <p className="text-2xl text-gray-300 leading-relaxed">
-                Transform your living spaces with our exceptional furniture solutions. Our expert consultants are ready to 
-                discuss your vision and create bespoke pieces that reflect your unique style and sophistication.
+                Transform your living spaces with our exceptional furniture solutions. Our expert consultants are ready to discuss your vision and create bespoke pieces.
               </p>
             </div>
           </div>

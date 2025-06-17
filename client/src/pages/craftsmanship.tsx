@@ -77,16 +77,29 @@ export default function Craftsmanship() {
     <div className="min-h-screen bg-black text-white">
       <Header />
       <div className="pt-20">
+        {/* Craftsmanship Page - Artisan Tool Pattern */}
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-black"></div>
+          <div className="absolute inset-0 opacity-[0.012]" style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23FFFFFF' stroke-width='0.8'%3E%3Cpath d='M60 10v20M50 30l20 0M45 45l30 0M40 60l40 0M45 75l30 0M50 90l20 0'/%3E%3Ccircle cx='30' cy='30' r='3'/%3E%3Ccircle cx='90' cy='90' r='3'/%3E%3Cpath d='M20 100l10-10M90 20l10 10'/%3E%3C/g%3E%3C/svg%3E")`,
+            backgroundSize: '120px 120px'
+          }}></div>
+          <div className="absolute inset-0 bg-gradient-to-tl from-orange-900/[0.01] via-transparent to-red-900/[0.015]"></div>
+        </div>
+
+        {/* Craftsman Light Elements */}
+        <div className="absolute top-1/6 right-1/5 w-72 h-72 bg-orange-500/[0.015] rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-1/6 left-1/5 w-72 h-72 bg-red-500/[0.02] rounded-full blur-3xl animate-pulse" style={{animationDelay: '8s'}}></div>
+
         {/* Hero Section */}
-        <section className="py-20 bg-black">
+        <section className="py-20 bg-transparent relative z-10">
           <div className="container mx-auto px-4">
             <div className="text-center max-w-4xl mx-auto">
               <h1 className="text-6xl font-playfair font-bold mb-6 text-white">
                 Craftsmanship in Action
               </h1>
               <p className="text-2xl text-gray-300 leading-relaxed">
-                Witness the extraordinary artistry and meticulous precision of our master craftsmen as they transform 
-                premium materials into exquisite furniture pieces that embody the perfect fusion of traditional techniques and contemporary innovation.
+                Witness the extraordinary artistry and meticulous precision of our master craftsmen. Premium materials transformed into exquisite furniture pieces that embody traditional techniques and contemporary innovation.
               </p>
             </div>
           </div>

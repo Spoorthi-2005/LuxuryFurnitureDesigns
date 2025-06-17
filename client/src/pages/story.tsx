@@ -50,28 +50,15 @@ export default function Story() {
                     <div className="space-y-8">
                       <div>
                         <h3 className="text-2xl font-playfair font-bold text-white mb-3">Amar Chauhan - Founder & Creative Director</h3>
-                        <p className="text-gray-300 leading-relaxed mb-4">
-                          With an unwavering passion for excellence and specialized expertise in luxury hospitality furniture, 
-                          Amar Chauhan established Blackhorse Furnitures with a revolutionary vision to create exceptional 
-                          commercial spaces. His entrepreneurial journey spans over two decades in the hospitality industry, 
-                          designing premium hotels, restaurants, bars, and luxury commercial environments.
-                        </p>
                         <p className="text-gray-300 leading-relaxed">
-                          Amar's expertise lies in understanding hospitality requirements, creating memorable guest experiences, 
-                          and designing furniture that combines functionality with luxury aesthetics for commercial success.
+                          With an unwavering passion for excellence and specialized expertise in luxury hospitality furniture, Amar Chauhan established Blackhorse Furnitures with a revolutionary vision. His entrepreneurial journey spans over two decades in the hospitality industry, designing premium hotels, restaurants, bars, and luxury commercial environments.
                         </p>
                       </div>
                       
                       <div>
                         <h3 className="text-2xl font-playfair font-bold text-white mb-3">Diksha Shringi - Co-Founder & Design Consultant</h3>
-                        <p className="text-gray-300 leading-relaxed mb-4">
-                          A distinguished graduate from the American University of Interior Design in Dubai, Diksha Shringi brings over 15 years of specialized experience in hospitality interior design and commercial furniture consultation. 
-                          Her international education combined with profound understanding of guest psychology, spatial dynamics, and commercial functionality enables her to create hospitality solutions 
-                          that enhance guest experiences and operational efficiency.
-                        </p>
                         <p className="text-gray-300 leading-relaxed">
-                          Diksha's meticulous attention to detail and innovative approach to hospitality design has resulted in 
-                          countless successful hotel, restaurant, and commercial projects that create memorable guest experiences while maintaining operational excellence.
+                          A distinguished graduate from the American University of Interior Design in Dubai, Diksha Shringi brings over 15 years of specialized experience in hospitality interior design. Her international education combined with profound understanding of guest psychology enables her to create hospitality solutions that enhance guest experiences and operational efficiency.
                         </p>
                       </div>
                     </div>
@@ -81,7 +68,7 @@ export default function Story() {
                     <img 
                       src={foundersImage} 
                       alt="Amar Chauhan and Diksha Shringi - Founders of Blackhorse Furnitures" 
-                      className="w-full h-[700px] object-cover object-center"
+                      className="w-full h-[600px] lg:h-[700px] object-cover object-center"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-900/20 via-transparent to-transparent"></div>
                   </div>
@@ -111,10 +98,7 @@ export default function Story() {
                     </div>
                     <h3 className="text-2xl font-playfair font-bold text-white mb-4">Founded on Innovation</h3>
                     <p className="text-gray-300 leading-relaxed">
-                      Blackhorse Furnitures emerged from a revolutionary vision to bridge the gap between traditional 
-                      Indian woodworking heritage and contemporary design sensibilities. Our founders recognized the 
-                      immense potential in combining time-honored craftsmanship techniques with modern aesthetic preferences, 
-                      creating furniture pieces that resonate with discerning customers worldwide.
+                      Blackhorse Furnitures emerged from a revolutionary vision to bridge the gap between traditional Indian woodworking heritage and contemporary design sensibilities. Our founders recognized the immense potential in combining time-honored craftsmanship techniques with modern aesthetic preferences.
                     </p>
                   </CardContent>
                 </Card>
@@ -126,10 +110,7 @@ export default function Story() {
                     </div>
                     <h3 className="text-2xl font-playfair font-bold text-white mb-4">Mastering the Craft</h3>
                     <p className="text-gray-300 leading-relaxed">
-                      Through years of dedicated research, experimentation, and collaboration with master craftsmen, 
-                      we have developed proprietary techniques that ensure exceptional quality in every piece. Our 
-                      commitment to excellence extends from material selection and design conceptualization to 
-                      precision manufacturing and meticulous finishing processes.
+                      Through years of dedicated research, experimentation, and collaboration with master craftsmen, we have developed proprietary techniques that ensure exceptional quality in every piece. Our commitment to excellence extends from material selection and design conceptualization to precision manufacturing.
                     </p>
                   </CardContent>
                 </Card>
