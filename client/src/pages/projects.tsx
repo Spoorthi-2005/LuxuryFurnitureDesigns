@@ -14,8 +14,30 @@ import dlfClub2 from '@assets/WhatsApp Image 2025-06-16 at 16.05.10_7cb7c3e0_175
 import dlfClub3 from '@assets/WhatsApp Image 2025-06-16 at 16.05.12_a6b47b5d_1750139295538.jpg';
 import dlfClub4 from '@assets/WhatsApp Image 2025-06-16 at 16.05.09_5fd2771f_1750139462870.jpg';
 
+// Import Mr. Sethi's residential project images
+import sethi1 from '@assets/WhatsApp Image 2025-06-16 at 17.02.25_8d88380a_1750139736501.jpg';
+import sethi2 from '@assets/WhatsApp Image 2025-06-16 at 17.02.24_bfe86c56_1750139781747.jpg';
+import sethi3 from '@assets/WhatsApp Image 2025-06-16 at 17.02.26_f3722efd_1750139803200.jpg';
+import sethi4 from '@assets/WhatsApp Image 2025-06-16 at 17.02.26_96d22181_1750139820133.jpg';
+import sethi5 from '@assets/WhatsApp Image 2025-06-16 at 17.02.29_e0dbe3dc_1750139873457.jpg';
+
+interface Project {
+  id: number;
+  title: string;
+  category: string;
+  description: string;
+  images: string[];
+  completionDate?: string;
+  location?: string;
+  features?: string[];
+  clientTestimonial?: string;
+  projectScope?: string;
+  area?: string;
+  isPlaceholder: boolean;
+}
+
 export default function Projects() {
-  const projects = [
+  const projects: Project[] = [
     {
       id: 1,
       title: "DLF Club 3 - Premium Restaurant",
@@ -32,11 +54,17 @@ export default function Projects() {
     },
     {
       id: 2,
-      title: "Luxury Hotel Suite Collection",
-      category: "Hospitality",
-      description: "Coming Soon - Premium hotel suite designs featuring bespoke furniture, elegant interiors, and luxury amenities for discerning guests.",
-      images: [],
-      isPlaceholder: true
+      title: "Mr. Sethi's Luxury Residence",
+      category: "Residential",
+      description: "A sophisticated residential project featuring modern kitchen design with premium appliances, elegant living spaces with custom furniture, and luxurious bedroom interiors. The project showcases contemporary aesthetics with warm wood tones, marble flooring, and innovative storage solutions throughout the home.",
+      images: [sethi1, sethi2, sethi3, sethi4, sethi5],
+      completionDate: "2024",
+      location: "Premium Residential Complex, Delhi NCR",
+      features: ["Modern Kitchen Design", "Custom Wardrobes", "Marble Flooring", "Contemporary Furniture", "Premium Lighting", "Luxury Finishes"],
+      clientTestimonial: "The team transformed our home into a masterpiece of modern luxury with impeccable attention to detail and functionality.",
+      projectScope: "Complete home interior design including kitchen, bedroom, and living spaces with custom furniture solutions",
+      area: "3,200 sq ft",
+      isPlaceholder: false
     },
     {
       id: 3,
@@ -125,14 +153,13 @@ export default function Projects() {
                     </p>
                   </div>
                 ) : (
-                  // DLF Club 3 - Full Project Layout
+                  // Full Project Layout
                   <div className="grid lg:grid-cols-2 gap-12 items-center">
                     {/* Left: Image Rotator */}
                     <div className="relative">
                       <SimpleImageRotator
-                        images={project.images}
-                        alt={project.title}
-                        className="w-full h-96 lg:h-[500px] object-cover rounded-2xl shadow-2xl"
+                        images={project.images.map((img) => ({ src: img, alt: project.title }))}
+                        rotationInterval={3000}
                       />
                     </div>
 
