@@ -35,7 +35,7 @@ export default function SimpleImageRotator({
         <img
           src={images[currentIndex].src}
           alt={images[currentIndex].alt}
-          className="w-full h-full object-cover transition-all duration-1000 ease-in-out"
+          className="w-full h-full object-contain transition-all duration-1000 ease-in-out"
         />
         
         {/* Overlay gradient */}
