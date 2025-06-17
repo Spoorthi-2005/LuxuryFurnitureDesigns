@@ -9,6 +9,8 @@ import TestimonialsCarousel from "@/components/testimonials-carousel";
 import LuxuryFeatures from "@/components/luxury-features";
 import AIChatAssistant from "@/components/ai-chat-assistant";
 import { LuxuryParticles, LuxuryCursorTrail, LuxuryCard, ShimmerText, LuxuryButton } from "@/components/luxury-effects";
+import { OpulentFloatingMenu, LuxuryStatusBar, AchievementBadges, LuxuryImageViewer } from "@/components/opulent-features";
+import { PremiumParallax, LuxuryTilt, GlassMorphCard, LuxuryReveal } from "@/components/premium-interactions";
 import heroImage from "@assets/img35_1749474302052.png";
 import founderImage from "@assets/WhatsApp Image 2025-06-02 at 18.04.55_ae1d9bc2_1749473393971.jpg";
 import workshopImage from "@assets/IMG-20250606-WA0034_1749474302060.jpg";

@@ -4,6 +4,8 @@ import Header from "@/components/header";
 import Footer from "@/components/footer";
 import SimpleImageRotator from "@/components/simple-image-rotator";
 import { Link } from "wouter";
+import { LuxuryParticles, LuxuryCursorTrail, LuxuryCard, ShimmerText, LuxuryButton } from "@/components/luxury-effects";
+import { PremiumParallax, LuxuryTilt, MagneticButton, LuxuryReveal, FloatingOrbs, GlassMorphCard, ScrollProgress } from "@/components/premium-interactions";
 
 // Import bed/bedroom images (your specific luxury bed collection)
 import bedImage1 from "@assets/IMG-20250613-WA0038_1750069478869.jpg";
@@ -140,20 +142,30 @@ export default function Collections() {
 
   return (
     <div className="min-h-screen relative overflow-hidden luxury-platinum-secondary">
+      {/* Luxury Effects */}
+      <LuxuryParticles />
+      <LuxuryCursorTrail />
+      <ScrollProgress />
+      <FloatingOrbs />
+      
       {/* Enhanced Background Elements */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-r from-amber-100/15 via-transparent to-slate-200/25"></div>
         <div className="absolute inset-0 bg-gradient-to-b from-slate-900/80 via-slate-700/40 to-slate-100/60"></div>
       </div>
 
+      {/* Premium Ambient Lighting */}
+      <div className="absolute top-0 left-1/3 w-80 h-80 bg-gold/10 rounded-full blur-3xl animate-pulse"></div>
+      <div className="absolute bottom-0 right-1/3 w-80 h-80 bg-amber-400/10 rounded-full blur-3xl animate-pulse" style={{animationDelay: '3s'}}></div>
+
       <Header />
 
       {/* Hero Section */}
       <section className="relative py-24 px-4 overflow-hidden">
         <div className="relative z-10 container mx-auto text-center">
-          <h1 className="text-6xl md:text-8xl font-bold text-transparent bg-gradient-to-r from-gold via-yellow-300 to-gold bg-clip-text mb-8 animated-gradient">
+          <ShimmerText className="text-6xl md:text-8xl font-bold mb-8">
             Our Collections
-          </h1>
+          </ShimmerText>
           <div className="w-32 h-2 bg-gradient-to-r from-transparent via-gold to-transparent mx-auto mb-8"></div>
           <p className="text-2xl md:text-3xl text-soft-brown max-w-4xl mx-auto leading-relaxed drop-shadow-xl">
             Discover our meticulously curated furniture collections, where luxury meets craftsmanship in perfect harmony.
