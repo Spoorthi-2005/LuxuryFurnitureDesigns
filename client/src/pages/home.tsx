@@ -11,7 +11,7 @@ import AIChatAssistant from "@/components/ai-chat-assistant";
 import heroImage from "@assets/img35_1749474302052.png";
 import founderImage from "@assets/WhatsApp Image 2025-06-02 at 18.04.55_ae1d9bc2_1749473393971.jpg";
 import workshopImage from "@assets/IMG-20250606-WA0034_1749474302060.jpg";
-import luxuryBedroom from "@assets/WhatsApp Image 2025-06-09 at 11.14.28_edf5b472_1749800699879.jpg";
+import luxuryBedroom from "@assets/IMG-20250613-WA0074_1750143716268.jpg";
 import craftsmanshipImage from "@assets/IMG-20250604-WA0023_1749793593319.jpg";
 
 export default function Home() {
@@ -43,42 +43,37 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen luxury-platinum-primary">
+    <div className="min-h-screen luxury-platinum-accent">
       <Header />
       
       {/* Enhanced Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Sophisticated Dark-to-Light Gradient Background */}
+        {/* Improved Dark Background for Better Text Contrast */}
         <div className="absolute inset-0">
-          {/* Primary Gradient Background */}
+          {/* Primary Dark Background */}
           <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-700"></div>
           
-          {/* Smooth Transition to Light */}
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-slate-600/20 to-slate-100/90"></div>
-          
-          {/* Decorative Geometric Elements */}
-          <div className="absolute top-16 left-16 w-32 h-32 bg-gradient-to-br from-amber-400/30 to-amber-600/20 rounded-full blur-2xl animate-pulse"></div>
-          <div className="absolute top-1/3 right-20 w-24 h-24 bg-gradient-to-br from-slate-400/30 to-slate-600/20 rounded-full blur-lg floating"></div>
-          <div className="absolute bottom-1/3 left-1/4 w-40 h-40 bg-gradient-to-br from-amber-300/20 to-amber-500/15 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-20 right-16 w-28 h-28 bg-gradient-to-br from-amber-500/25 to-amber-700/15 rounded-full blur-xl floating"></div>
+          {/* Decorative Elements */}
+          <div className="absolute top-16 left-16 w-32 h-32 bg-gradient-to-br from-amber-400/20 to-amber-600/10 rounded-full blur-2xl animate-pulse"></div>
+          <div className="absolute top-1/3 right-20 w-24 h-24 bg-gradient-to-br from-slate-400/20 to-slate-600/10 rounded-full blur-lg floating"></div>
+          <div className="absolute bottom-1/3 left-1/4 w-40 h-40 bg-gradient-to-br from-amber-300/15 to-amber-500/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-20 right-16 w-28 h-28 bg-gradient-to-br from-amber-500/20 to-amber-700/10 rounded-full blur-xl floating"></div>
           
           {/* Luxury Texture Pattern */}
-          <div className="absolute inset-0 opacity-10" style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23D4AF37' fill-opacity='0.15'%3E%3Cpath d='M60 60l30-30v60l-30-30zm-30 30l30-30h-60l30 30z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+          <div className="absolute inset-0 opacity-5" style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23D4AF37' fill-opacity='0.1'%3E%3Cpath d='M60 60l30-30v60l-30-30zm-30 30l30-30h-60l30 30z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
             backgroundSize: '120px 120px'
           }}></div>
           
-          {/* Elegant Furniture Image Overlay */}
+          {/* Subtle Furniture Image Overlay */}
           <img 
             src={heroImage} 
             alt="Luxury furniture showcase" 
-            className="absolute inset-0 w-full h-full object-cover opacity-12 mix-blend-soft-light"
+            className="absolute inset-0 w-full h-full object-cover opacity-8 mix-blend-soft-light"
           />
           
-          {/* Multi-layered Gradient System */}
-          <div className="absolute inset-0 bg-gradient-to-t from-slate-100/70 via-slate-200/30 to-transparent"></div>
-          <div className="absolute inset-0 bg-gradient-to-r from-amber-100/15 via-transparent to-slate-200/25"></div>
-          <div className="absolute inset-0 bg-gradient-to-b from-slate-900/80 via-slate-700/40 to-slate-100/60"></div>
+          {/* Dark overlay for better text contrast */}
+          <div className="absolute inset-0 bg-slate-900/40"></div>
         </div>
         
         {/* Floating Decorative Elements */}
@@ -94,14 +89,14 @@ export default function Home() {
         
         <div className="relative z-10 container mx-auto px-4 text-center">
           {/* Enhanced Title with Shimmer Effect */}
-          <h1 className="text-6xl md:text-7xl font-playfair font-bold mb-6 animated-gradient drop-shadow-2xl transform hover:scale-105 transition-transform duration-500">
+          <h1 className="text-6xl md:text-7xl font-playfair font-bold mb-6 text-gradient-brown drop-shadow-2xl transform hover:scale-105 transition-transform duration-500">
             Blackhorse Furnitures
           </h1>
           
           {/* Enhanced Description with Luxury Styling */}
           <div className="max-w-4xl mx-auto mb-8">
-            <div className="backdrop-blur-lg bg-white/15 rounded-3xl p-8 shadow-2xl border border-amber-400/40 luxury-shine">
-              <p className="text-2xl md:text-3xl text-slate-100 leading-relaxed font-medium drop-shadow-xl">
+            <div className="backdrop-blur-lg bg-slate-800/30 rounded-3xl p-8 shadow-2xl border border-amber-400/40 luxury-shine">
+              <p className="text-2xl md:text-3xl text-white leading-relaxed font-medium drop-shadow-xl">
                 Where traditional Indian craftsmanship meets contemporary elegance, creating extraordinary furniture pieces 
                 that define luxury living and transform spaces into timeless sanctuaries.
               </p>
@@ -420,12 +415,12 @@ export default function Home() {
                 </div>
                 <div className="p-12 lg:order-1">
                   <h2 className="text-4xl font-playfair font-bold text-elegant-brown mb-6">Craftsmanship in Action</h2>
-                  <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
+                  <p className="text-lg text-soft-brown mb-6 leading-relaxed">
                     Step into our workshop where master craftsmen bring designs to life through skilled hands and 
                     time-honored techniques. Our state-of-the-art facility combines traditional woodworking methods 
                     with modern precision tools to create furniture pieces that represent the highest standards of quality.
                   </p>
-                  <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
+                  <p className="text-lg text-soft-brown mb-8 leading-relaxed">
                     Watch our artisans transform premium materials into extraordinary furniture through our exclusive 
                     video documentation that showcases the artistry and dedication behind every piece.
                   </p>
