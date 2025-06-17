@@ -27,6 +27,11 @@ import vasal2 from '@assets/Screenshot 2025-06-17 113642_1750140682883.png';
 import vasal3 from '@assets/Screenshot 2025-06-17 113755_1750140694605.png';
 import vasal4 from '@assets/Screenshot 2025-06-17 113932_1750140718262.png';
 
+// Import remaining project images
+import indore1 from '@assets/WhatsApp Image 2025-06-16 at 18.05.55_4d2d72b3_1750141666441.jpg';
+import kapoor1 from '@assets/WhatsApp Image 2025-06-16 at 18.01.50_f5ffe22b_1750141738511.jpg';
+import mayur1 from '@assets/WhatsApp Image 2025-06-13 at 16.31.05_6db10a68_1750142099192.jpg';
+
 interface Project {
   id: number;
   title: string;
@@ -48,67 +53,49 @@ export default function Projects() {
       id: 1,
       title: "DLF Club 3 - Premium Restaurant",
       category: "Restaurant",
-      description: "An exquisite fine dining restaurant featuring elegant seating arrangements, sophisticated table settings, and premium interior design. The space combines contemporary aesthetics with classic luxury, creating an intimate dining experience with custom furniture, warm wood tones, and tasteful décor elements.",
+      description: "Custom-designed dining furniture featuring elegant upholstered chairs with premium fabric selection. Sophisticated table arrangements maximize seating capacity while maintaining intimate dining atmosphere. Rich wood tones complement warm lighting creating luxurious restaurant ambiance throughout. Contemporary design elements blend seamlessly with classic hospitality furniture aesthetics. High-quality commercial-grade materials ensure durability for heavy restaurant usage patterns. The complete dining set transforms the space into memorable fine dining destination.",
       images: [dlfClub1, dlfClub2, dlfClub3, dlfClub4],
-      completionDate: "2024",
-      location: "DLF Club 3, Gurgaon",
-      features: ["Custom Dining Tables", "Premium Seating", "Elegant Table Settings", "Sophisticated Lighting", "Wood Flooring", "Contemporary Design"],
-      clientTestimonial: "The restaurant design perfectly captures the essence of fine dining with impeccable attention to detail and luxurious comfort.",
-      projectScope: "Complete interior design and furniture for premium restaurant space",
-      area: "2,500 sq ft",
       isPlaceholder: false
     },
     {
       id: 2,
       title: "Mr. Sethi's Luxury Residence",
       category: "Residential",
-      description: "A sophisticated residential project featuring modern kitchen design with premium appliances, elegant living spaces with custom furniture, and luxurious bedroom interiors. The project showcases contemporary aesthetics with warm wood tones, marble flooring, and innovative storage solutions throughout the home.",
+      description: "Modern kitchen design featuring sleek cabinetry with premium hardware and contemporary styling. Custom wardrobes maximize storage efficiency while maintaining elegant bedroom aesthetics throughout. Marble flooring complements luxury furniture pieces creating sophisticated residential ambiance. Contemporary lighting fixtures illuminate spaces highlighting quality craftsmanship in every detail. Premium materials ensure durability while delivering exceptional visual appeal in design. The complete furniture collection transforms living spaces into modern luxury havens.",
       images: [sethi1, sethi2, sethi3, sethi4, sethi5],
-      completionDate: "2024",
-      location: "Premium Residential Complex, Delhi NCR",
-      features: ["Modern Kitchen Design", "Custom Wardrobes", "Marble Flooring", "Contemporary Furniture", "Premium Lighting", "Luxury Finishes"],
-      clientTestimonial: "The team transformed our home into a masterpiece of modern luxury with impeccable attention to detail and functionality.",
-      projectScope: "Complete home interior design including kitchen, bedroom, and living spaces with custom furniture solutions",
-      area: "3,200 sq ft",
       isPlaceholder: false
     },
     {
       id: 3,
       title: "Col. Vasal's Premium Furniture Collection",
       category: "Residential",
-      description: "An elegant residential furniture project featuring custom-designed premium seating, sophisticated bedroom furniture, and luxurious display units. The collection showcases exquisite craftsmanship with rich velvet upholstery, contemporary design elements, and premium materials creating a refined living environment.",
+      description: "Custom velvet seating collection featuring rich orange upholstery with diamond-quilted patterns. Premium bedroom furniture showcases elegant blue velvet headboard with contemporary styling. Luxury display units combine glass elements with sophisticated storage solutions throughout. Contemporary design elements blend traditional craftsmanship with modern aesthetic appeal perfectly. Rich upholstery materials ensure comfort while maintaining exceptional visual impact in spaces. The complete furniture collection creates refined living environment with timeless elegance.",
       images: [vasal1, vasal2, vasal3, vasal4],
-      completionDate: "2024",
-      location: "Distinguished Residence, Delhi NCR",
-      features: ["Custom Velvet Seating", "Premium Bedroom Furniture", "Luxury Display Units", "Contemporary Design", "Rich Upholstery", "Glass Elements"],
-      clientTestimonial: "Exceptional craftsmanship and attention to detail. The furniture pieces have transformed our home with elegance and comfort.",
-      projectScope: "Complete custom furniture design and manufacturing for premium residential spaces",
-      area: "2,800 sq ft",
       isPlaceholder: false
     },
     {
       id: 4,
-      title: "Residential Villa Project",
+      title: "Indore Premium Seating Collection",
       category: "Residential",
-      description: "Coming Soon - Complete home furniture and interior design for luxury residential properties with personalized styling.",
-      images: [],
-      isPlaceholder: true
+      description: "Custom-designed quilted leather armchairs featuring premium upholstery and ergonomic comfort. The elegant mint-green seating set showcases sophisticated diamond-quilted patterns with wooden legs. Modern circular side table complements the luxurious seating arrangement perfectly. Premium leather finish ensures durability while maintaining aesthetic appeal. Contemporary design elements blend seamlessly with traditional craftsmanship techniques. The complete furniture set transforms living spaces into sophisticated relaxation zones.",
+      images: [indore1],
+      isPlaceholder: false
     },
     {
       id: 5,
-      title: "Boutique Café Design",
-      category: "Restaurant",
-      description: "Coming Soon - Charming café interiors with custom seating and contemporary furniture solutions for intimate dining experiences.",
-      images: [],
-      isPlaceholder: true
+      title: "DLF Phase 5 - Mr. Kapoor's Custom Storage Solutions",
+      category: "Residential",
+      description: "Illuminated glass display cabinets with warm LED lighting creating stunning visual impact. Premium white lacquer finish combined with fluted glass panels for sophisticated storage. Custom-designed built-in units maximizing space utilization with contemporary aesthetics. Hidden lighting system highlights displayed items while maintaining elegant ambiance. Seamless integration with modern architecture creates cohesive interior design flow. High-quality materials ensure longevity while delivering exceptional visual appeal.",
+      images: [kapoor1],
+      isPlaceholder: false
     },
     {
       id: 6,
-      title: "Heritage Club Renovation",
-      category: "Hospitality",
-      description: "Coming Soon - Classic club interiors combining traditional elements with modern luxury furniture for prestigious venues.",
-      images: [],
-      isPlaceholder: true
+      title: "Mayur Jain House - Luxury Console Collection",
+      category: "Residential",
+      description: "Curved marble-top console with rich wood base showcasing exceptional craftsmanship excellence. Fluted wall paneling creates sophisticated backdrop enhancing furniture design aesthetics. Premium brass hardware adds luxurious accent details throughout the furniture piece. Custom marble selection ensures unique patterns and natural beauty in design. Contemporary styling blends modern elements with timeless traditional furniture making techniques. The console serves as stunning focal point while providing functional storage solutions.",
+      images: [mayur1],
+      isPlaceholder: false
     }
   ];
 
@@ -165,72 +152,29 @@ export default function Projects() {
                     </p>
                   </div>
                 ) : (
-                  // Full Project Layout
-                  <div className="grid lg:grid-cols-2 gap-12 items-center">
-                    {/* Left: Image Rotator */}
-                    <div className="relative">
+                  // Alternating Project Layout
+                  <div className={`grid lg:grid-cols-2 gap-12 items-center ${
+                    index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''
+                  }`}>
+                    {/* Image Section */}
+                    <div className={`relative ${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
                       <SimpleImageRotator
                         images={project.images.map((img) => ({ src: img, alt: project.title }))}
                         rotationInterval={3000}
                       />
                     </div>
 
-                    {/* Right: Project Information */}
-                    <div className="space-y-8">
+                    {/* Content Section */}
+                    <div className={`space-y-6 ${index % 2 === 1 ? 'lg:col-start-1' : ''}`}>
                       <div>
-                        <h3 className="text-3xl font-bold text-gold mb-4">Project Details</h3>
-                        <div className="grid grid-cols-2 gap-4 mb-6">
-                          <div className="bg-slate-800/50 rounded-lg p-4">
-                            <p className="text-sm text-soft-brown mb-1">Completion Date</p>
-                            <p className="text-lg font-semibold text-gold">{project.completionDate}</p>
-                          </div>
-                          <div className="bg-slate-800/50 rounded-lg p-4">
-                            <p className="text-sm text-soft-brown mb-1">Location</p>
-                            <p className="text-lg font-semibold text-gold">{project.location}</p>
-                          </div>
-                          <div className="bg-slate-800/50 rounded-lg p-4">
-                            <p className="text-sm text-soft-brown mb-1">Area</p>
-                            <p className="text-lg font-semibold text-gold">{project.area}</p>
-                          </div>
-                          <div className="bg-slate-800/50 rounded-lg p-4">
-                            <p className="text-sm text-soft-brown mb-1">Category</p>
-                            <p className="text-lg font-semibold text-gold">{project.category}</p>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div>
-                        <h4 className="text-xl font-bold text-gold mb-4">Key Features</h4>
-                        <div className="flex flex-wrap gap-2">
-                          {project.features?.map((feature, featureIndex) => (
-                            <Badge 
-                              key={featureIndex} 
-                              className="bg-gold/20 text-gold border-gold/30 text-sm py-1 px-3"
-                            >
-                              {feature}
-                            </Badge>
-                          ))}
-                        </div>
-                      </div>
-
-                      <div className="bg-gradient-to-r from-gold/10 to-yellow-600/10 rounded-xl p-6 border border-gold/20">
-                        <h4 className="text-lg font-bold text-gold mb-3">Client Testimonial</h4>
-                        <p className="text-soft-brown italic leading-relaxed">
-                          "{project.clientTestimonial}"
+                        <span className="inline-block bg-gold/20 text-gold px-4 py-2 rounded-full text-sm font-semibold mb-4">
+                          {project.category}
+                        </span>
+                        <h3 className="text-3xl font-bold text-gold mb-6">{project.title}</h3>
+                        <p className="text-soft-brown text-lg leading-relaxed">
+                          {project.description}
                         </p>
                       </div>
-
-                      <div>
-                        <h4 className="text-lg font-bold text-gold mb-3">Project Scope</h4>
-                        <p className="text-soft-brown leading-relaxed">
-                          {project.projectScope}
-                        </p>
-                      </div>
-
-                      <Button className="w-full bg-gradient-to-r from-gold to-yellow-600 text-slate-900 font-semibold hover:from-yellow-600 hover:to-gold transition-all duration-300 group py-3">
-                        View Full Project Details
-                        <ChevronRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
-                      </Button>
                     </div>
                   </div>
                 )}
