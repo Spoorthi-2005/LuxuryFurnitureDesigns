@@ -422,13 +422,13 @@ export default function Home() {
                   <div className="absolute inset-0 bg-gradient-to-t from-elegant-brown/10 to-transparent"></div>
                 </div>
                 <div className="p-12 lg:order-1">
-                  <h2 className="text-4xl font-playfair font-bold text-elegant-brown mb-6">Craftsmanship in Action</h2>
-                  <p className="text-lg text-soft-brown mb-6 leading-relaxed">
+                  <h2 className="text-4xl font-playfair font-bold text-white mb-6">Craftsmanship in Action</h2>
+                  <p className="text-lg text-gray-300 mb-6 leading-relaxed">
                     Step into our workshop where master craftsmen bring designs to life through skilled hands and 
                     time-honored techniques. Our state-of-the-art facility combines traditional woodworking methods 
                     with modern precision tools to create furniture pieces that represent the highest standards of quality.
                   </p>
-                  <p className="text-lg text-soft-brown mb-8 leading-relaxed">
+                  <p className="text-lg text-gray-300 mb-8 leading-relaxed">
                     Watch our artisans transform premium materials into extraordinary furniture through our exclusive 
                     video documentation that showcases the artistry and dedication behind every piece.
                   </p>

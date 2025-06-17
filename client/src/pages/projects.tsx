@@ -243,6 +243,100 @@ export default function Projects() {
         </div>
       </div>
 
+      {/* Call-to-Action Section */}
+      <section className="py-24 bg-gradient-to-br from-black via-gray-900 to-black relative overflow-hidden">
+        {/* Animated Background Elements */}
+        <div className="absolute inset-0">
+          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-white/[0.02] rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gold/[0.03] rounded-full blur-3xl animate-pulse" style={{animationDelay: '3s'}}></div>
+          <div className="absolute inset-0 opacity-[0.008]" style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='200' height='200' viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23FFFFFF' stroke-width='0.5'%3E%3Ccircle cx='100' cy='100' r='80'/%3E%3Ccircle cx='100' cy='100' r='60'/%3E%3Ccircle cx='100' cy='100' r='40'/%3E%3Ccircle cx='100' cy='100' r='20'/%3E%3C/g%3E%3C/svg%3E")`,
+            backgroundSize: '200px 200px'
+          }}></div>
+        </div>
+
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-4xl mx-auto text-center">
+            {/* Main Heading */}
+            <h2 className="text-5xl md:text-6xl font-bold text-white mb-8 leading-tight">
+              Ready to Create Your 
+              <span className="block text-transparent bg-gradient-to-r from-white via-gray-300 to-white bg-clip-text">
+                Dream Space?
+              </span>
+            </h2>
+
+            {/* Description */}
+            <p className="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed">
+              Transform your vision into reality with our exceptional furniture craftsmanship. Let's discuss your project and create something extraordinary together.
+            </p>
+
+            {/* Feature Highlights */}
+            <div className="grid md:grid-cols-3 gap-8 mb-12">
+              <div className="group">
+                <div className="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-white/20 transition-colors duration-300">
+                  <i className="fas fa-lightbulb text-white text-2xl"></i>
+                </div>
+                <h3 className="text-white font-semibold mb-2">Free Consultation</h3>
+                <p className="text-gray-400 text-sm">Expert design consultation to bring your vision to life</p>
+              </div>
+              <div className="group">
+                <div className="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-white/20 transition-colors duration-300">
+                  <i className="fas fa-hammer text-white text-2xl"></i>
+                </div>
+                <h3 className="text-white font-semibold mb-2">Custom Craftsmanship</h3>
+                <p className="text-gray-400 text-sm">Bespoke furniture tailored to your exact specifications</p>
+              </div>
+              <div className="group">
+                <div className="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-white/20 transition-colors duration-300">
+                  <i className="fas fa-award text-white text-2xl"></i>
+                </div>
+                <h3 className="text-white font-semibold mb-2">3 Years Warranty</h3>
+                <p className="text-gray-400 text-sm">Quality guarantee with comprehensive warranty coverage</p>
+              </div>
+            </div>
+
+            {/* Call-to-Action Buttons */}
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+              <Link href="/contact">
+                <Button className="bg-white text-black px-12 py-6 text-lg font-bold hover:bg-gray-100 transition-all duration-300 shadow-2xl hover:shadow-white/20 transform hover:scale-105 group">
+                  Start Your Project
+                  <i className="fas fa-arrow-right ml-3 group-hover:translate-x-1 transition-transform duration-300"></i>
+                </Button>
+              </Link>
+              
+              <div className="flex items-center space-x-4">
+                <div className="w-px h-8 bg-white/20"></div>
+                <div className="text-center">
+                  <p className="text-gray-400 text-sm">or call us directly</p>
+                  <a href="tel:+919718978337" className="text-white font-semibold hover:text-gray-300 transition-colors">
+                    +91 9718978337
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Trust Indicators */}
+            <div className="mt-16 pt-8 border-t border-white/10">
+              <p className="text-gray-500 text-sm mb-4">Trusted by luxury hotels, restaurants, and discerning homeowners</p>
+              <div className="flex justify-center items-center space-x-8 opacity-60">
+                <div className="flex items-center space-x-2">
+                  <i className="fas fa-star text-yellow-400"></i>
+                  <span className="text-white text-sm">Premium Quality</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <i className="fas fa-shipping-fast text-green-400"></i>
+                  <span className="text-white text-sm">Timely Delivery</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <i className="fas fa-handshake text-blue-400"></i>
+                  <span className="text-white text-sm">Expert Support</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <Footer />
     </div>
   );

@@ -50,15 +50,28 @@ export default function Story() {
                     <div className="space-y-8">
                       <div>
                         <h3 className="text-2xl font-playfair font-bold text-white mb-3">Amar Chauhan - Founder & Creative Director</h3>
+                        <p className="text-gray-300 leading-relaxed mb-4">
+                          With an unwavering passion for excellence and specialized expertise in luxury hospitality furniture, 
+                          Amar Chauhan established Blackhorse Furnitures with a revolutionary vision to create exceptional 
+                          commercial spaces. His entrepreneurial journey spans over two decades in the hospitality industry, 
+                          designing premium hotels, restaurants, bars, and luxury commercial environments.
+                        </p>
                         <p className="text-gray-300 leading-relaxed">
-                          With an unwavering passion for excellence and specialized expertise in luxury hospitality furniture, Amar Chauhan established Blackhorse Furnitures with a revolutionary vision. His entrepreneurial journey spans over two decades in the hospitality industry, designing premium hotels, restaurants, bars, and luxury commercial environments.
+                          Amar's expertise lies in understanding hospitality requirements, creating memorable guest experiences, 
+                          and designing furniture that combines functionality with luxury aesthetics for commercial success.
                         </p>
                       </div>
                       
                       <div>
                         <h3 className="text-2xl font-playfair font-bold text-white mb-3">Diksha Shringi - Co-Founder & Design Consultant</h3>
+                        <p className="text-gray-300 leading-relaxed mb-4">
+                          A distinguished graduate from the American University of Interior Design in Dubai, Diksha Shringi brings over 15 years of specialized experience in hospitality interior design and commercial furniture consultation. 
+                          Her international education combined with profound understanding of guest psychology, spatial dynamics, and commercial functionality enables her to create hospitality solutions 
+                          that enhance guest experiences and operational efficiency.
+                        </p>
                         <p className="text-gray-300 leading-relaxed">
-                          A distinguished graduate from the American University of Interior Design in Dubai, Diksha Shringi brings over 15 years of specialized experience in hospitality interior design. Her international education combined with profound understanding of guest psychology enables her to create hospitality solutions that enhance guest experiences and operational efficiency.
+                          Diksha's meticulous attention to detail and innovative approach to hospitality design has resulted in 
+                          countless successful hotel, restaurant, and commercial projects that create memorable guest experiences while maintaining operational excellence.
                         </p>
                       </div>
                     </div>

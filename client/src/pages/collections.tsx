@@ -61,7 +61,6 @@ export default function Collections() {
       title: "Beds",
       description: "Luxurious sleeping sanctuaries crafted with premium materials and sophisticated design elements for ultimate comfort and elegance.",
       images: [
-        { src: bedImage1, alt: "Luxury bedroom with premium grey upholstered bed and sophisticated lighting" },
         { src: bedImage2, alt: "Contemporary black bed with crystal chandeliers and modern design" },
         { src: bedImage3, alt: "Elegant quilted headboard bed with gold accents and premium materials" },
         { src: bedImage4, alt: "Art deco inspired bed with curved headboard and luxury finishes" },
