@@ -122,32 +122,86 @@ export default function Projects() {
         </div>
       </section>
 
-      {/* Projects Grid Layout */}
-      <div className="container mx-auto px-4 py-12 relative z-10">
-        <div className="grid gap-8">
-          {projects.map((project, index) => (
-            <div key={project.id}>
-              {!project.isPlaceholder && (
-                <Card className="bg-gradient-to-br from-slate-900/95 via-slate-800/90 to-slate-700/95 border-gold/20 backdrop-blur-xl shadow-2xl overflow-hidden">
-                  <CardContent className="p-0">
-                    <div className="text-center py-8 px-8">
-                      <h2 className="text-4xl md:text-5xl font-bold text-transparent bg-gradient-to-r from-gold via-yellow-300 to-gold bg-clip-text mb-4 tracking-wide animated-gradient">
-                        {project.title}
-                      </h2>
-                      <div className="w-24 h-1 bg-gradient-to-r from-transparent via-gold to-transparent mx-auto mb-6"></div>
+      {/* Opulent Projects Showcase */}
+      <div className="relative">
+        {/* Luxury Background Pattern */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23D4AF37' fill-opacity='0.1'%3E%3Cpath d='M30 30l15-15v30l-15-15zm-15 15l15-15h-30l15 15z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+            backgroundSize: '60px 60px'
+          }}></div>
+        </div>
+
+        <div className="container mx-auto px-4 py-16 relative z-10">
+          <div className="space-y-20">
+            {projects.map((project, index) => (
+              <div key={project.id}>
+                {!project.isPlaceholder && (
+                  <div className="group">
+                    {/* Opulent Project Header */}
+                    <div className="text-center mb-12">
+                      <div className="inline-block relative">
+                        <h2 className="text-5xl md:text-6xl lg:text-7xl font-playfair font-bold text-transparent bg-gradient-to-r from-amber-300 via-gold to-amber-600 bg-clip-text mb-6 tracking-wider">
+                          {project.title}
+                        </h2>
+                        <div className="absolute -inset-2 bg-gradient-to-r from-transparent via-gold/20 to-transparent blur-2xl opacity-50"></div>
+                      </div>
+                      
+                      {/* Luxury Divider */}
+                      <div className="flex items-center justify-center space-x-4 mb-8">
+                        <div className="w-16 h-px bg-gradient-to-r from-transparent to-gold"></div>
+                        <div className="w-3 h-3 bg-gold rounded-full shadow-lg shadow-gold/50"></div>
+                        <div className="w-24 h-px bg-gold"></div>
+                        <div className="w-3 h-3 bg-gold rounded-full shadow-lg shadow-gold/50"></div>
+                        <div className="w-16 h-px bg-gradient-to-l from-transparent to-gold"></div>
+                      </div>
+                      
+                      <div className="inline-block px-6 py-2 bg-gradient-to-r from-gold/20 to-amber-500/20 rounded-full border border-gold/30">
+                        <span className="text-gold font-semibold text-lg tracking-wide">{project.category}</span>
+                      </div>
                     </div>
-                    
-                    <div className="w-full">
-                      <SimpleImageRotator
-                        images={project.images.map((img) => ({ src: img, alt: project.title }))}
-                        rotationInterval={3000}
-                      />
+
+                    {/* Luxury Image Frame */}
+                    <div className="relative max-w-6xl mx-auto">
+                      {/* Ornate Border */}
+                      <div className="absolute -inset-6 bg-gradient-to-br from-amber-400/20 via-gold/30 to-amber-600/20 rounded-3xl blur-xl"></div>
+                      <div className="absolute -inset-4 bg-gradient-to-br from-slate-800 via-slate-700 to-slate-900 rounded-2xl shadow-2xl"></div>
+                      <div className="absolute -inset-3 bg-gradient-to-br from-gold/30 via-amber-500/20 to-gold/30 rounded-2xl"></div>
+                      
+                      {/* Main Image Container */}
+                      <div className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 rounded-xl overflow-hidden shadow-2xl border border-gold/40">
+                        {/* Inner Luxury Frame */}
+                        <div className="absolute inset-2 border border-gold/20 rounded-lg pointer-events-none z-10"></div>
+                        
+                        {/* Corner Ornaments */}
+                        <div className="absolute top-4 left-4 w-6 h-6 border-l-2 border-t-2 border-gold/50 z-10"></div>
+                        <div className="absolute top-4 right-4 w-6 h-6 border-r-2 border-t-2 border-gold/50 z-10"></div>
+                        <div className="absolute bottom-4 left-4 w-6 h-6 border-l-2 border-b-2 border-gold/50 z-10"></div>
+                        <div className="absolute bottom-4 right-4 w-6 h-6 border-r-2 border-b-2 border-gold/50 z-10"></div>
+                        
+                        {/* Image Display */}
+                        <div className="relative p-6">
+                          <SimpleImageRotator
+                            images={project.images.map((img) => ({ src: img, alt: project.title }))}
+                            rotationInterval={4000}
+                          />
+                        </div>
+                        
+                        {/* Subtle Glow Effect */}
+                        <div className="absolute inset-0 bg-gradient-to-t from-gold/5 via-transparent to-transparent pointer-events-none"></div>
+                      </div>
+                      
+                      {/* Floating Elements */}
+                      <div className="absolute -top-2 -left-2 w-4 h-4 bg-gold rounded-full shadow-lg shadow-gold/50 animate-pulse"></div>
+                      <div className="absolute -top-2 -right-2 w-4 h-4 bg-gold rounded-full shadow-lg shadow-gold/50 animate-pulse" style={{animationDelay: '1s'}}></div>
+                      <div className="absolute -bottom-2 -left-2 w-4 h-4 bg-gold rounded-full shadow-lg shadow-gold/50 animate-pulse" style={{animationDelay: '2s'}}></div>
+                      <div className="absolute -bottom-2 -right-2 w-4 h-4 bg-gold rounded-full shadow-lg shadow-gold/50 animate-pulse" style={{animationDelay: '0.5s'}}></div>
                     </div>
-                  </CardContent>
-                </Card>
-              )}
-            </div>
-          ))}
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
         </div>
       </div>
 
