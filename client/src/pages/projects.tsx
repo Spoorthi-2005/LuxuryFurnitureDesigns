@@ -119,13 +119,13 @@ export default function Projects() {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative py-24 px-4 overflow-hidden">
+      <section className="relative py-24 px-4 overflow-hidden bg-black">
         <div className="relative z-10 container mx-auto text-center">
-          <ShimmerText className="text-6xl md:text-8xl font-bold mb-8">
+          <h1 className="text-6xl md:text-8xl font-bold mb-8 text-white">
             Our Projects
-          </ShimmerText>
-          <div className="w-32 h-2 bg-gradient-to-r from-transparent via-gold to-transparent mx-auto mb-8"></div>
-          <p className="text-2xl md:text-3xl text-soft-brown max-w-4xl mx-auto leading-relaxed drop-shadow-xl">
+          </h1>
+          <div className="w-32 h-px bg-gradient-to-r from-transparent via-white/50 to-transparent mx-auto mb-8"></div>
+          <p className="text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
             Discover our exceptional portfolio of luxury furniture projects, where craftsmanship meets innovation in perfect harmony.
           </p>
         </div>
@@ -133,10 +133,10 @@ export default function Projects() {
 
       {/* Opulent Projects Showcase */}
       <div className="relative">
-        {/* Luxury Background Pattern */}
-        <div className="absolute inset-0 opacity-5">
+        {/* Minimal Background Pattern */}
+        <div className="absolute inset-0 opacity-3">
           <div className="absolute inset-0" style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23D4AF37' fill-opacity='0.1'%3E%3Cpath d='M30 30l15-15v30l-15-15zm-15 15l15-15h-30l15 15z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23FFFFFF' fill-opacity='0.05'%3E%3Cpath d='M30 30l15-15v30l-15-15zm-15 15l15-15h-30l15 15z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
             backgroundSize: '60px 60px'
           }}></div>
         </div>
@@ -146,32 +146,92 @@ export default function Projects() {
             {projects.map((project, index) => (
               <div key={project.id}>
                 {!project.isPlaceholder && (
-                  <div className="group">
-                    {/* Minimal Project Header */}
-                    <div className="text-center mb-8">
-                      <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 tracking-wide">
-                        {project.title}
-                      </h2>
-                      <div className="w-20 h-px bg-gradient-to-r from-transparent via-white/50 to-transparent mx-auto mb-4"></div>
-                      <span className="text-gray-300 text-sm uppercase tracking-wider">{project.category}</span>
-                    </div>
+                  <div className="group mb-24">
+                    {/* Alternating Layout: Left/Right Pattern */}
+                    <div className={`grid lg:grid-cols-2 gap-12 items-center ${index % 2 === 0 ? '' : 'lg:grid-cols-2'}`}>
+                      
+                      {/* Project Title and Details */}
+                      <div className={`space-y-6 ${index % 2 === 0 ? 'lg:order-1' : 'lg:order-2'}`}>
+                        <div className="space-y-4">
+                          <Badge className="bg-white/10 text-white border-white/20 hover:bg-white/20">
+                            {project.category}
+                          </Badge>
+                          <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight">
+                            {project.title}
+                          </h2>
+                          <div className="w-16 h-1 bg-gradient-to-r from-white/50 to-transparent"></div>
+                        </div>
 
-                    {/* Clean Image Display */}
-                    <div className="relative max-w-5xl mx-auto">
-                      {/* Minimal White Frame */}
-                      <div className="relative bg-black rounded-lg overflow-hidden shadow-2xl border border-white/20">
-                        {/* Simple Corner Accents */}
-                        <div className="absolute top-2 left-2 w-4 h-4 border-l border-t border-white/30"></div>
-                        <div className="absolute top-2 right-2 w-4 h-4 border-r border-t border-white/30"></div>
-                        <div className="absolute bottom-2 left-2 w-4 h-4 border-l border-b border-white/30"></div>
-                        <div className="absolute bottom-2 right-2 w-4 h-4 border-r border-b border-white/30"></div>
-                        
-                        {/* Image Display - Focus on Furniture */}
-                        <div className="relative p-2">
-                          <SimpleImageRotator
-                            images={project.images.map((img) => ({ src: img, alt: project.title }))}
-                            rotationInterval={4000}
-                          />
+                        <p className="text-gray-300 text-lg leading-relaxed">
+                          {project.description}
+                        </p>
+
+                        {project.location && (
+                          <div className="flex items-center text-gray-400">
+                            <MapPin className="w-4 h-4 mr-2" />
+                            <span>{project.location}</span>
+                          </div>
+                        )}
+
+                        {project.completionDate && (
+                          <div className="flex items-center text-gray-400">
+                            <Calendar className="w-4 h-4 mr-2" />
+                            <span>Completed: {project.completionDate}</span>
+                          </div>
+                        )}
+
+                        {project.features && (
+                          <div className="space-y-2">
+                            <h4 className="text-white font-semibold">Key Features:</h4>
+                            <ul className="space-y-1">
+                              {project.features.slice(0, 3).map((feature, idx) => (
+                                <li key={idx} className="text-gray-300 flex items-center">
+                                  <ChevronRight className="w-4 h-4 mr-2 text-white/50" />
+                                  {feature}
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        )}
+                      </div>
+
+                      {/* Enhanced Image Display with Visual Effects */}
+                      <div className={`relative ${index % 2 === 0 ? 'lg:order-2' : 'lg:order-1'}`}>
+                        <div className="relative group/image">
+                          {/* Glowing Border Effect */}
+                          <div className="absolute -inset-1 bg-gradient-to-r from-white/20 via-white/10 to-white/20 rounded-xl blur-sm opacity-0 group-hover/image:opacity-100 transition-opacity duration-500"></div>
+                          
+                          {/* Main Image Container */}
+                          <div className="relative bg-black rounded-lg overflow-hidden shadow-2xl border border-white/20 transform group-hover/image:scale-[1.02] transition-transform duration-500">
+                            {/* Floating Particles Effect */}
+                            <div className="absolute inset-0 pointer-events-none">
+                              <div className="absolute top-4 left-4 w-2 h-2 bg-white/30 rounded-full animate-pulse"></div>
+                              <div className="absolute top-8 right-6 w-1 h-1 bg-white/40 rounded-full animate-bounce" style={{animationDelay: '1s'}}></div>
+                              <div className="absolute bottom-6 left-8 w-1.5 h-1.5 bg-white/20 rounded-full animate-pulse" style={{animationDelay: '2s'}}></div>
+                            </div>
+                            
+                            {/* Corner Accents with Hover Effect */}
+                            <div className="absolute top-3 left-3 w-6 h-6 border-l-2 border-t-2 border-white/40 opacity-0 group-hover/image:opacity-100 transition-opacity duration-300"></div>
+                            <div className="absolute top-3 right-3 w-6 h-6 border-r-2 border-t-2 border-white/40 opacity-0 group-hover/image:opacity-100 transition-opacity duration-300"></div>
+                            <div className="absolute bottom-3 left-3 w-6 h-6 border-l-2 border-b-2 border-white/40 opacity-0 group-hover/image:opacity-100 transition-opacity duration-300"></div>
+                            <div className="absolute bottom-3 right-3 w-6 h-6 border-r-2 border-b-2 border-white/40 opacity-0 group-hover/image:opacity-100 transition-opacity duration-300"></div>
+                            
+                            {/* Shimmer Effect Overlay */}
+                            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent transform -skew-x-12 -translate-x-full group-hover/image:translate-x-full transition-transform duration-1000"></div>
+                            
+                            {/* Image Display - Main Focus */}
+                            <div className="relative p-3">
+                              <SimpleImageRotator
+                                images={project.images.map((img) => ({ src: img, alt: project.title }))}
+                                rotationInterval={5000}
+                              />
+                            </div>
+                          </div>
+
+                          {/* Floating Info Badge */}
+                          <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 bg-black/80 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 opacity-0 group-hover/image:opacity-100 transition-opacity duration-300">
+                            <span className="text-white text-sm font-medium">Premium Furniture</span>
+                          </div>
                         </div>
                       </div>
                     </div>

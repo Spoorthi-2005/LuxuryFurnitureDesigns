@@ -26,37 +26,37 @@ export default function Story() {
         </section>
 
         {/* Founders Section */}
-        <section className="py-20">
+        <section className="py-20 bg-black">
           <div className="container mx-auto px-4">
-            <Card className="bg-card border-champagne/40 overflow-hidden shadow-xl">
+            <Card className="bg-black/50 border-white/20 overflow-hidden shadow-xl">
               <CardContent className="p-0">
                 <div className="grid lg:grid-cols-2 gap-0 items-center">
                   <div className="p-12">
-                    <h2 className="text-4xl font-playfair font-bold text-elegant-brown mb-8">Meet Our Visionary Founders</h2>
+                    <h2 className="text-4xl font-playfair font-bold text-white mb-8">Meet Our Visionary Founders</h2>
                     
                     <div className="space-y-8">
                       <div>
-                        <h3 className="text-2xl font-playfair font-bold text-glow-gold mb-3">Amar Chauhan - Founder & Creative Director</h3>
-                        <p className="text-soft-brown leading-relaxed mb-4">
+                        <h3 className="text-2xl font-playfair font-bold text-white mb-3">Amar Chauhan - Founder & Creative Director</h3>
+                        <p className="text-gray-300 leading-relaxed mb-4">
                           With an unwavering passion for excellence and specialized expertise in luxury hospitality furniture, 
                           Amar Chauhan established Blackhorse Furnitures with a revolutionary vision to create exceptional 
                           commercial spaces. His entrepreneurial journey spans over two decades in the hospitality industry, 
                           designing premium hotels, restaurants, bars, and luxury commercial environments.
                         </p>
-                        <p className="text-soft-brown leading-relaxed">
+                        <p className="text-gray-300 leading-relaxed">
                           Amar's expertise lies in understanding hospitality requirements, creating memorable guest experiences, 
                           and designing furniture that combines functionality with luxury aesthetics for commercial success.
                         </p>
                       </div>
                       
                       <div>
-                        <h3 className="text-2xl font-playfair font-bold text-glow-gold mb-3">Diksha Shringi - Co-Founder & Design Consultant</h3>
-                        <p className="text-soft-brown leading-relaxed mb-4">
+                        <h3 className="text-2xl font-playfair font-bold text-white mb-3">Diksha Shringi - Co-Founder & Design Consultant</h3>
+                        <p className="text-gray-300 leading-relaxed mb-4">
                           A distinguished graduate from the American University of Interior Design in Dubai, Diksha Shringi brings over 15 years of specialized experience in hospitality interior design and commercial furniture consultation. 
                           Her international education combined with profound understanding of guest psychology, spatial dynamics, and commercial functionality enables her to create hospitality solutions 
                           that enhance guest experiences and operational efficiency.
                         </p>
-                        <p className="text-soft-brown leading-relaxed">
+                        <p className="text-gray-300 leading-relaxed">
                           Diksha's meticulous attention to detail and innovative approach to hospitality design has resulted in 
                           countless successful hotel, restaurant, and commercial projects that create memorable guest experiences while maintaining operational excellence.
                         </p>
@@ -79,25 +79,25 @@ export default function Story() {
         </section>
 
         {/* Company Journey */}
-        <section className="py-20 bg-section">
+        <section className="py-20 bg-black">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-16">
-                <h2 className="text-4xl font-playfair font-bold mb-6 text-elegant-brown">Our Evolution of Excellence</h2>
-                <p className="text-xl text-soft-brown max-w-3xl mx-auto">
+                <h2 className="text-4xl font-playfair font-bold mb-6 text-white">Our Evolution of Excellence</h2>
+                <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                   From humble beginnings to becoming a distinguished name in luxury furniture, our journey reflects 
                   unwavering commitment to quality, innovation, and customer satisfaction.
                 </p>
               </div>
 
               <div className="grid md:grid-cols-2 gap-12">
-                <Card className="bg-card border-champagne/40 hover-lift transition-all shadow-xl">
+                <Card className="bg-black/50 border-white/20 hover-lift transition-all shadow-xl">
                   <CardContent className="p-8">
-                    <div className="w-16 h-16 bg-glow-gold rounded-full flex items-center justify-center mb-6">
+                    <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mb-6">
                       <i className="fas fa-lightbulb text-white text-2xl"></i>
                     </div>
-                    <h3 className="text-2xl font-playfair font-bold text-elegant-brown mb-4">Founded on Innovation</h3>
-                    <p className="text-soft-brown leading-relaxed">
+                    <h3 className="text-2xl font-playfair font-bold text-white mb-4">Founded on Innovation</h3>
+                    <p className="text-gray-300 leading-relaxed">
                       Blackhorse Furnitures emerged from a revolutionary vision to bridge the gap between traditional 
                       Indian woodworking heritage and contemporary design sensibilities. Our founders recognized the 
                       immense potential in combining time-honored craftsmanship techniques with modern aesthetic preferences, 
@@ -106,13 +106,13 @@ export default function Story() {
                   </CardContent>
                 </Card>
 
-                <Card className="bg-card border-champagne/40 hover-lift transition-all shadow-xl">
+                <Card className="bg-black/50 border-white/20 hover-lift transition-all shadow-xl">
                   <CardContent className="p-8">
-                    <div className="w-16 h-16 bg-glow-gold rounded-full flex items-center justify-center mb-6">
+                    <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mb-6">
                       <i className="fas fa-tools text-white text-2xl"></i>
                     </div>
-                    <h3 className="text-2xl font-playfair font-bold text-elegant-brown mb-4">Mastering the Craft</h3>
-                    <p className="text-soft-brown leading-relaxed">
+                    <h3 className="text-2xl font-playfair font-bold text-white mb-4">Mastering the Craft</h3>
+                    <p className="text-gray-300 leading-relaxed">
                       Through years of dedicated research, experimentation, and collaboration with master craftsmen, 
                       we have developed proprietary techniques that ensure exceptional quality in every piece. Our 
                       commitment to excellence extends from material selection and design conceptualization to 
