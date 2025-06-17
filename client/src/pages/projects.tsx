@@ -7,6 +7,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Calendar, MapPin, Award, ChevronRight, Star, ExternalLink, Building2, Utensils, Hotel } from "lucide-react";
+import { LuxuryParticles, LuxuryCursorTrail, LuxuryCard, ShimmerText } from "@/components/luxury-effects";
 
 // Import DLF Club 3 restaurant images
 import dlfClub1 from '@assets/WhatsApp Image 2025-06-16 at 16.05.09_fe8629cd_1750139197282.jpg';
@@ -101,20 +102,29 @@ export default function Projects() {
 
   return (
     <div className="min-h-screen relative overflow-hidden luxury-platinum-secondary">
+      {/* Luxury Effects */}
+      <LuxuryParticles />
+      <LuxuryCursorTrail />
+      
       {/* Enhanced Background Elements */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-r from-amber-100/15 via-transparent to-slate-200/25"></div>
         <div className="absolute inset-0 bg-gradient-to-b from-slate-900/80 via-slate-700/40 to-slate-100/60"></div>
       </div>
 
+      {/* Premium Ambient Lighting */}
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-gold/8 rounded-full blur-3xl animate-pulse"></div>
+      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-amber-400/8 rounded-full blur-3xl animate-pulse" style={{animationDelay: '2s'}}></div>
+      <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-yellow-300/5 rounded-full blur-2xl animate-pulse" style={{animationDelay: '4s'}}></div>
+
       <Header />
 
       {/* Hero Section */}
       <section className="relative py-24 px-4 overflow-hidden">
         <div className="relative z-10 container mx-auto text-center">
-          <h1 className="text-6xl md:text-8xl font-bold text-transparent bg-gradient-to-r from-gold via-yellow-300 to-gold bg-clip-text mb-8 animated-gradient">
+          <ShimmerText className="text-6xl md:text-8xl font-bold mb-8">
             Our Projects
-          </h1>
+          </ShimmerText>
           <div className="w-32 h-2 bg-gradient-to-r from-transparent via-gold to-transparent mx-auto mb-8"></div>
           <p className="text-2xl md:text-3xl text-soft-brown max-w-4xl mx-auto leading-relaxed drop-shadow-xl">
             Discover our exceptional portfolio of luxury furniture projects, where craftsmanship meets innovation in perfect harmony.

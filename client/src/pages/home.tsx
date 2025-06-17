@@ -8,6 +8,7 @@ import AnimatedCounter from "@/components/animated-counter";
 import TestimonialsCarousel from "@/components/testimonials-carousel";
 import LuxuryFeatures from "@/components/luxury-features";
 import AIChatAssistant from "@/components/ai-chat-assistant";
+import { LuxuryParticles, LuxuryCursorTrail, LuxuryCard, ShimmerText, LuxuryButton } from "@/components/luxury-effects";
 import heroImage from "@assets/img35_1749474302052.png";
 import founderImage from "@assets/WhatsApp Image 2025-06-02 at 18.04.55_ae1d9bc2_1749473393971.jpg";
 import workshopImage from "@assets/IMG-20250606-WA0034_1749474302060.jpg";
@@ -44,6 +45,10 @@ export default function Home() {
 
   return (
     <div className="min-h-screen luxury-platinum-accent">
+      {/* Luxury Effects */}
+      <LuxuryParticles />
+      <LuxuryCursorTrail />
+      
       <Header />
       
       {/* Enhanced Hero Section */}
@@ -89,9 +94,9 @@ export default function Home() {
         
         <div className="relative z-10 container mx-auto px-4 text-center">
           {/* Enhanced Title with Shimmer Effect */}
-          <h1 className="text-6xl md:text-7xl font-playfair font-bold mb-6 text-gradient-brown drop-shadow-2xl transform hover:scale-105 transition-transform duration-500">
+          <ShimmerText className="text-6xl md:text-7xl font-playfair font-bold mb-6 drop-shadow-2xl transform hover:scale-105 transition-transform duration-500">
             Blackhorse Furnitures
-          </h1>
+          </ShimmerText>
           
           {/* Enhanced Description with Luxury Styling */}
           <div className="max-w-4xl mx-auto mb-8">
