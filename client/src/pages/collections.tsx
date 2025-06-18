@@ -59,7 +59,7 @@ export default function Collections() {
     {
       id: "beds",
       title: "Beds",
-      description: "Luxurious sleeping sanctuaries crafted with premium materials and sophisticated design elements for ultimate comfort and elegance.",
+      description: "Luxurious sleeping sanctuaries crafted with premium materials and sophisticated design elements for ultimate comfort and elegance. Our bed collection features solid wood construction, premium upholstery, and custom sizing options to create the perfect bedroom centerpiece. Each bed is designed with meticulous attention to detail, incorporating ergonomic principles and luxury aesthetics.",
       images: [
         { src: bedImage2, alt: "Contemporary black bed with crystal chandeliers and modern design" },
         { src: bedImage3, alt: "Elegant quilted headboard bed with gold accents and premium materials" },
@@ -71,7 +71,7 @@ export default function Collections() {
     {
       id: "sofas",
       title: "Sofas",
-      description: "Handcrafted seating solutions that combine exceptional comfort with timeless elegance, perfect for sophisticated living spaces.",
+      description: "Handcrafted seating solutions that combine exceptional comfort with timeless elegance, perfect for sophisticated living spaces. Our sofa collection showcases premium fabrics, innovative cushioning systems, and durable hardwood frames that ensure both comfort and longevity. Available in various configurations including sectionals, loveseats, and modular designs.",
       images: [
         { src: sofaImage1, alt: "Luxury taupe sofa with quilted detailing and designer throw pillows in sophisticated interior" },
         { src: sofaImage2, alt: "Contemporary grey sofa with plush fur throws and modern styling" },
@@ -83,7 +83,7 @@ export default function Collections() {
     {
       id: "armchairs",
       title: "Arm Chairs",
-      description: "Statement seating pieces that embody comfort and style, meticulously crafted to enhance any interior with sophistication.",
+      description: "Statement seating pieces that embody comfort and style, meticulously crafted to enhance any interior with sophistication. Our armchair collection features ergonomic design, premium upholstery options, and distinctive silhouettes that serve as focal points in any room. Each piece combines traditional craftsmanship with contemporary aesthetics.",
       images: [
         { src: chairImage1, alt: "Elegant white armchair with gold accents and luxury console in sophisticated interior" },
         { src: chairImage2, alt: "Luxury olive green tufted armchair with premium fabric and elegant styling" },
@@ -95,7 +95,7 @@ export default function Collections() {
     {
       id: "dining",
       title: "Dining Tables and Chairs",
-      description: "Exquisite dining ensembles that transform meals into memorable experiences through exceptional craftsmanship and elegant design.",
+      description: "Exquisite dining ensembles that transform meals into memorable experiences through exceptional craftsmanship and elegant design. Our dining collection includes solid wood tables with various base designs, matching chairs with premium upholstery, and coordinated accessories that create cohesive dining environments perfect for entertaining.",
       images: [
         { src: diningImage1, alt: "Contemporary dining table with blue sculptural base and quilted chairs" },
         { src: diningImage2, alt: "Luxury dark wood dining table with tufted brown chairs and gold accents" },

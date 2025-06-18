@@ -135,9 +135,35 @@ export default function Contact() {
               <h1 className="text-6xl font-playfair font-bold mb-6 text-white">
                 Connect With Excellence
               </h1>
-              <p className="text-2xl text-gray-300 leading-relaxed">
-                Transform your living spaces with our exceptional furniture solutions. Our expert consultants are ready to discuss your vision and create bespoke pieces.
+              <p className="text-2xl text-gray-300 leading-relaxed mb-8">
+                Transform your living spaces with our exceptional furniture solutions. Our expert consultants are ready to discuss your vision and create bespoke pieces that reflect your unique style and requirements.
               </p>
+              <div className="bg-gradient-to-r from-gold/20 to-amber-500/20 p-8 rounded-lg border border-gold/30">
+                <h2 className="text-3xl font-playfair font-bold text-gold mb-4">Why Choose Blackhorse Furnitures?</h2>
+                <div className="grid md:grid-cols-3 gap-6">
+                  <div className="text-center">
+                    <div className="w-16 h-16 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <i className="fas fa-award text-gold text-2xl"></i>
+                    </div>
+                    <h3 className="text-white font-semibold mb-2">20+ Years Experience</h3>
+                    <p className="text-gray-300 text-sm">Proven expertise in luxury furniture design and manufacturing</p>
+                  </div>
+                  <div className="text-center">
+                    <div className="w-16 h-16 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <i className="fas fa-users text-gold text-2xl"></i>
+                    </div>
+                    <h3 className="text-white font-semibold mb-2">700+ Projects Completed</h3>
+                    <p className="text-gray-300 text-sm">Successfully delivered across hotels, restaurants, and homes</p>
+                  </div>
+                  <div className="text-center">
+                    <div className="w-16 h-16 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <i className="fas fa-handshake text-gold text-2xl"></i>
+                    </div>
+                    <h3 className="text-white font-semibold mb-2">24/7 Support</h3>
+                    <p className="text-gray-300 text-sm">Dedicated customer service and post-delivery support</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
