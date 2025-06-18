@@ -50,8 +50,8 @@ export default function Story() {
                     <div className="bg-gradient-to-r from-gold/15 to-gold/5 p-8 rounded-xl border border-gold/50 shadow-2xl">
                       <div className="space-y-10">
                         <div>
-                          <div className="text-2xl font-playfair font-bold text-gold mb-6 tracking-wide uppercase">
-                            FOUNDER & CREATIVE DIRECTOR - AMAR CHAUHAN
+                          <div className="text-3xl font-playfair font-bold text-gold mb-6 tracking-wide">
+                            AMAR CHAUHAN
                           </div>
                           <p className="text-white leading-relaxed text-lg">
                             With an unwavering passion for excellence and specialized expertise in luxury hospitality furniture, 
