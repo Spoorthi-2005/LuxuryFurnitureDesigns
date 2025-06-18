@@ -50,12 +50,12 @@ export default function Story() {
                     <div className="bg-gradient-to-r from-gold/15 to-gold/5 p-8 rounded-xl border border-gold/50 shadow-2xl">
                       <div className="space-y-10">
                         <div>
-                          <h3 style={{color: '#d4af37', fontSize: '18px', fontWeight: 'bold', marginBottom: '8px', textTransform: 'uppercase', letterSpacing: '2px'}}>
+                          <h1 style={{color: '#d4af37', fontSize: '18px', fontWeight: 'bold', marginBottom: '8px', textTransform: 'uppercase', letterSpacing: '2px', fontFamily: 'Playfair Display'}}>
                             FOUNDER & CREATIVE DIRECTOR
-                          </h3>
-                          <h2 style={{color: 'white', fontSize: '32px', fontWeight: 'bold', marginBottom: '24px', letterSpacing: '1px'}}>
+                          </h1>
+                          <h1 style={{color: 'white', fontSize: '32px', fontWeight: 'bold', marginBottom: '24px', letterSpacing: '1px', fontFamily: 'Playfair Display'}}>
                             AMAR CHAUHAN
-                          </h2>
+                          </h1>
                           <p className="text-white leading-relaxed text-lg">
                             With an unwavering passion for excellence and specialized expertise in luxury hospitality furniture, 
                             Amar Chauhan established Blackhorse Furnitures with a revolutionary vision to create exceptional 
