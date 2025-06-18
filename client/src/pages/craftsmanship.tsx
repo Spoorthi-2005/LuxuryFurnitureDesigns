@@ -46,16 +46,6 @@ export default function Craftsmanship() {
       icon: "fas fa-leaf",
       title: "Sustainable Craftsmanship",
       description: "Environmentally conscious practices and responsible sourcing ensure our commitment to sustainability and ecological preservation. We use certified sustainable wood, eco-friendly finishes, waste reduction techniques, and support local forest conservation initiatives."
-    },
-    {
-      icon: "fas fa-users",
-      title: "Master Craftsmen Legacy",
-      description: "Our team of 50+ master craftsmen brings decades of combined experience, with many having learned their trade from their fathers and grandfathers. This generational knowledge transfer ensures that traditional skills are preserved while being enhanced with modern innovations."
-    },
-    {
-      icon: "fas fa-clock",
-      title: "Time-Intensive Perfection",
-      description: "Each piece undergoes a comprehensive creation process that can take weeks or months to complete. From initial wood seasoning to final polish application, every step is given the time required to achieve absolute perfection without compromise."
     }
   ];
 
