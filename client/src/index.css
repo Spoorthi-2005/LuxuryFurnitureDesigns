@@ -1381,19 +1381,7 @@
 
 /* Removed white overlay from image effects */
 
-.image-glossy-enhanced::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at 30% 30%, rgba(212, 175, 55, 0.2), transparent 50%);
-  opacity: 0;
-  transition: opacity 0.5s ease;
-  z-index: 1;
-}
-
-.image-glossy-enhanced:hover::after {
-  opacity: 1;
-}
+/* Removed image overlay effects that created white appearance */
 
 /* Glow effects */
 .glow-on-hover:hover {
@@ -1573,32 +1561,11 @@ input:focus, textarea:focus, select:focus {
 /* Luxury 3D and Glossy Effects */
 /* Removed luxuryGlow animation to improve text visibility */
 
-@keyframes luxuryShine {
-  0% {
-    background-position: -100% 0;
-  }
-  100% {
-    background-position: 100% 0;
-  }
-}
+/* Removed luxuryShine animation that created white overlays */
 
 /* Removed luxury-glow animation to improve text visibility */
 
-.luxury-shine {
-  position: relative;
-  overflow: hidden;
-}
-
-.luxury-shine::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
-  animation: luxuryShine 3s infinite;
-}
+/* Removed luxury-shine class that created white overlays */
 
 /* Premium 3D Card Effects */
 .premium-card {

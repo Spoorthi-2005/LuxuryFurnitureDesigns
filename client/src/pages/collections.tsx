@@ -247,8 +247,7 @@ export default function Collections() {
                     <div className="absolute bottom-0 left-0 w-8 h-8 bg-gradient-to-tr from-gold/20 to-transparent rounded-bl-3xl"></div>
                     <div className="absolute bottom-0 right-0 w-8 h-8 bg-gradient-to-tl from-gold/20 to-transparent rounded-br-3xl"></div>
                     
-                    {/* Luxury shimmer effect */}
-                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/2 to-transparent opacity-0 group-hover:opacity-100 group-hover:animate-pulse transition-opacity duration-1000"></div>
+                    {/* Removed white shimmer effect */}
                   </div>
                   
                   {/* Premium shadow effects */}
@@ -260,7 +259,7 @@ export default function Collections() {
                   <Link href="/contact">
                     <Button 
                       variant="outline" 
-                      className="bg-gradient-to-r from-elegant-brown to-glow-gold text-white border-2 border-amber-400 hover:bg-gradient-to-r hover:from-glow-gold hover:to-elegant-brown transition-all duration-500 px-8 py-3 text-base font-semibold shadow-2xl hover:shadow-glow-gold/50 transform hover:scale-105 luxury-glow"
+                      className="bg-gradient-to-r from-elegant-brown to-glow-gold text-white border-2 border-amber-400 hover:bg-gradient-to-r hover:from-glow-gold hover:to-elegant-brown transition-all duration-500 px-8 py-3 text-base font-semibold shadow-2xl hover:shadow-glow-gold/50 transform hover:scale-105"
                     >
                       Explore {collection.title}
                     </Button>
@@ -364,7 +363,7 @@ export default function Collections() {
       {/* Call to Action */}
       <section className="py-20 relative z-10">
         <div className="container mx-auto px-4 text-center">
-          <div className="backdrop-blur-lg bg-white/15 rounded-3xl p-12 shadow-2xl border border-amber-400/40 luxury-shine">
+          <div className="backdrop-blur-lg bg-black/15 rounded-3xl p-12 shadow-2xl border border-amber-400/40">
             <h2 className="text-4xl md:text-6xl font-bold text-transparent bg-gradient-to-r from-gold via-yellow-300 to-gold bg-clip-text mb-6 animated-gradient">
               Ready to Transform Your Space?
             </h2>
@@ -372,7 +371,7 @@ export default function Collections() {
               Let our expert designers create bespoke solutions that perfectly complement your lifestyle and aesthetic preferences.
             </p>
             <Link href="/contact">
-              <Button className="bg-gradient-to-r from-elegant-brown to-glow-gold text-white px-12 py-4 text-lg font-bold hover:from-glow-gold hover:to-elegant-brown transition-all duration-500 shadow-2xl hover:shadow-glow-gold/50 transform hover:scale-105 luxury-glow">
+              <Button className="bg-gradient-to-r from-elegant-brown to-glow-gold text-white px-12 py-4 text-lg font-bold hover:from-glow-gold hover:to-elegant-brown transition-all duration-500 shadow-2xl hover:shadow-glow-gold/50 transform hover:scale-105">
                 Schedule Consultation <i className="fas fa-arrow-right ml-2"></i>
               </Button>
             </Link>
