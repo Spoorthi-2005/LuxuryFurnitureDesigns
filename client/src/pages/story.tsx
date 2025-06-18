@@ -47,47 +47,36 @@ export default function Story() {
                   <div className="p-12">
                     <h2 className="text-4xl font-playfair font-bold text-white mb-8">Meet Our Visionary Founders</h2>
                     
-                    <div className="bg-gradient-to-br from-gold/20 via-gold/10 to-transparent p-10 rounded-2xl border-2 border-gold/60 shadow-2xl backdrop-blur-sm">
-                      
-                      {/* Amar Chauhan Profile */}
-                      <div className="mb-12">
-                        <h3 className="text-gold font-playfair font-bold text-xl mb-4 uppercase tracking-widest">
-                          FOUNDER & CREATIVE DIRECTOR
-                        </h3>
-                        <h1 className="text-white font-playfair font-bold text-5xl mb-6 tracking-wide drop-shadow-lg">
-                          AMAR CHAUHAN
-                        </h1>
-                        <p className="text-white/95 text-lg leading-relaxed font-medium">
-                          With an unwavering passion for excellence and specialized expertise in luxury hospitality furniture, 
-                          Amar Chauhan established Blackhorse Furnitures with a revolutionary vision to create exceptional 
-                          commercial spaces. His entrepreneurial journey spans over two decades in the hospitality industry, 
-                          designing premium hotels, restaurants, bars, and luxury commercial environments. Amar's expertise lies 
-                          in understanding hospitality requirements, creating memorable guest experiences, and designing furniture 
-                          that combines functionality with luxury aesthetics for commercial success.
-                        </p>
+                    <div className="bg-gradient-to-r from-gold/15 to-gold/5 p-8 rounded-xl border border-gold/50 shadow-2xl">
+                      <div className="space-y-10">
+                        <div>
+                          <h4 className="text-2xl font-playfair font-bold text-gold mb-6 tracking-wide">
+                            FOUNDER & CREATIVE DIRECTOR - AMAR CHAUHAN
+                          </h4>
+                          <p className="text-white leading-relaxed text-lg">
+                            With an unwavering passion for excellence and specialized expertise in luxury hospitality furniture, 
+                            Amar Chauhan established Blackhorse Furnitures with a revolutionary vision to create exceptional 
+                            commercial spaces. His entrepreneurial journey spans over two decades in the hospitality industry, 
+                            designing premium hotels, restaurants, bars, and luxury commercial environments. Amar's expertise lies 
+                            in understanding hospitality requirements, creating memorable guest experiences, and designing furniture 
+                            that combines functionality with luxury aesthetics for commercial success.
+                          </p>
+                        </div>
+                        
+                        <div className="border-t border-gold/30 pt-8">
+                          <h4 className="text-2xl font-playfair font-bold text-gold mb-6 tracking-wide">
+                            CO-FOUNDER & DESIGN CONSULTANT - DIKSHA SHRINGI
+                          </h4>
+                          <p className="text-white leading-relaxed text-lg">
+                            A distinguished graduate from the American University of Interior Design in Dubai, Diksha Shringi brings 
+                            over 15 years of specialized experience in hospitality interior design and commercial furniture consultation. 
+                            Her international education combined with profound understanding of guest psychology, spatial dynamics, and 
+                            commercial functionality enables her to create hospitality solutions that enhance guest experiences and 
+                            operational efficiency. Her expertise in color psychology, space optimization, and luxury aesthetics ensures 
+                            that every project creates emotional connections with guests while maintaining operational excellence.
+                          </p>
+                        </div>
                       </div>
-                      
-                      {/* Separator */}
-                      <div className="w-full h-px bg-gradient-to-r from-transparent via-gold/50 to-transparent mb-12"></div>
-                      
-                      {/* Diksha Shringi Profile */}
-                      <div>
-                        <h3 className="text-gold font-playfair font-bold text-xl mb-4 uppercase tracking-widest">
-                          CO-FOUNDER & DESIGN CONSULTANT
-                        </h3>
-                        <h1 className="text-white font-playfair font-bold text-5xl mb-6 tracking-wide drop-shadow-lg">
-                          DIKSHA SHRINGI
-                        </h1>
-                        <p className="text-white/95 text-lg leading-relaxed font-medium">
-                          A distinguished graduate from the American University of Interior Design in Dubai, Diksha Shringi brings 
-                          over 15 years of specialized experience in hospitality interior design and commercial furniture consultation. 
-                          Her international education combined with profound understanding of guest psychology, spatial dynamics, and 
-                          commercial functionality enables her to create hospitality solutions that enhance guest experiences and 
-                          operational efficiency. Her expertise in color psychology, space optimization, and luxury aesthetics ensures 
-                          that every project creates emotional connections with guests while maintaining operational excellence.
-                        </p>
-                      </div>
-                      
                     </div>
                   </div>
                   
