@@ -484,6 +484,24 @@ export default function Contact() {
       
       <FloatingContact />
       <Footer />
+
+      {/* AI Design Consultant Modal */}
+      <Dialog open={isAIConsultantOpen} onOpenChange={setIsAIConsultantOpen}>
+        <DialogContent className="max-w-6xl max-h-[90vh] overflow-hidden p-0">
+          <DialogHeader className="p-6 pb-0">
+            <DialogTitle className="flex items-center gap-2">
+              <Bot className="w-6 h-6 text-purple-500" />
+              AI Design Consultant
+              <Badge variant="secondary" className="bg-purple-500/10 text-purple-400 border-purple-400/30">
+                Premium Service
+              </Badge>
+            </DialogTitle>
+          </DialogHeader>
+          <div className="h-[75vh]">
+            <AIDesignConsultant />
+          </div>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 }
