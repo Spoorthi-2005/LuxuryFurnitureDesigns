@@ -424,9 +424,9 @@ export default function Home() {
       </section>
 
       {/* Workshop Preview */}
-      <section className="py-20">
+      <section className="py-20 bg-black">
         <div className="container mx-auto px-4">
-          <Card className="bg-white border-silver/20 overflow-hidden shadow-2xl">
+          <Card className="bg-black border-white/20 overflow-hidden shadow-2xl">
             <CardContent className="p-0">
               <div className="grid lg:grid-cols-2 gap-0 items-center">
                 <div className="relative lg:order-2">
@@ -435,21 +435,23 @@ export default function Home() {
                     alt="Blackhorse Furnitures workshop with skilled craftsmen" 
                     className="w-full h-full object-cover min-h-[500px] image-luxury image-glossy"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-elegant-brown/10 to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
                 </div>
-                <div className="p-12 lg:order-1">
+                <div className="p-12 lg:order-1 bg-black">
                   <h2 className="text-4xl font-playfair font-bold text-white mb-6">Craftsmanship in Action</h2>
-                  <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-                    Step into our workshop where master craftsmen bring designs to life through skilled hands and 
-                    time-honored techniques. Our state-of-the-art facility combines traditional woodworking methods 
-                    with modern precision tools to create furniture pieces that represent the highest standards of quality.
-                  </p>
-                  <p className="text-lg text-gray-300 mb-8 leading-relaxed">
-                    Watch our artisans transform premium materials into extraordinary furniture through our exclusive 
-                    video documentation that showcases the artistry and dedication behind every piece.
-                  </p>
+                  <div className="bg-black/80 p-6 rounded-lg border border-white/20">
+                    <p className="text-xl text-white mb-6 leading-relaxed font-medium">
+                      Step into our workshop where master craftsmen bring designs to life through skilled hands and 
+                      time-honored techniques. Our state-of-the-art facility combines traditional woodworking methods 
+                      with modern precision tools to create furniture pieces that represent the highest standards of quality.
+                    </p>
+                    <p className="text-xl text-white mb-8 leading-relaxed font-medium">
+                      Watch our artisans transform premium materials into extraordinary furniture through our exclusive 
+                      video documentation that showcases the artistry and dedication behind every piece.
+                    </p>
+                  </div>
                   <Link href="/craftsmanship">
-                    <Button className="bg-elegant-brown text-white px-8 py-4 text-lg font-bold hover:bg-primary transition-colors shadow-lg">
+                    <Button className="bg-gold text-black px-8 py-4 text-lg font-bold hover:bg-amber-400 transition-all duration-300 shadow-lg hover:shadow-gold/50 transform hover:scale-105">
                       Watch Craftsmanship Video
                     </Button>
                   </Link>
