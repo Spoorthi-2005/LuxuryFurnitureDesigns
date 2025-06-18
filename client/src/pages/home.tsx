@@ -110,7 +110,7 @@ export default function Home() {
         
         <div className="relative z-10 container mx-auto px-4 text-center">
           {/* Enhanced Title with Shimmer Effect */}
-          <ShimmerText className="text-6xl md:text-7xl font-playfair font-bold mb-6 drop-shadow-2xl transform hover:scale-105 transition-transform duration-500 whitespace-nowrap">
+          <ShimmerText className="text-7xl md:text-8xl font-playfair font-bold mb-8 drop-shadow-2xl transform hover:scale-105 transition-transform duration-500 whitespace-nowrap bg-gradient-to-r from-gold via-amber-300 to-gold bg-clip-text text-transparent">
             Blackhorse Furnitures
           </ShimmerText>
           
