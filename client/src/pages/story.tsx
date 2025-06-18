@@ -88,7 +88,7 @@ export default function Story() {
                     <img 
                       src={foundersImage} 
                       alt="Amar Chauhan and Diksha Shringi - Founders of Blackhorse Furnitures" 
-                      className="w-full h-[700px] lg:h-[800px] object-cover object-center"
+                      className="w-full h-[900px] lg:h-[1000px] object-cover object-center"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-900/20 via-transparent to-transparent"></div>
                   </div>
