@@ -22,26 +22,38 @@ export default function Home() {
     {
       icon: "fas fa-couch",
       title: "Luxurious Living Rooms",
-      description: "Elegant furniture pieces that transform your living space into a sophisticated sanctuary of comfort and style.",
+      description: "Elegant furniture pieces that transform your living space into a sophisticated sanctuary of comfort and style, featuring premium upholstery, solid wood construction, and timeless designs.",
       link: "/collections"
     },
     {
       icon: "fas fa-utensils",
       title: "Premium Kitchen Solutions",
-      description: "Bespoke kitchen designs that seamlessly blend functionality with aesthetic excellence for the modern home.",
+      description: "Bespoke kitchen designs that seamlessly blend functionality with aesthetic excellence for the modern home, including custom cabinetry, premium countertops, and ergonomic layouts.",
       link: "/collections"
     },
     {
       icon: "fas fa-bed",
       title: "Bedroom Collections",
-      description: "Meticulously crafted bedroom furniture that creates peaceful retreats for rest and rejuvenation.",
+      description: "Meticulously crafted bedroom furniture that creates peaceful retreats for rest and rejuvenation, featuring luxury beds, wardrobes, dressing tables, and coordinated accessories.",
       link: "/collections"
     },
     {
       icon: "fas fa-tools",
       title: "Custom Craftsmanship",
-      description: "Witness our master artisans at work, creating extraordinary pieces through traditional techniques and modern precision.",
+      description: "Witness our master artisans at work, creating extraordinary pieces through traditional techniques and modern precision, combining heritage woodworking with contemporary design excellence.",
       link: "/craftsmanship"
+    },
+    {
+      icon: "fas fa-hotel",
+      title: "Hospitality Furniture",
+      description: "Specialized furniture solutions for hotels, restaurants, and commercial spaces, designed for durability, functionality, and luxury aesthetics that enhance guest experiences.",
+      link: "/collections"
+    },
+    {
+      icon: "fas fa-gem",
+      title: "Premium Materials",
+      description: "Only the finest quality materials including solid hardwoods, premium fabrics, leather, and hardware sourced from trusted suppliers to ensure exceptional durability and beauty.",
+      link: "/collections"
     }
   ];
 

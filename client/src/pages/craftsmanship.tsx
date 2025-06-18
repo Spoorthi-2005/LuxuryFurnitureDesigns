@@ -20,32 +20,42 @@ export default function Craftsmanship() {
     {
       icon: "fas fa-hammer",
       title: "Traditional Indian Techniques",
-      description: "Time-honored methods passed down through generations of master craftsmen, preserving the authentic essence of Indian woodworking traditions."
+      description: "Time-honored methods passed down through generations of master craftsmen, preserving the authentic essence of Indian woodworking traditions. Our artisans use ancient joinery techniques like mortise and tenon, dovetail joints, and hand-carved details that ensure structural integrity and artistic beauty."
     },
     {
       icon: "fas fa-cog",
       title: "Contemporary Precision Engineering",
-      description: "State-of-the-art precision tools and modern techniques ensure flawless execution and perfect finishing in every piece we create."
+      description: "State-of-the-art precision tools and modern techniques ensure flawless execution and perfect finishing in every piece we create. CNC machines, laser cutting, and computerized design software work alongside traditional hand tools to achieve unmatched accuracy and consistency."
     },
     {
       icon: "fas fa-heart",
       title: "Passionate Artisanal Devotion",
-      description: "Every piece is crafted with unwavering passion, meticulous attention to detail, and genuine love for the art of furniture making."
+      description: "Every piece is crafted with unwavering passion, meticulous attention to detail, and genuine love for the art of furniture making. Our master craftsmen treat each project as a personal masterpiece, investing their skills, experience, and artistic vision into every creation."
     },
     {
       icon: "fas fa-gem",
       title: "Premium Material Selection",
-      description: "Only the finest quality wood, fabrics, and hardware are selected to ensure exceptional durability and timeless aesthetic appeal."
+      description: "Only the finest quality wood including teak, rosewood, mahogany, and oak, along with premium fabrics, Italian leather, and imported hardware are selected to ensure exceptional durability and timeless aesthetic appeal. Each material is carefully inspected and tested for quality standards."
     },
     {
       icon: "fas fa-award",
       title: "Quality Assurance Excellence",
-      description: "Rigorous quality control processes at every stage ensure that each piece meets our uncompromising standards of excellence."
+      description: "Rigorous quality control processes at every stage ensure that each piece meets our uncompromising standards of excellence. Multiple inspection points, stress testing, finish quality checks, and final approval by our master craftsmen guarantee perfection in every delivery."
     },
     {
       icon: "fas fa-leaf",
       title: "Sustainable Craftsmanship",
-      description: "Environmentally conscious practices and responsible sourcing ensure our commitment to sustainability and ecological preservation."
+      description: "Environmentally conscious practices and responsible sourcing ensure our commitment to sustainability and ecological preservation. We use certified sustainable wood, eco-friendly finishes, waste reduction techniques, and support local forest conservation initiatives."
+    },
+    {
+      icon: "fas fa-users",
+      title: "Master Craftsmen Legacy",
+      description: "Our team of 50+ master craftsmen brings decades of combined experience, with many having learned their trade from their fathers and grandfathers. This generational knowledge transfer ensures that traditional skills are preserved while being enhanced with modern innovations."
+    },
+    {
+      icon: "fas fa-clock",
+      title: "Time-Intensive Perfection",
+      description: "Each piece undergoes a comprehensive creation process that can take weeks or months to complete. From initial wood seasoning to final polish application, every step is given the time required to achieve absolute perfection without compromise."
     }
   ];
 

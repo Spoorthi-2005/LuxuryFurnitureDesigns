@@ -48,18 +48,62 @@ export default function Story() {
                     <h2 className="text-4xl font-playfair font-bold text-white mb-8">Meet Our Visionary Founders</h2>
                     
                     <div className="space-y-8">
-                      <div>
-                        <h3 className="text-2xl font-playfair font-bold text-white mb-3">Amar Chauhan - Founder & Creative Director</h3>
-                        <p className="text-gray-300 leading-relaxed mb-4">
-                          With an unwavering passion for excellence and specialized expertise in luxury hospitality furniture, 
-                          Amar Chauhan established Blackhorse Furnitures with a revolutionary vision to create exceptional 
-                          commercial spaces. His entrepreneurial journey spans over two decades in the hospitality industry, 
-                          designing premium hotels, restaurants, bars, and luxury commercial environments.
-                        </p>
-                        <p className="text-gray-300 leading-relaxed">
-                          Amar's expertise lies in understanding hospitality requirements, creating memorable guest experiences, 
-                          and designing furniture that combines functionality with luxury aesthetics for commercial success.
-                        </p>
+                      <div className="bg-gradient-to-r from-gold/10 to-amber-500/10 p-8 rounded-lg border border-gold/30">
+                        <h3 className="text-3xl font-playfair font-bold text-gold mb-6">Amar Chauhan - Founder & Creative Director</h3>
+                        
+                        <div className="space-y-4">
+                          <p className="text-white leading-relaxed text-lg font-medium">
+                            With an unwavering passion for excellence and specialized expertise in luxury hospitality furniture, 
+                            Amar Chauhan established Blackhorse Furnitures with a revolutionary vision to create exceptional 
+                            commercial spaces. His entrepreneurial journey spans over two decades in the hospitality industry, 
+                            designing premium hotels, restaurants, bars, and luxury commercial environments.
+                          </p>
+                          
+                          <p className="text-white leading-relaxed text-lg">
+                            Amar's expertise lies in understanding hospitality requirements, creating memorable guest experiences, 
+                            and designing furniture that combines functionality with luxury aesthetics for commercial success. 
+                            His deep understanding of guest psychology, operational efficiency, and aesthetic excellence has made 
+                            him a trusted partner for India's leading hospitality brands.
+                          </p>
+                          
+                          <p className="text-white leading-relaxed text-lg">
+                            Starting his career with a small workshop in Delhi, Amar transformed his passion for woodworking into 
+                            a thriving enterprise that now serves premium hotels across India. His hands-on approach to quality 
+                            control ensures that every piece meets the exacting standards of luxury hospitality.
+                          </p>
+                          
+                          <p className="text-white leading-relaxed text-lg">
+                            Under his leadership, Blackhorse Furnitures has completed over 700 successful projects, including 
+                            luxury hotels, fine dining restaurants, premium bars, and exclusive commercial spaces. His innovative 
+                            approach to sustainable luxury has earned recognition from industry leaders and satisfied clients nationwide.
+                          </p>
+                          
+                          <div className="grid md:grid-cols-3 gap-4 mt-8">
+                            <div className="bg-black/30 p-4 rounded-lg border border-gold/20">
+                              <div className="text-2xl font-bold text-gold mb-1">20+</div>
+                              <div className="text-white text-sm">Years Experience</div>
+                            </div>
+                            <div className="bg-black/30 p-4 rounded-lg border border-gold/20">
+                              <div className="text-2xl font-bold text-gold mb-1">700+</div>
+                              <div className="text-white text-sm">Projects Completed</div>
+                            </div>
+                            <div className="bg-black/30 p-4 rounded-lg border border-gold/20">
+                              <div className="text-2xl font-bold text-gold mb-1">200+</div>
+                              <div className="text-white text-sm">Happy Clients</div>
+                            </div>
+                          </div>
+                          
+                          <div className="mt-6 flex items-center space-x-6">
+                            <div className="flex items-center">
+                              <i className="fas fa-crown text-gold text-xl mr-3"></i>
+                              <span className="text-gold font-semibold">Hospitality Design Expert</span>
+                            </div>
+                            <div className="flex items-center">
+                              <i className="fas fa-award text-gold text-xl mr-3"></i>
+                              <span className="text-gold font-semibold">Industry Recognition</span>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                       
                       <div>
@@ -96,11 +140,19 @@ export default function Story() {
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-16">
-                <h2 className="text-4xl font-playfair font-bold mb-6 text-white">Our Evolution of Excellence</h2>
-                <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                <h2 className="text-5xl font-playfair font-bold mb-8 text-white">Our Evolution of Excellence</h2>
+                <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
                   From humble beginnings to becoming a distinguished name in luxury furniture, our journey reflects 
-                  unwavering commitment to quality, innovation, and customer satisfaction.
+                  unwavering commitment to quality, innovation, and customer satisfaction. We have transformed from 
+                  a small workshop into India's premier hospitality furniture manufacturer.
                 </p>
+                <div className="bg-gradient-to-r from-gold/20 to-amber-500/20 p-6 rounded-lg border border-gold/30 max-w-4xl mx-auto">
+                  <p className="text-white text-lg leading-relaxed">
+                    Our story is one of relentless pursuit of perfection, where traditional Indian craftsmanship meets 
+                    contemporary design excellence. Every piece we create carries the legacy of master artisans who have 
+                    perfected their skills over decades, combined with modern innovation that meets today's hospitality standards.
+                  </p>
+                </div>
               </div>
 
               <div className="grid md:grid-cols-2 gap-12">

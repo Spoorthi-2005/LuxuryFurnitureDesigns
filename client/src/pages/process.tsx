@@ -13,7 +13,7 @@ export default function Process() {
     {
       id: 1,
       title: "Conceptual Designing & Planning",
-      description: "Our distinguished design consultants collaborate intimately with clients to conceptualize extraordinary furniture pieces that harmoniously blend personal vision with spatial requirements. Through meticulous planning sessions, we transform abstract ideas into tangible design blueprints that capture the essence of luxury living.",
+      description: "Our distinguished design consultants collaborate intimately with clients to conceptualize extraordinary furniture pieces that harmoniously blend personal vision with spatial requirements. Through meticulous planning sessions, we transform abstract ideas into tangible design blueprints that capture the essence of luxury living. Our design process includes detailed 3D modeling, material selection guidance, space optimization analysis, and comprehensive project timelines to ensure every aspect meets client expectations.",
       image: designingImage,
       alt: "Professional design consultation with material samples and color palettes",
       icon: "fas fa-drafting-compass"
@@ -21,7 +21,7 @@ export default function Process() {
     {
       id: 2,
       title: "Masterful Carpentry & Construction",
-      description: "Our seasoned craftsmen employ time-honored woodworking techniques combined with state-of-the-art precision tools to meticulously shape and construct the foundational framework. Each joint, curve, and surface is crafted with unwavering attention to detail, ensuring structural integrity and aesthetic perfection.",
+      description: "Our seasoned craftsmen employ time-honored woodworking techniques combined with state-of-the-art precision tools to meticulously shape and construct the foundational framework. Each joint, curve, and surface is crafted with unwavering attention to detail, ensuring structural integrity and aesthetic perfection. Our carpentry team uses traditional mortise and tenon joints, dovetail connections, and hand-carved details that showcase generations of woodworking expertise.",
       image: carpentryImage,
       alt: "Skilled carpenter working with precision tools in workshop",
       icon: "fas fa-hammer"
@@ -29,7 +29,7 @@ export default function Process() {
     {
       id: 3,
       title: "Premium Foaming & Comfort Engineering",
-      description: "Utilizing only the finest quality foam materials, our specialists precisely cut, shape, and engineer comfort layers that provide optimal support and luxurious seating experience. Each foam component is carefully selected and positioned to ensure maximum durability and comfort for years of enjoyment.",
+      description: "Utilizing only the finest quality foam materials, our specialists precisely cut, shape, and engineer comfort layers that provide optimal support and luxurious seating experience. Each foam component is carefully selected and positioned to ensure maximum durability and comfort for years of enjoyment. We use high-density foam, memory foam layers, and specialized cushioning systems that maintain their shape and comfort through decades of use.",
       image: foamingImage,
       alt: "Industrial foam cutting and shaping process",
       icon: "fas fa-cube"
@@ -37,7 +37,7 @@ export default function Process() {
     {
       id: 4,
       title: "Exquisite Upholstery & Fabric Application",
-      description: "Our master upholsterers demonstrate exceptional artistry in applying premium fabrics and materials with meticulous precision. Every stitch, seam, and fabric placement is executed with surgical accuracy, ensuring flawless finish, perfect fit, and enduring beauty that stands the test of time.",
+      description: "Our master upholsterers demonstrate exceptional artistry in applying premium fabrics and materials with meticulous precision. Every stitch, seam, and fabric placement is executed with surgical accuracy, ensuring flawless finish, perfect fit, and enduring beauty that stands the test of time. We work with imported Italian leather, premium fabrics, and custom textile solutions that are hand-selected for each project.",
       image: upholsteryImage,
       alt: "Professional upholstery work with premium materials",
       icon: "fas fa-cut"
