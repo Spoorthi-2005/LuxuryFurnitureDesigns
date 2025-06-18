@@ -49,70 +49,42 @@ export default function Story() {
                     
                     <div className="space-y-8">
                       <div>
-                        <h3 className="text-2xl font-playfair font-bold text-white mb-4">Amar Chauhan - Founder & Creative Director</h3>
-                        <p className="text-gray-300 leading-relaxed mb-4">
+                        <h3 className="text-3xl font-playfair font-bold text-white mb-4">Amar Chauhan - Founder & Creative Director</h3>
+                        <p className="text-gray-300 leading-relaxed mb-4 text-lg">
                           With an unwavering passion for excellence and specialized expertise in luxury hospitality furniture, 
                           Amar Chauhan established Blackhorse Furnitures with a revolutionary vision to create exceptional 
                           commercial spaces. His entrepreneurial journey spans over two decades in the hospitality industry, 
                           designing premium hotels, restaurants, bars, and luxury commercial environments.
                         </p>
-                        <p className="text-gray-300 leading-relaxed mb-4">
+                        <p className="text-gray-300 leading-relaxed mb-4 text-lg">
                           Amar's expertise lies in understanding hospitality requirements, creating memorable guest experiences, 
                           and designing furniture that combines functionality with luxury aesthetics for commercial success. 
                           His deep understanding of guest psychology, operational efficiency, and aesthetic excellence has made 
                           him a trusted partner for India's leading hospitality brands.
                         </p>
-                        <p className="text-gray-300 leading-relaxed mb-6">
+                        <p className="text-gray-300 leading-relaxed text-lg">
                           Starting his career with a small workshop in Delhi, Amar transformed his passion for woodworking into 
                           a thriving enterprise that now serves premium hotels across India. Under his leadership, Blackhorse 
                           Furnitures has completed over 700 successful projects, earning recognition from industry leaders nationwide.
                         </p>
-                        <div className="grid grid-cols-3 gap-4">
-                          <div className="text-center">
-                            <div className="text-2xl font-bold text-gold">20+</div>
-                            <div className="text-white text-sm">Years Experience</div>
-                          </div>
-                          <div className="text-center">
-                            <div className="text-2xl font-bold text-gold">700+</div>
-                            <div className="text-white text-sm">Projects</div>
-                          </div>
-                          <div className="text-center">
-                            <div className="text-2xl font-bold text-gold">200+</div>
-                            <div className="text-white text-sm">Happy Clients</div>
-                          </div>
-                        </div>
                       </div>
                       
                       <div>
-                        <h3 className="text-2xl font-playfair font-bold text-white mb-4">Diksha Shringi - Co-Founder & Design Consultant</h3>
-                        <p className="text-gray-300 leading-relaxed mb-4">
+                        <h3 className="text-3xl font-playfair font-bold text-white mb-4">Diksha Shringi - Co-Founder & Design Consultant</h3>
+                        <p className="text-gray-300 leading-relaxed mb-4 text-lg">
                           A distinguished graduate from the American University of Interior Design in Dubai, Diksha Shringi brings over 15 years of specialized experience in hospitality interior design and commercial furniture consultation. 
                           Her international education combined with profound understanding of guest psychology, spatial dynamics, and commercial functionality enables her to create hospitality solutions 
                           that enhance guest experiences and operational efficiency.
                         </p>
-                        <p className="text-gray-300 leading-relaxed mb-4">
+                        <p className="text-gray-300 leading-relaxed mb-4 text-lg">
                           Diksha's meticulous attention to detail and innovative approach to hospitality design has resulted in 
                           countless successful hotel, restaurant, and commercial projects that create memorable guest experiences while maintaining operational excellence.
                         </p>
-                        <p className="text-gray-300 leading-relaxed mb-6">
+                        <p className="text-gray-300 leading-relaxed text-lg">
                           Her expertise in color psychology, space optimization, and luxury aesthetics ensures that every project 
                           not only meets functional requirements but also creates emotional connections with guests. Diksha's design 
                           philosophy centers on creating spaces that tell stories and evoke lasting impressions.
                         </p>
-                        <div className="grid grid-cols-3 gap-4">
-                          <div className="text-center">
-                            <div className="text-2xl font-bold text-gold">15+</div>
-                            <div className="text-white text-sm">Years Design Experience</div>
-                          </div>
-                          <div className="text-center">
-                            <div className="text-2xl font-bold text-gold">Dubai</div>
-                            <div className="text-white text-sm">International Education</div>
-                          </div>
-                          <div className="text-center">
-                            <div className="text-2xl font-bold text-gold">500+</div>
-                            <div className="text-white text-sm">Design Projects</div>
-                          </div>
-                        </div>
                       </div>
                     </div>
                   </div>
