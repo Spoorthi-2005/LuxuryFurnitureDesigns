@@ -47,32 +47,35 @@ export default function Story() {
                   <div className="p-12">
                     <h2 className="text-4xl font-playfair font-bold text-white mb-8">Meet Our Visionary Founders</h2>
                     
-                    <div className="bg-gradient-to-br from-gold/15 via-amber-400/10 to-gold/15 p-8 rounded-xl border border-gold/50 shadow-2xl backdrop-blur-sm">
-                      <div className="grid md:grid-cols-2 gap-8">
-                        <div className="text-center md:text-left">
-                          <h3 className="text-4xl font-playfair font-bold bg-gradient-to-r from-gold to-amber-400 bg-clip-text text-transparent mb-2 drop-shadow-lg">
-                            AMAR CHAUHAN
-                          </h3>
-                          <h4 className="text-xl font-bold text-white mb-4 tracking-wide">FOUNDER & CREATIVE DIRECTOR</h4>
-                          <p className="text-white leading-relaxed text-base font-medium">
-                            With an unwavering passion for excellence and specialized expertise in luxury hospitality furniture, 
-                            Amar Chauhan established Blackhorse Furnitures with a revolutionary vision to create exceptional 
-                            commercial spaces. His entrepreneurial journey spans over two decades in the hospitality industry, 
-                            designing furniture that combines functionality with luxury aesthetics for commercial success.
-                          </p>
-                        </div>
-                        
-                        <div className="text-center md:text-left border-l-0 md:border-l border-gold/30 md:pl-8">
-                          <h3 className="text-4xl font-playfair font-bold bg-gradient-to-r from-gold to-amber-400 bg-clip-text text-transparent mb-2 drop-shadow-lg">
-                            DIKSHA SHRINGI
-                          </h3>
-                          <h4 className="text-xl font-bold text-white mb-4 tracking-wide">CO-FOUNDER & DESIGN CONSULTANT</h4>
-                          <p className="text-white leading-relaxed text-base font-medium">
-                            A distinguished graduate from the American University of Interior Design in Dubai, Diksha Shringi brings over 15 years of specialized experience in hospitality interior design and commercial furniture consultation. 
-                            Her expertise in color psychology, space optimization, and luxury aesthetics ensures that every project 
-                            creates emotional connections with guests while maintaining operational excellence.
-                          </p>
-                        </div>
+                    <div className="space-y-8">
+                      <div className="bg-gradient-to-r from-gold/15 to-amber-400/10 p-8 rounded-xl border border-gold/50 shadow-xl">
+                        <h3 className="text-4xl font-playfair font-bold bg-gradient-to-r from-gold to-amber-400 bg-clip-text text-transparent mb-3 drop-shadow-lg">
+                          AMAR CHAUHAN
+                        </h3>
+                        <h4 className="text-xl font-bold text-white mb-6 tracking-wide">FOUNDER & CREATIVE DIRECTOR</h4>
+                        <p className="text-white leading-relaxed text-lg font-medium mb-4">
+                          With an unwavering passion for excellence and specialized expertise in luxury hospitality furniture, 
+                          Amar Chauhan established Blackhorse Furnitures with a revolutionary vision to create exceptional 
+                          commercial spaces. His entrepreneurial journey spans over two decades in the hospitality industry.
+                        </p>
+                        <p className="text-white leading-relaxed text-lg font-medium">
+                          Amar's expertise lies in understanding hospitality requirements, creating memorable guest experiences, 
+                          and designing furniture that combines functionality with luxury aesthetics for commercial success.
+                        </p>
+                      </div>
+                      
+                      <div className="bg-gradient-to-r from-gold/15 to-amber-400/10 p-8 rounded-xl border border-gold/50 shadow-xl">
+                        <h3 className="text-4xl font-playfair font-bold bg-gradient-to-r from-gold to-amber-400 bg-clip-text text-transparent mb-3 drop-shadow-lg">
+                          DIKSHA SHRINGI
+                        </h3>
+                        <h4 className="text-xl font-bold text-white mb-6 tracking-wide">CO-FOUNDER & DESIGN CONSULTANT</h4>
+                        <p className="text-white leading-relaxed text-lg font-medium mb-4">
+                          A distinguished graduate from the American University of Interior Design in Dubai, Diksha Shringi brings over 15 years of specialized experience in hospitality interior design and commercial furniture consultation.
+                        </p>
+                        <p className="text-white leading-relaxed text-lg font-medium">
+                          Her expertise in color psychology, space optimization, and luxury aesthetics ensures that every project 
+                          creates emotional connections with guests while maintaining operational excellence.
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -81,7 +84,7 @@ export default function Story() {
                     <img 
                       src={foundersImage} 
                       alt="Amar Chauhan and Diksha Shringi - Founders of Blackhorse Furnitures" 
-                      className="w-full h-[400px] lg:h-[450px] object-cover object-center"
+                      className="w-full h-[650px] lg:h-[750px] object-cover object-center"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-900/20 via-transparent to-transparent"></div>
                   </div>
