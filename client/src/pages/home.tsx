@@ -202,28 +202,47 @@ export default function Home() {
       </section>
 
       {/* About Preview */}
-      <section className="py-20">
+      <section className="py-20 bg-black">
         <div className="container mx-auto px-4">
-          <Card className="bg-card border-champagne/40 overflow-hidden shadow-xl">
+          <Card className="bg-black border-gold/30 overflow-hidden shadow-xl">
             <CardContent className="p-0">
               <div className="grid lg:grid-cols-2 gap-0 items-center">
                 <div className="p-12">
-                  <h2 className="text-4xl font-playfair font-bold text-elegant-brown mb-6">Crafting Legacy Since Inception</h2>
-                  <p className="text-lg text-soft-brown mb-6 leading-relaxed">
-                    Founded by visionary entrepreneurs Amar Chauhan and Diksha Shringi, Blackhorse Furnitures represents 
-                    the perfect synthesis of traditional Indian woodworking heritage and contemporary design innovation. 
-                    With over 15 years of specialized experience in the Indian furniture industry, our founders have 
-                    established a reputation for creating exceptional pieces that transcend ordinary expectations.
-                  </p>
-                  <p className="text-lg text-soft-brown mb-8 leading-relaxed">
-                    Every piece we create tells a story of passion, precision, and unwavering commitment to excellence, 
-                    ensuring that our furniture becomes a cherished part of your home for generations to come.
-                  </p>
-                  <Link href="/our-story">
-                    <Button className="bg-elegant-brown text-white px-8 py-4 text-lg font-bold hover:bg-soft-brown transition-all duration-300 shadow-lg">
-                      Discover Our Journey
-                    </Button>
-                  </Link>
+                  <h2 className="text-4xl font-playfair font-bold text-white mb-8">Crafting Legacy Since Inception</h2>
+                  
+                  <div className="space-y-8">
+                    <div>
+                      <h3 className="text-2xl font-playfair font-bold text-gold mb-4">
+                        FOUNDER & CREATIVE DIRECTOR - AMAR CHAUHAN
+                      </h3>
+                      <p className="text-white leading-relaxed text-base">
+                        With an unwavering passion for excellence and specialized expertise in luxury hospitality furniture, 
+                        Amar Chauhan established Blackhorse Furnitures with a revolutionary vision to create exceptional 
+                        commercial spaces. His entrepreneurial journey spans over two decades in the hospitality industry, 
+                        designing furniture that combines functionality with luxury aesthetics for commercial success.
+                      </p>
+                    </div>
+                    
+                    <div>
+                      <h3 className="text-2xl font-playfair font-bold text-gold mb-4">
+                        CO-FOUNDER & DESIGN CONSULTANT - DIKSHA SHRINGI
+                      </h3>
+                      <p className="text-white leading-relaxed text-base">
+                        A distinguished graduate from the American University of Interior Design in Dubai, Diksha Shringi brings 
+                        over 15 years of specialized experience in hospitality interior design and commercial furniture consultation. 
+                        Her expertise in color psychology, space optimization, and luxury aesthetics ensures that every project 
+                        creates emotional connections with guests while maintaining operational excellence.
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div className="mt-8">
+                    <Link href="/story">
+                      <Button className="bg-gold text-black px-8 py-4 text-lg font-bold hover:bg-amber-400 transition-all duration-300 shadow-lg">
+                        Discover Our Journey
+                      </Button>
+                    </Link>
+                  </div>
                 </div>
                 <div className="relative">
                   <img 
