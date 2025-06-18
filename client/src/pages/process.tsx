@@ -1,7 +1,7 @@
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import { Card, CardContent } from "@/components/ui/card";
-import designingImage from "@assets/image_1749473635504.png";
+import designingImage from "@assets/WhatsApp Image 2025-06-17 at 15.03.21_7c02d735_1750250701827.jpg";
 import carpentryImage from "@assets/WhatsApp Image 2025-06-09 at 13.13.31_21d3a583_1749473653273.jpg";
 import foamingImage from "@assets/WhatsApp Image 2025-06-09 at 13.07.01_2a278a20_1749473665532.jpg";
 import upholsteryImage from "@assets/WhatsApp Image 2025-06-09 at 12.00.39_8ba48a52_1749473681038.jpg";
