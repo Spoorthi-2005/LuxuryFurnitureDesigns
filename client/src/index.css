@@ -316,15 +316,7 @@
   100% { background-position: 0% 50%; }
 }
 
-.luxury-glow {
-  box-shadow: 0 0 30px rgba(212, 175, 55, 0.6), 0 0 60px rgba(212, 175, 55, 0.3);
-  animation: pulseGlow 3s ease-in-out infinite;
-}
-
-@keyframes pulseGlow {
-  0%, 100% { box-shadow: 0 0 30px rgba(212, 175, 55, 0.6), 0 0 60px rgba(212, 175, 55, 0.3); }
-  50% { box-shadow: 0 0 40px rgba(212, 175, 55, 0.8), 0 0 80px rgba(212, 175, 55, 0.4); }
-}
+/* Removed luxury-glow effects to improve text visibility */
 
 /* Opulent Cursor Trail */
 .cursor-trail {
@@ -1593,14 +1585,7 @@ input:focus, textarea:focus, select:focus {
 }
 
 /* Luxury 3D and Glossy Effects */
-@keyframes luxuryGlow {
-  0%, 100% {
-    box-shadow: 0 0 20px rgba(218, 165, 32, 0.3);
-  }
-  50% {
-    box-shadow: 0 0 40px rgba(218, 165, 32, 0.6), 0 0 60px rgba(218, 165, 32, 0.4);
-  }
-}
+/* Removed luxuryGlow animation to improve text visibility */
 
 @keyframes luxuryShine {
   0% {
@@ -1611,9 +1596,7 @@ input:focus, textarea:focus, select:focus {
   }
 }
 
-.luxury-glow {
-  animation: luxuryGlow 2s ease-in-out infinite;
-}
+/* Removed luxury-glow animation to improve text visibility */
 
 .luxury-shine {
   position: relative;
@@ -1646,34 +1629,19 @@ input:focus, textarea:focus, select:focus {
   box-shadow: 0 20px 60px rgba(0,0,0,0.15), 0 0 0 1px rgba(255,255,255,0.7) inset;
 }
 
-/* Glossy Button Effects */
+/* Simplified Button Effects - removed white overlay */
 .glossy-btn {
   background: linear-gradient(145deg, #DAA520, #B8860B);
   border: none;
-  position: relative;
-  overflow: hidden;
-  box-shadow: 0 4px 15px rgba(218, 165, 32, 0.3), inset 0 1px 0 rgba(255,255,255,0.3);
+  box-shadow: 0 4px 15px rgba(218, 165, 32, 0.3);
   transition: all 0.3s ease;
 }
 
-.glossy-btn::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
-  transition: left 0.5s;
-}
-
-.glossy-btn:hover::before {
-  left: 100%;
-}
+/* Removed hover effect that created white overlay */
 
 .glossy-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(218, 165, 32, 0.4), inset 0 1px 0 rgba(255,255,255,0.4);
+  box-shadow: 0 8px 25px rgba(218, 165, 32, 0.4);
 }
 
 /* Enhanced 3D Hover Effects */
