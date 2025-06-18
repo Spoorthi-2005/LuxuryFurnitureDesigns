@@ -86,13 +86,13 @@ export default function Story() {
                     </div>
                   </div>
                   
-                  <div className="relative overflow-hidden rounded-2xl shadow-2xl">
+                  <div className="relative rounded-2xl shadow-2xl">
                     <img 
                       src={foundersImage} 
                       alt="Amar Chauhan and Diksha Shringi - Founders of Blackhorse Furnitures" 
-                      className="w-full h-[1100px] lg:h-[1200px] object-cover object-center"
+                      className="w-full h-auto object-contain rounded-2xl"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900/20 via-transparent to-transparent"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900/20 via-transparent to-transparent rounded-2xl"></div>
                   </div>
                 </div>
               </CardContent>
