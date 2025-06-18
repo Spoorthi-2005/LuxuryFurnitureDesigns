@@ -49,11 +49,11 @@ export default function Story() {
                     
                     <div className="bg-gradient-to-r from-gold/15 to-gold/5 p-8 rounded-xl border border-gold/50 shadow-2xl">
                       <div className="space-y-10">
-                        <div>
-                          <h1 style={{color: '#d4af37', fontSize: '18px', fontWeight: 'bold', marginBottom: '8px', textTransform: 'uppercase', letterSpacing: '2px', fontFamily: 'Playfair Display'}}>
+                        <div style={{position: 'relative', zIndex: 10}}>
+                          <h1 style={{color: '#d4af37', fontSize: '18px', fontWeight: 'bold', marginBottom: '8px', textTransform: 'uppercase', letterSpacing: '2px', fontFamily: 'Playfair Display', position: 'relative', zIndex: 10, display: 'block'}}>
                             FOUNDER & CREATIVE DIRECTOR
                           </h1>
-                          <h1 style={{color: 'white', fontSize: '32px', fontWeight: 'bold', marginBottom: '24px', letterSpacing: '1px', fontFamily: 'Playfair Display'}}>
+                          <h1 style={{color: 'white', fontSize: '36px', fontWeight: 'bold', marginBottom: '24px', letterSpacing: '1px', fontFamily: 'Playfair Display', position: 'relative', zIndex: 10, display: 'block', textShadow: '2px 2px 4px rgba(0,0,0,0.8)'}}>
                             AMAR CHAUHAN
                           </h1>
                           <p className="text-white leading-relaxed text-lg">
