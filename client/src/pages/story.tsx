@@ -50,6 +50,9 @@ export default function Story() {
                     <div className="bg-gradient-to-r from-gold/15 to-gold/5 p-8 rounded-xl border border-gold/50 shadow-2xl">
                       <div className="space-y-10">
                         <div>
+                          <div className="text-lg font-playfair font-bold text-gold mb-2 tracking-wider uppercase">
+                            FOUNDER & CREATIVE DIRECTOR
+                          </div>
                           <div className="text-3xl font-playfair font-bold text-white mb-6 tracking-wide">
                             AMAR CHAUHAN
                           </div>
