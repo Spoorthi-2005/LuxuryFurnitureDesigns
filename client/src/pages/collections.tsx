@@ -255,22 +255,111 @@ export default function Collections() {
                   <div className="absolute -inset-4 bg-gradient-to-r from-gold/5 via-transparent to-gold/5 rounded-3xl blur-xl opacity-60 group-hover:opacity-100 transition-opacity duration-700 -z-10"></div>
                 </div>
                 
-                {/* Collection Action Button */}
-                <div className="text-center">
+                {/* Enhanced Collection Actions */}
+                <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                   <Link href="/contact">
                     <Button 
                       variant="outline" 
-                      className="bg-gradient-to-r from-elegant-brown to-glow-gold text-white border-2 border-amber-400 hover:bg-gradient-to-r hover:from-glow-gold hover:to-elegant-brown transition-all duration-500 px-12 py-4 text-lg font-semibold shadow-2xl hover:shadow-glow-gold/50 transform hover:scale-105 luxury-glow"
+                      className="bg-gradient-to-r from-elegant-brown to-glow-gold text-white border-2 border-amber-400 hover:bg-gradient-to-r hover:from-glow-gold hover:to-elegant-brown transition-all duration-500 px-8 py-3 text-base font-semibold shadow-2xl hover:shadow-glow-gold/50 transform hover:scale-105 luxury-glow"
                     >
-                      Explore {collection.title} Collection
+                      Explore {collection.title}
                     </Button>
                   </Link>
+                  
+                  {/* Virtual Design Features */}
+                  <div className="flex gap-2">
+                    <Button
+                      onClick={() => {
+                        setSelectedCollection(collection);
+                        setIsVirtualDesignerOpen(true);
+                      }}
+                      variant="outline"
+                      size="sm"
+                      className="bg-black/20 backdrop-blur-sm border-gold/30 text-gold hover:bg-gold/10 transition-all duration-300"
+                    >
+                      <Move3D className="w-4 h-4 mr-2" />
+                      3D Design
+                    </Button>
+                    
+                    <Button
+                      onClick={() => {
+                        setSelectedCollection(collection);
+                        setIsARPreviewOpen(true);
+                      }}
+                      variant="outline"
+                      size="sm"
+                      className="bg-black/20 backdrop-blur-sm border-purple-400/30 text-purple-300 hover:bg-purple-400/10 transition-all duration-300"
+                    >
+                      <Camera className="w-4 h-4 mr-2" />
+                      AR View
+                    </Button>
+                  </div>
                 </div>
               </CardContent>
             </Card>
           </div>
         ))}
       </div>
+
+      {/* AI-Powered Design Features Section */}
+      <section className="py-16 relative z-10">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <Badge className="mb-4 bg-purple-500/10 text-purple-300 border-purple-400/30">
+              <Sparkles className="w-4 h-4 mr-2" />
+              AI-Powered Design Technology
+            </Badge>
+            <h2 className="text-3xl md:text-4xl font-bold text-transparent bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 bg-clip-text mb-4">
+              Experience the Future of Interior Design
+            </h2>
+            <p className="text-lg text-slate-300 max-w-2xl mx-auto">
+              Visualize furniture in your space with cutting-edge AR technology and design custom rooms with our 3D tools
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6 mb-12">
+            <div className="bg-black/30 backdrop-blur-sm rounded-2xl p-6 border border-purple-400/20 hover:border-purple-400/40 transition-all duration-300">
+              <div className="w-12 h-12 bg-purple-500/20 rounded-xl flex items-center justify-center mb-4">
+                <Camera className="w-6 h-6 text-purple-400" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">AR Visualization</h3>
+              <p className="text-slate-400 text-sm">
+                See how our furniture looks in your actual space using augmented reality before making a purchase
+              </p>
+            </div>
+
+            <div className="bg-black/30 backdrop-blur-sm rounded-2xl p-6 border border-gold/20 hover:border-gold/40 transition-all duration-300">
+              <div className="w-12 h-12 bg-gold/20 rounded-xl flex items-center justify-center mb-4">
+                <Move3D className="w-6 h-6 text-gold" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">3D Room Designer</h3>
+              <p className="text-slate-400 text-sm">
+                Create and customize your perfect room layout with our advanced drag-and-drop 3D design tools
+              </p>
+            </div>
+
+            <div className="bg-black/30 backdrop-blur-sm rounded-2xl p-6 border border-blue-400/20 hover:border-blue-400/40 transition-all duration-300">
+              <div className="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center mb-4">
+                <Zap className="w-6 h-6 text-blue-400" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">Instant Recommendations</h3>
+              <p className="text-slate-400 text-sm">
+                Get AI-powered furniture suggestions based on your style preferences and room dimensions
+              </p>
+            </div>
+          </div>
+
+          <div className="text-center">
+            <Button
+              onClick={() => setIsVirtualDesignerOpen(true)}
+              className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-8 py-3 text-lg font-semibold shadow-2xl hover:shadow-purple-500/50 transform hover:scale-105 transition-all duration-300"
+            >
+              <Palette className="w-5 h-5 mr-2" />
+              Launch Virtual Designer
+            </Button>
+          </div>
+        </div>
+      </section>
 
       {/* Call to Action */}
       <section className="py-20 relative z-10">
@@ -292,6 +381,32 @@ export default function Collections() {
       </section>
       
       <Footer />
+
+      {/* Virtual Design Modals */}
+      <Dialog open={isVirtualDesignerOpen} onOpenChange={setIsVirtualDesignerOpen}>
+        <DialogContent className="max-w-7xl max-h-[95vh] overflow-hidden p-0">
+          <DialogHeader className="p-6 pb-0">
+            <DialogTitle className="flex items-center gap-2">
+              <Move3D className="w-6 h-6 text-gold" />
+              Virtual Room Designer
+              {selectedCollection && (
+                <Badge variant="secondary" className="ml-2">
+                  {selectedCollection.title} Collection
+                </Badge>
+              )}
+            </DialogTitle>
+          </DialogHeader>
+          <div className="h-[80vh]">
+            <VirtualRoomDesigner />
+          </div>
+        </DialogContent>
+      </Dialog>
+
+      <ARPreviewModal 
+        isOpen={isARPreviewOpen}
+        onClose={() => setIsARPreviewOpen(false)}
+        roomData={selectedCollection}
+      />
     </div>
   );
 }

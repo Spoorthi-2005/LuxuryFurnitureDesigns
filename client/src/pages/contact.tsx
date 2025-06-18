@@ -4,13 +4,34 @@ import Header from "@/components/header";
 import Footer from "@/components/footer";
 import FloatingContact from "@/components/floating-contact";
 import WhatsAppContact from "@/components/whatsapp-contact";
-import { Card, CardContent } from "@/components/ui/card";
+import AIDesignConsultant from "@/components/ai-design-consultant";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
+import { Badge } from "@/components/ui/badge";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { useToast } from "@/hooks/use-toast";
 import { apiRequest } from "@/lib/queryClient";
+import { motion } from "framer-motion";
+import { 
+  Bot, 
+  Calendar, 
+  Camera, 
+  Clock, 
+  MessageCircle, 
+  Phone, 
+  Mail, 
+  MapPin, 
+  Star, 
+  Sparkles,
+  Zap,
+  Users,
+  Award,
+  CheckCircle
+} from "lucide-react";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -20,6 +41,8 @@ export default function Contact() {
     phone: "",
     projectDetails: ""
   });
+  const [isAIConsultantOpen, setIsAIConsultantOpen] = useState(false);
+  const [activeTab, setActiveTab] = useState("consultation");
   const { toast } = useToast();
 
   const consultationMutation = useMutation({
@@ -131,33 +154,101 @@ export default function Contact() {
         {/* Hero Section */}
         <section className="py-20 bg-transparent relative z-10">
           <div className="container mx-auto px-4">
-            <div className="text-center max-w-4xl mx-auto">
+            <div className="text-center max-w-4xl mx-auto mb-16">
+              <Badge className="mb-4 bg-purple-500/10 text-purple-300 border-purple-400/30">
+                <Sparkles className="w-4 h-4 mr-2" />
+                Premium Design Consultation
+              </Badge>
               <h1 className="text-6xl font-playfair font-bold mb-6 text-white">
                 Connect With Excellence
               </h1>
-              <p className="text-2xl text-gray-300 leading-relaxed mb-8">
-                Transform your living spaces with our exceptional furniture solutions. Our expert consultants are ready to discuss your vision and create bespoke pieces that reflect your unique style and requirements.
+              <p className="text-xl text-gray-300 leading-relaxed mb-8">
+                Experience next-generation interior design consultation with AI-powered recommendations and expert human guidance
               </p>
+              
+              {/* Enhanced CTA Buttons */}
+              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+                <Button
+                  onClick={() => setIsAIConsultantOpen(true)}
+                  className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-8 py-3 text-lg font-semibold shadow-2xl transform hover:scale-105 transition-all duration-300"
+                >
+                  <Bot className="w-5 h-5 mr-2" />
+                  AI Design Consultant
+                </Button>
+                
+                <Button
+                  onClick={() => setActiveTab("consultation")}
+                  className="bg-gradient-to-r from-gold to-amber-500 hover:from-amber-500 hover:to-gold text-black px-8 py-3 text-lg font-semibold shadow-2xl transform hover:scale-105 transition-all duration-300"
+                >
+                  <Calendar className="w-5 h-5 mr-2" />
+                  Schedule Expert Call
+                </Button>
+              </div>
+            </div>
+
+            {/* AI Features Preview */}
+            <div className="grid md:grid-cols-3 gap-6 mb-12">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.1 }}
+                className="bg-black/30 backdrop-blur-sm rounded-2xl p-6 border border-purple-400/20"
+              >
+                <Bot className="w-12 h-12 text-purple-400 mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-2">AI Design Assistant</h3>
+                <p className="text-slate-400 text-sm">
+                  Get instant design recommendations powered by advanced AI algorithms trained on premium interior design principles
+                </p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2 }}
+                className="bg-black/30 backdrop-blur-sm rounded-2xl p-6 border border-gold/20"
+              >
+                <Users className="w-12 h-12 text-gold mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-2">Expert Consultation</h3>
+                <p className="text-slate-400 text-sm">
+                  Connect with our master craftsmen and design experts for personalized guidance on your luxury furniture project
+                </p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.3 }}
+                className="bg-black/30 backdrop-blur-sm rounded-2xl p-6 border border-blue-400/20"
+              >
+                <Camera className="w-12 h-12 text-blue-400 mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-2">Virtual Preview</h3>
+                <p className="text-slate-400 text-sm">
+                  Visualize furniture in your space using AR technology before making final decisions on your investment
+                </p>
+              </motion.div>
+            </div>
+            
+            <div className="text-center">
               <div className="bg-gradient-to-r from-gold/20 to-amber-500/20 p-8 rounded-lg border border-gold/30">
                 <h2 className="text-3xl font-playfair font-bold text-gold mb-4">Why Choose Blackhorse Furnitures?</h2>
                 <div className="grid md:grid-cols-3 gap-6">
                   <div className="text-center">
                     <div className="w-16 h-16 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <i className="fas fa-award text-gold text-2xl"></i>
+                      <Award className="text-gold text-2xl" />
                     </div>
                     <h3 className="text-white font-semibold mb-2">20+ Years Experience</h3>
                     <p className="text-gray-300 text-sm">Proven expertise in luxury furniture design and manufacturing</p>
                   </div>
                   <div className="text-center">
                     <div className="w-16 h-16 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <i className="fas fa-users text-gold text-2xl"></i>
+                      <Users className="text-gold text-2xl" />
                     </div>
                     <h3 className="text-white font-semibold mb-2">700+ Projects Completed</h3>
                     <p className="text-gray-300 text-sm">Successfully delivered across hotels, restaurants, and homes</p>
                   </div>
                   <div className="text-center">
                     <div className="w-16 h-16 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <i className="fas fa-handshake text-gold text-2xl"></i>
+                      <CheckCircle className="text-gold text-2xl" />
                     </div>
                     <h3 className="text-white font-semibold mb-2">24/7 Support</h3>
                     <p className="text-gray-300 text-sm">Dedicated customer service and post-delivery support</p>
