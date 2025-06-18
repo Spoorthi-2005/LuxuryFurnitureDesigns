@@ -47,35 +47,39 @@ export default function Story() {
                   <div className="p-12">
                     <h2 className="text-4xl font-playfair font-bold text-white mb-8">Meet Our Visionary Founders</h2>
                     
-                    <div className="bg-gradient-to-r from-gold/15 to-amber-400/10 p-8 rounded-xl border border-gold/50 shadow-xl">
-                      <div className="space-y-8">
-                        <div>
-                          <h3 className="text-3xl font-playfair font-bold bg-gradient-to-r from-gold to-amber-400 bg-clip-text text-transparent mb-6 drop-shadow-lg">
-                            FOUNDER & CREATIVE DIRECTOR - AMAR CHAUHAN
-                          </h3>
-                          <p className="text-white leading-relaxed text-lg font-medium">
-                            With an unwavering passion for excellence and specialized expertise in luxury hospitality furniture, 
-                            Amar Chauhan established Blackhorse Furnitures with a revolutionary vision to create exceptional 
-                            commercial spaces. His entrepreneurial journey spans over two decades in the hospitality industry, 
-                            designing premium hotels, restaurants, bars, and luxury commercial environments. Amar's expertise lies 
-                            in understanding hospitality requirements, creating memorable guest experiences, and designing furniture 
-                            that combines functionality with luxury aesthetics for commercial success.
-                          </p>
-                        </div>
-                        
-                        <div className="border-t border-gold/30 pt-8">
-                          <h3 className="text-3xl font-playfair font-bold bg-gradient-to-r from-gold to-amber-400 bg-clip-text text-transparent mb-6 drop-shadow-lg">
-                            CO-FOUNDER & DESIGN CONSULTANT - DIKSHA SHRINGI
-                          </h3>
-                          <p className="text-white leading-relaxed text-lg font-medium">
-                            A distinguished graduate from the American University of Interior Design in Dubai, Diksha Shringi brings 
-                            over 15 years of specialized experience in hospitality interior design and commercial furniture consultation. 
-                            Her international education combined with profound understanding of guest psychology, spatial dynamics, and 
-                            commercial functionality enables her to create hospitality solutions that enhance guest experiences and 
-                            operational efficiency. Her expertise in color psychology, space optimization, and luxury aesthetics ensures 
-                            that every project creates emotional connections with guests while maintaining operational excellence.
-                          </p>
-                        </div>
+                    <div className="space-y-10">
+                      <div>
+                        <h3 className="text-2xl font-playfair font-bold text-gold mb-6 tracking-wide">
+                          FOUNDER & CREATIVE DIRECTOR
+                        </h3>
+                        <h2 className="text-4xl font-playfair font-bold text-white mb-6">
+                          AMAR CHAUHAN
+                        </h2>
+                        <p className="text-white leading-relaxed text-lg">
+                          With an unwavering passion for excellence and specialized expertise in luxury hospitality furniture, 
+                          Amar Chauhan established Blackhorse Furnitures with a revolutionary vision to create exceptional 
+                          commercial spaces. His entrepreneurial journey spans over two decades in the hospitality industry, 
+                          designing premium hotels, restaurants, bars, and luxury commercial environments. Amar's expertise lies 
+                          in understanding hospitality requirements, creating memorable guest experiences, and designing furniture 
+                          that combines functionality with luxury aesthetics for commercial success.
+                        </p>
+                      </div>
+                      
+                      <div>
+                        <h3 className="text-2xl font-playfair font-bold text-gold mb-6 tracking-wide">
+                          CO-FOUNDER & DESIGN CONSULTANT
+                        </h3>
+                        <h2 className="text-4xl font-playfair font-bold text-white mb-6">
+                          DIKSHA SHRINGI
+                        </h2>
+                        <p className="text-white leading-relaxed text-lg">
+                          A distinguished graduate from the American University of Interior Design in Dubai, Diksha Shringi brings 
+                          over 15 years of specialized experience in hospitality interior design and commercial furniture consultation. 
+                          Her international education combined with profound understanding of guest psychology, spatial dynamics, and 
+                          commercial functionality enables her to create hospitality solutions that enhance guest experiences and 
+                          operational efficiency. Her expertise in color psychology, space optimization, and luxury aesthetics ensures 
+                          that every project creates emotional connections with guests while maintaining operational excellence.
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -84,7 +88,7 @@ export default function Story() {
                     <img 
                       src={foundersImage} 
                       alt="Amar Chauhan and Diksha Shringi - Founders of Blackhorse Furnitures" 
-                      className="w-full h-[500px] lg:h-[550px] object-cover object-center"
+                      className="w-full h-[700px] lg:h-[800px] object-cover object-center"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-900/20 via-transparent to-transparent"></div>
                   </div>
