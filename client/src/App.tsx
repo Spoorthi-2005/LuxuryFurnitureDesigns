@@ -11,7 +11,6 @@ import Process from "@/pages/process";
 import Craftsmanship from "@/pages/craftsmanship";
 import Contact from "@/pages/contact";
 import Projects from "@/pages/projects";
-import VirtualShowroom from "@/pages/virtual-showroom";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -30,7 +29,7 @@ function Router() {
       <Route path="/process" component={Process} />
       <Route path="/craftsmanship" component={Craftsmanship} />
       <Route path="/projects" component={Projects} />
-      <Route path="/virtual-showroom" component={VirtualShowroom} />
+
       <Route path="/contact" component={Contact} />
       <Route component={NotFound} />
     </Switch>

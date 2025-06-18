@@ -22,7 +22,8 @@ import {
   Zap,
   Target,
   CheckCircle,
-  Clock
+  Clock,
+  Calendar
 } from "lucide-react";
 
 interface Message {

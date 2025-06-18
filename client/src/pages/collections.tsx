@@ -1,11 +1,17 @@
+import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import SimpleImageRotator from "@/components/simple-image-rotator";
+import VirtualRoomDesigner from "@/components/virtual-room-designer";
+import ARPreviewModal from "@/components/ar-preview-modal";
 import { Link } from "wouter";
 import { LuxuryParticles, LuxuryCursorTrail, LuxuryCard, ShimmerText, LuxuryButton } from "@/components/luxury-effects";
 import { PremiumParallax, LuxuryTilt, MagneticButton, LuxuryReveal, FloatingOrbs, GlassMorphCard, ScrollProgress } from "@/components/premium-interactions";
+import { Camera, Eye, Move3D, Palette, Sparkles, Zap } from "lucide-react";
 
 // Import bed/bedroom images (your specific luxury bed collection)
 import bedImage1 from "@assets/IMG-20250613-WA0038_1750069478869.jpg";
@@ -55,6 +61,9 @@ import benchImage3 from "@assets/IMG-20250613-WA0041_1750075606070.jpg";
 import benchImage4 from "@assets/IMG-20250613-WA0074_1750075628284.jpg";
 
 export default function Collections() {
+  const [isVirtualDesignerOpen, setIsVirtualDesignerOpen] = useState(false);
+  const [isARPreviewOpen, setIsARPreviewOpen] = useState(false);
+  const [selectedCollection, setSelectedCollection] = useState<any>(null);
   const collections = [
     {
       id: "beds",
