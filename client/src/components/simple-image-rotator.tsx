@@ -55,25 +55,18 @@ export default function SimpleImageRotator({
               }}
             />
             
-            {/* Premium Furniture Highlight Frame */}
-            <div className="absolute inset-0 border-2 border-white/0 group-hover:border-white/30 transition-all duration-500 rounded-lg"></div>
-            
-            {/* Corner Accent Lines */}
-            <div className="absolute top-3 left-3 w-6 h-6 border-l-2 border-t-2 border-white/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-            <div className="absolute top-3 right-3 w-6 h-6 border-r-2 border-t-2 border-white/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-            <div className="absolute bottom-3 left-3 w-6 h-6 border-l-2 border-b-2 border-white/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-            <div className="absolute bottom-3 right-3 w-6 h-6 border-r-2 border-b-2 border-white/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            {/* Removed white overlays for cleaner appearance */}
             
             {/* Furniture Focus Overlay */}
             <div className="absolute inset-0 bg-gradient-radial from-transparent via-transparent to-black/5"></div>
             
             {/* Premium Label */}
-            <div className="absolute bottom-4 left-4 bg-white/10 backdrop-blur-sm text-white px-3 py-1.5 rounded-full text-xs font-semibold border border-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+            <div className="absolute bottom-4 left-4 bg-black/60 backdrop-blur-sm text-white px-3 py-1.5 rounded-full text-xs font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-500">
               HANDCRAFTED FURNITURE
             </div>
             
             {/* Image Counter with Style */}
-            <div className="absolute top-4 right-4 bg-black/60 backdrop-blur-sm text-white px-3 py-1.5 rounded-full text-sm font-medium border border-white/20">
+            <div className="absolute top-4 right-4 bg-black/60 backdrop-blur-sm text-white px-3 py-1.5 rounded-full text-sm font-medium">
               {currentIndex + 1} / {images.length}
             </div>
           </div>
@@ -81,7 +74,7 @@ export default function SimpleImageRotator({
       </div>
 
       {/* Enhanced Navigation Dots */}
-      <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-3 bg-black/30 backdrop-blur-sm px-4 py-2 rounded-full border border-white/10">
+      <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-3 bg-black/60 backdrop-blur-sm px-4 py-2 rounded-full">
         {images.map((_, index) => (
           <button
             key={index}
@@ -95,12 +88,9 @@ export default function SimpleImageRotator({
           >
             <div className={`w-full h-full rounded-full transition-all duration-500 ${
               index === currentIndex 
-                ? 'bg-white shadow-lg shadow-white/50 ring-2 ring-white/30 ring-offset-1 ring-offset-black' 
-                : 'bg-white/40 hover:bg-white/60 border border-white/20'
+                ? 'bg-amber-500 shadow-lg' 
+                : 'bg-gray-400 hover:bg-gray-300'
             }`} />
-            {index === currentIndex && (
-              <div className="absolute inset-0 bg-white rounded-full animate-ping opacity-20"></div>
-            )}
           </button>
         ))}
       </div>
