@@ -26,7 +26,7 @@ import {
 } from "lucide-react";
 
 export default function VirtualShowroom() {
-  const [selectedRoom, setSelectedRoom] = useState(null);
+  const [selectedRoom, setSelectedRoom] = useState<any>(null);
   const [isARModalOpen, setIsARModalOpen] = useState(false);
 
   const showrooms = [

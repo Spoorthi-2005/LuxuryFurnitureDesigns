@@ -21,6 +21,7 @@ export default function Header() {
     { label: "Home", path: "/" },
     { label: "Our Story", path: "/our-story" },
     { label: "Collections", path: "/collections" },
+    { label: "Virtual Showroom", path: "/virtual-showroom" },
     { label: "Process", path: "/process" },
     { label: "Craftsmanship", path: "/craftsmanship" },
     { label: "Projects", path: "/projects" },
