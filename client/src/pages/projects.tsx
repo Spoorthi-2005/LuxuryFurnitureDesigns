@@ -150,192 +150,114 @@ export default function Projects() {
                     {/* Alternating Layout: Left/Right Pattern */}
                     <div className={`grid lg:grid-cols-2 gap-12 items-center ${index % 2 === 0 ? '' : 'lg:grid-cols-2'}`}>
                       
-                      {/* Project Title and Details */}
-                      <div className={`space-y-6 ${index % 2 === 0 ? 'lg:order-1' : 'lg:order-2'}`}>
-                        <div className="space-y-4">
-                          <Badge className="bg-white/10 text-white border-white/20 hover:bg-white/20">
-                            {project.category}
-                          </Badge>
-                          <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight">
-                            {project.title}
-                          </h2>
-                          <div className="w-16 h-1 bg-gradient-to-r from-white/50 to-transparent"></div>
+                      {/* Content Section */}
+                      <div className={`space-y-8 ${index % 2 === 1 ? 'lg:order-2' : ''}`}>
+                        <div className="space-y-6">
+                          <div className="flex items-center space-x-4">
+                            <Badge className="px-4 py-2 bg-gold text-black font-bold text-sm">
+                              {project.category}
+                            </Badge>
+                            {project.location && (
+                              <div className="flex items-center text-gray-400">
+                                <MapPin className="w-4 h-4 mr-1" />
+                                <span className="text-sm">{project.location}</span>
+                              </div>
+                            )}
+                            {project.completionDate && (
+                              <div className="flex items-center text-gray-400">
+                                <Calendar className="w-4 h-4 mr-1" />
+                                <span className="text-sm">{project.completionDate}</span>
+                              </div>
+                            )}
+                          </div>
+
+                          <div>
+                            <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-white group-hover:text-gold transition-colors duration-300">
+                              {project.title}
+                            </h2>
+                            <p className="text-lg text-gray-300 leading-relaxed mb-8">
+                              {project.description}
+                            </p>
+                          </div>
+
+                          {project.features && project.features.length > 0 && (
+                            <div className="space-y-3">
+                              <h3 className="text-xl font-semibold text-gold">Key Features</h3>
+                              <ul className="space-y-2">
+                                {project.features.map((feature, idx) => (
+                                  <li key={idx} className="flex items-center text-gray-300">
+                                    <Award className="w-4 h-4 text-gold mr-3 flex-shrink-0" />
+                                    <span>{feature}</span>
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                          )}
+
+                          <div className="flex flex-col sm:flex-row gap-4">
+                            <Button className="bg-gold text-black hover:bg-yellow-500 font-bold py-3 px-8 group">
+                              View Details
+                              <ChevronRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                            </Button>
+                            <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black font-bold py-3 px-8">
+                              Contact for Quote
+                              <ExternalLink className="w-4 h-4 ml-2" />
+                            </Button>
+                          </div>
                         </div>
-
-                        <p className="text-gray-300 text-lg leading-relaxed line-clamp-2">
-                          {project.description.split('.').slice(0, 2).join('.')}
-                        </p>
-
-                        {project.location && (
-                          <div className="flex items-center text-gray-400">
-                            <MapPin className="w-4 h-4 mr-2" />
-                            <span>{project.location}</span>
-                          </div>
-                        )}
-
-                        {project.completionDate && (
-                          <div className="flex items-center text-gray-400">
-                            <Calendar className="w-4 h-4 mr-2" />
-                            <span>Completed: {project.completionDate}</span>
-                          </div>
-                        )}
-
-                        {project.features && (
-                          <div className="space-y-2">
-                            <h4 className="text-white font-semibold">Key Features:</h4>
-                            <ul className="space-y-1">
-                              {project.features.slice(0, 3).map((feature, idx) => (
-                                <li key={idx} className="text-gray-300 flex items-center">
-                                  <ChevronRight className="w-4 h-4 mr-2 text-white/50" />
-                                  {feature}
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-                        )}
                       </div>
 
-                      {/* Enhanced Image Display with Visual Effects */}
-                      <div className={`relative ${index % 2 === 0 ? 'lg:order-2' : 'lg:order-1'}`}>
-                        <div className="relative group/image">
-                          {/* Glowing Border Effect */}
-                          <div className="absolute -inset-1 bg-gradient-to-r from-white/20 via-white/10 to-white/20 rounded-xl blur-sm opacity-0 group-hover/image:opacity-100 transition-opacity duration-500"></div>
-                          
-                          {/* Main Image Container */}
-                          <div className="relative bg-black rounded-lg overflow-hidden shadow-2xl border border-white/20 transform group-hover/image:scale-[1.02] transition-transform duration-500">
-                            {/* Floating Particles Effect */}
-                            <div className="absolute inset-0 pointer-events-none">
-                              <div className="absolute top-4 left-4 w-2 h-2 bg-white/30 rounded-full animate-pulse"></div>
-                              <div className="absolute top-8 right-6 w-1 h-1 bg-white/40 rounded-full animate-bounce" style={{animationDelay: '1s'}}></div>
-                              <div className="absolute bottom-6 left-8 w-1.5 h-1.5 bg-white/20 rounded-full animate-pulse" style={{animationDelay: '2s'}}></div>
-                            </div>
-                            
-                            {/* Corner Accents with Hover Effect */}
-                            <div className="absolute top-3 left-3 w-6 h-6 border-l-2 border-t-2 border-white/40 opacity-0 group-hover/image:opacity-100 transition-opacity duration-300"></div>
-                            <div className="absolute top-3 right-3 w-6 h-6 border-r-2 border-t-2 border-white/40 opacity-0 group-hover/image:opacity-100 transition-opacity duration-300"></div>
-                            <div className="absolute bottom-3 left-3 w-6 h-6 border-l-2 border-b-2 border-white/40 opacity-0 group-hover/image:opacity-100 transition-opacity duration-300"></div>
-                            <div className="absolute bottom-3 right-3 w-6 h-6 border-r-2 border-b-2 border-white/40 opacity-0 group-hover/image:opacity-100 transition-opacity duration-300"></div>
-                            
-                            {/* Shimmer Effect Overlay */}
-                            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent transform -skew-x-12 -translate-x-full group-hover/image:translate-x-full transition-transform duration-1000"></div>
-                            
-                            {/* Image Display - Main Focus */}
-                            <div className="relative p-3">
-                              <SimpleImageRotator
-                                images={project.images.map((img) => ({ src: img, alt: project.title }))}
-                                rotationInterval={5000}
-                              />
-                            </div>
-                          </div>
-
-                          {/* Floating Info Badge */}
-                          <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 bg-black/80 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 opacity-0 group-hover/image:opacity-100 transition-opacity duration-300">
-                            <span className="text-white text-sm font-medium">Premium Furniture</span>
-                          </div>
-                        </div>
+                      {/* Image Gallery Section */}
+                      <div className={`${index % 2 === 1 ? 'lg:order-1' : ''}`}>
+                        <LuxuryCard className="overflow-hidden shadow-2xl">
+                          <SimpleImageRotator 
+                            images={project.images.map(img => ({ src: img, alt: project.title }))}
+                            rotationInterval={4000}
+                          />
+                        </LuxuryCard>
                       </div>
                     </div>
+
+                    {/* Project Stats or Testimonial */}
+                    {project.clientTestimonial && (
+                      <div className="mt-12 bg-black/30 border border-white/10 rounded-lg p-8 text-center">
+                        <blockquote className="text-xl italic text-gray-300 mb-4">
+                          "{project.clientTestimonial}"
+                        </blockquote>
+                        <cite className="text-gold font-semibold">— Client Testimonial</cite>
+                      </div>
+                    )}
                   </div>
                 )}
               </div>
             ))}
           </div>
-        </div>
-      </div>
 
-      {/* Call-to-Action Section */}
-      <section className="py-24 bg-gradient-to-br from-black via-gray-900 to-black relative overflow-hidden">
-        {/* Animated Background Elements */}
-        <div className="absolute inset-0">
-          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-white/[0.02] rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gold/[0.03] rounded-full blur-3xl animate-pulse" style={{animationDelay: '3s'}}></div>
-          <div className="absolute inset-0 opacity-[0.008]" style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='200' height='200' viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23FFFFFF' stroke-width='0.5'%3E%3Ccircle cx='100' cy='100' r='80'/%3E%3Ccircle cx='100' cy='100' r='60'/%3E%3Ccircle cx='100' cy='100' r='40'/%3E%3Ccircle cx='100' cy='100' r='20'/%3E%3C/g%3E%3C/svg%3E")`,
-            backgroundSize: '200px 200px'
-          }}></div>
-        </div>
-
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            {/* Main Heading */}
-            <h2 className="text-5xl md:text-6xl font-bold text-white mb-8 leading-tight">
-              Ready to Create Your 
-              <span className="block text-transparent bg-gradient-to-r from-white via-gray-300 to-white bg-clip-text">
-                Dream Space?
-              </span>
+          {/* Call to Action Section */}
+          <div className="text-center py-20">
+            <h2 className="text-4xl md:text-5xl font-bold mb-8 text-white">
+              Ready to Start Your Dream Project?
             </h2>
-
-            {/* Description */}
-            <p className="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed">
-              Transform your vision into reality with our exceptional furniture craftsmanship. Let's discuss your project and create something extraordinary together.
+            <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
+              Transform your space with our bespoke furniture solutions. From concept to completion, we bring your vision to life with unparalleled craftsmanship and attention to detail.
             </p>
-
-            {/* Feature Highlights */}
-            <div className="grid md:grid-cols-3 gap-8 mb-12">
-              <div className="group">
-                <div className="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-white/20 transition-colors duration-300">
-                  <i className="fas fa-lightbulb text-white text-2xl"></i>
-                </div>
-                <h3 className="text-white font-semibold mb-2">Free Consultation</h3>
-                <p className="text-gray-400 text-sm">Expert design consultation to bring your vision to life</p>
-              </div>
-              <div className="group">
-                <div className="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-white/20 transition-colors duration-300">
-                  <i className="fas fa-hammer text-white text-2xl"></i>
-                </div>
-                <h3 className="text-white font-semibold mb-2">Custom Craftsmanship</h3>
-                <p className="text-gray-400 text-sm">Bespoke furniture tailored to your exact specifications</p>
-              </div>
-              <div className="group">
-                <div className="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-white/20 transition-colors duration-300">
-                  <i className="fas fa-award text-white text-2xl"></i>
-                </div>
-                <h3 className="text-white font-semibold mb-2">3 Years Warranty</h3>
-                <p className="text-gray-400 text-sm">Quality guarantee with comprehensive warranty coverage</p>
-              </div>
-            </div>
-
-            {/* Call-to-Action Buttons */}
-            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+            <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Link href="/contact">
-                <Button className="bg-white text-black px-12 py-6 text-lg font-bold hover:bg-gray-100 transition-all duration-300 shadow-2xl hover:shadow-white/20 transform hover:scale-105 group">
+                <Button className="bg-gold text-black hover:bg-yellow-500 text-lg font-bold py-4 px-10">
                   Start Your Project
-                  <i className="fas fa-arrow-right ml-3 group-hover:translate-x-1 transition-transform duration-300"></i>
+                  <ChevronRight className="w-5 h-5 ml-2" />
                 </Button>
               </Link>
-              
-              <div className="flex items-center space-x-4">
-                <div className="w-px h-8 bg-white/20"></div>
-                <div className="text-center">
-                  <p className="text-gray-400 text-sm">or call us directly</p>
-                  <a href="tel:+919718978337" className="text-white font-semibold hover:text-gray-300 transition-colors">
-                    +91 9718978337
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            {/* Trust Indicators */}
-            <div className="mt-16 pt-8 border-t border-white/10">
-              <p className="text-gray-500 text-sm mb-4">Trusted by luxury hotels, restaurants, and discerning homeowners</p>
-              <div className="flex justify-center items-center space-x-8 opacity-60">
-                <div className="flex items-center space-x-2">
-                  <i className="fas fa-star text-yellow-400"></i>
-                  <span className="text-white text-sm">Premium Quality</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <i className="fas fa-shipping-fast text-green-400"></i>
-                  <span className="text-white text-sm">Timely Delivery</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <i className="fas fa-handshake text-blue-400"></i>
-                  <span className="text-white text-sm">Expert Support</span>
-                </div>
-              </div>
+              <Link href="/collections">
+                <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black text-lg font-bold py-4 px-10">
+                  Explore Our Collections
+                  <ExternalLink className="w-5 h-5 ml-2" />
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
-      </section>
+      </div>
 
       <Footer />
     </div>
