@@ -30,7 +30,7 @@ function Router() {
       <Route path="/process" component={Process} />
       <Route path="/craftsmanship" component={Craftsmanship} />
       <Route path="/projects" component={Projects} />
-
+      <Route path="/admin" component={AdminDashboard} />
       <Route path="/contact" component={Contact} />
       <Route component={NotFound} />
     </Switch>
