@@ -13,8 +13,8 @@ import { LuxuryParticles, LuxuryCursorTrail, LuxuryCard, ShimmerText, LuxuryButt
 import { PremiumParallax, LuxuryTilt, MagneticButton, LuxuryReveal, FloatingOrbs, GlassMorphCard, ScrollProgress } from "@/components/premium-interactions";
 import { SEOHead, BreadcrumbStructuredData } from "@/components/seo-optimizer";
 import { SkipToContent, useKeyboardNavigation, useReducedMotion } from "@/components/accessibility-enhancer";
-import { AdvancedSearch, ViewModeToggle, QuickViewModal, WishlistButton, ShareButton } from "@/components/modern-enhancements";
-import { Camera, Eye, Move3D, Palette, Sparkles, Zap, Grid, List, Filter } from "lucide-react";
+import { QuickViewModal, WishlistButton, ShareButton } from "@/components/modern-enhancements";
+import { Camera, Eye, Move3D, Palette, Sparkles, Zap } from "lucide-react";
 
 // Import bed/bedroom images (your specific luxury bed collection)
 import bedImage1 from "@assets/IMG-20250613-WA0038_1750069478869.jpg";
@@ -224,7 +224,7 @@ export default function Collections() {
 
       {/* Collections Linear Layout */}
       <div className="container mx-auto px-4 py-12 relative z-10">
-        {filteredCollections.map((collection, index) => (
+        {collections.map((collection, index) => (
           <div key={collection.id} className="mb-20">
             <Card className="bg-black/50 border-white/10 backdrop-blur-xl shadow-2xl overflow-hidden">
               <CardContent className="p-8 md:p-12">
