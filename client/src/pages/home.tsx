@@ -14,6 +14,8 @@ import { PremiumParallax, LuxuryTilt, GlassMorphCard, LuxuryReveal } from "@/com
 import { SEOHead, StructuredData } from "@/components/seo-optimizer";
 import { SkipToContent, useKeyboardNavigation, useReducedMotion } from "@/components/accessibility-enhancer";
 import { AdvancedSearch, ProgressiveImage } from "@/components/modern-enhancements";
+import { useAnalytics, HeatmapTracker } from "@/components/analytics-tracker";
+import { MobileFloatingActions, useMobileViewportFix } from "@/components/mobile-enhancements";
 import heroImage from "@assets/img35_1749474302052.png";
 import founderImage from "@assets/WhatsApp Image 2025-06-02 at 18.04.55_ae1d9bc2_1749473393971.jpg";
 import workshopImage from "@assets/IMG-20250606-WA0034_1749474302060.jpg";
@@ -22,7 +24,9 @@ import craftsmanshipImage from "@assets/IMG-20250604-WA0023_1749793593319.jpg";
 
 export default function Home() {
   useKeyboardNavigation();
+  useMobileViewportFix();
   const prefersReducedMotion = useReducedMotion();
+  const analytics = useAnalytics();
   
   const featuredServices = [
     {
@@ -161,12 +165,19 @@ export default function Home() {
           {/* Enhanced Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Link href="/collections">
-              <Button className="bg-gradient-to-r from-gold to-amber-400 text-black px-12 py-6 text-lg font-bold hover:from-amber-400 hover:to-gold transition-all duration-500 shadow-2xl hover:shadow-gold/50 transform hover:scale-105 rounded-full">
+              <Button 
+                onClick={() => analytics.track('cta_click', 'conversion', 'explore_collections_hero')}
+                className="bg-gradient-to-r from-gold to-amber-400 text-black px-12 py-6 text-lg font-bold hover:from-amber-400 hover:to-gold transition-all duration-500 shadow-2xl hover:shadow-gold/50 transform hover:scale-105 rounded-full"
+              >
                 Explore Collections <i className="fas fa-arrow-right ml-2"></i>
               </Button>
             </Link>
-            <Link href="/our-story">
-              <Button variant="outline" className="border-2 border-gold text-gold px-12 py-6 text-lg font-bold hover:bg-gold hover:text-black transition-all duration-500 shadow-2xl bg-black/30 backdrop-blur-sm hover:shadow-gold/50 transform hover:scale-105 rounded-full">
+            <Link href="/story">
+              <Button 
+                onClick={() => analytics.track('cta_click', 'engagement', 'our_story_hero')}
+                variant="outline" 
+                className="border-2 border-gold text-gold px-12 py-6 text-lg font-bold hover:bg-gold hover:text-black transition-all duration-500 shadow-2xl bg-black/30 backdrop-blur-sm hover:shadow-gold/50 transform hover:scale-105 rounded-full"
+              >
                 Our Story <i className="fas fa-book-open ml-2"></i>
               </Button>
             </Link>
@@ -583,6 +594,8 @@ export default function Home() {
 
       <FloatingContact />
       <AIChatAssistant />
+      <MobileFloatingActions />
+      <HeatmapTracker />
       <Footer />
     </div>
   );
