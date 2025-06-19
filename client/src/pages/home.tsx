@@ -336,51 +336,51 @@ export default function Home() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <Card className="premium-card hover-3d transition-all shadow-xl luxury-shine">
+            <Card className="bg-black/50 border-white/20 transition-all shadow-xl">
               <CardContent className="p-8 text-center">
-                <div className="w-20 h-20 bg-glow-gold rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg luxury-glow">
+                <div className="w-20 h-20 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
                   <i className="fas fa-users text-white text-2xl"></i>
                 </div>
-                <div className="text-4xl font-playfair font-bold text-elegant-brown mb-2 text-shimmer">
+                <div className="text-4xl font-bold text-white mb-2">
                   <AnimatedCounter end={200} suffix="+" />
                 </div>
-                <p className="text-soft-brown font-medium">Happy Customers</p>
+                <p className="text-gray-300 font-medium">Happy Customers</p>
               </CardContent>
             </Card>
 
-            <Card className="premium-card hover-3d transition-all shadow-xl luxury-shine">
+            <Card className="bg-black/50 border-white/20 transition-all shadow-xl">
               <CardContent className="p-8 text-center">
-                <div className="w-20 h-20 bg-glow-gold rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg luxury-glow">
+                <div className="w-20 h-20 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
                   <i className="fas fa-project-diagram text-white text-2xl"></i>
                 </div>
-                <div className="text-4xl font-playfair font-bold text-elegant-brown mb-2 text-shimmer">
+                <div className="text-4xl font-bold text-white mb-2">
                   <AnimatedCounter end={700} suffix="+" />
                 </div>
-                <p className="text-soft-brown font-medium">Projects Completed</p>
+                <p className="text-gray-300 font-medium">Projects Completed</p>
               </CardContent>
             </Card>
 
-            <Card className="premium-card hover-3d transition-all shadow-xl luxury-shine">
+            <Card className="bg-black/50 border-white/20 transition-all shadow-xl">
               <CardContent className="p-8 text-center">
-                <div className="w-20 h-20 bg-glow-gold rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg luxury-glow">
+                <div className="w-20 h-20 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
                   <i className="fas fa-calendar text-white text-2xl"></i>
                 </div>
-                <div className="text-4xl font-playfair font-bold text-elegant-brown mb-2 text-shimmer">
+                <div className="text-4xl font-bold text-white mb-2">
                   <AnimatedCounter end={15} suffix="+" />
                 </div>
-                <p className="text-soft-brown font-medium">Years of Excellence</p>
+                <p className="text-gray-300 font-medium">Years of Excellence</p>
               </CardContent>
             </Card>
 
-            <Card className="premium-card hover-3d transition-all shadow-xl luxury-shine">
+            <Card className="bg-black/50 border-white/20 transition-all shadow-xl">
               <CardContent className="p-8 text-center">
-                <div className="w-20 h-20 bg-glow-gold rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg luxury-glow">
+                <div className="w-20 h-20 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
                   <i className="fas fa-award text-white text-2xl"></i>
                 </div>
-                <div className="text-4xl font-playfair font-bold text-elegant-brown mb-2 text-shimmer">
+                <div className="text-4xl font-bold text-white mb-2">
                   <AnimatedCounter end={98} suffix="%" />
                 </div>
-                <p className="text-soft-brown font-medium">Client Satisfaction</p>
+                <p className="text-gray-300 font-medium">Client Satisfaction</p>
               </CardContent>
             </Card>
           </div>

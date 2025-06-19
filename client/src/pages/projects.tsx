@@ -238,9 +238,9 @@ export default function Projects() {
         <div className="absolute inset-0 bg-gradient-to-b from-white/5 via-transparent to-white/3"></div>
       </div>
 
-      {/* Minimal Ambient Lighting for Elegance */}
-      <div className="absolute top-0 left-1/4 w-80 h-80 bg-white/3 rounded-full blur-3xl animate-pulse"></div>
-      <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-gold/5 rounded-full blur-3xl animate-pulse" style={{animationDelay: '3s'}}></div>
+      {/* Subtle Background Effects - No Yellow Shine */}
+      <div className="absolute top-0 left-1/4 w-80 h-80 bg-white/2 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-white/1 rounded-full blur-3xl"></div>
 
       <Header />
 
@@ -258,7 +258,7 @@ export default function Projects() {
           {/* Add Project Button */}
           <Button 
             onClick={() => setShowLoginModal(true)}
-            className="bg-gold text-black hover:bg-yellow-500 font-bold py-3 px-8 text-lg"
+            className="bg-white text-black hover:bg-gray-200 font-bold py-3 px-8 text-lg border-2 border-white/20"
           >
             <Plus className="w-5 h-5 mr-2" />
             Add New Project
