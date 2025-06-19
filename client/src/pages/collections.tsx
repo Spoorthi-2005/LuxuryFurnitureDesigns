@@ -70,8 +70,7 @@ export default function Collections() {
   const [isVirtualDesignerOpen, setIsVirtualDesignerOpen] = useState(false);
   const [isARPreviewOpen, setIsARPreviewOpen] = useState(false);
   const [selectedCollection, setSelectedCollection] = useState<any>(null);
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [filterCategory, setFilterCategory] = useState<string>('all');
+
 
   const breadcrumbItems = [
     { name: 'Home', url: '/' },
@@ -161,9 +160,7 @@ export default function Collections() {
     }
   ];
 
-  const filteredCollections = filterCategory === 'all' 
-    ? collections 
-    : collections.filter(collection => collection.id === filterCategory);
+  // Show all collections without filtering
 
   return (
     <div className="min-h-screen relative overflow-hidden bg-black text-white">
@@ -215,35 +212,12 @@ export default function Collections() {
         </div>
       </section>
 
-      {/* Enhanced Search and Filter Section */}
-      <section id="main-content" className="py-12 bg-gradient-to-b from-black to-gray-900">
+      {/* Simplified Collections Header */}
+      <section id="main-content" className="py-12 bg-black">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col lg:flex-row gap-6 items-center justify-between mb-8">
-            <div className="flex-1 max-w-2xl">
-              <AdvancedSearch />
-            </div>
-            
-            <div className="flex items-center gap-4">
-              {/* Category Filter */}
-              <select 
-                value={filterCategory}
-                onChange={(e) => setFilterCategory(e.target.value)}
-                className="modern-input text-white px-4 py-2 rounded-lg"
-                aria-label="Filter by category"
-              >
-                <option value="all">All Categories</option>
-                <option value="beds">Beds</option>
-                <option value="sofas">Sofas</option>
-                <option value="armchairs">Arm Chairs</option>
-                <option value="dining">Dining Sets</option>
-                <option value="coffee">Coffee Tables</option>
-                <option value="centre">Centre Tables</option>
-                <option value="benches">Benches & Poufs</option>
-              </select>
-              
-              {/* View Mode Toggle */}
-              <ViewModeToggle mode={viewMode} onModeChange={setViewMode} />
-            </div>
+          <div className="text-center mb-8">
+            <h2 className="text-4xl font-bold text-white mb-4">Browse Our Collections</h2>
+            <p className="text-gray-300 max-w-2xl mx-auto">Explore our meticulously crafted furniture pieces</p>
           </div>
         </div>
       </section>
@@ -287,7 +261,7 @@ export default function Collections() {
                               alt={image.alt}
                               className="w-full h-64 object-cover rounded-lg shadow-lg transition-transform duration-300 group-hover:scale-105 border border-gold/20"
                             />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg"></div>
+
                           </div>
                         ))}
                       </div>

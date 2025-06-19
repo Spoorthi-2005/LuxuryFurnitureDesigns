@@ -116,8 +116,7 @@ export default function Home() {
             className="absolute inset-0 w-full h-full object-cover opacity-8 mix-blend-soft-light"
           />
           
-          {/* Dark overlay for better text contrast */}
-          <div className="absolute inset-0 bg-black/40"></div>
+
         </div>
         
         {/* Floating Decorative Elements */}
@@ -529,7 +528,7 @@ export default function Home() {
                     alt="Luxury bedroom furniture delivery and installation" 
                     className="w-full h-full object-cover min-h-[500px] image-luxury image-glossy"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent to-slate-900/30"></div>
+
                 </div>
                 <div className="p-12 bg-black">
                   <h2 className="text-4xl font-playfair font-bold text-gold mb-6">Curated Piece Delivery & Installation</h2>
