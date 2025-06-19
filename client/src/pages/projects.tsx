@@ -415,7 +415,7 @@ export default function Projects() {
               </p>
             </div>
           </DialogHeader>
-          <div className="space-y-4">
+          <form onSubmit={(e) => { e.preventDefault(); handleLogin(); }} className="space-y-4">
             <div>
               <Label htmlFor="email" className="text-white">Admin Email</Label>
               <Input
@@ -425,6 +425,7 @@ export default function Projects() {
                 onChange={(e) => setLoginData(prev => ({ ...prev, email: e.target.value }))}
                 className="bg-gray-900 border-gray-700 text-white"
                 placeholder="Enter admin email"
+                required
               />
             </div>
             <div>
@@ -436,6 +437,7 @@ export default function Projects() {
                 onChange={(e) => setLoginData(prev => ({ ...prev, username: e.target.value }))}
                 className="bg-gray-900 border-gray-700 text-white"
                 placeholder="Enter username"
+                required
               />
             </div>
             <div>
@@ -447,17 +449,26 @@ export default function Projects() {
                 onChange={(e) => setLoginData(prev => ({ ...prev, password: e.target.value }))}
                 className="bg-gray-900 border-gray-700 text-white"
                 placeholder="Enter password"
+                required
               />
             </div>
-            <div className="flex gap-2">
-              <Button onClick={handleLogin} className="bg-gold text-black hover:bg-yellow-500">
-                Login
+            <div className="flex gap-2 pt-4">
+              <Button 
+                type="submit"
+                className="bg-white text-black hover:bg-gray-200 font-bold px-6 py-2 flex-1"
+              >
+                Submit & Login
               </Button>
-              <Button variant="outline" onClick={() => setShowLoginModal(false)} className="border-gray-600 text-white">
+              <Button 
+                type="button"
+                variant="outline" 
+                onClick={() => setShowLoginModal(false)} 
+                className="border-gray-600 text-white hover:bg-gray-800 px-6 py-2"
+              >
                 Cancel
               </Button>
             </div>
-          </div>
+          </form>
         </DialogContent>
       </Dialog>
 
