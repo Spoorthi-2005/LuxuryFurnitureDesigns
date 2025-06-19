@@ -59,7 +59,7 @@ export default function Projects() {
   const [showLoginModal, setShowLoginModal] = useState(false);
   const [showAddProjectModal, setShowAddProjectModal] = useState(false);
   const [isAuthenticated, setIsAuthenticated] = useState(false);
-  const [loginData, setLoginData] = useState({ username: '', password: '' });
+  const [loginData, setLoginData] = useState({ username: '', password: '', email: '' });
   const [newProject, setNewProject] = useState({
     title: '',
     category: 'Residential',
@@ -133,18 +133,29 @@ export default function Projects() {
 
   // Authentication handler
   const handleLogin = async () => {
-    if (loginData.username === 'admin' && loginData.password === 'admin123') {
+    const validCredentials = [
+      { username: 'blackhorse', password: 'blackhorse@1908', email: 'amarchauhan1287@gmail.com' },
+      { username: 'blackhorse', password: 'blackhorse@1908', email: 'dikshas2591@gmail.com' }
+    ];
+
+    const isValidAdmin = validCredentials.some(cred => 
+      cred.username === loginData.username && 
+      cred.password === loginData.password && 
+      cred.email === loginData.email
+    );
+
+    if (isValidAdmin) {
       setIsAuthenticated(true);
       setShowLoginModal(false);
       setShowAddProjectModal(true);
       toast({
         title: "Authentication successful",
-        description: "You can now add new projects.",
+        description: "Welcome admin! You can now add new projects.",
       });
     } else {
       toast({
-        title: "Authentication failed",
-        description: "Invalid username or password.",
+        title: "Access Denied",
+        description: "Only admin should add projects. Invalid credentials provided.",
         variant: "destructive",
       });
     }
@@ -386,15 +397,36 @@ export default function Projects() {
       <Footer />
 
       {/* Login Modal */}
-      <Dialog open={showLoginModal} onOpenChange={setShowLoginModal}>
+      <Dialog open={showLoginModal} onOpenChange={(open) => {
+        setShowLoginModal(open);
+        if (!open) {
+          setLoginData({ username: '', password: '', email: '' });
+        }
+      }}>
         <DialogContent className="bg-black border-gold/50 text-white">
           <DialogHeader>
             <DialogTitle className="text-gold flex items-center">
               <Lock className="w-5 h-5 mr-2" />
               Admin Authentication
             </DialogTitle>
+            <div className="bg-red-900/20 border border-red-500/30 rounded-lg p-4 mt-4">
+              <p className="text-red-300 text-sm font-medium">
+                ⚠️ RESTRICTED ACCESS: Only authorized Blackhorse Furniture administrators should access this feature.
+              </p>
+            </div>
           </DialogHeader>
           <div className="space-y-4">
+            <div>
+              <Label htmlFor="email" className="text-white">Admin Email</Label>
+              <Input
+                id="email"
+                type="email"
+                value={loginData.email}
+                onChange={(e) => setLoginData(prev => ({ ...prev, email: e.target.value }))}
+                className="bg-gray-900 border-gray-700 text-white"
+                placeholder="Enter admin email"
+              />
+            </div>
             <div>
               <Label htmlFor="username" className="text-white">Username</Label>
               <Input
