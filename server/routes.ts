@@ -1,12 +1,15 @@
 import type { Express } from "express";
 import { createServer, type Server } from "http";
 import { storage } from "./storage";
-import { sendConsultationNotification } from "./email";
 import { 
-  insertConsultationRequestSchema,
-  insertCategorySchema,
-  insertFurnitureItemSchema 
+  insertProjectSchema,
+  insertProjectImageSchema,
+  insertCategorySchema
 } from "@shared/schema";
+import { setupAuth, isAuthenticated } from "./replitAuth";
+import multer from "multer";
+import path from "path";
+import fs from "fs";
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // Health check
