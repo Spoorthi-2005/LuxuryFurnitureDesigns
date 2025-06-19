@@ -11,6 +11,7 @@ import Process from "@/pages/process";
 import Craftsmanship from "@/pages/craftsmanship";
 import Contact from "@/pages/contact";
 import Projects from "@/pages/projects";
+import AdminDashboard from "@/pages/admin";
 import NotFound from "@/pages/not-found";
 
 function Router() {
