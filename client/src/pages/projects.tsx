@@ -6,8 +6,15 @@ import SimpleImageRotator from "@/components/simple-image-rotator";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Calendar, MapPin, Award, ChevronRight, Star, ExternalLink, Building2, Utensils, Hotel } from "lucide-react";
+import { Calendar, MapPin, Award, ChevronRight, Star, ExternalLink, Building2, Utensils, Hotel, Plus, Upload, X, Lock } from "lucide-react";
 import { LuxuryParticles, LuxuryCursorTrail, LuxuryCard, ShimmerText } from "@/components/luxury-effects";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
+import { useToast } from "@/hooks/use-toast";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
+import { apiRequest } from "@/lib/queryClient";
 
 // Import DLF Club 3 restaurant images
 import dlfClub1 from '@assets/WhatsApp Image 2025-06-16 at 16.05.09_fe8629cd_1750139197282.jpg';
@@ -49,6 +56,27 @@ interface Project {
 }
 
 export default function Projects() {
+  const [showLoginModal, setShowLoginModal] = useState(false);
+  const [showAddProjectModal, setShowAddProjectModal] = useState(false);
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [loginData, setLoginData] = useState({ username: '', password: '' });
+  const [newProject, setNewProject] = useState({
+    title: '',
+    category: 'Residential',
+    description: '',
+    price: '',
+    materials: '',
+    dimensions: ''
+  });
+  const [uploadedImages, setUploadedImages] = useState<File[]>([]);
+  const [dragOver, setDragOver] = useState(false);
+  
+  const { toast } = useToast();
+  const queryClient = useQueryClient();
+
+  // Add new project to the existing hardcoded list
+  const [dynamicProjects, setDynamicProjects] = useState<Project[]>([]);
+
   const projects: Project[] = [
     {
       id: 1,
@@ -100,6 +128,93 @@ export default function Projects() {
     }
   ];
 
+  // Combine existing projects with newly added ones
+  const allProjects = [...dynamicProjects, ...projects];
+
+  // Authentication handler
+  const handleLogin = async () => {
+    if (loginData.username === 'admin' && loginData.password === 'admin123') {
+      setIsAuthenticated(true);
+      setShowLoginModal(false);
+      setShowAddProjectModal(true);
+      toast({
+        title: "Authentication successful",
+        description: "You can now add new projects.",
+      });
+    } else {
+      toast({
+        title: "Authentication failed",
+        description: "Invalid username or password.",
+        variant: "destructive",
+      });
+    }
+  };
+
+  // File upload handlers
+  const handleDrop = (e: React.DragEvent) => {
+    e.preventDefault();
+    setDragOver(false);
+    const files = Array.from(e.dataTransfer.files).filter(file => 
+      file.type.startsWith('image/')
+    );
+    setUploadedImages(prev => [...prev, ...files]);
+  };
+
+  const handleFileSelect = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.target.files) {
+      const files = Array.from(e.target.files);
+      setUploadedImages(prev => [...prev, ...files]);
+    }
+  };
+
+  const removeImage = (index: number) => {
+    setUploadedImages(prev => prev.filter((_, i) => i !== index));
+  };
+
+  // Add project handler
+  const handleAddProject = () => {
+    if (!newProject.title || !newProject.description || uploadedImages.length === 0) {
+      toast({
+        title: "Missing information",
+        description: "Please fill in title, description and upload at least one image.",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    // Convert uploaded files to URLs for display
+    const imageUrls = uploadedImages.map(file => URL.createObjectURL(file));
+    
+    const projectToAdd: Project = {
+      id: Date.now(), // Simple ID generation
+      title: newProject.title,
+      category: newProject.category,
+      description: newProject.description,
+      images: imageUrls,
+      isPlaceholder: false
+    };
+
+    setDynamicProjects(prev => [projectToAdd, ...prev]);
+    
+    // Reset form
+    setNewProject({
+      title: '',
+      category: 'Residential',
+      description: '',
+      price: '',
+      materials: '',
+      dimensions: ''
+    });
+    setUploadedImages([]);
+    setShowAddProjectModal(false);
+    setIsAuthenticated(false);
+
+    toast({
+      title: "Project added successfully",
+      description: "Your new project is now visible on the page.",
+    });
+  };
+
   return (
     <div className="min-h-screen relative overflow-hidden bg-black text-white">
       {/* Luxury Effects */}
@@ -125,9 +240,18 @@ export default function Projects() {
             Our Projects
           </h1>
           <div className="w-32 h-px bg-gradient-to-r from-transparent via-white/50 to-transparent mx-auto mb-8"></div>
-          <p className="text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
             Discover our exceptional portfolio of luxury furniture projects, where craftsmanship meets innovation in perfect harmony.
           </p>
+          
+          {/* Add Project Button */}
+          <Button 
+            onClick={() => setShowLoginModal(true)}
+            className="bg-gold text-black hover:bg-yellow-500 font-bold py-3 px-8 text-lg"
+          >
+            <Plus className="w-5 h-5 mr-2" />
+            Add New Project
+          </Button>
         </div>
       </section>
 
@@ -143,7 +267,7 @@ export default function Projects() {
 
         <div className="container mx-auto px-4 py-16 relative z-10">
           <div className="space-y-20">
-            {projects.map((project, index) => (
+            {allProjects.map((project, index) => (
               <div key={project.id}>
                 {!project.isPlaceholder && (
                   <div className="group mb-24">
@@ -260,6 +384,195 @@ export default function Projects() {
       </div>
 
       <Footer />
+
+      {/* Login Modal */}
+      <Dialog open={showLoginModal} onOpenChange={setShowLoginModal}>
+        <DialogContent className="bg-black border-gold/50 text-white">
+          <DialogHeader>
+            <DialogTitle className="text-gold flex items-center">
+              <Lock className="w-5 h-5 mr-2" />
+              Admin Authentication
+            </DialogTitle>
+          </DialogHeader>
+          <div className="space-y-4">
+            <div>
+              <Label htmlFor="username" className="text-white">Username</Label>
+              <Input
+                id="username"
+                type="text"
+                value={loginData.username}
+                onChange={(e) => setLoginData(prev => ({ ...prev, username: e.target.value }))}
+                className="bg-gray-900 border-gray-700 text-white"
+                placeholder="Enter username"
+              />
+            </div>
+            <div>
+              <Label htmlFor="password" className="text-white">Password</Label>
+              <Input
+                id="password"
+                type="password"
+                value={loginData.password}
+                onChange={(e) => setLoginData(prev => ({ ...prev, password: e.target.value }))}
+                className="bg-gray-900 border-gray-700 text-white"
+                placeholder="Enter password"
+              />
+            </div>
+            <div className="flex gap-2">
+              <Button onClick={handleLogin} className="bg-gold text-black hover:bg-yellow-500">
+                Login
+              </Button>
+              <Button variant="outline" onClick={() => setShowLoginModal(false)} className="border-gray-600 text-white">
+                Cancel
+              </Button>
+            </div>
+          </div>
+        </DialogContent>
+      </Dialog>
+
+      {/* Add Project Modal */}
+      <Dialog open={showAddProjectModal} onOpenChange={setShowAddProjectModal}>
+        <DialogContent className="bg-black border-gold/50 text-white max-w-2xl max-h-[90vh] overflow-y-auto">
+          <DialogHeader>
+            <DialogTitle className="text-gold flex items-center">
+              <Plus className="w-5 h-5 mr-2" />
+              Add New Project
+            </DialogTitle>
+          </DialogHeader>
+          <div className="space-y-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <Label htmlFor="title" className="text-white">Project Title</Label>
+                <Input
+                  id="title"
+                  value={newProject.title}
+                  onChange={(e) => setNewProject(prev => ({ ...prev, title: e.target.value }))}
+                  className="bg-gray-900 border-gray-700 text-white"
+                  placeholder="Enter project title"
+                />
+              </div>
+              <div>
+                <Label htmlFor="category" className="text-white">Category</Label>
+                <select
+                  id="category"
+                  value={newProject.category}
+                  onChange={(e) => setNewProject(prev => ({ ...prev, category: e.target.value }))}
+                  className="w-full p-2 bg-gray-900 border border-gray-700 text-white rounded-md"
+                >
+                  <option value="Residential">Residential</option>
+                  <option value="Restaurant">Restaurant</option>
+                  <option value="Hotel">Hotel</option>
+                  <option value="Office">Office</option>
+                  <option value="Retail">Retail</option>
+                </select>
+              </div>
+            </div>
+            
+            <div>
+              <Label htmlFor="description" className="text-white">Description</Label>
+              <Textarea
+                id="description"
+                value={newProject.description}
+                onChange={(e) => setNewProject(prev => ({ ...prev, description: e.target.value }))}
+                className="bg-gray-900 border-gray-700 text-white h-32"
+                placeholder="Describe your project in detail..."
+              />
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div>
+                <Label htmlFor="price" className="text-white">Price (Optional)</Label>
+                <Input
+                  id="price"
+                  value={newProject.price}
+                  onChange={(e) => setNewProject(prev => ({ ...prev, price: e.target.value }))}
+                  className="bg-gray-900 border-gray-700 text-white"
+                  placeholder="₹50,000"
+                />
+              </div>
+              <div>
+                <Label htmlFor="materials" className="text-white">Materials (Optional)</Label>
+                <Input
+                  id="materials"
+                  value={newProject.materials}
+                  onChange={(e) => setNewProject(prev => ({ ...prev, materials: e.target.value }))}
+                  className="bg-gray-900 border-gray-700 text-white"
+                  placeholder="Wood, Steel, Glass"
+                />
+              </div>
+              <div>
+                <Label htmlFor="dimensions" className="text-white">Dimensions (Optional)</Label>
+                <Input
+                  id="dimensions"
+                  value={newProject.dimensions}
+                  onChange={(e) => setNewProject(prev => ({ ...prev, dimensions: e.target.value }))}
+                  className="bg-gray-900 border-gray-700 text-white"
+                  placeholder="120cm x 80cm"
+                />
+              </div>
+            </div>
+
+            {/* Image Upload */}
+            <div>
+              <Label className="text-white">Project Images</Label>
+              <div
+                className={`border-2 border-dashed rounded-lg p-8 text-center transition-colors ${
+                  dragOver ? 'border-gold bg-gold/10' : 'border-gray-600'
+                }`}
+                onDrop={handleDrop}
+                onDragOver={(e) => { e.preventDefault(); setDragOver(true); }}
+                onDragLeave={() => setDragOver(false)}
+              >
+                <Upload className="w-12 h-12 text-gray-400 mx-auto mb-4" />
+                <p className="text-gray-300 mb-2">Drag and drop images here, or</p>
+                <input
+                  type="file"
+                  multiple
+                  accept="image/*"
+                  onChange={handleFileSelect}
+                  className="hidden"
+                  id="file-upload"
+                />
+                <label
+                  htmlFor="file-upload"
+                  className="bg-gold text-black px-4 py-2 rounded cursor-pointer hover:bg-yellow-500"
+                >
+                  Choose Files
+                </label>
+              </div>
+              
+              {/* Preview uploaded images */}
+              {uploadedImages.length > 0 && (
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-4">
+                  {uploadedImages.map((file, index) => (
+                    <div key={index} className="relative">
+                      <img
+                        src={URL.createObjectURL(file)}
+                        alt={`Upload ${index + 1}`}
+                        className="w-full h-24 object-cover rounded"
+                      />
+                      <button
+                        onClick={() => removeImage(index)}
+                        className="absolute top-1 right-1 bg-red-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs"
+                      >
+                        <X className="w-3 h-3" />
+                      </button>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            <div className="flex gap-2">
+              <Button onClick={handleAddProject} className="bg-gold text-black hover:bg-yellow-500">
+                Add Project
+              </Button>
+              <Button variant="outline" onClick={() => setShowAddProjectModal(false)} className="border-gray-600 text-white">
+                Cancel
+              </Button>
+            </div>
+          </div>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 }
