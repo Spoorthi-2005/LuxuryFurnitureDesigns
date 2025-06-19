@@ -605,11 +605,18 @@ export default function Projects() {
               )}
             </div>
 
-            <div className="flex gap-2">
-              <Button onClick={handleAddProject} className="bg-gold text-black hover:bg-yellow-500">
-                Add Project
+            <div className="flex gap-2 pt-4">
+              <Button 
+                onClick={handleAddProject} 
+                className="bg-white text-black hover:bg-gray-200 font-bold px-8 py-3 text-lg flex-1"
+              >
+                Submit Project
               </Button>
-              <Button variant="outline" onClick={() => setShowAddProjectModal(false)} className="border-gray-600 text-white">
+              <Button 
+                variant="outline" 
+                onClick={() => setShowAddProjectModal(false)} 
+                className="border-gray-600 text-white hover:bg-gray-800 px-6 py-3"
+              >
                 Cancel
               </Button>
             </div>
