@@ -65,9 +65,22 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-black text-white">
+      {/* SEO and Accessibility */}
+      <SEOHead 
+        title="Home"
+        description="Blackhorse Furnitures - Premium luxury furniture manufacturer specializing in handcrafted custom furniture for homes, hotels, and restaurants. Experience timeless elegance and superior craftsmanship."
+        keywords="luxury furniture, custom furniture, handcrafted furniture, premium furniture, interior design, bedroom furniture, living room furniture, dining furniture"
+      />
+      <StructuredData />
+      <SkipToContent />
+      
       {/* Luxury Effects */}
-      <LuxuryParticles />
-      <LuxuryCursorTrail />
+      {!prefersReducedMotion && (
+        <>
+          <LuxuryParticles />
+          <LuxuryCursorTrail />
+        </>
+      )}
       <LuxuryStatusBar />
       <OpulentFloatingMenu />
       
@@ -162,6 +175,19 @@ export default function Home() {
           {/* Scroll Indicator */}
           <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-amber-400/80 animate-bounce">
             <i className="fas fa-chevron-down text-2xl drop-shadow-2xl filter drop-shadow-[0_0_8px_rgba(245,158,11,0.6)]"></i>
+          </div>
+        </div>
+      </section>
+
+      {/* Enhanced Search Section */}
+      <section id="main-content" className="py-16 bg-gradient-to-b from-black to-gray-900">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-white mb-4">Find Your Perfect Furniture</h2>
+            <p className="text-gray-300 max-w-2xl mx-auto mb-8">
+              Search through our extensive collection of handcrafted furniture pieces
+            </p>
+            <AdvancedSearch />
           </div>
         </div>
       </section>

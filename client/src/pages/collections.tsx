@@ -11,7 +11,10 @@ import ARPreviewModal from "@/components/ar-preview-modal";
 import { Link } from "wouter";
 import { LuxuryParticles, LuxuryCursorTrail, LuxuryCard, ShimmerText, LuxuryButton } from "@/components/luxury-effects";
 import { PremiumParallax, LuxuryTilt, MagneticButton, LuxuryReveal, FloatingOrbs, GlassMorphCard, ScrollProgress } from "@/components/premium-interactions";
-import { Camera, Eye, Move3D, Palette, Sparkles, Zap } from "lucide-react";
+import { SEOHead, BreadcrumbStructuredData } from "@/components/seo-optimizer";
+import { SkipToContent, useKeyboardNavigation, useReducedMotion } from "@/components/accessibility-enhancer";
+import { AdvancedSearch, ViewModeToggle, QuickViewModal, WishlistButton, ShareButton } from "@/components/modern-enhancements";
+import { Camera, Eye, Move3D, Palette, Sparkles, Zap, Grid, List, Filter } from "lucide-react";
 
 // Import bed/bedroom images (your specific luxury bed collection)
 import bedImage1 from "@assets/IMG-20250613-WA0038_1750069478869.jpg";
@@ -61,9 +64,19 @@ import benchImage3 from "@assets/IMG-20250613-WA0041_1750075606070.jpg";
 import benchImage4 from "@assets/IMG-20250613-WA0074_1750075628284.jpg";
 
 export default function Collections() {
+  useKeyboardNavigation();
+  const prefersReducedMotion = useReducedMotion();
+  
   const [isVirtualDesignerOpen, setIsVirtualDesignerOpen] = useState(false);
   const [isARPreviewOpen, setIsARPreviewOpen] = useState(false);
   const [selectedCollection, setSelectedCollection] = useState<any>(null);
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const [filterCategory, setFilterCategory] = useState<string>('all');
+
+  const breadcrumbItems = [
+    { name: 'Home', url: '/' },
+    { name: 'Collections', url: '/collections' }
+  ];
   const collections = [
     {
       id: "beds",
@@ -148,11 +161,28 @@ export default function Collections() {
     }
   ];
 
+  const filteredCollections = filterCategory === 'all' 
+    ? collections 
+    : collections.filter(collection => collection.id === filterCategory);
+
   return (
     <div className="min-h-screen relative overflow-hidden bg-black text-white">
+      {/* SEO and Accessibility */}
+      <SEOHead 
+        title="Collections"
+        description="Explore our premium furniture collections including luxury beds, sofas, dining sets, and custom furniture. Handcrafted with traditional techniques and modern design."
+        keywords="furniture collections, luxury beds, premium sofas, dining furniture, custom furniture, handcrafted furniture"
+      />
+      <BreadcrumbStructuredData items={breadcrumbItems} />
+      <SkipToContent />
+      
       {/* Luxury Effects */}
-      <LuxuryParticles />
-      <LuxuryCursorTrail />
+      {!prefersReducedMotion && (
+        <>
+          <LuxuryParticles />
+          <LuxuryCursorTrail />
+        </>
+      )}
       <ScrollProgress />
       <FloatingOrbs />
       
@@ -185,9 +215,42 @@ export default function Collections() {
         </div>
       </section>
 
+      {/* Enhanced Search and Filter Section */}
+      <section id="main-content" className="py-12 bg-gradient-to-b from-black to-gray-900">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col lg:flex-row gap-6 items-center justify-between mb-8">
+            <div className="flex-1 max-w-2xl">
+              <AdvancedSearch />
+            </div>
+            
+            <div className="flex items-center gap-4">
+              {/* Category Filter */}
+              <select 
+                value={filterCategory}
+                onChange={(e) => setFilterCategory(e.target.value)}
+                className="modern-input text-white px-4 py-2 rounded-lg"
+                aria-label="Filter by category"
+              >
+                <option value="all">All Categories</option>
+                <option value="beds">Beds</option>
+                <option value="sofas">Sofas</option>
+                <option value="armchairs">Arm Chairs</option>
+                <option value="dining">Dining Sets</option>
+                <option value="coffee">Coffee Tables</option>
+                <option value="centre">Centre Tables</option>
+                <option value="benches">Benches & Poufs</option>
+              </select>
+              
+              {/* View Mode Toggle */}
+              <ViewModeToggle mode={viewMode} onModeChange={setViewMode} />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Collections Linear Layout */}
       <div className="container mx-auto px-4 py-12 relative z-10">
-        {collections.map((collection, index) => (
+        {filteredCollections.map((collection, index) => (
           <div key={collection.id} className="mb-20">
             <Card className="bg-black/50 border-white/10 backdrop-blur-xl shadow-2xl overflow-hidden">
               <CardContent className="p-8 md:p-12">
