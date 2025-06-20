@@ -21,30 +21,39 @@ export default function WhatsAppContact() {
     
     // Create WhatsApp message
     const whatsappMessage = `
-*New Consultation Request - Blackhorse Furnitures*
+🏠 *New Consultation Request - Blackhorse Furnitures*
 
-*Customer Details:*
+👤 *Customer Details:*
 Name: ${formData.name}
 Phone: ${formData.phone}
 Location: ${formData.location}
 
-*Project Information:*
+🏗️ *Project Information:*
 Project Type: ${formData.projectType}
 Budget Range: ${formData.budget}
 
-*Message:*
+💬 *Message:*
 ${formData.message}
 
+---
 *Requested via Blackhorse Furnitures Website*
     `.trim();
 
-    // Amar Chauhan's WhatsApp number
-    const whatsappNumber = "919718978337";
     const encodedMessage = encodeURIComponent(whatsappMessage);
-    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
     
-    // Open WhatsApp
-    window.open(whatsappUrl, '_blank');
+    // Contact numbers for both founders
+    const amarNumber = "919718978337";
+    const dikshaNumber = "918826560644";
+    
+    // Create WhatsApp URLs for both contacts
+    const amarWhatsAppUrl = `https://wa.me/${amarNumber}?text=${encodedMessage}`;
+    const dikshaWhatsAppUrl = `https://wa.me/${dikshaNumber}?text=${encodedMessage}`;
+    
+    // Open both WhatsApp chats
+    window.open(amarWhatsAppUrl, '_blank');
+    setTimeout(() => {
+      window.open(dikshaWhatsAppUrl, '_blank');
+    }, 1000); // Small delay to prevent popup blocking
     
     // Reset form
     setFormData({
@@ -76,7 +85,7 @@ ${formData.message}
               WhatsApp Consultation
             </h3>
             <p className="text-soft-brown">
-              Send your consultation request directly via WhatsApp for immediate response
+              Send your consultation request directly to both Amar Chauhan and Diksha Shringi via WhatsApp for immediate response
             </p>
           </div>
 
@@ -183,7 +192,7 @@ ${formData.message}
               <span className="font-medium">Quick Response Guaranteed</span>
             </div>
             <p className="text-green-600 text-sm mt-1">
-              Your message will be sent directly to our WhatsApp for immediate attention. 
+              Your message will be sent directly to both Amar Chauhan and Diksha Shringi's WhatsApp for immediate attention. 
               We typically respond within 15 minutes during business hours.
             </p>
           </div>
