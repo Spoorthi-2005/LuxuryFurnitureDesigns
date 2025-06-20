@@ -202,6 +202,17 @@ export default function Projects() {
       category: newProject.category,
       description: newProject.description,
       images: imageUrls,
+      completionDate: new Date().toLocaleDateString(),
+      location: "Custom Location", // You can make this an input field later
+      features: newProject.materials ? [
+        `Premium ${newProject.materials} construction`,
+        `Custom dimensions: ${newProject.dimensions || 'Made to measure'}`,
+        "Expert craftsmanship with attention to detail",
+        "Durable finish for long-lasting beauty"
+      ] : undefined,
+      clientTestimonial: undefined, // Can be added later
+      projectScope: newProject.price,
+      area: newProject.dimensions,
       isPlaceholder: false
     };
 
@@ -289,7 +300,7 @@ export default function Projects() {
                       <div className={`space-y-8 ${index % 2 === 1 ? 'lg:order-2' : ''}`}>
                         <div className="space-y-6">
                           <div className="flex items-center space-x-4">
-                            <Badge className="px-4 py-2 bg-gold text-black font-bold text-sm">
+                            <Badge className="px-4 py-2 bg-white text-black font-bold text-sm">
                               {project.category}
                             </Badge>
                             {project.location && (
@@ -307,7 +318,7 @@ export default function Projects() {
                           </div>
 
                           <div>
-                            <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-white group-hover:text-gold transition-colors duration-300">
+                            <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-white group-hover:text-white transition-colors duration-300">
                               {project.title}
                             </h2>
                             <p className="text-lg text-gray-300 leading-relaxed mb-8">
@@ -317,11 +328,11 @@ export default function Projects() {
 
                           {project.features && project.features.length > 0 && (
                             <div className="space-y-3">
-                              <h3 className="text-xl font-semibold text-gold">Key Features</h3>
+                              <h3 className="text-xl font-semibold text-white">Key Features</h3>
                               <ul className="space-y-2">
                                 {project.features.map((feature, idx) => (
                                   <li key={idx} className="flex items-center text-gray-300">
-                                    <Award className="w-4 h-4 text-gold mr-3 flex-shrink-0" />
+                                    <Award className="w-4 h-4 text-white mr-3 flex-shrink-0" />
                                     <span>{feature}</span>
                                   </li>
                                 ))}
@@ -330,7 +341,7 @@ export default function Projects() {
                           )}
 
                           <div className="flex flex-col sm:flex-row gap-4">
-                            <Button className="bg-gold text-black hover:bg-yellow-500 font-bold py-3 px-8 group">
+                            <Button className="bg-white text-black hover:bg-gray-200 font-bold py-3 px-8 group">
                               View Details
                               <ChevronRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                             </Button>
