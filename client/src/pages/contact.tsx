@@ -121,8 +121,8 @@ export default function Contact() {
       icon: "fas fa-phone",
       title: "Direct Contact Numbers",
       items: [
-        { label: "Primary Contact", value: "+919718978337" },
-        { label: "Secondary Contact", value: "+918826560644" }
+        { label: "Amar Chauhan (Founder)", value: "+919718978337" },
+        { label: "Diksha Shringi (Co-Founder)", value: "+918826560644" }
       ]
     }
   ];
@@ -312,7 +312,43 @@ export default function Contact() {
                             {detail.items.map((item, itemIndex) => (
                               <div key={itemIndex} className="bg-section rounded-lg p-4 border border-champagne/30">
                                 <p className="text-sm text-soft-brown mb-1 font-medium">{item.label}</p>
-                                <p className="text-elegant-brown font-semibold text-lg break-all">{item.value}</p>
+                                {detail.title === "Direct Contact Numbers" ? (
+                                  <div className="flex items-center justify-between">
+                                    <a 
+                                      href={`tel:${item.value}`}
+                                      className="text-elegant-brown hover:text-glow-gold font-semibold text-lg transition-colors cursor-pointer"
+                                    >
+                                      {item.value}
+                                    </a>
+                                    <Button
+                                      onClick={() => window.open(`tel:${item.value}`, '_self')}
+                                      size="sm"
+                                      className="ml-2 bg-green-600 hover:bg-green-700 text-white px-3 py-1"
+                                    >
+                                      <Phone className="w-4 h-4 mr-1" />
+                                      Call
+                                    </Button>
+                                  </div>
+                                ) : detail.title === "Email Communications" ? (
+                                  <div className="flex items-center justify-between">
+                                    <a 
+                                      href={`mailto:${item.value}`}
+                                      className="text-elegant-brown hover:text-glow-gold font-semibold text-lg transition-colors cursor-pointer break-all"
+                                    >
+                                      {item.value}
+                                    </a>
+                                    <Button
+                                      onClick={() => window.open(`mailto:${item.value}`, '_self')}
+                                      size="sm"
+                                      className="ml-2 bg-blue-600 hover:bg-blue-700 text-white px-3 py-1"
+                                    >
+                                      <Mail className="w-4 h-4 mr-1" />
+                                      Email
+                                    </Button>
+                                  </div>
+                                ) : (
+                                  <p className="text-elegant-brown font-semibold text-lg break-all">{item.value}</p>
+                                )}
                               </div>
                             ))}
                           </div>
