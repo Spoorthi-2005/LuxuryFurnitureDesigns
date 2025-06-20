@@ -6,7 +6,7 @@ import SimpleImageRotator from "@/components/simple-image-rotator";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Calendar, MapPin, Award, ChevronRight, Star, ExternalLink, Building2, Utensils, Hotel, Plus, Upload, X, Lock } from "lucide-react";
+import { Calendar, MapPin, Award, ChevronRight, Star, ExternalLink, Building2, Utensils, Hotel, Plus, Upload, X, Lock, Trash2 } from "lucide-react";
 import { LuxuryParticles, LuxuryCursorTrail, LuxuryCard, ShimmerText } from "@/components/luxury-effects";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
@@ -215,6 +215,14 @@ export default function Projects() {
     setUploadedImages(prev => prev.filter((_, i) => i !== index));
   };
 
+  const deleteProject = (projectId: number) => {
+    setDynamicProjects(prev => prev.filter(project => project.id !== projectId));
+    toast({
+      title: "Project deleted",
+      description: "The project has been removed successfully.",
+    });
+  };
+
   // Add project handler
   const handleAddProject = () => {
     if (!newProject.title || !newProject.description || uploadedImages.length === 0) {
@@ -332,21 +340,35 @@ export default function Projects() {
                       {/* Content Section */}
                       <div className={`space-y-8 ${index % 2 === 1 ? 'lg:order-2' : ''}`}>
                         <div className="space-y-6">
-                          <div className="flex items-center space-x-4">
-                            <Badge className="px-4 py-2 bg-white text-black font-bold text-sm">
-                              {project.category}
-                            </Badge>
-                            {project.location && (
-                              <div className="flex items-center text-gray-400">
-                                <MapPin className="w-4 h-4 mr-1" />
-                                <span className="text-sm">{project.location}</span>
-                              </div>
-                            )}
-                            {project.completionDate && (
-                              <div className="flex items-center text-gray-400">
-                                <Calendar className="w-4 h-4 mr-1" />
-                                <span className="text-sm">{project.completionDate}</span>
-                              </div>
+                          <div className="flex items-center justify-between">
+                            <div className="flex items-center space-x-4">
+                              <Badge className="px-4 py-2 bg-white text-black font-bold text-sm">
+                                {project.category}
+                              </Badge>
+                              {project.location && (
+                                <div className="flex items-center text-gray-400">
+                                  <MapPin className="w-4 h-4 mr-1" />
+                                  <span className="text-sm">{project.location}</span>
+                                </div>
+                              )}
+                              {project.completionDate && (
+                                <div className="flex items-center text-gray-400">
+                                  <Calendar className="w-4 h-4 mr-1" />
+                                  <span className="text-sm">{project.completionDate}</span>
+                                </div>
+                              )}
+                            </div>
+                            
+                            {/* Delete button for dynamically added projects */}
+                            {dynamicProjects.find(dp => dp.id === project.id) && (
+                              <Button
+                                onClick={() => deleteProject(project.id)}
+                                variant="outline"
+                                size="sm"
+                                className="border-red-500 text-red-500 hover:bg-red-500 hover:text-white"
+                              >
+                                <Trash2 className="w-4 h-4" />
+                              </Button>
                             )}
                           </div>
 
