@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { useMutation } from "@tanstack/react-query";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import FloatingContact from "@/components/floating-contact";
@@ -14,7 +13,6 @@ import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { useToast } from "@/hooks/use-toast";
-import { apiRequest } from "@/lib/queryClient";
 import { motion } from "framer-motion";
 import { 
   Bot, 
@@ -45,41 +43,49 @@ export default function Contact() {
   const [activeTab, setActiveTab] = useState("consultation");
   const { toast } = useToast();
 
-  const consultationMutation = useMutation({
-    mutationFn: async (data: typeof formData) => {
-      const response = await fetch("/api/consultation-requests", {
-        method: "POST",
-        body: JSON.stringify(data),
-        headers: {
-          "Content-Type": "application/json",
-        },
-      } as RequestInit);
-      if (!response.ok) {
-        throw new Error("Failed to submit consultation request");
-      }
-      return await response.json();
-    },
-    onSuccess: () => {
-      toast({
-        title: "Consultation Request Submitted Successfully!",
-        description: "Thank you for your inquiry. Our design experts will contact you within 24 hours to discuss your project requirements.",
-      });
-      setFormData({
-        firstName: "",
-        lastName: "",
-        email: "",
-        phone: "",
-        projectDetails: ""
-      });
-    },
-    onError: () => {
-      toast({
-        title: "Submission Failed",
-        description: "There was an error submitting your request. Please try again or contact us directly.",
-        variant: "destructive",
-      });
-    }
-  });
+  const sendWhatsAppConsultation = (data: typeof formData) => {
+    const message = `🏠 *New Consultation Request*
+
+👤 *Name:* ${data.firstName} ${data.lastName}
+📧 *Email:* ${data.email}
+📱 *Phone:* ${data.phone}
+
+📝 *Project Details:*
+${data.projectDetails}
+
+---
+Sent from Blackhorse Furnitures Website`;
+
+    const encodedMessage = encodeURIComponent(message);
+    
+    // Contact numbers for Amar Chauhan and Diksha Shringi
+    const amarNumber = "919718978337";
+    const dikshaNumber = "918826560644";
+    
+    // Send to both contacts
+    const amarWhatsAppUrl = `https://wa.me/${amarNumber}?text=${encodedMessage}`;
+    const dikshaWhatsAppUrl = `https://wa.me/${dikshaNumber}?text=${encodedMessage}`;
+    
+    // Open both WhatsApp chats
+    window.open(amarWhatsAppUrl, '_blank');
+    setTimeout(() => {
+      window.open(dikshaWhatsAppUrl, '_blank');
+    }, 1000); // Small delay to prevent popup blocking
+    
+    toast({
+      title: "WhatsApp Consultation Sent!",
+      description: "Your consultation request has been sent to both Amar Chauhan and Diksha Shringi via WhatsApp.",
+    });
+    
+    // Clear form
+    setFormData({
+      firstName: "",
+      lastName: "",
+      email: "",
+      phone: "",
+      projectDetails: ""
+    });
+  };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -91,7 +97,7 @@ export default function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    consultationMutation.mutate(formData);
+    sendWhatsAppConsultation(formData);
   };
 
   const contactInfo = [
@@ -182,6 +188,18 @@ export default function Contact() {
                 >
                   <Calendar className="w-5 h-5 mr-2" />
                   Schedule Expert Call
+                </Button>
+
+                <Button
+                  onClick={() => {
+                    const quickMessage = "Hi! I'm interested in a luxury interior design consultation for my space. Could you please help me get started?";
+                    const encodedMessage = encodeURIComponent(quickMessage);
+                    window.open(`https://wa.me/919718978337?text=${encodedMessage}`, '_blank');
+                  }}
+                  className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white px-8 py-3 text-lg font-semibold shadow-2xl transform hover:scale-105 transition-all duration-300"
+                >
+                  <MessageCircle className="w-5 h-5 mr-2" />
+                  Quick WhatsApp Chat
                 </Button>
               </div>
             </div>
@@ -408,8 +426,11 @@ export default function Contact() {
                     <div className="w-16 h-16 bg-glow-gold rounded-full flex items-center justify-center">
                       <i className="fas fa-calendar-check text-white text-xl"></i>
                     </div>
-                    <h3 className="text-3xl font-playfair font-bold text-elegant-brown">Schedule Your Consultation</h3>
+                    <h3 className="text-3xl font-playfair font-bold text-elegant-brown">WhatsApp Consultation Request</h3>
                   </div>
+                  <p className="text-soft-brown mb-6 text-center">
+                    Fill out the form below and we'll send your consultation request directly to both Amar Chauhan and Diksha Shringi via WhatsApp for immediate response.
+                  </p>
                   <form onSubmit={handleSubmit} className="space-y-8">
                     <div className="grid md:grid-cols-2 gap-6">
                       <div>
@@ -479,10 +500,9 @@ export default function Contact() {
                     </div>
                     <Button 
                       type="submit" 
-                      disabled={consultationMutation.isPending}
-                      className="w-full bg-glow-gold text-white py-4 text-lg font-bold hover:bg-elegant-brown transition-colors disabled:opacity-50 shadow-lg"
+                      className="w-full bg-glow-gold text-white py-4 text-lg font-bold hover:bg-elegant-brown transition-colors shadow-lg"
                     >
-                      {consultationMutation.isPending ? "Submitting..." : "Send Consultation Request"}
+                      Send WhatsApp Consultation
                     </Button>
                   </form>
                 </CardContent>
