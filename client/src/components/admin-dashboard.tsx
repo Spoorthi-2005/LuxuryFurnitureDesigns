@@ -98,13 +98,8 @@ export function AdminDashboard() {
   return (
     <div className="p-8 bg-gray-50 min-h-screen">
       <div className="max-w-7xl mx-auto space-y-8">
-        {/* Header */}
-        <div className="flex justify-between items-center">
-          <div>
-            <h1 className="text-3xl font-bold text-gray-900">Analytics Dashboard</h1>
-            <p className="text-gray-600">Blackhorse Furnitures - Website Performance</p>
-          </div>
-          
+        {/* Time Range Controls */}
+        <div className="flex justify-end items-center">
           <div className="flex gap-2">
             {['24h', '7d', '30d', '90d'].map((range) => (
               <Button
