@@ -25,7 +25,6 @@ export default function Header() {
     { label: "Craftsmanship", path: "/craftsmanship" },
     { label: "Projects", path: "/projects" },
     { label: "Contact", path: "/contact" },
-    { label: "Admin", path: "/admin" },
   ];
 
   return (
