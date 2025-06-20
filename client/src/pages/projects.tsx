@@ -162,19 +162,52 @@ export default function Projects() {
   };
 
   // File upload handlers
-  const handleDrop = (e: React.DragEvent) => {
+  const handleDrop = (e: React.DragEvent<HTMLDivElement>) => {
     e.preventDefault();
+    e.stopPropagation();
     setDragOver(false);
+    
     const files = Array.from(e.dataTransfer.files).filter(file => 
       file.type.startsWith('image/')
     );
-    setUploadedImages(prev => [...prev, ...files]);
+    
+    if (files.length > 0) {
+      setUploadedImages(prev => [...prev, ...files]);
+      toast({
+        title: "Images uploaded",
+        description: `${files.length} image(s) added successfully.`,
+      });
+    }
+  };
+
+  const handleDragOver = (e: React.DragEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setDragOver(true);
+  };
+
+  const handleDragEnter = (e: React.DragEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setDragOver(true);
+  };
+
+  const handleDragLeave = (e: React.DragEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setDragOver(false);
   };
 
   const handleFileSelect = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files) {
-      const files = Array.from(e.target.files);
+      const files = Array.from(e.target.files).filter(file => 
+        file.type.startsWith('image/')
+      );
       setUploadedImages(prev => [...prev, ...files]);
+      toast({
+        title: "Images selected",
+        description: `${files.length} image(s) added successfully.`,
+      });
     }
   };
 
@@ -570,11 +603,12 @@ export default function Projects() {
               <Label className="text-white">Project Images</Label>
               <div
                 className={`border-2 border-dashed rounded-lg p-8 text-center transition-colors ${
-                  dragOver ? 'border-gold bg-gold/10' : 'border-gray-600'
+                  dragOver ? 'border-white bg-white/10' : 'border-gray-600'
                 }`}
                 onDrop={handleDrop}
-                onDragOver={(e) => { e.preventDefault(); setDragOver(true); }}
-                onDragLeave={() => setDragOver(false)}
+                onDragOver={handleDragOver}
+                onDragEnter={handleDragEnter}
+                onDragLeave={handleDragLeave}
               >
                 <Upload className="w-12 h-12 text-gray-400 mx-auto mb-4" />
                 <p className="text-gray-300 mb-2">Drag and drop images here, or</p>
@@ -588,7 +622,7 @@ export default function Projects() {
                 />
                 <label
                   htmlFor="file-upload"
-                  className="bg-gold text-black px-4 py-2 rounded cursor-pointer hover:bg-yellow-500"
+                  className="bg-white text-black px-4 py-2 rounded cursor-pointer hover:bg-gray-200 font-bold"
                 >
                   Choose Files
                 </label>
