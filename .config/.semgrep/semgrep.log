@@ -1,0 +1,126 @@
+2025-06-21 14:46:25,401 - semgrep.run_scan - DEBUG - semgrep version 1.4.0
+2025-06-21 14:46:25,407 - semgrep.git - DEBUG - Failed to get project url from 'git ls-remote': Command failed with exit code: 128
+-----
+Command failed with output:
+fatal: No remote configured to list refs from.
+
+
+Failed to run 'git ls-remote --get-url'. Possible reasons:
+
+- the git binary is not available
+- the current working directory is not a git repository
+- the baseline commit is not a parent of the current commit
+    (if you are running through semgrep-app, check if you are setting `SEMGREP_BRANCH` or `SEMGREP_BASELINE_COMMIT` properly)
+- the current working directory is not marked as safe
+    (fix with `git config --global --add safe.directory $(pwd)`)
+
+Try running the command yourself to debug the issue.
+2025-06-21 14:46:25,409 - semgrep.config_resolver - DEBUG - Loading local config from /home/runner/workspace/.config/.semgrep/semgrep_rules.json
+2025-06-21 14:46:25,411 - semgrep.config_resolver - DEBUG - Done loading local config from /home/runner/workspace/.config/.semgrep/semgrep_rules.json
+2025-06-21 14:46:25,417 - semgrep.config_resolver - DEBUG - Saving rules to /tmp/semgrep-63e60k41.rules
+2025-06-21 14:46:26,218 - semgrep.rule_lang - DEBUG - semgrep-core validation response: valid=True
+2025-06-21 14:46:26,218 - semgrep.rule_lang - DEBUG - semgrep-core validation succeeded
+2025-06-21 14:46:26,218 - semgrep.rule_lang - DEBUG - RPC validation succeeded
+2025-06-21 14:46:26,219 - semgrep.config_resolver - DEBUG - loaded 1 configs in 0.8097918033599854
+2025-06-21 14:46:26,294 - semgrep.run_scan - VERBOSE - running 714 rules from 1 config /home/runner/workspace/.config/.semgrep/semgrep_rules.json_0
+2025-06-21 14:46:26,295 - semgrep.run_scan - VERBOSE - No .semgrepignore found. Using default .semgrepignore rules. See the docs for the list of default ignores: https://semgrep.dev/docs/cli-usage/#ignore-files
+2025-06-21 14:46:26,297 - semgrep.run_scan - VERBOSE - Rules:
+2025-06-21 14:46:26,297 - semgrep.run_scan - VERBOSE - <SKIPPED DATA (too many entries; use --max-log-list-entries)>
+2025-06-21 14:46:27,348 - semgrep.core_runner - DEBUG - Passing whole rules directly to semgrep_core
+2025-06-21 14:46:27,776 - semgrep.core_runner - DEBUG - Running Semgrep engine with command:
+2025-06-21 14:46:27,777 - semgrep.core_runner - DEBUG - /tmp/_MEICYaWOl/semgrep/bin/opengrep-core -json -rules /tmp/tmpahwg1iln.json -j 8 -targets /tmp/tmp0vcl830s -timeout 5 -timeout_threshold 3 -max_memory 0 -fast
+2025-06-21 14:46:36,326 - semgrep.core_runner - DEBUG - --- semgrep-core stderr ---
+[00.08][[34mINFO[0m]: Executed as: /tmp/_MEICYaWOl/semgrep/bin/opengrep-core -json -rules /tmp/tmpahwg1iln.json -j 8 -targets /tmp/tmp0vcl830s -timeout 5 -timeout_threshold 3 -max_memory 0 -fast
+[00.08][[34mINFO[0m]: Version: 1.4.0
+[00.08][[34mINFO[0m]: Parsing rules in /tmp/tmpahwg1iln.json
+[00.61][[34mINFO[0m]: scan: processing 689 files (skipping 0), with 456 rules (skipping 0 )
+[01.95][[33mWARNING[0m]: Fixpoint timeout while performing taint analysis [rule: config..semgrep.vendored-rules.typescript.react.security.audit.react-href-var file: client/src/pages/projects.tsx func: Projects:2036]
+[0m[02.06][[33mWARNING[0m]: Fixpoint timeout while performing taint analysis [rule: config..semgrep.vendored-rules.javascript.lang.security.audit.sqli.node-postgres-sqli file: client/src/pages/projects.tsx func: Projects:2036]
+[0m[02.22][[33mWARNING[0m]: Fixpoint timeout while performing taint analysis [rule: config..semgrep.vendored-rules.javascript.lang.security.audit.unsafe-formatstring file: client/src/pages/projects.tsx func: Projects:2036]
+[0m[02.83][[33mWARNING[0m]: Fixpoint timeout while performing taint analysis [rule: config..semgrep.vendored-rules.javascript.express.security.require-request file: client/src/pages/projects.tsx func: Projects:2036]
+[0m[03.07][[33mWARNING[0m]: Fixpoint timeout while performing taint analysis [rule: config..semgrep.vendored-rules.javascript.express.security.cors-misconfiguration file: client/src/pages/projects.tsx func: Projects:2036]
+[0m[03.55][[33mWARNING[0m]: Fixpoint timeout while performing taint analysis [rule: config..semgrep.vendored-rules.javascript.browser.security.raw-html-concat file: client/src/pages/projects.tsx func: Projects:2036]
+[0m[05.19][[33mWARNING[0m]: Fixpoint timeout while performing taint analysis [rule: config..semgrep.vendored-rules.typescript.react.security.audit.react-href-var file: client/src/pages/home.tsx func: Home:20468]
+[0m[05.33][[33mWARNING[0m]: Fixpoint timeout while performing taint analysis [rule: config..semgrep.vendored-rules.javascript.lang.security.audit.detect-non-literal-require file: client/src/components/ai-design-consultant.tsx func: AIDesignConsultant:21741]
+[0m[05.33][[33mWARNING[0m]: Fixpoint timeout while performing taint analysis [rule: config..semgrep.vendored-rules.javascript.lang.security.audit.detect-non-literal-require file: client/src/pages/home.tsx func: Home:20468]
+[0m--- end semgrep-core stderr ---
+2025-06-21 14:46:36,332 - semgrep.rule_match - DEBUG - match_key = ('', PosixPath('client/index.html'), 'config..semgrep.vendored-rules.html.security.audit.missing-integrity') match_id = 0ee74fd49637bebe183eca7188dbde26e386314e62cc2e7ba1ee60b377b638243fcd84e6c6fa04886198ccacfa6a711bfbcc61a28f9ddc913d5b3c53083cbc90_0
+2025-06-21 14:46:36,333 - semgrep.rule_match - DEBUG - match_key = (' rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" (?is).*integrity= (google-analytics\\.com|fonts\\.googleapis\\.com|fonts\\.gstatic\\.com|googletagmanager\\.com) .*rel\\s*=\\s*[\'"]?preconnect.* href="... :// ..." href="//..." href=\'... :// ...\' href=\'//...\' src="... :// ..." src="//..." src=\'... :// ...\' src=\'//...\' <link  rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" > <script  rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" >...</script>', PosixPath('client/index.html'), 'config..semgrep.vendored-rules.html.security.audit.missing-integrity') match_id = adf34343d6be96447b85230df74b5423013b6f397ca1ee8ccbc07a073ba10f0983c4b0b35a5af316de0d1d48282b1618c59c38f99ebdcc2ee93f24aea49f7101_0
+2025-06-21 14:46:36,333 - semgrep.rule_match - DEBUG - match_key = (' rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" (?is).*integrity= (google-analytics\\.com|fonts\\.googleapis\\.com|fonts\\.gstatic\\.com|googletagmanager\\.com) .*rel\\s*=\\s*[\'"]?preconnect.* href="... :// ..." href="//..." href=\'... :// ...\' href=\'//...\' src="... :// ..." src="//..." src=\'... :// ...\' src=\'//...\' <link  rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" > <script  rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" >...</script>', PosixPath('client/index.html'), 'config..semgrep.vendored-rules.html.security.audit.missing-integrity') match_id = adf34343d6be96447b85230df74b5423013b6f397ca1ee8ccbc07a073ba10f0983c4b0b35a5af316de0d1d48282b1618c59c38f99ebdcc2ee93f24aea49f7101_0
+2025-06-21 14:46:36,334 - semgrep.rule_match - DEBUG - match_key = (' rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" (?is).*integrity= (google-analytics\\.com|fonts\\.googleapis\\.com|fonts\\.gstatic\\.com|googletagmanager\\.com) .*rel\\s*=\\s*[\'"]?preconnect.* href="... :// ..." href="//..." href=\'... :// ...\' href=\'//...\' src="... :// ..." src="//..." src=\'... :// ...\' src=\'//...\' <link  rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" > <script  rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" >...</script>', PosixPath('client/index.html'), 'config..semgrep.vendored-rules.html.security.audit.missing-integrity') match_id = adf34343d6be96447b85230df74b5423013b6f397ca1ee8ccbc07a073ba10f0983c4b0b35a5af316de0d1d48282b1618c59c38f99ebdcc2ee93f24aea49f7101_0
+2025-06-21 14:46:36,334 - semgrep.rule_match - DEBUG - match_key = ('', PosixPath('client/index.html'), 'config..semgrep.vendored-rules.html.security.audit.missing-integrity') match_id = 0ee74fd49637bebe183eca7188dbde26e386314e62cc2e7ba1ee60b377b638243fcd84e6c6fa04886198ccacfa6a711bfbcc61a28f9ddc913d5b3c53083cbc90_0
+2025-06-21 14:46:36,335 - semgrep.rule_match - DEBUG - match_key = (' type="text/javascript" src="https://replit.com/public/js/replit-dev-banner.js" (?is).*integrity= (google-analytics\\.com|fonts\\.googleapis\\.com|fonts\\.gstatic\\.com|googletagmanager\\.com) .*rel\\s*=\\s*[\'"]?preconnect.* href="... :// ..." href="//..." href=\'... :// ...\' href=\'//...\' src="... :// ..." src="//..." src=\'... :// ...\' src=\'//...\' <link  type="text/javascript" src="https://replit.com/public/js/replit-dev-banner.js" > <script  type="text/javascript" src="https://replit.com/public/js/replit-dev-banner.js" >...</script>', PosixPath('client/index.html'), 'config..semgrep.vendored-rules.html.security.audit.missing-integrity') match_id = 0728b64e224596592d04447ba8a642ff94e1fb9fcc07be26d49dc7e7f6898e638ad16ffcaca086932c58f4c6400fe32603323afef02cf9bfebcb0e4a53562a40_0
+2025-06-21 14:46:36,335 - semgrep.rule_match - DEBUG - match_key = (' type="text/javascript" src="https://replit.com/public/js/replit-dev-banner.js" (?is).*integrity= (google-analytics\\.com|fonts\\.googleapis\\.com|fonts\\.gstatic\\.com|googletagmanager\\.com) .*rel\\s*=\\s*[\'"]?preconnect.* href="... :// ..." href="//..." href=\'... :// ...\' href=\'//...\' src="... :// ..." src="//..." src=\'... :// ...\' src=\'//...\' <link  type="text/javascript" src="https://replit.com/public/js/replit-dev-banner.js" > <script  type="text/javascript" src="https://replit.com/public/js/replit-dev-banner.js" >...</script>', PosixPath('client/index.html'), 'config..semgrep.vendored-rules.html.security.audit.missing-integrity') match_id = 0728b64e224596592d04447ba8a642ff94e1fb9fcc07be26d49dc7e7f6898e638ad16ffcaca086932c58f4c6400fe32603323afef02cf9bfebcb0e4a53562a40_0
+2025-06-21 14:46:36,336 - semgrep.rule_match - DEBUG - match_key = (' type="text/javascript" src="https://replit.com/public/js/replit-dev-banner.js" (?is).*integrity= (google-analytics\\.com|fonts\\.googleapis\\.com|fonts\\.gstatic\\.com|googletagmanager\\.com) .*rel\\s*=\\s*[\'"]?preconnect.* href="... :// ..." href="//..." href=\'... :// ...\' href=\'//...\' src="... :// ..." src="//..." src=\'... :// ...\' src=\'//...\' <link  type="text/javascript" src="https://replit.com/public/js/replit-dev-banner.js" > <script  type="text/javascript" src="https://replit.com/public/js/replit-dev-banner.js" >...</script>', PosixPath('client/index.html'), 'config..semgrep.vendored-rules.html.security.audit.missing-integrity') match_id = 0728b64e224596592d04447ba8a642ff94e1fb9fcc07be26d49dc7e7f6898e638ad16ffcaca086932c58f4c6400fe32603323afef02cf9bfebcb0e4a53562a40_0
+2025-06-21 14:46:36,337 - semgrep.rule_match - DEBUG - match_key = ('', PosixPath('server/email.ts'), 'config..semgrep.vendored-rules.javascript.lang.security.html-in-template-string') match_id = 55bb35191e06a876861fe164b021493592ca966e87c0c96d219cc5baff47a116f33c7fa591de72b60d7dfb1fc679bd457ad749a60a6c4f29461de8bcc7e28d6e_0
+2025-06-21 14:46:36,337 - semgrep.rule_match - DEBUG - match_key = ('</p>\n      </div>\n      \n      <div style="margin-top: 30px; padding: 15px; background-color: #EEEBE5; border-radius: 5px;">\n        <p style="margin: 0; font-size: 14px; color: #666;">\n          This consultation request was submitted through the Blackhorse Furnitures website contact form.\n        </p>\n      </div>\n    </div>\n   .*</?[a-zA-Z] `</p>\n      </div>\n      \n      <div style="margin-top: 30px; padding: 15px; background-color: #EEEBE5; border-radius: 5px;">\n        <p style="margin: 0; font-size: 14px; color: #666;">\n          This consultation request was submitted through the Blackhorse Furnitures website contact form.\n        </p>\n      </div>\n    </div>\n  ${consultationData.projectDetails}...`\n `...${consultationData.projectDetails}</p>\n      </div>\n      \n      <div style="margin-top: 30px; padding: 15px; background-color: #EEEBE5; border-radius: 5px;">\n        <p style="margin: 0; font-size: 14px; color: #666;">\n          This consultation request was submitted through the Blackhorse Furnitures website contact form.\n        </p>\n      </div>\n    </div>\n  `\n', PosixPath('server/email.ts'), 'config..semgrep.vendored-rules.javascript.lang.security.html-in-template-string') match_id = eebecbc14c0e886dbd0cb64959ee3a80e88becab2c36724697b1abfbf79316acdd0775ceeabdd46f04175777f2432b35f38cf18cf351e941c85c96188f111b07_0
+2025-06-21 14:46:36,338 - semgrep.rule_match - DEBUG - match_key = ('</p>\n      </div>\n      \n      <div style="margin-top: 30px; padding: 15px; background-color: #EEEBE5; border-radius: 5px;">\n        <p style="margin: 0; font-size: 14px; color: #666;">\n          This consultation request was submitted through the Blackhorse Furnitures website contact form.\n        </p>\n      </div>\n    </div>\n   .*</?[a-zA-Z] `</p>\n      </div>\n      \n      <div style="margin-top: 30px; padding: 15px; background-color: #EEEBE5; border-radius: 5px;">\n        <p style="margin: 0; font-size: 14px; color: #666;">\n          This consultation request was submitted through the Blackhorse Furnitures website contact form.\n        </p>\n      </div>\n    </div>\n  ${consultationData.projectDetails}...`\n `...${consultationData.projectDetails}</p>\n      </div>\n      \n      <div style="margin-top: 30px; padding: 15px; background-color: #EEEBE5; border-radius: 5px;">\n        <p style="margin: 0; font-size: 14px; color: #666;">\n          This consultation request was submitted through the Blackhorse Furnitures website contact form.\n        </p>\n      </div>\n    </div>\n  `\n', PosixPath('server/email.ts'), 'config..semgrep.vendored-rules.javascript.lang.security.html-in-template-string') match_id = eebecbc14c0e886dbd0cb64959ee3a80e88becab2c36724697b1abfbf79316acdd0775ceeabdd46f04175777f2432b35f38cf18cf351e941c85c96188f111b07_0
+2025-06-21 14:46:36,339 - semgrep.rule_match - DEBUG - match_key = ('</p>\n      </div>\n      \n      <div style="margin-top: 30px; padding: 15px; background-color: #EEEBE5; border-radius: 5px;">\n        <p style="margin: 0; font-size: 14px; color: #666;">\n          This consultation request was submitted through the Blackhorse Furnitures website contact form.\n        </p>\n      </div>\n    </div>\n   .*</?[a-zA-Z] `</p>\n      </div>\n      \n      <div style="margin-top: 30px; padding: 15px; background-color: #EEEBE5; border-radius: 5px;">\n        <p style="margin: 0; font-size: 14px; color: #666;">\n          This consultation request was submitted through the Blackhorse Furnitures website contact form.\n        </p>\n      </div>\n    </div>\n  ${consultationData.projectDetails}...`\n `...${consultationData.projectDetails}</p>\n      </div>\n      \n      <div style="margin-top: 30px; padding: 15px; background-color: #EEEBE5; border-radius: 5px;">\n        <p style="margin: 0; font-size: 14px; color: #666;">\n          This consultation request was submitted through the Blackhorse Furnitures website contact form.\n        </p>\n      </div>\n    </div>\n  `\n', PosixPath('server/email.ts'), 'config..semgrep.vendored-rules.javascript.lang.security.html-in-template-string') match_id = eebecbc14c0e886dbd0cb64959ee3a80e88becab2c36724697b1abfbf79316acdd0775ceeabdd46f04175777f2432b35f38cf18cf351e941c85c96188f111b07_0
+2025-06-21 14:46:36,341 - semgrep.core_runner - DEBUG - semgrep ran in 0:00:08.992884 on 289 files
+2025-06-21 14:46:36,342 - semgrep.core_runner - DEBUG - findings summary: 3 warning, 0 error, 0 info
+2025-06-21 14:46:36,345 - semgrep.app.auth - DEBUG - Getting API token from settings file
+2025-06-21 14:46:36,345 - semgrep.app.auth - DEBUG - No API token found in settings file
+2025-06-21 14:46:36,465 - semgrep.output - VERBOSE - 
+========================================
+Files skipped:
+========================================
+
+  Always skipped by Opengrep:
+
+   • <none>
+
+  Skipped by .gitignore:
+  (Disable by passing --no-git-ignore)
+
+   • <all files not listed by `git ls-files` were skipped>
+
+  Skipped by .semgrepignore:
+  - https://semgrep.dev/docs/ignoring-files-folders-code/#understand-semgrep-defaults
+
+   • <none>
+
+  Skipped by --include patterns:
+
+   • <none>
+
+  Skipped by --exclude patterns:
+
+   • <none>
+
+  Files skipped due to insufficient read permissions:
+
+   • <none>
+
+  Skipped by limiting to files smaller than 1000000 bytes:
+  (Adjust with the --max-target-bytes flag)
+
+   • attached_assets/Blackhorse Furnitures - Luxury Custom Furniture - Google Chrome 2025-06-13
+     14-49-05_1749806469404.mp4
+   • attached_assets/LocalLearningHub_1749471640989.zip
+   • attached_assets/LocalLearningHub_1749473054464.zip
+   • attached_assets/beauty_1749471009327.mp4
+   • attached_assets/beauty_1749471775976.mp4
+   • attached_assets/image_1749470541023.png
+   • attached_assets/image_1749471698343.png
+   • attached_assets/image_1749471703870.png
+   • attached_assets/image_1749471725265.png
+   • attached_assets/image_1749473635504.png
+   • attached_assets/image_1749795624306.png
+   • attached_assets/image_1749796619978.png
+   • attached_assets/image_1750247491991.png
+   • attached_assets/img35_1749474302052.png
+   • attached_assets/introo_1750163712016.mp4
+
+  Partially analyzed due to parsing or internal Opengrep errors
+
+   • tailwind.config.ts (1 lines skipped)
+
+2025-06-21 14:46:36,467 - semgrep.output - INFO - Some files were skipped or only partially analyzed.
+  Scan was limited to files tracked by git.
+  Partially scanned: 1 files only partially analyzed due to parsing or internal Opengrep errors
+  Scan skipped: 15 files larger than 1.0 MB
+  For a full list of skipped files, run opengrep with the --verbose flag.
+
+Ran 437 rules on 289 files: 3 findings.
+2025-06-21 14:46:36,467 - semgrep.app.version - DEBUG - Version cache does not exist
+2025-06-21 14:46:36,480 - semgrep.metrics - VERBOSE - Not sending pseudonymous metrics since metrics are configured to OFF and registry usage is False
